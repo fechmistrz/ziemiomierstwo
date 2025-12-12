@@ -1,0 +1,86 @@
+%
+
+\section{Podobieństwa}
+
+O podobieństwach pisze Coxeter \cite[s. 84-92]{coxeter_1967}.
+
+\begin{definition}[homotetia]
+    Przekształcenie, które zachowuje (lub odwraca) kierunek, czyli przekształca każdą prostą na prostą do niej równległą, nazywamy dylatacją albo homotetią.
+\end{definition}
+
+Nazwy ,,dylatacja'' używa Coxeter \cite[s. 84]{coxeter_1967}.\todofoot{Dwie figury są homotetyczne, jeśli są podobne i podobnie położone, to znaczy można je przekształcić przez dylatację lub homotetię. Czyli jest jakaś różnica?}
+Dwie figury, które są podobne i podobnie położone, to znaczy jeżeli jedną można przekształcić na drugą przez dylatację, nazywamy homotetycznymi.
+
+\begin{proposition}
+    Każda dylatacja, która nie jest translacją, ma punkt stały.
+\end{proposition}
+
+Wystarczy dobrać dwa punkty $A$ i $B$ takie, że $A$ nie jest punktem niezmienniczym, zaś odcinek $AB$ nie leży na prostej niezmienniczej i sprawdzić przecięcie odcinków $AA'$, $BB'$.
+Okazuje się, że każda dylatacja jest podobieństwem!
+
+\begin{definition}[podobieństwo]
+    Przekształcenie płaszczyzny w siebie, które przeprowadza każdy odcinek $AB$ na jakiś odcinek $A'B'$ o długości określonej wzorem
+    \begin{equation}
+        \frac{|A'B'|}{|AB|} = \mu
+    \end{equation}
+    nazywamy podobieństwem o skali (rzadziej: współczynniku rozciągania) $\mu$.
+\end{definition}
+
+Podobieństwa są bijekcjami i zachowują miary kątów.
+Eves \cite[s. 105]{eves1_1972} nazywa te przekształcenia \emph{homothety, expansion, dilatation or stretch}.\todofoot{My nigdzie nie definiujemy jednokładności, ughhhh!}, w konflikcie z naszymi nazwami.
+
+https://www.deltami.edu.pl/2010/03/dobrze-sie-sklada/ jednokładności
+
+\begin{example}
+    Podobieństwo o skali $1$ to identyczność, zaś o skali $-1$ to półobrót. 
+\end{example}
+
+\begin{proposition}
+    Niech $\Gamma_1, \Gamma_2$ będą dwoma różnymi okręgami o środkach $C_1, C_2$ oraz nierównych promieniach $r_1, r_2$.
+    Wtedy dwie dylatacje (o środku $O_1$ i skali $r_2/r_1$ oraz o środku $O_2$ i skali $-r_2/r_1$) przekształcają pierwszy okrąg na drugi.
+    Punkty $O_1$ i $O_2$ dzielą odcinek $C_1 C_2$ zewnętrznie i wewnętrznie w stosunku $r_1 : r_2$.
+\end{proposition}
+
+Wspomniane punkty nazywa się środkami podobieństwa dwóch okręgów.
+
+\begin{proposition}
+    Każde dwa trójkąty podobne przekształcają się na siebie za pomocą jednego i tylko jednego podobieństwa.
+\end{proposition}
+
+\begin{proposition}
+    Dane są dwa okręgi o różnych środkach $O_1, O_2$ i promieniach $r_1, r_2$.
+    Niech punkty $I, E$ dzielą odcinek $O_1O_2$ wewnętrznie i zewnętrznie w stosunku $r_1/r_2$.
+    Wtedy jednokładność o środku w $I$ oraz skali $-r_2/r_1$ albo o środku w $E$ oraz skali $r_2/r_1$ przenosi jeden okrąg na drugi.
+\end{proposition}
+
+Pisze o tym Eves \cite[s. 108]{eves1_1972}.
+
+\begin{definition}[podobieństwo spiralne]
+    Złożenie obrotu i jednokładnści o tym samym środku nazywamy podobieństwem spiralnym.
+\end{definition}
+
+\begin{definition}[symetria dylatacyjna]
+    Złożenie symetrii osiowej i jednokładnści o środku leżącym na osi symetrii nazywamy symetrią dylatacyjną.
+\end{definition}
+
+\begin{proposition}
+    Jeżeli $\lambda \mu \neq 1$, to $J_A^\lambda \circ J_B^\mu = J_C^{\lambda \mu}$, gdzie $[CBA] = (1-\lambda) / (\lambda \mu - 1)$.
+\end{proposition}
+
+To jest ćwiczenie 4.75 \cite[s. 217]{neugebauer_2018}.
+
+\begin{proposition}
+\label{podobienstwa_klasyfikacja}%
+    Każde podobieństwo jest:
+    \begin{itemize}
+        \item izometrią,
+        \item symetrią dylatacyjną albo
+        \item podobieństwem spiralnym.
+    \end{itemize}
+\end{proposition}
+
+Wynika to z klasyfikacji izometrii, patrz Bogdańska, Neugebauer \cite[s. 220]{neugebauer_2018}; Eves \cite[s. 118]{eves1_1972}.
+
+Pantograf Scheinera Krzysztofa z około 1630 (albo 1603?) roku: patrz Eves \cite[s. 107]{eves1_1972}.
+
+%

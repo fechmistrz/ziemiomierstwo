@@ -1,0 +1,55 @@
+%
+
+\subsection{Klasyfikacja izometrii}
+
+\begin{theorem}[Chasles'a, 1830]
+\index{twierdzenie!Chasles'a}%
+\label{theorem_chasles}
+    Każda izometria płaszczyzny jest złożeniem co najwyżej trzech symetrii osiowych.
+\end{theorem}
+
+\todofoot{https://www.deltami.edu.pl/2012/09/wszystko-moze-sie-przydac/}
+\todofoot{https://www.deltami.edu.pl/2015/11/maly-wybor-i-dobrze/}
+\todofoot{https://www.deltami.edu.pl/2015/11/rzut-butem-czyli-twierdzenie-chaslesa/}
+\todofoot{https://www.deltami.edu.pl/2017/01/uczniowie/}
+
+Piszą o nim Eves \cite[s. 113]{eves1_1972}; Audin \cite[s. 49]{audin_2003} (w ogólniejszej wersji dla przestrzeni $\mathbb R^n$ i $n+1$ odbić).
+Poza symetriami osiowymi oraz złożeniami dwóch takich, pozostał przypadek trzech symetrii.
+% TODO: https://en.wikipedia.org/wiki/Cartan–Dieudonné_theorem
+
+\begin{definition}[symetria z poślizgiem]
+    Niech $p$ będzie prostą, zaś $w$ wektorem równoległym do niej.
+    Złożenie $T_w \circ S_p$ nazywamy symetrią osiową z poślizgiem.
+\end{definition}
+
+Wektor $w$ nie musi być równoległy do prostej $p$, ale jeśli założymy, że tak jest, to nie musimy pamiętać kolejności składania, bo mamy równość $T_w \circ S_p = S_p \circ T_w$.
+
+\begin{corollary}
+    Każda izometria płaszczyzny jest przesunięciem, obrotem albo symetrią z poślizgiem, przy czym orientację zachowują dokładnie pierwsze dwa typy izometrii.
+\end{corollary}
+
+Klasyfikacja izometrii płaszczyzny eliminuje paradoks Banacha-Tarskiego z płaszczyzny, bo nie ma podgrupy wolnej w grupie jej izometrii.
+Oto szczegóły.
+Jeśli $f$ jest izometrią, to $f^2$ jest przesunięciem albo obrotem.
+Gdy $g$ też jest izometrią, to $f^2g^2f^{-2}g^{-2}$ jest zawsze przesunięciem; dla dowodu tego należy rozpatrzeć cztery przypadki, z których najtrudniejszy to para obrót-obrót.
+Pomocne może być zauważenie, że jeśli mamy dwa obroty $f$, $g$ o różnych środkach i ich złożenie jest obrotem, to $fg$ i $gf$ są obrotami o ten sam kąt, ale różnych środkach.
+A więc 
+\begin{align}
+    \ldots & = f^2 g^2 f^{-2} g^{-2} f^{-2} g^2 f^4 g^{-2} f^{-2} g^2 f^{-2} g^{-2} f^2 \label{slowo_banacha} \\
+    & = (f^2 g^2 f^{-2} g^{-2})( f^{-2} g^2 f^2 g^{-2}) (g^2 f^2g^{-2} f^{-2} ) (g^2 f^{-2} g^{-2} f^2) \\
+    & = T_v T_w T_{-v} T_{-w} \\
+    & = \operatorname{Id},
+\end{align}
+co kończy dowód.
+(Po drodze skorzystaliśmy z faktów \ref{delta_1997_9_start} do \ref{delta_1997_9_end}, twierdzenia \ref{theorem_chasles}, że złożenie przesunięć jest przesunięciem oraz faktu \ref{for_banach_11}).
+Napis \ref{slowo_banacha} to tak zwane słowem Banacha.
+
+Istnieje podobna klasyfikacja izometrii przestrzeni $\mathbb R^3$, jak u Coxetera \cite[s. 113-122]{coxeter_1967}, Evesa \cite[s. 148]{eves1_1972}:
+
+\begin{proposition}
+    Każda izometria przestrzeni $\mathbb R^3$
+    zachowuje orientację (i jest odwzorowaniem tożsamościowym; przesunięciem; obrotem wokół prostej albo ruchem śrubowym, czyli obrotem wokół prostej z przesunięciem)
+    albo nie (i jest odbiciem względem płaszczyzny; odbiciem z poślizgiem; obrotem niewłaściwym, czyli obrotem wokół prostej z odbiciem w płaszczyźnie prostopadłej do niej).
+\end{proposition}
+
+%
