@@ -4,6 +4,7 @@
 % \input{blurbs/page-1-5}
 
 Guzicki napisał \cite{guzicki_2021}.
+\index[persons]{Guzicki, Wojciech}%
 
 \input{chapters/01} % aksjomatyka
 \input{chapters/02} % trójkąty
@@ -20,5 +21,12 @@ Guzicki napisał \cite{guzicki_2021}.
 
 \bibliography{ziemiomierstwo}{}
 \bibliographystyle{plain}
+
+\raggedright
+\indexprologue{\small Tekst prologu rzeczowego...}
+\printindex
+
+\indexprologue{\small Tekst prologu osobowego...}
+\printindex[persons]
 
 \end{document}
