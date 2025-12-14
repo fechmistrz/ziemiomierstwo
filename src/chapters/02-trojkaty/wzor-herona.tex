@@ -1,0 +1,87 @@
+%
+
+\index{wzór!Herona|(}
+\subsection{Pole trójkąta, wzór Herona}
+
+\todofoot{delta 93-09}
+\todofoot{https://www.deltami.edu.pl/2014/03/heron-uogolniony/}
+\todofoot{https://www.deltami.edu.pl/2025/12/heron-heron-po-trzykroc-heron/}
+
+W tej podsekcji znajdziemy różne wzory na pole trójkąta.
+
+\begin{proposition}
+    Pole trójkąta o podstawie długości $a$ oraz wysokości opuszczonej na tę podstawę długości $h$ wyraża się wzorem
+    \begin{equation}
+        S_\triangle = \frac 1 2 a h.
+    \end{equation}
+    Jeśli kąt naprzeciw podstawy ma miarę $\alpha$, a ramiona długości $b, c$, to zachodzi też
+    \begin{equation}
+        S_\triangle = \frac 1 2 bc \sin \alpha.
+    \end{equation}
+\end{proposition}
+
+Pisze o tym Guzicki \cite[s. 255]{guzicki_2021}.
+
+% TODO: https://www.cut-the-knot.org/Curriculum/Geometry/HeronsProblem.shtml#explanation
+
+\begin{proposition}[wzór Herona, 60 r.n.e.?]
+\label{prp_heron}%
+    Pole trójkąta o bokach długości $a, b, c$ wyraża się wzorem
+    \begin{equation}
+        S = \sqrt{p(p-a)(p-b)(p-c)},
+    \end{equation}
+    gdzie $p = \frac 1 2 (a + b + c)$ oznacza połowę obwodu.
+\end{proposition}
+
+Wynik przypiszemy Heronowi z Aleksandrii, który poda dość skomplikowany dowód w~dziele \emph{,,Metrica''}.
+\index[persons]{Heron z Aleksandrii}%
+Coxeter \cite[s. 12]{coxeter_1991} przeczyta van der Waerdena \cite[s. 228, 277]{waerden_1961} i przez to stwierdzi, że wzór był już wcześniej znany Archimedesowi dwieście lat wcześniej; to samo pojawi się w polskim wydaniu \cite[s. 28]{coxeter_1967}.
+% TODO: czemu jest cytowane angielskie i polskie wydanie?
+\index[persons]{Archimedes}%
+Pompe w $\Delta_{93}^9$ pokaże, jak dojść do dowodu Sidneya Kunga ,,bez rachowania''. % https://www.deltami.edu.pl/1993/09/jak-udowodnic-wzor-herona/
+\index[persons]{Kung, Sidney}%
+Guzicki \cite[s. 165-169]{guzicki_2021} wyprowadzi go z twierdzenia Pitagorasa i~wspomni, że prosty geometryczny dowód podał też Euler.
+\index[persons]{Euler, Leonhard}%
+\index{twierdzenie!Pitagorasa}
+Wreszcie Bogdańska, Neugebauer \cite[s. 92]{neugebauer_2018} skorzystają z twierdzenia cosinusów.
+
+Istnieje częściowe uogólnienie wzoru Herona dla czworokątów:
+
+\begin{proposition}[wzór Brahmagupty]
+    \label{brahmagupta_formula}%
+    \index{czworokąt!cykliczny}%
+    Pole czworokąta wypukłego, na którym można opisać okrąg, o bokach długości $a, b, c, d$ wyraża się wzorem
+    \begin{equation}
+        S = \sqrt{(p-a)(p-b)(p-c)(p-d)},
+    \end{equation}
+    gdzie $p$ oznacza połowę obwodu.
+\end{proposition}
+\index{wzór!Brahmagupty}%
+
+Dowód polega na zastosowaniu wzoru Herona dwa razy do trójkątów podobnych lub ponownym skorzystaniu z dobrodziejstw trygonometrii.
+Założenie o wypukłości i cykliczności można pominąć, jak odkryją równocześnie Carl Bretschneider i Karl von Staudt:
+\index[persons]{Staudt@von Staudt, Karl}%
+\index[persons]{Bretschneider, Carl}%
+
+\begin{proposition}[wzór Bretschneidera, 1842]
+    Pole czworokąta o bokach długości $a, b, c, d$ i sumie miar dwóch przeciwległych kątów wewnętrznych $2 \varphi$ wyraża się wzorem
+    \begin{equation}
+        S = \sqrt{(p-a)(p-b)(p-c)(p-d) - abcd \cos^2  \varphi},
+    \end{equation}
+    gdzie $p$ oznacza połowę obwodu.
+\end{proposition}
+\index{wzór!Bretschneidera}%
+
+Inny, równie przydatny wzór znajdzie Julian Coolidge \cite{coolidge_1939}:
+\index[persons]{Coolidge, Julian}%
+pole czworokąta o bokach długości $a, b, c, d$ i przekątnych długości $e, f$ wyraża się wzorem
+\begin{equation}
+    S = \sqrt{(p-a)(p-b)(p-c)(p-d) - \frac 1 4 (ac + bd + pq)(ac + bd - pq)},
+\end{equation}
+gdzie $p$ oznacza raz jeszcze (i nie ostatni) połowę obwodu.
+
+% TODO: https://en.wikipedia.org/wiki/History_of_geometry#Classical_Indian_geometry
+
+\index{wzór!Herona|)}
+
+%

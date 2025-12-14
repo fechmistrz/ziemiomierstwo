@@ -1,0 +1,54 @@
+%
+
+% PRZECZYTANO: https://en.wikipedia.org/wiki/Triangle_inequality
+
+\section{Nierówność trójkąta}
+
+\todofoot{https://www.deltami.edu.pl/2012/06/punkt-w-trojkacie/ zadanie 4 z odnośnikiem do tw. Ptolemeusza.}
+
+Zajmiemy się teraz (I.20).
+
+\begin{proposition}[nierówność trójkąta]
+\index{nierówność!trójkąta}%
+	Niech $ABC$ będzie trojkątem.
+	Wtedy suma odcinków $AB$ i $BC$ jest dłuższa niż $AC$.
+\end{proposition}
+
+% TODO: https://www.deltami.edu.pl/2013/09/siatka-czworoscianu/ to samo w R3
+
+\begin{proof}
+	Wynika to ze wzoru Herona (fakt \ref{prp_heron}) i tego, że pole trójkąta jest nieujemne.
+\end{proof}
+
+\begin{corollary}
+	Niech $a \ge b \ge c$ będą bokami trójkąta.
+	Wtedy
+	% \begin{equation}
+	% 	1 < \frac{a + c}{b} < 3 
+	% \end{equation}
+	% oraz
+	\begin{equation}
+		1 \le \min \left(\frac ab, \frac bc\right) \le \phi = \frac {1 + \sqrt 5}{2}.
+		% American Mathematical Monthly, pp. 49-50, 1954. 
+	\end{equation}
+\end{corollary}
+
+Nierówność trójkąta nie jest wnioskiem z aksjomatów I1-I3, B1-B4, C1-C3, ponieważ nie zachodzi w następującym modelu (ukradniętym Hartshorne'owi \cite[s. 90]{hartshorne2000}):
+
+\begin{example}
+	Rozpatrujemy zbiór $\mathbb R^2$ jako płaszczyznę ze standardowymi punktami oraz prostymi, ale niestandardową metryką
+	\begin{equation}
+		d((x_1, y_1), (x_2, y_2)) = \begin{cases}
+			\sqrt{(x_1-x_2)^2 + (y_1-y_2)^2} & \text{jeśli } x_1 = x_2 \vee y_1 = y_2, \\
+			2 \sqrt{(x_1-x_2)^2 + (y_1-y_2)^2} & \text{w przeciwnym wypadku}
+		\end{cases}.
+	\end{equation}
+	Wtedy nierówność trójkąta nie zachodzi.
+\end{example}
+
+Przytoczone niżej dwa zadania: Fagnano i Fermata będą prawie zawsze omawiane razem.
+
+\input{chapters/02-trojkaty/nierownosc-trojkata-fagnano}
+\input{chapters/02-trojkaty/nierownosc-trojkata-fermat}
+
+%
