@@ -1,0 +1,77 @@
+%
+
+\section{Objętość. Trzeci problem Hilberta}
+
+% TODO: https://en.wikipedia.org/wiki/Wallace-Bolyai-Gerwien_theorem to nie działa w 3d a jest ok w 2d
+\todofoot{https://www.deltami.edu.pl/2011/11/osobliwosc-trojkatow/
+}
+\todofoot{https://www.deltami.edu.pl/2015/08/nozyczki-matematyczne/}
+\todofoot{https://www.deltami.edu.pl/2017/04/dedukcja-lokalna-na-przykladzie/}
+\todofoot{https://www.deltami.edu.pl/2020/06/rownoleglobok/ zad. 8}
+\todofoot{https://www.deltami.edu.pl/2025/03/wycinanki-i-ukladanki/}
+
+Trójwymiarowy odpowiednik definicji TODO jest oczywisty:
+
+\begin{definition}
+    Dwa wielościany $V, V'$ nazywamy równoważnymi przez podział, jeśli można je podzielić na tyle samo przystających do siebie wielościanów o rozłącznych wnętrzach:
+    \begin{align}
+        V & = \bigcup_{k=1}^n V_k \\
+        V' & = \bigcup_{k=1}^n V'_k,
+    \end{align}
+   że wielościan $V_k$ przystaje do $V_k'$ (istnieje pewna izometria $f_k$ taka, że $f_k[V_k] = V'_k$).
+\end{definition}
+
+Władysław Kretkowski przygotuje na konkurs matematyczny w 1882 roku zadanie, rozwiązanie którego wyceni na 500 złotych franków.
+Nagrodę przyzna się Ludwikowi Birkenmajerowi; niestety ani problem, ani jego rozwiązanie nie zostaną opublikowane w żadnym rozsądnym zagranicznym czasopiśmie.
+Hilbert przedstawi na początku XX wieku listę 23 problemów, pokazujących stan ówczesnej matematyki.
+Pośród nich pojawi się:
+
+\begin{problem}[trzeci problem Hilberta]
+    \label{trzeci_problem_hilberta}
+    Czy mając dane dwa wielościany o równej objętości, można zawsze rozłożyć jeden z nich na skończoną liczbę wielościennych części, a następnie złożyć je w drugi?
+\end{problem}
+
+Już Euklides będzie znać wzór na objętość ostrosłupa, jedna trzecia iloczynu pola podstawy oraz wysokości.
+Ale każdy dowód tego wzoru wykorzysta elementy rachunku różniczkowo-całkowego takie jak zasada Cavalieriego albo przejście graniczne (metoda wyczerpywania).
+Wzory na pola wielokątów można wyprowadzić elementarnymi metodami, dlatego zastanawią się, co jest nie tak z~trzema wymiarami.
+
+Negatywnej odpowiedzi na pytanie \ref{trzeci_problem_hilberta} udzieli bardzo szybko Dehn, prostszy dowód pokaże Hadwiger w 1954 roku.
+% Hadwiger, Glur pokazali, że kiedy boki kawałków mogą musieć być równoległe % Hadwiger, H.; Glur, P.: Zerlegungsgleichheit ebener Polygone. Elem. Math. 6 (1951), 97–106.
+
+\begin{theorem}[Hadwigera] % Delta 1984 11
+    Niech $\alpha_1$, $\ldots$, $\alpha_p$ będą kątami dwuściennymi wielościanu $W$ leżącymi wzdłuż krawędzi długości $k_1$, $\ldots$, $k_p$, a $\beta_1$, $\ldots$, $\beta_q$ kątami wielościanu $V$ (wzdłuż krawędzi długości $l_1$, $\ldots$, $l_q$).
+    Definiujemy, z lekkim nadużyciem notacji,
+    \begin{equation}
+        W := \sum_{i \le p} k_i \alpha_i
+    \end{equation}
+    i analogicznie liczbę $V$.
+    Jeśli istnieje taka funkcja $\mathbb Z$-addytywna na zbiorze $M \subseteq \mathbb R$ zawierającym $\pi$, $\alpha_1$, $\ldots$, $\alpha_p$, $\beta_1$, $\ldots$, $\beta_q$, że $f(W) \neq f(V)$, to $W$ i $V$ nie są równoważne przez podział.
+\end{theorem}
+
+Poniższy wniosek wyciągnie nieznany autor w $\Delta_{84}^{11}$.
+
+\begin{corollary}
+    Czworościan o kątach dwuściennych
+    \begin{equation}
+        \frac \pi 2, \frac \pi 2, \frac \pi 2,
+        \arccos \frac{1}{\sqrt 3}, \arccos \frac{1}{\sqrt 3}, \arccos \frac{1}{\sqrt 3}
+    \end{equation}
+    nie jest równoważny przez podział z żadnym sześcianem.
+    Dla dowodu można wziąć $M = \{\pi/2, \pi, \alpha\}$ i określić $f(\pi/2) = f(\pi) = 0$, $f(\alpha) = 1$.
+    Wtedy funkcja $f$ przyjmuje na czworościanie wartość $3 \ \sqrt 2$, zaś na sześcianie $0$.
+\end{corollary}
+
+\begin{proposition}
+    Następujące warunki są równoważne: dwa wielościany są równoważne przez podział; dwa wielościany mają równe objętości oraz równe niezmienniki Dehna.
+\end{proposition}
+
+Sydler pokaże to w 1965
+Børge Jessen przeniesie ten wynik do czterech wymiarów.
+W 1990 roku Dupont i Sah opracują prostszy dowód wyniku Sydlera, reinterpretując go jako twierdzenie o homologiach pewnych klasycznych grup.
+% TODO: Dupont, Johan; Sah, Chih-Han (1990). "Homology of Euclidean groups of motions made discrete and Euclidean scissors congruences". Acta Math. 164 (1–2): 1–27. doi:10.1007/BF02392750.
+% TODO: Sydler, J.-P. (1965). "Conditions nécessaires et suffisantes pour l'équivalence des polyèdres de l'espace euclidien à trois dimensions". Comment. Math. Helv. 40: 43–80. doi:10.1007/bf02564364. S2CID 123317371.
+% TODO: Jessen, Børge (1972). "Zur Algebra der Polytope". Nachrichten der Akademie der Wissenschaften zu Göttingen, Mathematisch-Physikalische Klasse, Fachgruppe II: Nachrichten aus der Physik, Astronomie, Geophysik, Technik: 47–53. MR 0353150. Zbl 0262.52004.
+
+% http://sciencecow.mit.edu/me/hilberts_third_problem.pdf
+
+%
