@@ -1,0 +1,66 @@
+\subsection{Rozwiązywanie trójkątów}
+% https://en.wikipedia.org/wiki/Solution_of_triangles
+
+Podamy teraz kilka nowych zależności trygonometrycznych, które pomagają w rozwiązywaniu trójkątów.
+Znamy już twierdzenia sinusów i cosinusów; w ogólności to drugie jest bezpieczniejsze od pierwszego (ponieważ z faktu, że $\sin \alpha = \frac 1 2$ nie wynika, czy kąt $\alpha$ jest ostry, czy rozwarty, cosinus zaś jest jednoznaczny).
+
+W każdym z poniższych stwierdzeń mamy trójkąt o kątach $\alpha, \beta, \gamma$, bokach $a, b, c$, połowie obsowdu $p = \frac 1 2 (a + b + c)$, promieniu okręgu opisanego $R$ i wpisanego $r$.
+
+\begin{proposition}
+    Zachodzi
+    \begin{equation}
+    S = 2 R^2 \sin \alpha \sin \beta \sin \gamma.
+    \end{equation}
+\end{proposition}
+
+\begin{proposition}
+    Zachodzi
+    \begin{equation}
+        p = R (\sin \alpha + \sin \beta + \sin \theta).
+    \end{equation}
+\end{proposition}
+
+\begin{proposition}
+    Zachodzi
+    \begin{equation}
+        r = 4R \sin \frac \alpha 2 \sin \frac \beta 2 \sin \frac \gamma 2.
+    \end{equation}
+\end{proposition}
+
+\begin{proposition}[wzór Newtona]
+\index{wzór!Newtona}%
+    Zachodzi
+    \begin{equation}
+        \frac{a + b}{c} = \frac{\cos \frac 1 2 (\alpha - \beta)}{\cos \frac 1 2 (\alpha + \beta)}.
+    \end{equation}
+\end{proposition}
+
+\begin{proposition}[wzór Mollweidego]
+\index{wzór!Mollweidego}%
+\label{wzor_mollweidego}%
+    Zachodzi
+    \begin{equation}
+        \frac{a - b}{c} = \frac{\sin \frac 1 2 (\alpha - \beta)}{\sin \frac 1 2 (\alpha + \beta)}.
+    \end{equation}
+\end{proposition}
+
+(Nie ma zgodności co do powyższych nazw).
+Nieco bardziej geometryczną wersję wzorów podał Izaak Newton w 1707 roku, potem Friedrich von Oppel w 1746.
+\index[persons]{Newton, Izaak}%
+\index[persons]{Oppel@von Oppel, Friedrich}%
+Wyrażenia, których używamy po dziś dzień zawdzięczamy Thomasowi Simpsonowi z 1748 roku, oraz Karlowi Mollweidemu, który opublikował to samo w 1808 roku bez cytowania poprzedników.
+\index[persons]{Simpson, Thomas}%
+\index[persons]{Mollweide, Karl}%
+
+\begin{proposition}[wzór Regiomontanusa]
+\index{wzór!Regiomontanusa}%
+    Zachodzi
+    \begin{equation}
+        \frac{a + b}{a- b} = \frac{\tan \frac 1 2 (\alpha + \beta)}{\tan \frac 1 2 (\alpha - \beta)}.
+    \end{equation}
+\end{proposition}
+% TODO: https://en.wikipedia.org/wiki/Law_of_tangents
+
+Regiomontanus był znany gorzej jako Johannes Müller von Königsberg.
+\index[persons]{Königsberg@von Königsberg, Johannes|see{Regiomontanus}}%
+\index[persons]{Regiomontanus}%
