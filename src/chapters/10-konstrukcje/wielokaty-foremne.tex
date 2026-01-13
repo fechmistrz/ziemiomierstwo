@@ -1,0 +1,106 @@
+\section{Wielokąty foremne}
+\index{wielokąt!foremny}
+
+\begin{problem}
+    Skonstrować trójkąt równoboczny wpisany w okrąg, którego środek nie jest znany. \hfill \emph{(7 kroków)}
+\end{problem}
+
+\begin{problem}
+    Skonstrować kwadrat. \hfill \emph{(9 kroków)}
+\end{problem}
+
+Konstrukcja trójkąta równobocznego oraz kwadratu będzie znana dobrze w~starożytności i~nie wiadomo, kto pierwszy na nią wpadnie.
+Pojawią się u Euklidesa (I.1), (I.46).
+
+\begin{problem}
+    Skonstrować pięciokąt foremny.
+\end{problem}
+
+Pięciokąt foremny jest pierwszym wielokątem foremnym, którego konstrukcja nie jest oczywista.
+Różne pomysły podadzą Euklides (IV.11), Ptolemeusz w~Almageście (łatwiej będzie jednak przeczytać Guzickiego \cite[s. 286-287]{guzicki_2021}).
+\index[persons]{Ptolemeusz}%
+\index{Almagest}%
+Nie pominie jej Hartshorne \cite[s. 45-49]{hartshorne2000} w swoim ,,przedłużeniu'' Elementów z komentarzem, że dowód Euklidesa poprawności konstrukcji tworzy standard pięknego dowodu matematycznego.
+Jeszcze inne eleganckie rozwiązanie (opisane w~$\Delta_{24}^{10}$) znajdzie Yosifusa Hirano, japoński miłośnik matematyki z XIX wieku, a opisze jego przyjaciel Kawakita Chorin w~manuskrypcie ,,\emph{Sanpo Jyojutu Kaigi}'' (rozwiązania Sanpo Jyojutu).
+\index[persons]{Hirano, Yosifusa}%
+Konstrukcja Hirano to kolejny powód, by sięgnąć po książkę Fukagawy, Pedoe \cite{fukagawa_1989}.
+
+Jeśli mamy zadany jeden z jego boków, konstrukcja wymaga 11 kroków. % Hartshorne s. 51
+
+\begin{problem}
+    Skonstruować wielokąt foremny o $n$ kątach.
+\end{problem}
+
+Poza wyżej wymienionymi, Euklides potrafi skonstruować sześciokąt foremny (IV.15) albo, po wykreśleniu trójkąta i pięciokąta opisanych wewnątrz tego samego okręgu, piętnastokąt (IV.16).
+\index[persons]{Euklides}%
+Mając wielokąt o $n$ bokach, bisekcja kąta środkowego pozwala podwoić liczbę boków do $2n$.
+Możemy więc uznać, że Euklides wykreśli wielokąty, które mają
+\begin{equation}
+    3, 4, 5, 6, 8, 10, 12, 15, 16, 20, \ldots
+\end{equation}
+boków.
+Lista zostanie rozszerzona dopiero w 1796 roku przez Gaussa: pokaże, że siedemnastokąt foremny jest konstruowalny.
+\index{Gauss, Carl Friedrich}%
+\index{wielokąt!siedemnastokąt}%
+Będzie tak zadowolony z tego wyniku, że zażyczy sobie wyryć właśnie tę figurę na swoim grobie.
+Faktycznej konstrukcji dokona Johannes Erchinger w 1800 roku.
+\index[persons]{Erchinger, Johannes}%
+Hartstone \cite[s. 250-259]{hartshorne2000} poświęca tej konstrukcji całą sekcję; Guzicki nie szczędzi rachunków \cite[s. 290-299]{guzicki_2021}.
+Siedemnastokąt pojawi się też u Evesa \cite[s. 185-191]{eves1_1972} i Coxetera \cite[s. 42, 43]{coxeter_1967}.
+
+W ogólności, mamy:
+\begin{theorem}[Gaussa-Wantzla]
+    \label{gauss_wantzel}
+    Wielokąt foremny o $n$ bokach jest konstruowalny przy pomocy cyrkla i~linijki bez podziałki wtedy i tylko wtedy, kiedy $n$ jest postaci
+    \begin{equation}
+        n = 2^r p_1 \cdot \ldots \cdot p_s,
+    \end{equation}
+    $r, s \ge 0$, gdzie $p_i$ są różnymi liczbami pierwszymi postaci $2^{2^k} + 1$, na przykład: $3$, $5$, $17$, $257$, $65537$.
+    \index{liczba pierwsza!Fermata}%
+\end{theorem}
+
+Gauss znajdzie warunek wystarczający i napisze bez dowodu w~\emph{Disquisitiones Arithmeticae} (po polsku byłyby to Dociekaniach arytmetyczne, 1801), że jest też konieczny.
+Brakujący dowód doda Pierre Laurent Wantzel w 1837 roku.
+\index[persons]{Wantzel, Pierre Laurent}%
+Spisany współczesnym językiem znajdzie się u Hartstone'a \cite[s. 258]{hartshorne2000}; wzmiankować go będzie Guzicki \cite[s. 285]{guzicki_2021}.
+
+
+
+Twierdzenie Gaussa zachęca do znalezienia przepisu na wielokąty foremne o większej liczbie boków.
+W 1822 roku Magnus Georg von Paucker\footnote{Właściwie Магнус-Георг Андреевич Паукер, urodzon w Simunie, wtedy części Imperium Rosyjskiego, później Łotwy.} \cite{paucker_1822}, a po dziesięciu latach także Friederich Julius Richelot \cite{richelot_1832} znajdą konstrukcję $257$-kąta foremnego. 
+\index[persons]{Paucker@von Paucker, Magnus Georg}%
+\index[persons]{Richelot, Friederich Julius}%
+Ich cierpliwość przyćmiewa konstrukcja $65\,537$-kąta Johanna Hermesa z 1896 roku, na którą poświęci dziesięć lat swojego życia (i dwieście stron rękopisu).
+\index[persons]{Hermes, Johann(es?)}%
+
+W 2025 roku nie będzie jeszcze wiadomo, ile jest liczb pierwszych Fermata, więc ludzkość będzie w stanie wykreślić wielokąty o nieparzyście wielu bokach dokładnie wtedy, gdy liczba tych boków będzie dzielnikiem $2^{32} - 1 = 4\,294\,967\,295$.
+Dla oszczędności papieru i tuszu darujemy sobie wypisywanie tych dzielników.
+
+\todofoot{Coxeter, s. 26}
+
+\subsection{Konstrukcje przybliżone}
+Dwie konstrukcje przybliżone pięciokąta foremnego podadzą Leonardo da Vinci (gdzie kąty środkowe mają miarę $71.6350$ oraz $72.5475$ zamiast dokładnie $72$ stopni) oraz Dürer; obydwie można znaleźć u Guzickiego \cite[s. 287-290]{guzicki_2021}.
+
+\subsection{Konstrukcje z niestandardowymi przyborami}
+Jeżeli mamy do dyspozycji trysektor kąta, potrafimy zbudować więcej wielokątów foremnych niż sugeruje to twierdzenie \ref{gauss_wantzel}:
+\index{trysekcja!kąta}
+\index{trysektor kąta}
+
+\begin{proposition}
+    Wielokąt foremny o $n$ bokach jest konstruowalny przy pomocy cyrkla, linijki bez podziałki oraz trysektora kąta wtedy i tylko wtedy, kiedy $n$ jest postaci
+    \begin{equation}
+        n = 2^r 3^q p_1 \cdot \ldots \cdot p_s,
+    \end{equation}
+    $q, r, s \ge 0$, gdzie $p_i$ są różnymi liczbami pierwszymi Pierponta, postaci $2^t3^u + 1$.
+    \index{liczba pierwsza!Pierponta}
+\end{proposition}
+
+To są dokładnie wielokąty, które można skonstruować używając stożkowych, albo równoważnie origami.
+Lista nowych nieparzystych liczb $n$, który dostarcza ten fakt, to \textbf{7}, $9$, \textbf{13}, \textbf{19}, $21$, $27$, $35$, \textbf{37}, $39$, $45$, $57$, $63$, $65$, \textbf{73}, $81$, $91$, $95$, \textbf{97}, $105$, \textbf{109}, $111$, $117$, $119$, $133$, $135$, $153$, \textbf{163}, $171$, $185$, $189$, \textbf{193}, $195$, $219$, $221$, $243$, $247$, \textbf{257}, $259$, $273$, $285$, $291\ldots$ (pogrubiono liczby pierwsze).
+% gdzie 25???
+
+Szczegóły zapewnia artykuł Gleasona \cite{gleason_1988}.
+\index[persons]{Gleason, Andrew Mattei}%
+Konstrukcję siedmiokąta przy użyciu znaczonej linijki opisuje Hartshorne \todofoot{Hartshorne rozdział 30/31.}.
+% TODO: https://www.deltami.edu.pl/2015/10/siedmiokata-foremnego-nie-mozna-skonstruowac-cyrklem-i-linijka/
+\index{linijka!znaczona}

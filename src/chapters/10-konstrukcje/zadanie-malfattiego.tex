@@ -1,0 +1,83 @@
+%
+
+\subsection{Zadanie Malfattiego}
+\index{zadanie!Malfattiego}
+
+W 1803 roku Malfatti \cite{malfatti_1803} zainspirowany pewnym praktycznym zagadnieniem (wycinanie walców z graniastosłupa) postawi następujący problem:
+\index[persons]{Malfatti, Gian Francesco}%
+
+\begin{problem}[zadanie Malfattiego]
+	\label{malfatti_problem}
+	\index{zadanie!Malfattiego}%
+	Dany jest trójkąt $\triangle ABC$.
+	Skonstruować takie trzy parami styczne okręgi $\Gamma_A, \Gamma_B, \Gamma_C$, że okrąg $\Gamma_A$ (odpowiednio: $\Gamma_B$, $\Gamma_C$) jest wpisany w~kąt $\angle A$ (odpowiednio: $\angle B$, $\angle C$).
+\end{problem}
+
+% https://www.desmos.com/calculator/mqzextwkad?lang=pl
+\begin{figure}[H] \centering
+\begin{comment}
+\begin{tikzpicture}[scale=.5]
+\tkzDefPoints{0/0/A,10/2/B,6/7/C}
+\tkzDefPoints{4.43012726/2.59439459/Oa}
+\tkzDefCircle[R](Oa,1.67519375895) \tkzGetPoint{Oaa}
+\tkzDrawCircle[line width=0.2mm](Oa,Oaa)
+
+\tkzDefPoints{7.48168986/2.91734309/Ob}
+\tkzDefCircle[R](Ob,1.39341015784) \tkzGetPoint{Obb}
+\tkzDrawCircle[line width=0.2mm](Ob,Obb)
+
+\tkzDefPoints{5.96721113/5.06490116/Oc}
+\tkzDefCircle[R](Oc,1.23445046858) \tkzGetPoint{Occ}
+\tkzDrawCircle[line width=0.2mm](Oc,Occ)
+
+\tkzLabelPoint(A){$A$}
+\tkzLabelPoint[anchor=center](Oa){$\Gamma_A$}
+\tkzLabelPoint(B){$B$}
+\tkzLabelPoint[anchor=center](Ob){$\Gamma_B$}
+\tkzLabelPoint[above](C){$C$}
+\tkzLabelPoint[anchor=center](Oc){$\Gamma_C$}
+\tkzDrawPolygon[line width=0.3mm](A,B,C)
+\end{tikzpicture}
+\end{comment}
+\caption{Trzy okręgi Malfattiego}
+\end{figure}
+
+Problem będzie rozważany na długo przed Malfattim, zajmie się nim Ajima Naonobu\footnote{Matematyk japoński, przypisze się mu wprowadzenie rachunku różniczkowo-całkowego do matematyki japońskiej.} w~XVIII wieku, a~jeszcze wcześniej Gilio de Cecco da Montepulciano w~rękopisie z~1384 roku.
+\index[persons]{Ajima, Naonobu}%
+\index[persons]{de Cecco da Montepulciano, Gilio}%
+
+Malfatti wyprowadzi co następuje.
+Niech $p$ będzie połową obwodu trójkąta, $r$ będzie promieniem okręgu wpisanego w~ten trójkąt zaś $d_A$, $d_B$, $d_C$ odległościami wierzchołków $A, B, C$ od środka tego okręgu.
+Wtedy promienie okręgów Malfattiego wyrażają się wzorami
+\begin{align}
+	r_A & = \frac r 2 \cdot {\frac {s-r+d_A-d_B-d_C}{p-a}}, \\
+	r_B & = \frac r 2 \cdot {\frac {s-r+d_B-d_A-d_C}{p-b}}, \\
+	r_C & = \frac r 2 \cdot {\frac {s-r+d_C-d_A-d_B}{p-c}}.
+\end{align}
+
+Prostą konstrukcję okręgów opartą na dwustycznych zawdzięczymy Steinerowi \cite{steiner_1826} w~1826 roku;
+\index[persons]{Steiner, Jakob}%
+inne rozwiązania podadzą Lehmus \cite{lehmus_1819}, Catalan \cite{catalan_1846}, Adams \cite{adams_1846}, Derousseau \cite{derousseau_1895}, Pampuch \cite{pampuch_1904}.
+% TODO: po poprawie bibliografii, podać tu index persons
+
+(O~problemie napiszą też Bogdańska, Neugebauer \cite[s. 102]{neugebauer_2018}).
+
+Malfatti postawi tak naprawdę inny problem: znalezienia trzech rozłącznych kół zawartych w~trójkącie, których suma pól jest maksymalna i~błędnie założy, że opisane wyżej okręgi stanowią rozwiązanie.
+Pomyłkę zauważą najpierw bez dowodu Lob, Richmond \cite{lob_richmond_1930} w~1930 roku: z trójkąta równobocznego można wyciąć zachłannie kolejno trzy koła, ich łączna powierzchnia jest większa od powierzchni kół znalezionych przez Malfattiego o 1\%.
+\index[persons]{Richmond, ?}%
+\index[persons]{Lob, ?}%
+Howard Eves powtórzy to dla stromych trójkątów równoramiennych o bardzo wąskiej podstawie i dużej wysokości około 1946 roku.
+\index[persons]{Eves, Howard}%
+% https://en.wikipedia.org/w/index.php?title=Howard_Eves&diff=831382284&oldid=750910758
+Goldberg \cite{goldberg_1967} wykaże, że domniemanie Malfattiego nie daje nigdy kół o maksymalnej łącznej powierzchni.
+Ostatnie słowo należy zaś do Zalgallera, Losa \cite{zalgaller_los_1992}, którzy znajdą trzy koła rozwiązujące problem Malfattiego w dowolnym trójkącie.
+% TODO: Goldberg M., On the original Malfatti problem, Math. Mag. 40 (1967), 241-247.
+\index[persons]{Zalgaller, VA?}%
+\index[persons]{Los, GA?}%
+% TODO: Zalgaller V.A., Los’ G.A., Solution of the Malfatti problem, Ukrain. Geom. Sb. 35 (1992), 14-33 (ang. J. Math. Sci. 72 (1994), 3163-3177).
+% TODO: po poprawie bibliografii, podać tu index persons
+% TODO: Lob, H.; Richmond, H. W. (1930), "On the Solutions of Malfatti's Problem for a Triangle", Proceedings of the London Mathematical Society, 2nd ser., 30 (1): 287-304, doi:10.1112/plms/s2-30.1.287.
+
+Kryształowa kula nie potrafi przewidzieć, kto oceni, czy algorytm zachłanny zawsze znajduje $n \ge 4$ rozłącznych kół w trójkącie o maksymalnej łącznej powierzchni.
+
+(O więcej niż jednym okręgu wpisanym w trójkąt pisaliśmy w podpodsekcji \ref{sssection_6_7_9_circles}).

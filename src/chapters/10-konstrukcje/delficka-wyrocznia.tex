@@ -1,0 +1,115 @@
+%
+
+\section{Wyrocznia w Delfach}
+\index{wyrocznia w Delfach}
+
+Przytoczymy teraz trzy problemy geometryczne, zaprzątające głowy przez blisko dwa tysiąclecia.
+Wszystkie trzy znajdziemy też u Evesa \cite[s. 156]{eves1_1972}.
+
+Według legendy wyrocznia na wyspie Delos poradzi, by dla powstrzymania panującej tam zarazy trzeba dwukrotnie powiększyć ołtarz ofiarny, nie zmieniając jego sześciennego kształtu.
+\index{podwojenie sześcianu}
+
+\begin{problem}[problem delijski]
+    \label{problem_delijski}%
+    Zbudować sześcian o objętości dwa razy większej niż sześcian dany.
+    \index{problem!delijski}
+\end{problem}
+
+https://www.deltami.edu.pl/2017/03/analiza-starozytnych-i-cyprian-norwid/
+
+O problemie następne pokolenia dowiedzą się między innymi z prac Teona ze Smyrny.
+\index[persons]{Teon ze Smyrny}%
+% https://en.wikipedia.org/wiki/Theon_of_Smyrna  It is also one of the sources of our knowledge of the origins of the classical problem of Doubling the cube.[5]
+Choć odkryte zostanie wiele konstrukcji przybliżonych albo takich, które wykorzystują poza cyrklem i~linijką dodatkowe narzędzia (Hipokrates razem z Menaichmosem i hiperbola z parabolą, których nie da się wykreślić; Diokles i cysoida; Nikomedes i konchoida, Hippiasz z Elidy i kwadratrysa), to mimo upływu setek lat nie zostanie zrobiony żaden postęp.
+\index[persons]{Hipokrates z Chios}%
+\index[persons]{Menaichmos}%
+\index{hiperbola}%
+\index{parabola}%
+\index[persons]{Diokles}%
+\index{cysoida}%
+\index[persons]{Nikomedes}%
+\index{konchoida}%
+\index[persons]{Hippiasz z Elidy}%
+\index[persons]{kwadratrysa}%
+
+\begin{problem}[trysekcja kąta]
+    \label{trysekcja_kata}%
+    Podzielić dowolny kąt na trzy równe części.
+    \index{trysekcja!kąta}
+\end{problem}
+% TODO: % TODO: Coxeter, s. 28
+% TODO: https://en.wikipedia.org/wiki/Square_trisection
+% https://en.wikipedia.org/wiki/Angle_trisection
+
+https://www.deltami.edu.pl/2020/11/trysekcja-kata-w-geometrii-kartezjusza/
+
+https://www.deltami.edu.pl/2015/09/zabawy-w-kacie/
+
+Tu też pojawią się próby użycia różnorakich przyrządów.
+Archmiedes zaproponuje dodanie podziałki do linijki, co okaże się wystarczające do wykreślenia kątów.
+\index[persons]{Archimedes}
+W średniowieczu zostanie zauważone, że zagadnienie trysekcji kąta prowadzi do rozwiązania równania algebraicznego stopnia trzeciego postaci
+\begin{equation}
+    x^3 - 3 x - 2 \cos 3\alpha = 0.
+\end{equation}
+W szczególności, jeśli $\alpha = \pi / 9$, to pierwiastki nie są konstruowalne.
+Patrz też do Coxetera \cite[s. 44]{coxeter_1967}.
+
+\begin{proposition}
+    Rozwiązanie problemu delijskiego oraz trysekcja kąta są niewykonalne za pomocą cyrkla i linijki.
+\end{proposition}
+
+Pierwszy dowód tego faktu poda Pierre Wantzel \cite{wantzel_1837} w 1837 roku.
+Być może to będzie powodem, dla którego dopiero w 1899 roku Frank Morley \cite{morley_1907} odkryje:
+\index[persons]{Morley, Frank}
+
+\begin{theorem}[Morleya]
+    Punkty przeciecięcia tych spośród trójsiecznych kątów trójkąta, które sąsiadują z~którymś z~boków trójkąta, są wierzchołkami trójkąta równobocznego.
+    \index{trójkąt!Morleya}%
+    \index{twierdzenie!Morleya}%
+\end{theorem}
+
+W tym sformułowaniu nie ma mowy, że chodzi o kąty wewnętrzne -- ponieważ twierdzenie jest prawdziwe także dla kątów zewnętrznych, z prawie takim samym dowodem; napisze o tym Kordos w $\Delta_{13}^{11}$.
+Trójkąt równoboczny, jaki powstaje, ma bok długości
+\begin{equation}
+    8 R \sin \frac \alpha 3 \sin \frac \beta 3 \sin \frac \gamma 3,
+\end{equation}
+% Coxeter s. 23-25
+% https://en.wikipedia.org/wiki/Hofstadter_points
+a samo twierdzenie opiszą Coxeter \cite[s. 39-41]{coxeter_1967}.
+
+Jak pamiętamy, pola powierzchnie wszystkich figur płaskich (trójkąta, równoległoboku, itd.) zostaną wyznaczone w starożytności przez podział figury na mniejsze części i ułożenie z nich prostokąta.
+Próbowano tego samego wobec koła, bez powodzenia.
+
+\begin{problem}[kwadratura koła]
+\index{kwadratura koła}%
+    Wykreślić kwadrat o polu równym polu danego koła.
+\end{problem}
+
+Opowiadaliśmy już o nie do końca trafionych pomysłach Mikołaja z Kuzy na stronie \pageref{nierownosc_mikolaja_z_kuzy}.
+Adam Adamandy Kochański herbu Lubicz, dworzanin króla Jana Sobieskiego i członek zakonu jezuitów znajdzie przybliżenie
+\begin{equation}
+    \pi \approx \sqrt{\frac{40}{3} - 2 \sqrt{3}} = 3.14153\,33387...
+\end{equation}
+w pracy \emph{Observationes Cyclometricae ad facilitandam Praxin accommodatae} (Obserwacje cyklometryczne przystosowane dla ułatwienia praktycznego użycia) z 1685 roku.
+Ludzie nie przestaną szukać innych niezbyt czasochłonnych przepisów.
+Jacob de Gelder w 1849 znajdzie dokładniejsze przybliżenie
+\begin{equation}
+    \pi \approx 3 + \frac{4^2}{7^2 + 8^2} = \frac{355}{113} = 3.14159\,29203...
+\end{equation}
+
+Wreszcie Ramanujan w 1914 poda inny przepis oparty o przybliżenie zgadzające się na ośmiu miejscach po przecinku:
+\begin{equation}
+    \pi \approx \sqrt[4]{9^2 + \frac{19^2}{22}} = 3.14159\,26525...
+\end{equation}
+
+https://www.deltami.edu.pl/media/issues/2018/03/delta-2018-03.pdf
+
+Ferdinand Lindemann odkryje w 1882 roku, że liczba $\pi$ pojawiająca się we wzorze na pole koła jest przestępna, zatem rozszerzenie $\mathbb Q(\sqrt{\pi}) / \mathbb Q$ jest za dużego stopnia i kwadratura koła, podobnie jak poprzednie dwa problemy, również nie jest wykonalna standardowymi narzędziami. (Jeśli liczba $x$ jest konstruowalna, to stopień rozszerzenia $\mathbb Q(x) / \mathbb Q$ jest potęgą $2$).
+
+Kwadratura koła jest równoważna rektyfikacji okręgu, czyli zadaniu, by wykreślić odcinek tej samej długości, co obwód danego okręgu.
+To również nie jest wykonalne.
+
+https://www.deltami.edu.pl/media/issues/2018/03/delta-2018-03.pdf
+
+%
