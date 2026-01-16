@@ -1,10 +1,6 @@
 %
 
-\todofoot{https://www.deltami.edu.pl/2013/05/kacik-przestrzenny-17-punkt-fermata-torricellego/}
-\todofoot{https://www.deltami.edu.pl/2018/01/zagadnienie-fermata-w-jednej-linijce/
-}
-\todofoot{https://www.deltami.edu.pl/2019/09/w-poszukiwaniu-trojkata-rownobocznego/ 14}
-\todofoot{Zadanie Fermata -- Neugebauer, s. 117.}
+\subsection{Zadanie Fermata}
 
 \begin{problem}[zadanie Fermata]
 	\label{punkt_fermata}
@@ -18,18 +14,31 @@ Powyższe zadanie rozwiąże Evangelista Torricelli (dlatego też punkt $P$ nazy
 Rozwiązanie opublikuje student Torricelliego, Vincenzo Viviani, w 1659 roku.
 \index[persons]{Viviani, Vincenzo}
 % TODO: Johnson, R. A. Modern Geometry: An Elementary Treatise on the Geometry of the Triangle and the Circle. Boston, MA: Houghton Mifflin, pp. 221-222, 1929.
-Coxeter \cite[s. 37]{coxeter_1967} przytoczy rozwiązanie Hofmanna\todofoot{J E Hoffman, Elementare Losung einer Mimimumsaufgabe 1929}
-Patrz też Pompe \cite[s. 19-22]{pompe_2022}, Neugebauer \cite[s. 117]{neugebauer_2018}.
+Coxeter \cite[s. 37]{coxeter_1967} przytoczy rozwiązanie Hofmanna \cite{hofmann_1929}.
+Patrz też Pompe \cite[s. 19-22]{pompe_2022} + $\Delta_{18}^1$, Neugebauer \cite[s. 117]{neugebauer_2018}.
 Audin \cite[s. 105]{audin_2003} podaje ten fakt w formie ćwiczenia.
 
 Założenie ostrokątności można osłabić, wystarczy, żeby każdy kąt wewnętrzny trójkąta miał miarę mniejszą niż $2\pi/3$.
 
-W trójkącie ostrokątnym suma odległości ortocentrum od trzech wierzchołków trójkąta jest dwa razy większa niż suma promieni kół opisanego i wpisanego. % Guzicki, strona 354
+Michał Kieza opisze w $\Delta_{13}^5$ przestrzenny odpowiednik punktu Fermata-Torricellego z adnotacją, że najkrótsza sieć łącząca cztery wierzchołki czworościanu często jest łamaną złożoną z pięciu odcinków:
+
+\begin{proposition}
+    Jeśli punkt $F$ wewnątrz czworościanu $ABCD$ minimalizuje sumę odległości od wierzchołków $|AF| + |BF| + |CF| + |DF|$, to 
+    \begin{itemize}
+    \item dwusieczne kątów płaskich $\angle AFB$ oraz $\angle CFD$ pokrywają się,
+    \item $\angle AFB = \angle CFD$,
+    \item $\cos \angle AFB + \cos \angle BFC + \cos \angle CFA = -1$.
+    \end{itemize}
+\end{proposition}
+
+% W trójkącie ostrokątnym suma odległości ortocentrum od trzech wierzchołków trójkąta jest dwa razy większa niż suma promieni kół opisanego i wpisanego. % Guzicki, strona 354 % TODO: czy to ma być tu?
 
 \begin{proposition}
     Dany jest trójkąt $ABC$, w którym żaden kąt nie ma miary większej niż $2\pi/3$.
     Wtedy wewnątrz istnieje dokładnie jeden punkt $P$ taki, że kąty $\angle APB$, $\angle BPC$, $\angle CPA$ są przystające (i miarę $2\pi/3$). 
 \end{proposition}
+
+Dowód tego stwierdzenia to ostatnie zadanie Bartłomieja Bzdęgi w $\Delta_{19}^9$.
 
 Punkt $P$ jest punktem Fermata i można go łatwo skontruować.
 Na zewnątrz boków trójkąta $ABC$ kreślimy trzy trójkąty równoboczne $ABD$, $BCE$, $CAF$, po czym prowadzimy proste $AE$, $BF$, $CD$.
