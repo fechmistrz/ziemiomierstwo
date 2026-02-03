@@ -1,27 +1,39 @@
-Punkt Lemoine'a.
-% UW: Twierdzenie Cevy (wraz z trygonometryczną wersją), przykłady punktów szczególnych trójkąta: punkt Nagela (Guzicki-4), punkt Gergonne'a (guzicki4), punkt Lemoine'a.
-\index{punkt!Lemoine'a}
-Symediany.
+%
 
-https://www.deltami.edu.pl/2016/05/izogonalne-sprzezenie-i-symediany/
+\index{punkt!Lemoine'a}
+
+Emile Lemoine odczyta w 1873 roku pracę \emph{,,Sur quelques propriétés d'un point remarquable du triangle''}, gdzie po raz pierwszy pojawią się bez dowodów fakty \ref{random_prp_symmedians_proportional_squares} i \ref{punkt_lemoine}.
+Termin symediana zaproponuje Maurice d'Ocagne w 1883 roku, jako zastępstwo \emph{antyrównoległej środkowej} używanego przez Lemoine'a. % NouvdUs Annales de Malhematiquet, 3rd series, II. 451 (1883).
+Punkt Lemoine'a pojawia się u Józefa Neuberga (praca \emph{Mémoire sur le tétraèdre} z 1886 roku). % https://www.persee.fr/doc/marb_0770-8459_1886_num_37_1_2317
+W~1847 roku Ernst Grebe skonstruuje kwadraty na zewnątrz trójkąta i odkryje punkt Lemoine'a przed Lemoinem, dlatego w literaturze padać będzie też nazwa punkt Grebego.
+
+Wszystko to pięknie opisze Altshiller-Court \cite{altshiller_2007}.
+
+% UW: Twierdzenie Cevy (wraz z trygonometryczną wersją),
+% przykłady punktów szczególnych trójkąta:
+% punkt Nagela (Guzicki-4),
+% punkt Gergonne'a (guzicki4),
+
+% https://www.deltami.edu.pl/2016/05/izogonalne-sprzezenie-i-symediany/
 
 \begin{definition}[symediana]
     Odbicie symetryczne środkowej trójkąta względem dwusiecznej wychodzącej z~tego samego wierzchołka nazywamy symedianą.
 \end{definition}
 
-https://www.deltami.edu.pl/2015/02/krotka-opowiesc-o-symedianie/
-
-Innymi słowy symediana jest to prosta izogonalna ze środkową (Zetel \cite[s. 111]{zetel_2020}).
+Symediana to prosta izogonalna ze środkową (Zetel \cite[s. 111]{zetel_2020}, Dutka w $\Delta_{15}^2$).
+% https://www.deltami.edu.pl/2015/02/krotka-opowiesc-o-symedianie/
 Symediana jest miejscem geometrycznym punktów, których odległości od dwóch boków trójkąta są proporcjonalne do tych boków.
+Ale dużo ważniejszą jej własnością jest:
 
 \begin{proposition}
+    \label{random_prp_symmedians_proportional_squares}
     Symediana poprowadzona z wierzchołka $C$ trójkąta $ABC$ dzieli wewnętrznie przeciwległy bok proporcjonalnie do kwadratów długości boków przyległych:
     \begin{equation}
         \frac{AF}{BF} = \frac{b^2}{a^2}.
     \end{equation}
 \end{proposition}
 
-(I odwrotnie, punkt leżący na boku $AB$ i spełniający powyższą proporcję wyznacza symedianę z~wierzchołka $C$).
+I odwrotnie, punkt leżący na boku $AB$ i spełniający powyższą proporcję wyznacza symedianę z~wierzchołka $C$.
 Zetel \cite[s. 111, 112]{zetel_2020} uważa to za szczególny przypadek twierdzenie Steinera o~prostych izogonalnych.
 (Chyba nie ma tego twierdzenia w tej książce).
 
@@ -32,17 +44,52 @@ Zetel \cite[s. 111, 112]{zetel_2020} uważa to za szczególny przypadek twierdze
     \end{equation}
 \end{proposition}
 
-Zetel \cite[s. 119]{zetel_2020} pisze, że można dostać tę długość z twierdzenia Stewarta, ale nie trzeba.
+Zetel \cite[s. 119]{zetel_2020} pisze, że można dostać tę długość z twierdzenia Stewarta. % ale nie trzeba.
 
 \begin{proposition}[punkt Lemoine'a]
     \label{punkt_lemoine}%
-    Symediany przecinają się w jednym punkcie $L$, zwanym punktem Lemoine'a.
+    W ustalonym trójkącie $ABC$, trzy symediany przecinają się w jednym punkcie $L$, zwanym punktem Lemoine'a.
 \end{proposition}
 
-Zetel \cite[s. 114]{zetel_2020} sugeruje udowodnić na podstawie twierdzenia odwrotnego do twierdzenia Cevy, że punkt Lemoine'a istnieje.
+Zetel \cite[s. 114]{zetel_2020} sugeruje udowodnić \ref{punkt_lemoine} na podstawie twierdzenia odwrotnego do twierdzenia Cevy.
+Ross Honsberger nazwie istnienie punktu Lemoine'a ,,jednym z klejnotów koronnych współczesnej geometrii''.
+
+
 
 \begin{proposition}
     Punkt Lemoine'a minimalizuje sumę kwadratów odległości od boków trójkąta.
 \end{proposition}
 
 % TODO: https://www.deltami.edu.pl/media/articles/2015/02/delta-2015-02-krotka-opowiesc-o-symedianie.pdf
+
+\begin{proposition}
+    Punkt Lemoine'a $L$ trójkąta $ABC$ jest środkiem ciężkości trójkąta, którego wierzchołki to rzuty punktu $L$ na boki $AB$, $BC$, $AC$.
+\end{proposition}
+
+\begin{proposition}[twierdzenie Schlömilcha]
+    Trzy proste łączące środki boków trójkąta ze środkami odpowiednich wysokości są współpękowe, przechodzą przez punkt Lemoine'a.
+\end{proposition}
+
+\index{twierdzenie!Schloemilcha}
+
+Napisze o tym duet Bogdańska, Neugebauer \cite[s. 195]{neugebauer_2018} (jako ćwiczenie, bez wzmianki o nazwie punktu), ale też Zetel \cite[s. 34]{zetel_2020}.
+% https://ems.press/content/serial-article-files/51635 VVV
+Twierdzenie napotka w 1862 roku Oskar Schlömilch, cokolwiek to znaczy.
+
+\begin{definition}[antyrównoległa]
+    Antyrównoległa do boku $AB$ w trójkącie $ABC$ to prosta, która tnie bok naprzeciw wierzchołka $A$ pod takim samym kątem jak ten przy wierzchołku $A$ oraz bok naprzeciw wierzchołka $B$ pod takim samym kątem jak ten przy wierzchołku $B$.
+\end{definition}
+
+\begin{proposition}
+    Trzy antyrównoległe do boków trójkąta przechodzące przez punkt Lemoine'a wyznaczają sześć nowych punktów na brzegu trójkąta.
+    Leżą one na pierwszym okręgu Lemoine'a. 
+\end{proposition}
+
+\begin{proposition}
+    Trzy równoległe do boków trójkąta przechodzące przez punkt Lemoine'a wyznaczają sześć nowych punktów na brzegu trójkąta.
+    Leżą one na drugim okręgu Lemoine'a. 
+\end{proposition}
+
+Istnieje jeszcze trzeci okrąg Lemoine'a, ale jego konstrukcja nie jest już taka prosta.
+
+%
