@@ -1,17 +1,40 @@
 %
 
-\subsubsection{Pryzmatoidy} % prism? graniastosłup?
-Pryzmatoid to bryła, której wierzchołki leżą na dwóch płaszczyznach równoległych.
+% ZAPOZNANO SIĘ Z https://en.wikipedia.org/wiki/Prismatoid
 
-\begin{example}[pyramids]
-    Ostrosłup, gdzie jedna płaszczyzna zawiera tylko wierzchołek.
+\subsubsection{Pryzmatoidy}
+Pryzmatoid to bryła, której wierzchołki leżą na dwóch równoległych płaszczyznach.
+
+\begin{example}[ostrosłup]
+    Każdy ostrosłup jest pryzmatoidem: na jednej płaszczyźnie leży jego podstawa, na drugiej wierzchołek.
 \end{example}
 
-\begin{example}[wedges]
-    (Klin?), gdzie jedna płaszczyzna zawiera tylko dwa wierzchołki.
+\begin{example}[klin]
+    Klin, wielościan, którego podstawa jest prostokątem, zaś ściany boczne to dwa trójkąty równoramienne i dwa trapezy, też jest pryzmatoidem.
 \end{example}
 
-\begin{example}[parallelepipeds]
+Nie wiadomo, czemu ten kształt ma w ogóle swoją nazwę.
+
+\begin{example}[graniastosłup]
+    Graniastosłup, gdzie płaszczyzny są przystającymi wielokątami, zaś ściany boczne to równoległoboki.
+\end{example}
+
+\begin{example}[antygraniastosłup]
+    % Antiprisms, whose polygons in each plane are congruent and joined by an alternating strip of triangles;[5]
+    % Star antiprisms;
+\end{example}
+
+\begin{example}[kopuła]
+    % Cupolae, in which the polygon in one plane contains twice as many points as the other and is joined to it by alternating triangles and rectangles;
+    % https://en.wikipedia.org/wiki/Cupola_(geometry)
+\end{example}
+
+\begin{example}[frustum]
+    Frusta obtained by truncation of a pyramid or a cone;
+    % https://en.wikipedia.org/wiki/Frustum
+\end{example}
+
+\begin{example}[równoległościan]
     Quadrilateral-faced hexahedral prismatoids:
         Parallelepipeds – six parallelogram faces
         Rhombohedrons – six rhombus faces
@@ -19,25 +42,6 @@ Pryzmatoid to bryła, której wierzchołki leżą na dwóch płaszczyznach równ
         Cuboids – six rectangular faces
         Quadrilateral frusta – an apex-truncated square pyramid
         Cube – six square faces
-\end{example}
-
-\begin{example}[prisms]
-    Graniastosłup, gdzie płaszczyzny są przystającymi wielokątami, zaś ściany boczne to równoległoboki.
-\end{example}
-
-\begin{example}[antiprisms]
-    % Antiprisms, whose polygons in each plane are congruent and joined by an alternating strip of triangles;[5]
-    % Star antiprisms;
-\end{example}
-
-\begin{example}[cupolae]
-    % Cupolae, in which the polygon in one plane contains twice as many points as the other and is joined to it by alternating triangles and rectangles;
-    % https://en.wikipedia.org/wiki/Cupola_(geometry)
-\end{example}
-
-\begin{example}[frusta]
-    Frusta obtained by truncation of a pyramid or a cone;
-    % https://en.wikipedia.org/wiki/Frustum
 \end{example}
 
 \begin{proposition}
@@ -49,7 +53,8 @@ Pryzmatoid to bryła, której wierzchołki leżą na dwóch płaszczyznach równ
 \end{proposition}
 
 \begin{proof}
-    Wzór wynika z całkowania metodą Simsona, która daje dokładny wynik dla wielomianów stopnia co najwyżej trzeciego; pole przekroju poprzecznego stanowi funkcję kwadratową wysokości.
+    Pole przekroju poprzecznego pryzmatoidu stanowi funkcję kwadratową wysokości.
+    Wzór wynika z całkowania metodą Simsona, która daje dokładny wynik dla wielomianów stopnia co najwyżej trzeciego.
 \end{proof}
 
 % TODO https://en.wikipedia.org/wiki/Prismatoid#Prismatoid_families
