@@ -2,32 +2,62 @@
 
 \subsection{Punkt i twierdzenie Miquela}
 
-\begin{proposition}[o punkcie Miquela]
-	\index{twierdzenie!Miquela}%
-	Na bokach $AB$, $BC$, $AC$ trójkąta $\triangle ABC$ wybrano kolejno punkty $C'$, $A'$, $B'$.
-	Okręgi opisane na trójkątach $AB'C'$, $A'BC'$ oraz $A'B'C$ mają punkt wspólny, zwany punktem Miquela.
+Jest wiele wyników, wobec których używać się będzie nazwy ,,twierdzenie Miquela''.
+Na przykład dla Audina \cite[s. 104]{audin_2003} ,,twierdzenie Miquela'' to trzeci wynik z listy, zaś ,,the pivot'' to określenie, jakiego używa wobec naszego twierdzenie Miquela.
+Patrz też do Guzickiego \cite[s. 29, 32]{guzicki_2021}.
+\index{punkt!Miquela}%
+% trzecie? zmieniłem kolejność !!!
+
+\begin{proposition}[twierdzenie Miquela]
+\index{twierdzenie!Miquela}%
+	Niech $ABC$ będzie trójkątem, na bokach którego ($AB$, $BC$, $AC$) wybrano punkty $C'$, $A'$, $B'$.
+	Wtedy okręgi opisane na trójkątach $AB'C'$, $A'BC'$, $A'B'C$ przecinają się w~jednym punkcie.
 \end{proposition}
+
+Sformułowanie mówi tylko o trójkątach, ale dowód wykorzystuje własności czworokątów cyklicznych.
+Hartshorne \cite[s. 61]{hartshorne2000} jako ćwiczenie napisze, że tym razem punkt Miquela zostanie nazwany na cześć osoby, która go odkryje w 1838 roku.
+\index{punkt!Miquela}%
+\todofoot{Guzicki ps. 29, 32}
+Audin \cite[s. 104]{audin_2003} jako ,,the pivot'' (dla niego twierdzenie Miquela mówi o czterech okręgach, czyli nasz fakt \ref{miquel6}).
+Patrz też \cite[s. 11]{komisarczyk_2024}.
 
 Ostermann, Wanner (autorzy książki ,,Geometry by its History'') stwierdzą, że Auguste Miquel był nauczycielem szkoły średniej na francuskiej prowincji (Nantua).
 % Ostermann, Alexander; Wanner, Gerhard (2012), Geometry by its History, Springer, ISBN 978-3-642-29162-3
 % STRONA 94 TAMŻĘ
-Podobną informację znajdziemy w ćwiczeniu u Hartshorne'a \cite[s. 61]{hartshorne2000} razem z datą: rokiem 1838.
+Podobną informację znajdziemy u~Hartshorne'a razem z datą: rokiem 1838.
+
+\begin{proposition}[twierdzenie Miquela o czterech okręgach]
+	\label{miquel_to_tez_cztery_okregi}
+	Okręgi opisane na czterech trójkątach wyznaczonych przez czworobok zupełny przechodzą przez jeden punkt.
+\end{proposition}
+
+Zostanie to ogłoszone krótko przez Jakoba Steinera w wydaniu 1827/1828 \emph{,,Gergonne's Annales de Mathématiques''}, dowiedzione przez Miquela.
+
+\begin{proposition}[twierdzenie Miquela o pięciokącie]
+	Niech $ABCDE$ będzie pięciokątem wypukłym, którego przedłużenia boków przecinają się w punktach $F$, $G$, $H$, $I$, $K$.
+	Na trójkątach $CFD$, $DGE$, $EHA$, $AIB$, $BKC$ opisano okręgi.
+	Wtedy ich nowe punkty przecięcia (różne od $A$, $B$, $C$, $D$, $E$) leżą na jednym okręgu. 
+\end{proposition}
+% converse: https://en.wikipedia.org/wiki/Five_circles_theorem
+
+% Miquel, A. "Mémoire de Géométrie." J. de mathématiques pures et appliquées de Liouville 1, 485-487, 1838. ???
+
+\begin{proposition}[twierdzenie Miquela o sześciu okręgach]
+\label{miquel6}%
+	Niech $\Gamma$ będzie okręgiem opisanym na czworokącie $ABCD$.
+	Niech $\Gamma_1$, $\Gamma_2$, $\Gamma_3$, $\Gamma_4$ będą dowolnymi okręgami, które przechodzą przez $AB$, $BC$, $CD$, $DA$.
+	Wtedy ich cztery nowe punkty przecięcia tworzą czworokąt cykliczny.
+	\index{czworokąt!cykliczny}%
+	% https://en.wikipedia.org/wiki/Miquel%27s_theorem#Miquel's_six_circle_theorem
+	% Ostermann, Alexander; Wanner, Gerhard (2012), Geometry by its History, Springer, ISBN 978-3-642-29162-3 STRONA=352
+\end{proposition}
+
+Twierdzenie pojawia się jako zagadka w $\Delta_{18}^6$.
+% https://www.deltami.edu.pl/2018/06/jesli/
 
 \begin{proposition}
 	Jeśli oznaczyć punkt Miquela przez $M$, to kąty $\angle MA'B$, $\angle MB'C$ oraz $\angle MC'A$ mają równe miary.	
 \end{proposition}
-
-Niektórzy używają nazwy ,,twierdzenie Miquela'' wobec innych wyników:
-\begin{itemize}
-    \label{miquel_to_tez_cztery_okregi}
-	\item (o czterech okręgach) że okręgi opisane na czterech trójkątach wyznaczonych przez czworobok zupełny przechodzą przez jeden punkt; ogłoszone krótko przez Jakoba Steinera w wydaniu 1827/1828 \emph{,,Gergonne's Annales de Mathématiques''}, dowiedzione przez Miquela,
-	\item (o pięciu okręgach) że okręgi opisane na trójkątach wyznaczonych przez przedłużenia boków pięciokąta wypukłego przecinają się w pięciu nowych punktach; leżą one na jednym okręgu, % converse: https://en.wikipedia.org/wiki/Five_circles_theorem
-	\item (o sześciu okręgach) że pięć okręgów, które mają cztery potrójne punkty przecięcia, wyznaczają szósty okrąg, na którym leżą pozostałe cztery punkty przecięć.
-\end{itemize}
-
-Na przykład dla Audina \cite[s. 104]{audin_2003} ,,twierdzenie Miquela'' to trzeci wynik z listy, zaś ,,the pivot'' to określenie, jakiego używa wobec naszego twierdzenie Miquela.
-Patrz też do Guzickiego \cite[s. 29, 32]{guzicki_2021}.
-\index{punkt!Miquela}%
 
 \begin{theorem}[Droza-Farny'ego]
 	Dany jest trójkąt $\triangle ABC$ z ortocentrum $H$ oraz dwie prostopadłe proste $l_1, l_2$ przechodzące przez $H$.
