@@ -31,18 +31,46 @@ Osiem zadań, do rozwiązania których wygodnym narzędziem jest twierdzenie Cev
 
 Prostą, która przechodzi przez wierzchołek trójkąta i przeciwległy bok nazywa się czewianą, nazwy tej używa się też wobec odcinka trójkąta leżącego na tej prostej.
 
-\begin{proposition}[wzór Routha]
-	\todofoot{Routh's theorem gives the area of the triangle formed by three cevians in the case that they are not concurrent. Ceva's theorem can be obtained from it by setting the area equal to zero and solving.}
+\begin{proposition}[wzór Steinera-Routha]
+	Rozpatrzmy trójkąt $ABC$ z czewianami $AD$, $BE$, $CF$ tak, że
+	\begin{equation}
+		\frac{BD}{DC} = \lambda_1, \quad
+		\frac{CE}{EA} = \lambda_2, \quad
+		\frac{AF}{FB} = \lambda_3.
+	\end{equation}
+	Oznaczmy przekrój $BE$ i $CF$ przez $G_1$; $AD$ i $CF$ przez $G_2$, zaś $AD$ i $BE$ przez $G_3$.
+	Wtedy
+	\begin{equation}
+		\frac{S_{G_1G_2G_3}}{S_{ABC}} = \frac{(\lambda_1 \lambda_2 \lambda_3 - 1)^2}{
+			(\lambda_1 \lambda_2 + \lambda_1 + 1)
+			(\lambda_2 \lambda_3 + \lambda_2 + 1)
+			(\lambda_3 \lambda_1 + \lambda_3 + 1)
+		}
+	\end{equation}
+	oraz
+	\begin{equation}
+		\frac{S_{DEF}}{S_{ABC}} = \frac{\lambda_1 \lambda_2 \lambda_3 + 1}{
+			(\lambda_1 + 1)
+			(\lambda_2 + 1)
+			(\lambda_3 + 1)
+		}.
+	\end{equation}
 \end{proposition}
 
-\todofoot{https://www.deltami.edu.pl/2016/08/polecamy-bardzo-trudne-zadanie/}
+% J. Steiner, Gesammelte Werke, Vol. 1, Reimer, Berlin, 1882. strony 163-168
+% E. J. Routh, A Treatise on Analytical Statics with Numerous Examples, Vol. 1, second edition. Cambridge University Press, 1896. strona 82
+% https://ems.press/content/serial-article-files/51635
 
-https://www.deltami.edu.pl/2011/06/sprawa-niezbyt-pedagogiczna/
+Stanowi to uogólnienie twierdzeń Cevy ($\lambda_1 \lambda_2 \lambda_3 = 1$) i Menelausa ($\lambda_1 \lambda_2 \lambda_3 = -1$).
+Napiszą o nim w Delcie ($\Delta_{11}^6$, $\Delta_{12}^3$, $\Delta_{16}^8$)
 
-% 1/7: https://www.deltami.edu.pl/2011/06/sprawa-niezbyt-pedagogiczna/ https://en.wikipedia.org/wiki/Routh%27s_theorem
-% https://www.deltami.edu.pl/2012/03/co-moga-nam-dac-ciezary-i-wypory/ => współrzędne barycentryczne; Routh implikuje Menelaosa i Cevę
+\begin{example}[trójkąt, który zaskoczył Feynmana]
+	Dla $\lambda_1 = \lambda_2 = \lambda_3 = 2$, stosunek pól trójkątów wynosi $1 : 7$.
+\end{example}
 
-https://www.deltami.edu.pl/2016/08/krotki-dowod-twierdzenia-routha/
+% https://www.deltami.edu.pl/2011/06/sprawa-niezbyt-pedagogiczna/
+% https://www.deltami.edu.pl/2012/03/co-moga-nam-dac-ciezary-i-wypory/
+% https://www.deltami.edu.pl/2016/08/polecamy-bardzo-trudne-zadanie/
 
 Ceva 3D https://www.deltami.edu.pl/2013/10/kacik-przestrzenny-19-plaszczyzny-przecinajace-sie-w-punkcie/
 
