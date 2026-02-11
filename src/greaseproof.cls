@@ -18,7 +18,7 @@
 \graphicspath{{images/}}
 \RequirePackage{tikz}
 
-\RequirePackage[usenames, svgnames, table]{xcolor}
+\RequirePackage[svgnames, table]{xcolor}
 \RequirePackage{calc}
 \RequirePackage{changepage}
 \RequirePackage[toc]{appendix}
