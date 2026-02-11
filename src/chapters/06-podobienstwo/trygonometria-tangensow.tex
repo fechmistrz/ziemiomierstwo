@@ -8,6 +8,7 @@ Twierdzenie odkryje Abu al-Wafa Buzjani w X wieku oraz niezależnie Ibn Mu'adh a
 \index[persons]{Ibn Mu'adh al-Jayyani}%
 % The law of tangents for spherical triangles was described in the 13th century by Persian mathematician Nasir al-Din al-Tusi (1201–1274), who also presented the law of sines for plane triangles in his five-volume work Treatise on the Quadrilateral.
 Po polsku często padać będzie nazwa wzór Regiomontana.
+\index{wzór Regiomontana}%
 
 \begin{proposition}[twierdzenie tangensów]
 	W trójkącie o bokach długości $a, b, c$ z kątami $\alpha$, $\beta$ naprzeciwko krawędzi $a$, $b$ zachodzi
@@ -18,14 +19,27 @@ Po polsku często padać będzie nazwa wzór Regiomontana.
 \end{proposition}
 
 Prosty dowód wykorzystuje twierdzenie sinusów.
-Inny korzysta ze wzorów Mollweidege (to jest faktu \ref{wzor_mollweidego}), które wyprowadza się i tak z twierdzenia sinusów.
+\index{twierdzenie!sinusów}%
+Inny korzysta ze wzorów Mollweidego (to jest faktu \ref{wzor_mollweidego}), które wyprowadza się i tak z twierdzenia sinusów.
+\index{wzór!Mollweidego}%
 
-Dopóki nie zostanie wynaleziony komputer (albo chociaż kalkulator elektroniczny), twierdzenie tangensów będzie mieć przewagę nad twierdzeniem kosinusów, ponieważ nie wymaga sięgania po tablice logarytmiczne do znalezienia pierwiastka
+Dopóki nie zostanie wynaleziony komputer albo chociaż kalkulator elektroniczny, twierdzenie tangensów będzie mieć przewagę nad twierdzeniem kosinusów, ponieważ nie wymaga sięgania po tablice logarytmiczne do znalezienia pierwiastka
+\index{twierdzenie!kosinusów}%
 \begin{equation}
 c = \sqrt{a^2 + b^2 - 2 a b \cos \gamma}.
 \end{equation}
 
 Po wynalezieniu rzeczonej maszyny, przewaga nie zniknie.
 Twierdzenie tangensów pozwala uniknąć błędów numerycznych, kiedy $a \approx b$, zaś kąt $\gamma$ jest bardzo mały.
+
+Istnieje rzadko stosowane uogólnienie do czworokątów cyklicznych (wpisanych w okrąg):
+
+% źródło: https://de.wikipedia.org/wiki/Tangenssatz#Verallgemeinerung_für_Sehnenvierecke
+\begin{proposition}
+	W czworokącie $ABCD$ wpisanym w okrąg, o bokach $a = AB$, $b = BC$, $c = CD$, $d = DA$ i kątach $\alpha = \angle DAB$, $\beta = \angle ABC$ zachodzi
+	\begin{equation}
+		\frac{(a+c)(b+d)}{(a-c)(b-d)} = \frac{\tan \frac 1 2 (\alpha + \beta)}{\tan \frac 1 2 (\alpha - \beta)}.
+	\end{equation}
+\end{proposition}
 
 %
