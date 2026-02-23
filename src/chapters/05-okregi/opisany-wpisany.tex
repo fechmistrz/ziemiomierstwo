@@ -1,20 +1,19 @@
 %
 
-\section{Okręgi wpisane i opisane}
-
-\todofoot{Okrąg wpisany, opisany, dopisany: Audin \cite[s. 98]{audin_2003}.}
-\index{okrąg!wpisany}%
-\index{okrąg!opisany}%
-\index{okrąg!dopisany}%
-
-Są jeszcze trzy inne okręgi styczne do wszystkich trzech prostych, na których leżą boki trójkąta.
-Nazywamy je okręgami dopisanymi.
+\section{Okręgi dopisane}
 \index{okrąg dopisany}%
+
+Oprócz okręgu wpisanego w trójkąt są jeszcze trzy inne okręgi styczne do wszystkich trzech prostych, na których leżą boki trójkąta.
+Nazywamy je okręgami dopisanymi (\emph{excircle} albo \emph{escribed circle} po angielsku), pisze o nich Audin \cite[s. 98]{audin_2003}.
+
+Środek okręgu wpisanego znajduje się na przecięciu dwusiecznych wewnętrznych kątów trójkąta.
+Analogicznie środki okręgów dopisanych znajdują się na przecięciu dwusiecznej kąta wewnętrznego przy ustalonym wierzchołku i dwusiecznych kątów zewnętrznych przy pozostałych wierzchołkach.
+% TODO: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Incircle_and_Excircles.svg/960px-Incircle_and_Excircles.svg.png
 Ich promienie można łatwo wyznaczyć przez porównanie pól trójkątów, co prowadzi do wzoru:
 \begin{equation}
 	r_a = \frac{S_{ABC}}{p - a},
 \end{equation}
-oraz dwóch kolejnych dla $r_b$ i $r_c$, jak Zetel \cite[s. 18]{zetel_2020}.
+oraz dwóch kolejnych dla $r_b$ i $r_c$, jak pokazuje Zetel \cite[s. 18]{zetel_2020}.
 Tutaj $p$ oznacza tak jak zawsze połowę obwodu.
 Czynnik $p - a$ sugeruje związek ze wzorem Herona i tak istotnie jest, mamy
 \begin{equation}
@@ -48,14 +47,30 @@ Nieelementarny zauważa, że obydwa iloczyny są równe (poza znakiem) potędze 
 Definicję \ref{def_power_point} potęgi punktu podamy już za kilka stron.
 \index{potęga punktu}%
 
+Wynika z niego:
+
+\begin{proposition}[twierdzenie o motylku]
+\index{twierdzenie!o motylku}
+	Niech $M$ będzie środkiem cięciwy $PQ$ okręgu, przez który poprowadzono dwie inne cięciwy $AB$ oraz $CD$ tak, że $AD$ i $BC$ przecinają $PQ$ w punktach $X$ i $Y$ odpowiednio.
+	Wtedy punkt $M$ jest środkiem odcinka $XY$.
+\end{proposition}
+
+William Wallace postawi to jako problem w 1803 roku, trzy rozwiązania zostaną opublikowane w~1804 roku.
+\index[persons]{Wallace, William}%
+Rok później (sir) William Herschel napisze list do Wallace'a, gdzie znowu postawi ten sam problem. 
+\index[persons]
+Ostatni pierwszy raz problem opublikuje wielebny Thomas Scurr w 1814 roku.
+\index[persons]{Scurr, Thomas}
+% todo: to nie jest pełna historia, pełna jest w https://www.cut-the-knot.org/pythagoras/WallaceButterfly.shtml
+%  Eves 145 => HESSE - nowe twierdzenie, którego tu raczej jeszcze nie ma
+
+Jest jeszcze twierdzenie o siecznych i stycznych, które znowu prowadzi do pojęcia potęgi punktu względem okręgu...
+
 \begin{proposition}[twierdzenie o siecznych i stycznych]
-	Jeżeli przechodząca przez dany punkt $S$ sieczna $k$ przecina okrąg $K$ o środku $O$ i promieniu $r$ w punktach $A$ i $B$, to iloczyn $|SA| \cdot |SB|$ nie zależy od wyboru prostej $k$ i ma wartość $|s^2 - r^2|$, gdzie $s = |SO|$.
+	Jeżeli przechodząca przez dany punkt $S$ sieczna $k$ przecina okrąg $\Omega$ o środku $O$ i promieniu $r$ w punktach $A$ i $B$, to iloczyn $|SA| \cdot |SB|$ nie zależy od wyboru prostej $k$; ma on wartość $|s^2 - r^2|$, gdzie $s = |SO|$.
 	\index{twierdzenie!o siecznych i stycznych}
 \end{proposition}
 
 Piszą o nim Bogdańska, Neugebauer \cite[s. 66]{neugebauer_2018}.
-
-\todofoot{twierdzenie o motylku} % https://en.wikipedia.org/wiki/Butterfly_theorem % Eves 145 => HESSE - nowe twierdzenie, którego tu raczej jeszcze nie ma
-\index{twierdzenie!o motylku}
 
 %
