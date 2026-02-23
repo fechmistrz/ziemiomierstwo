@@ -3,7 +3,16 @@
 \section{Aksjomaty Tarskiego}
 \index{aksjomat!Tarskiego}%
 
-Zmienne są punktami, relacja $\beta$ mówi, że punkty leżą na prostej w kolejności takiej, jak w napisie, zaś relacja $\equiv$ mówi, że dwa odcinki są przystające:
+Ludzie będą starać się manipulować pojęciami pierwotnymi, by dostać w jakimś sensie prostszą aksjomatykę.
+Jedną z popularniejszych alternatyw do pomysłów Hilberta zaproponuje Alfred Tarski około 1926 roku (a później ulepszą ją: Wanda Szmielew, Wolfram Schwabhäuser i inni). % https://mizar.uwb.edu.pl/fm/2016-24/pdf24-2/gtarski2.pdf "Tarski Geometry Axioms – Part II" -> patrz cytowania
+Tarski pokaże, że pierwszorzędowa teoria geometrii euklidesowej jest spójna, zupełna i decydowalna
+
+Using his axiom system, Tarski was able to show that the first-order theory of Euclidean geometry is consistent, complete and decidable: every sentence in its language is either provable or disprovable from the axioms, and we have an algorithm which decides for any given sentence whether it is provable or not.
+
+
+
+W aksjomatyce Tarskiego mamy zmienne (punkty) i dwie relacje $\beta$, $\equiv$.
+Relacja $\beta (x, y, z)$ mówi, że trzy punkty leżą na jednej prostej w kolejności takiej, jak w napisie: $y$ między $x$ oraz $z$; zaś relacja $\equiv$ orzeka, że dwa odcinki są przystające.
 \begin{enumerate}
     \item jeśli $\beta (x, y, x)$, to $x = y$;
     \item jeśli $\beta (x, y, u)$ oraz $\beta (y, z, u)$,  to $\beta (x, z, u)$;
@@ -11,19 +20,16 @@ Zmienne są punktami, relacja $\beta$ mówi, że punkty leżą na prostej w kole
     \item $xy \equiv yx$;
     \item jeśli $xy \equiv zu$ oraz $xy \equiv vw$, to $zu \equiv vw$;
     \item jeśli $xy \equiv zz$, to $x = y$;
-    \item aksjomat Pascha: jeśli $\beta (x, t, u)$, $\beta (y, u, z)$, to istnieje taki $v$, że $\beta (x, v, y)$, $\beta(z, t, v)$'';
-    \item V aksjomat Euklidesa\footnote{Ten aksjomat można zastąpić przez ,,na każdym trójkącie można opisać okrąg'' (mniej zmiennych) albo ,,linia środkowa w trójkącie jest dwukrotnie krótsza od podstawy'' (brak kwantyfikatorów).} (dla każdego kąta i punktu wewnątrz istnieje odcinek przez ten punkt, który przecina ramiona kąta): jeśli $\beta(x, u, t)$, $\beta (y, u, z)$, $x \neq y$, to istnieją takie $v, w$, że $\beta(x, z, v)$, $\beta(x, y, w)$ oraz $\beta (v, t, w)$;
-    \item aksjomat pięciu odcinków (cecha przystawania bkb): jeśli $xy \equiv x'y'$, $yz \equiv y'z'$, $xu \equiv x'u'$, $yu \equiv y'u'$, $\beta (x, y, z)$, $\beta(x', y', z')$ i $x \neq y$, to $zu \equiv z'u'$;
+    \item aksjomat Pascha: jeśli $\beta (x, t, u)$, $\beta (y, u, z)$, to istnieje taki $v$, że $\beta (x, v, y)$, $\beta(z, t, v)$''; \index{aksjomat Pascha}%
+    \item V aksjomat Euklidesa\footnote{Ten aksjomat można zastąpić przez ,,na każdym trójkącie można opisać okrąg'' (mniej zmiennych) albo ,,linia środkowa w trójkącie jest dwukrotnie krótsza od podstawy'' (brak kwantyfikatorów).} (dla każdego kąta i punktu wewnątrz istnieje odcinek przez ten punkt, który przecina ramiona kąta): jeśli $\beta(x, u, t)$, $\beta (y, u, z)$, $x \neq y$, to istnieją takie $v, w$, że $\beta(x, z, v)$, $\beta(x, y, w)$ oraz $\beta (v, t, w)$; \index{V postulat}
+    \item aksjomat pięciu odcinków (cecha przystawania bkb): jeśli $xy \equiv x'y'$, $yz \equiv y'z'$, $xu \equiv x'u'$, $yu \equiv y'u'$, $\beta (x, y, z)$, $\beta(x', y', z')$ i $x \neq y$, to $zu \equiv z'u'$; \index{cecha przystawania bkb}%
     \item odkładanie odcinków: istnieje $z$ taki, że $\beta (x, y, z)$ i $yz \equiv uw$;
     \item istnieją trzy niewspółliniowe punkty\footnote{Bez tego aksjomatu teoria ma model na prostej rzeczywistej.} $x, y, z$: $\neg \beta(x, y, z)$, $\neg \beta(y, z, x)$, $\neg \beta(z, x, y, )$;
     \item trzy punkty równoodległe od końców odcinka tworzą prostą\footnote{Bez tego aksjomatu teoria ma model w trzech i więcej wymiarach.}: jeśli $xu \equiv xv$, $yu \equiv yv$, $zu \equiv zv$ i $u \neq v$, to $\beta(x, y, z)$, $\beta(y, z, x)$ lub $\beta(z, x, y)$;
     \item schemat aksjomatu ciągłości.
 \end{enumerate}
 
-% TODO: https://en.wikipedia.org/wiki/Tarski%27s_axioms
-
-% TODO: https://smp.uws.edu.pl/msn/14/10-18.pdf
-% Kompletne, beznadziejne bezdroża, Marek KORDOS
+O aksjomatach Tarskiego napisze Marek Kordos w artykule ,,Kompletne, beznadziejne manowce''. % https://smp.uws.edu.pl/msn/14/10-18.pdf TODO: przepisać stąd inne aksjomatyki. Pieri jest też tu: https://en.wikipedia.org/wiki/Tarski%27s_axioms
 
 % https://www.deltami.edu.pl/media/articles/2015/01/delta-2015-01-prozny-trud.pdf
 
