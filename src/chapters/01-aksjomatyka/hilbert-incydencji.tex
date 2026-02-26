@@ -31,10 +31,12 @@ Analogicznie mówimy, że wiele prostych, które przechodzą przez jeden punkt, 
 \end{definition}
 \index{prosta!równoległa}%
 
-Trzeba uważać, bo dla niektórych dwie proste równoległe są współpękowe, bo przechodzą przez punkt w nieskończoności, jak zwykło się mawiać w geometrii rzutowej (niektórzy bowiem rozróżniają współpękowość właściwą i niewłaściwą).
-Na dwóch prostych, które nie są równoległe, leży dokładnie jeden punkt.
+Symbolicznie: $k \parallel l$.
+Trzeba uważać, bo dla niektórych dwie proste równoległe są współpękowe, bo przechodzą przez punkt w nieskończoności, jak zwykło się mawiać w geometrii rzutowej.
+
+Na dwóch prostych, które nie są równoległe ($k \nparallel l$), leży dokładnie jeden punkt.
 Mówimy, że proste się przecinają, a wspomniany punkt jest ich punktem przecięcia.
-Symbolicznie: $k \parallel l$ albo $k \nparallel l$ (wtedy $k \cdot l$ to jedyny punkt leżący na obydwu prostych).
+Oznaczamy go $k \cdot l$.
 
 Hartshorne \cite[s. 38]{hartshorne2000} przywoła:
 
@@ -47,7 +49,19 @@ Hartshorne \cite[s. 38]{hartshorne2000} przywoła:
 John Playfair opublikuje ten aksjomat w 1795 roku, chociaż już wtedy stwierdzi, że inni używali go przed nim (np. William Ludlam).
 \index[persons]{Playfair, John}%
 \index[persons]{Ludlam, William}%
+
+\begin{example}
+    Rozważmy geometrię, gdzie płaszczyzna składa się z pięciu punktów $A$, $B$, $C$, $D$, $E$ i leży na niej dziesięć różnych prostych, każda z nich przechodząca przez dokładnie dwa różne punkty.
+    Wtedy proste $AB$ i $AC$ mają punkt wspólny $A$, chociaż obydwie są równoległe do prostej $DE$.
+    Aksjomat Playfaira nie jest spełniony. \index{aksjomat!Playfaira}
+\end{example}
+
 Aksjomat Playfaira jest równoważny z (piątym) postulatem Euklidesa i dlatego wiele osób spróbuje wyprowadzić go z czterech wcześniejszych postulatów.
+Marek Kordos opisze  w $\Delta_{12}^5$ (i $\Delta_{12}^6$) trzy ,,dowody'': Bolyaia, Legendre'a i Saccheriego.
+\index[persons]{Bolyai, Farkas}%
+\index[persons]{Legendre, Adrien-Marie}%
+\index[persons]{Saccheri, Girolamo}%
+% https://www.deltami.edu.pl/2012/05/dowody-v-postulatu-euklidesa/
 Za każdym razem okaże się, że w ,,dowodzie'' użyte jest zdanie będące równoważnikiem piątego postulatu, na przykład:
 \begin{itemize}
     \item suma kątów wewnętrznych pewnego trójkąta jest kątem półpełnym,\index{suma kątów}%
@@ -67,19 +81,13 @@ Za każdym razem okaże się, że w ,,dowodzie'' użyte jest zdanie będące ró
 
 % TODO: https://en.wikipedia.org/wiki/Parallel_postulate
 
-https://www.deltami.edu.pl/2012/05/dowody-v-postulatu-euklidesa/
-
-\begin{example}
-    Rozważmy geometrię, gdzie płaszczyzna składa się z pięciu punktów $A$, $B$, $C$, $D$, $E$ i leży na niej dziesięć różnych prostych, każda z nich przechodząca przez dokładnie dwa różne punkty.
-    Wtedy proste $AB$ i $AC$ mają punkt wspólny $A$, chociaż obydwie są równoległe do prostej $DE$.
-    Aksjomat Playfaira nie jest spełniony. \index{aksjomat!Playfaira}
-\end{example}
-
 \begin{proposition}
     Aksjomaty incydencji I1, I2, I3 oraz aksjomat P (Playfaira) są od siebie niezależne. \index{aksjomat!Playfaira}
 \end{proposition}
 
 Hartshorne \cite[s. 69-70]{hartshorne2000} konstruuje modele geometrii, w których spełnione są dowolne trzy, ale nie czwarty z nich.
+
+\subsubsection{Wstęp do geometrii rzutowej}
 
 \begin{proposition}
     Płaszczyzna rzutowa to taki zbiór punktów oraz prostych (podzbiorów zbioru punktów), że: \index{płaszczyzna!rzutowa}
@@ -94,7 +102,7 @@ Hartshorne \cite[s. 69-70]{hartshorne2000} konstruuje modele geometrii, w który
     Jeśli istnieje prosta, która ma $n+1$ punktów, to płaszczyzna ma $n^2 + n + 1$ punktów.
 \end{proposition} % Hartshorne 71
 
-https://www.deltami.edu.pl/2013/05/dziewiec-twarzy-plaszczyzny-rzutowej/ % TODO
+Marek Kordos opisze dziewięć twarzy płaszczyzny rzutowej w $\Delta_{13}^5$, wcześniej czymś podobnym zajmie się Maria Donten-Bury w $\Delta_{11}^6$. % https://www.deltami.edu.pl/2013/05/dziewiec-twarzy-plaszczyzny-rzutowej/ % TODO
 
 \begin{example}[płaszczyzna Fana]
     Zbiór złożony z siedmiu elementów (,,punktów''), w którym wyróżniono rodzinę siedmiu podzbiorów (,,prostych'') spełniający następujące warunki: \index{płaszczyzna!Fana}
@@ -134,20 +142,19 @@ https://www.deltami.edu.pl/2013/05/dziewiec-twarzy-plaszczyzny-rzutowej/ % TODO
 Jest po jednej płaszczyźnie rzutowej dla $n = 3, 4, 5, 6, 8$ punktów na każdej prostej; żadnej dla $n = 7$, co najmniej jedna dla $n = 9$ i co najmniej cztery dla $n = 10$.
 O płaszczyźnie Fana napisze Eves \cite[s. 366]{eves1_1972}.
 
-W momencie pisania tego tekstu nie jesteśmy jeszcze zainteresowani geometrią rzutową, więc przytoczymy tylko wymagania wobec studenta, który ukończył kurs ,,Geometria III'' na uniwersytecie w Warszawie.
-Audin \cite[s. 143-182]{audin_2003}.
-Delta: 2024/lipiec.
-
-Zna pojęcie płaszczyzny rzutowej rzeczywistej (równoważne sformułowania), dwustosunku, definicję przekształceń rzutowych łańcuchów, stożkowych, pęków stycznych do stożkowych.
+W momencie pisania tego tekstu nie interesuje nas jeszcze geometria rzutowa, więc wymienimy tylko kilka terminów:
+dwustosunek,
 \index{dwustosunek}%
-\index{pęk}%
+rzutowe przekształcenia łańcuchów, stożkowych oraz pęków stycznych do stożkowych.
 \index{stożkowa}%
-Zna i~potrafi stosować twierdzenia Steinera i Braikenridge'a-Maclaurina.
+Oprócz tego są dwa twierdzenia: Steinera i Braikendridge'a-Maclaurina.
 \index{twierdzenie!Steinera}%
 \index{twierdzenie!Braikendridge'a-Maclaurina}%
-Wie w jaki sposób określa się rzutowo ogniska i kierownice stożkowych.
-\index{ognisko}%
-\index{kierownica}%
+
+Patrz też do Audina \cite[s. 143-182]{audin_2003}.
+% Delta: 2024/lipiec.
+
+\subsubsection{Wstęp do geometrii afinicznej}
 
 \begin{proposition}
     Płaszczyzna afiniczna to taki zbiór punktów i prostych, które spełniają: \index{płaszczyzna!afiniczna}
@@ -161,8 +168,7 @@ Wie w jaki sposób określa się rzutowo ogniska i kierownice stożkowych.
 \end{proposition} % Hartshorne 71, 72
 
 Podręcznik Audina \cite[s. 7]{audin_2003} zaczyna się od definicji przestrzeni afinicznej.
-Coxeter \cite[s. 209]{coxeter_1967} wspomni, że według Blaschkego słowo ,,afiniczny'' utworzył Euler.
-
-My nie poświęcimy powinowactwu (bo tak tłumaczy się na polski słowo \emph{affinity}) za dużo miejsca; znajdzie się w niektórych numerach czasopisma Delta: $\Delta_{24}^6$.
+Natomiast Coxeter \cite[s. 209]{coxeter_1967} wspomni, że według Blaschkego słowo ,,afiniczny'' utworzył Euler.
+Powinowactwo (bo tak tłumaczy się na polski \emph{,,affinity''}) znajdzie się w niektórych numerach czasopisma Delta: $\Delta_{24}^6$, ale nie za bardzo u nas.
 
 %
