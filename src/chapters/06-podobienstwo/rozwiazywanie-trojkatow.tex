@@ -1,7 +1,15 @@
-\subsection{Rozwiązywanie trójkątów}
+%
+
+\section{Rozwiązywanie trójkątów}
 % https://en.wikipedia.org/wiki/Solution_of_triangles
 
-Podamy teraz kilka nowych zależności trygonometrycznych, które pomagają w rozwiązywaniu trójkątów.
+% TODO: https://en.wikipedia.org/wiki/Skinny_triangle
+
+Rozwiązywanie trójkątów (łacińskie \emph{solutio triangulorum}) to najważniejsze rachunkowe zadanie w~trygonometrii.
+Dane są pewne informacje o trójkącie na płaszczyźnie lub sferze, takie jak: długości boków albo kąty wewnętrzne; należy ustalić miary pozostałych.
+Zastosowania obejmują geodezję, astronomię, nawigację i nie tylko.
+
+Ograniczymy się do płaszczyzny i podamy kilka nowych zależności trygonometrycznych, które pomagają w rozwiązywaniu trójkątów.
 Znamy już twierdzenia sinusów i kosinusów; w ogólności to drugie jest bezpieczniejsze od pierwszego (ponieważ z faktu, że $\sin \alpha = \frac 1 2$ nie wynika, czy kąt $\alpha$ jest ostry, czy rozwarty, kosinus zaś jest jednoznaczny).
 
 W każdym z poniższych stwierdzeń mamy trójkąt o kątach $\alpha, \beta, \gamma$, bokach $a, b, c$, połowie obsowdu $p = \frac 1 2 (a + b + c)$, promieniu okręgu opisanego $R$ i wpisanego $r$.
@@ -45,10 +53,10 @@ W każdym z poniższych stwierdzeń mamy trójkąt o kątach $\alpha, \beta, \ga
 \end{proposition}
 
 (Nie ma zgodności co do powyższych nazw).
-Nieco bardziej geometryczną wersję wzorów podał Izaak Newton w 1707 roku, potem Friedrich von Oppel w 1746.
+Nieco bardziej geometryczną wersję wzorów poda Izaak Newton w 1707 roku, potem Friedrich von Oppel w 1746.
 \index[persons]{Newton, Izaak}%
 \index[persons]{Oppel@von Oppel, Friedrich}%
-Wyrażenia, których używamy po dziś dzień zawdzięczamy Thomasowi Simpsonowi z 1748 roku, oraz Karlowi Mollweidemu, który opublikował to samo w 1808 roku bez cytowania poprzedników.
+Wyrażenia, których używać będziemy do końca świata i jeden dzień dłużej zawdzięczymy Thomasowi Simpsonowi z 1748 roku, oraz Karlowi Mollweidemu, który opublikuje to samo w 1808 roku bez cytowania poprzedników.
 \index[persons]{Simpson, Thomas}%
 \index[persons]{Mollweide, Karl}%
 
@@ -61,6 +69,16 @@ Wyrażenia, których używamy po dziś dzień zawdzięczamy Thomasowi Simpsonowi
 \end{proposition}
 % TODO: https://en.wikipedia.org/wiki/Law_of_tangents
 
-Regiomontanus był znany gorzej jako Johannes Müller von Königsberg.
+Regiomontanus będzie znany gorzej jako Johannes Müller von Königsberg.
 \index[persons]{Königsberg@von Königsberg, Johannes|see{Regiomontanus}}%
 \index[persons]{Regiomontanus}%
+
+\begin{proposition}
+	Niech $\alpha, \beta, \gamma$ będą miarami kątów trójkąta o bokach $a, b, c$, polu $S$ i promieniu okręgu opisanego $R$.
+	Wtedy
+	\begin{equation}
+		\tan \alpha + \tan \beta + \tan \gamma = \frac{4S}{a^2 + b^2 + c^2 - 8R^2}
+	\end{equation}
+\end{proposition}
+
+%

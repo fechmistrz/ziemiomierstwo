@@ -1,0 +1,34 @@
+%
+
+\section{Problem Hansena}
+\index{problem!Hansena}%
+W trygonometrii problem Hansena to zagadnienie z zakresu pomiarów w terenie, nazwane na cześć astronoma Petra Andreasa Hansena, który będzie pracował przy mapach państwa duńskiego.
+
+\begin{problem}
+    Dane są dwa znane punkty $A$ i $B$ oraz dwa nieznane punkty $P_1$ i $P_2$.
+    Z punktów $P_1$ i $P_2$ obserwator mierzy kąty utworzone przez linie łączące go z każdym z pozostałych trzech punktów skierowane do każdego z pozostałych trzech punktów.
+    Wyznaczyć położenie punktów $P_1$ i $P_2$.
+\end{problem}
+
+Znamy cztery kąty $\alpha_1 = \angle AP_1B$, $\beta_1 = \angle BP_1 P_2$, $\alpha_2 = \angle  AP_2B$, $\beta_2 = \angle AP_2P_1$.
+Wtedy jedno z~rozwiązań zaczyna się od wyznaczenia kątów
+\begin{equation}
+    \gamma = \pi - \alpha_1 - \beta_1 - \beta_2, \quad
+    \delta = \pi - \alpha_2 - \beta_1 - \beta_2
+\end{equation}
+oraz ilorazu
+\begin{equation}
+    k = \frac{\sin \gamma \sin \alpha_2 \sin \beta_1}{\sin \delta \sin \alpha_1 \sin \beta_2}.
+\end{equation}
+Niech
+\begin{equation}
+    \theta = 2 \arctan \left(\frac{k-1}{k+1} \tan \frac{\beta_1 + \beta_2}{2} \right).
+\end{equation}
+Wprowadzamy pomocnicze kąty $\varphi = \frac 1 2 (\beta_1 + \beta_2 + \theta)$ oraz $\psi = \frac 1 2 (\beta_1 + \beta_2 - \theta)$.
+Szukany odcinek ma długość
+\begin{equation}
+    |P_1 P_2| = |AB| \cdot \frac{\sin \psi \sin \gamma}{\sin \alpha_1 \sin \beta_2} = |AB| \cdot \frac{\sin \varphi \sin \delta}{\sin \alpha_2 \sin \beta_1},
+\end{equation}
+przy czym by uniknąć błędów numerycznych bierzemy ten ułamek, którego mianownik ma większą wartość bezwzględną.
+
+%
