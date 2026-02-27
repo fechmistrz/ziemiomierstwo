@@ -14,7 +14,8 @@ Przekątne pięciokąta foremnego dzielą się w złotej proporcji.
 \section{Uogólnienie twierdzenia Varignona}
 
 Jarosław Górnicki opisze w $\Delta_{20}^{12}$ twierdzenie Edwarda Kasnera z 1903 roku:
-% TODO: https://www.deltami.edu.pl/2020/12/odkryj-wielokat/
+% https://www.deltami.edu.pl/2020/12/odkryj-wielokat/
+\index[persons]{Kasner, Edward}%
 
 \begin{proposition}
     Dane są parami różne punkty $S_1, S_2, \ldots, S_n$ ($n \ge 3$), które są środkami kolejnych boków pewnego wielokąta.
@@ -26,10 +27,32 @@ Twierdzenie Varignona \ref{theorem_varignon} mówi, że środki boków czworoką
 
 \subsection{Twierdzenie Heinekena}
 
+Hugo Steinhaus \cite{steinhaus_1958} poprosi o dowód tego, że w $n$-kącie foremnym, gdzie $n$ jest liczbą pierwszą, żadne trzy przekątne nie przechodzą przez ten sam punkt wewnątrz wielokąta.
+% H. Steinhaus: Problem 225, Colloq. Math. 5 (1958).
+Sukces osiągną Hallard Croft oraz M. Fowler\footnote{Imię nieznane.} \cite{croft_fowler_1961}.
+% H. T. Croft and M. Fowler: On a problem of Steinhaus about polygons, Proc. Camb. Phil. Soc. 57 (1961), 686–688.
+W latach sześćdziesiątych XX wieku, Heineken uogólni wynik do wszystkich nieparzystokątów:
+% H. Heineken: Regelm¨assige Vielecke und ihre Diagonalen, Enseignement Math. (2), s´er. 8 (1962), 275–278.
+% H. Heineken: Regelm¨assige Vielecke und ihre Diagonalen II, Rend. Sem. Mat. Univ. Padova 41 (1968), 332–344.
+
 \begin{proposition}[Heineken]
 \index{twierdzenie!Heinekena (o współpękowych przekątnych wielokąta)}%
-    Jeśli $n \ge 5$ jest liczbą nieparzystą, to żadne trzy przekątne $n$-kąta foremnego nie przechodzą przez jeden punkt.
-    % TODO: https://arxiv.org/pdf/math/9508209v3 ... In the 1960s, Heineken [6] gave a delightful argument which generalized this to all odd n,
+    Jeśli $n \ge 5$ jest liczbą nieparzystą, to żadne trzy przekątne $n$-kąta foremnego nie przechodzą przez jeden punkt we wnętrzu wielokąta.
+\end{proposition}
+
+Dalsze uogólnienie znajdą Bjorn Poonen i Michael Rubinstein \cite{poonen_rubinstein_2006} już w XXI wieku:
+% https://arxiv.org/pdf/math/9508209v3
+
+\begin{proposition}
+    Niech $n > 4$ będzie liczbą boków $n$-kąta foremnego.
+    Wtedy największą liczbą przekątnych, które przechodzą przez jeden punkt wewnątrz wielokąta różny od jego środka jest:
+    \begin{itemize}
+    \item $2$, jeżeli $n$ jest nieparzyste,
+    \item $3$, jeżeli $n$ jest parzyste, ale niepodzielne przez $6$,
+    \item $5$, jeżeli $n$ jest podzielne przez $6$, ale niepodzielne przez $30$,
+    \item $7$, jeżeli $n$ jest podzielne przez $30$;
+    \end{itemize}
+    z dwoma wyjątkami: $2$ dla sześciokąta i $4$ dla dwunastokąta (zamiast $5$ jak mówi trzeci warunek).
 \end{proposition}
 
 %
