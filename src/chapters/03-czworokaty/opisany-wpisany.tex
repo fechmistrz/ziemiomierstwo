@@ -2,7 +2,7 @@
 
 \section{Opisane i wpisane}
 
-Na rombie, który nie jest kwadratem, nie można opisać okręgu.
+Na rombie, który nie jest kwadratem, nie można opisać okręgu, ponieważ symetralne jego boków nie przecinają się jednym punkcie.
 
 % TODO: https://de.wikipedia.org/wiki/Sehnenviereck czworokąt cięciwowy
 \begin{proposition}[okrąg opisany na czworokącie]
@@ -18,9 +18,31 @@ Na rombie, który nie jest kwadratem, nie można opisać okręgu.
 \end{proposition}
 
 Jedna ze wspomnianych implikacji to wniosek \ref{ab_twice_pi}.
-Piszą o tym Guzicki \cite[s. 11-13, 16, 17]{guzicki_2021}.
+Piszą o tym Guzicki \cite[s. 11-13, 16, 17]{guzicki_2021}, Euklides (III.22).
 
 Czworokąt, na którym można opisać okrąg, Niemcy będą nazywać \emph{Sehnenviereck}, co znaczy dosłownie czworokąt cięciwowy.
+W użyciu będzie też przymiotnik cykliczny, ze starożytnego greckiego κύκλος (kuklos), co oznacza okrąg albo koło.
+
+David Fraivert, Avi Sigler, Moshe Stupel znajdą w 2020 roku dużo mniej oczywiste kryterium:
+\index[persons]{Fraivet, David}%
+\index[persons]{Sigler, Avi}%
+\index[persons]{Stupel, Moshe}%
+% TODO: Fraivert, David; Sigler, Avi; Stupel, Moshe (2020), "Necessary and sufficient properties for a cyclic quadrilateral", International Journal of Mathematical Education in Science and Technology, 51 (6): 913–938, doi:10.1080/0020739X.2019.1683772, S2CID 209930435
+
+\begin{proposition}
+	Dany jest wypukły czworokąt $ABCD$, którego przekątne przecinają się w punkcie $E$, zaś boki $AD$ i $BC$ (a właściwie ich przedłużenia) przecinają się w punkcie $F$.
+	Niech $\Omega$ będzie okręgiem, którego średnicą jest odcinek $EF$.
+	Wtedy $\Omega$ przecina bok $AD$ w $N$, zaś $BC$ w punkcie $M$, przedłużenie $AC$ w $L$, zaś przedłużenie $BD$ w $K$.
+	Wtedy twierdzenie Pascala o sześciokątach $EKNFML$ i $EKMFNL$ wpisanych w $\Omega$ mówi, że proste $NK$ i $ML$ przecinają się w punkcie $P$ na boku $AB$, zaś $NL$ i $MK$ w punkcie $Q$ na boku $CD$.
+	(Punkty $P$, $Q$ nazywane są czasami punktami Pascala).
+	
+	Wtedy następujące warunki są równoważne: 
+	\begin{itemize}
+	\item czworokąt $ABCD$ jest cykliczny
+	\item punkty $P, Q$ i środek okręgu $\Omega$ są współliniowe
+	\item punkty $P$, $Q$ są środkami boków $AB$, $CD$.
+	\end{itemize}
+\end{proposition}
 
 W prostokąt, który nie jest kwadratem, nie można wpisać okręgu.
 
@@ -86,7 +108,7 @@ Wynika z niego:
 William Wallace postawi to jako problem w 1803 roku, trzy rozwiązania zostaną opublikowane w~1804 roku.
 \index[persons]{Wallace, William}%
 Rok później (sir) William Herschel napisze list do Wallace'a, gdzie znowu postawi ten sam problem. 
-\index[persons]
+\index[persons]{Herschel, William}
 Ostatni pierwszy raz problem opublikuje wielebny Thomas Scurr w 1814 roku.
 \index[persons]{Scurr, Thomas}
 % todo: to nie jest pełna historia, pełna jest w https://www.cut-the-knot.org/pythagoras/WallaceButterfly.shtml
@@ -100,7 +122,5 @@ Ostatni pierwszy raz problem opublikuje wielebny Thomas Scurr w 1814 roku.
 
 Piszą o tym Guzicki \cite[s. 237, 238]{guzicki_2021}, że jest to szczególny przypadek twierdzenia Brianchona, którego dowodzi najpierw dla sześciokąta.
 \index{twierdzenie!Brianchona}%
-
-
 
 %
