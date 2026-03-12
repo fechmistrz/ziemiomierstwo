@@ -2,12 +2,41 @@
 \section{Pole powierzchni}
 \label{sekcja_pole_powierzchni}
 
+Euklides nie zdefiniuje figur o równych polach, ale czytając jego dowody możemy domyślić się, że równopolowe figury mają następujące właściwości:
+\begin{itemize}
+\item przystające figury mają równe pola;
+\item suma, różnica i połówki figur o równych polach mają równe pola;
+\item całość jest większa od części i wreszcie
+\item boki kwadratów o równych polach są równej długości.
+\end{itemize}
+
+% hartshorne 196
+(Ostatni punkt okazuje się być wnioskiem z poprzedniego).
+Hartshorne \cite[s. 196--204]{hartshorne2000} lepiej niż my sformalizuje pojęcie pola dla płaszczyzny Hilberta; wspomni po drodze aksjomat de Zolta:
+\index{aksjomat de Zolta}%
+
+\begin{axiom}[Z, de Zolta]
+    Jeśli $Q$ jest figurą zawartą wewnątrz figury $P$ tak, że różnica $P \setminus Q$ ma niepuste wnętrze, to figury $P$ oraz $Q$ nie są równopolowe.
+\end{axiom}
+
 Tysiące lat po Euklidesie pojęcie rozmiaru (nie tylko długości, ale przede wszystkim pola figur płaskich oraz objętości brył) sformalizuje się przez miarę Jordana, albo jej uogólnienie --- miarę Lebesgue'a.
+O mierze wspomina Hartshorne \cite[s. 205]{hartshorne2000}; jest to funkcja, która przyporządkowuje każdej figurze $P$ pewną nieujemną liczbę $[P]$ (zwaną polem) taką, że:
+\begin{itemize}
+    \item pole każdego trójkąta jest dodatnie: $[\triangle] > 0$;
+    \item przystające trójkąty mają równe pola;
+    \item jeśli dwie figury $P, Q$ nie nachodzą na siebie, to $[P \cup Q] = [P] + [Q]$.
+\end{itemize}
+
+(Z istnienia takiej funkcji wynika aksjomat (Z).)
+Pole jest wyznaczone jednoznacznie z dokładnością do stałej.
+Przyjęcie, że trójkąt o podstawie $a$ oraz wysokości $h$ ma pole $\frac 1 2 ah$ daje jednoznaczność.
 
 Starożytni będą jednak postępować inaczej: wykorzystają raczej zapomniane przez ich potomków rozcięcia. % dissections.
-Technika ta pojawi się wielokrotnie u starożytnych, na przykład w dowodzie (I.35), że równoległoboki o tej samej podstawie i równych wysokościach mają równe pola.
-W 1873 roku H. Perigal (a w 1917 H. E. Dudeney) poda dowód twierdzenia Pitagorasa wykorzystujący rozcięcia.
-Dokładnie opisze to Eves \cite[s. 194-239]{eves1_1972}, będzie używać dokładnie tej samej notacji, co my.
+Technika ta pojawi się wielokrotnie, na przykład w dowodzie (I.35), że równoległoboki o~tej samej podstawie i równych wysokościach mają równe pola.
+W 1873 roku Henry Perigal (a w 1917 inny Henry,  Dudeney) poda dowód twierdzenia Pitagorasa wykorzystujący rozcięcia.
+\index[persons]{Dudeney, Henry}%
+\index[persons]{Perigal, Henry}%
+Dokładnie opisze to Eves \cite[s. 194-239]{eves1_1972}, będzie używać dokładnie tej samej notacji, co my, ale też Hartshorne \cite[s. 212-221]{hartshorne2000} z nieco inną notacją.
 
 Niech $P, Q$ będą jakimiś figurami o tej samej powierzchni.
 Będziemy mówić, że są równopolowe (\emph{equivalent}) i pisać $P \simeq Q$.
@@ -87,6 +116,11 @@ Doszliśmy wreszcie do wyniku Williama Wallace'a (z 1807 roku), znalezionego nie
 Laczkovich wzmocni później ten wynik: każdy wielokąt można rozciąć na kawałki i złożyć z nich równopolowy kwadrat tak, by kawałki były przesuwane, ale nie obracane.
 % M. Laczkovich, Equidecomposability and discrepancy: a solution to Tarski’s circle squaring problem, Journal fu¨ r die reine und angewandte Mathematik 404(1990), 77–117.
 % M. Laczkovich, Paradoxical decompositions: a survey of recent results, Proc. First European Congress of Mathematics, Vol. II (Paris, 1992), Progress in Mathematics 120, Birkha¨ user, Basel 1994
+
+Euklides nie zdefiniuje pola koła i będzie unikać problemu kwadratury, ale w księdze XII napisze, że pola dwóch kół mają się do siebie tak, jak kwadraty ich promieni.
+Czytaj dalej w sekcji \ref{sekcja_przyblizenia_pi}.
+
+\subsection{Zasada Cavalieriego}
 
 Sekcję zamkniemy ciekawostką związaną z zasadą Cavalieriego.
 Eves pokaże w 1991 roku, że każde dwa równopolowe trójkąty można umieścić na płaszczyźnie tak, by każda prosta równoległa do danej przecinała obydwa na odcinku o tej samej długości, wspomni o tym Jarosław Górnicki w $\Delta_{11}^{11}$.
