@@ -10,9 +10,11 @@ ziemiomierstwo.pdf: src/ziemiomierstwo.tex src/chapters/*.tex src/chapters/*/*.t
 	cd src && lualatex ziemiomierstwo.tex && bibtex ziemiomierstwo && lualatex ziemiomierstwo.tex && lualatex ziemiomierstwo.tex
 	cp src/ziemiomierstwo.pdf .
 
-ziemiomierstwo-wloskie.pdf: src/ziemiomierstwo-wloskie.tex src/chapters/*.tex src/chapters/*/*.tex src/img.jpeg
+ziemiomierstwo-wloskie.pdf: src/ziemiomierstwo.tex src/chapters/*.tex src/chapters/*/*.tex src/img.jpeg
+	sed -r 's/poltrue/itatrue/g' src/ziemiomierstwo.tex > src/ziemiomierstwo-wloskie.tex
 	cd src && lualatex ziemiomierstwo-wloskie.tex && bibtex ziemiomierstwo-wloskie && lualatex ziemiomierstwo-wloskie.tex && lualatex ziemiomierstwo-wloskie.tex
 	cp src/ziemiomierstwo-wloskie.pdf .
+	rm src/ziemiomierstwo-wloskie.tex
 
 fast: src/ziemiomierstwo.tex src/chapters/*.tex src/chapters/*/*.tex
 	cd src && lualatex -interaction=nonstopmode  ziemiomierstwo.tex && bibtex ziemiomierstwo && lualatex -interaction=nonstopmode  ziemiomierstwo.tex && lualatex -interaction=nonstopmode  ziemiomierstwo.tex
