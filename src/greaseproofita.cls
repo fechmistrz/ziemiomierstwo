@@ -30,9 +30,9 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage[final]{microtype}
 
-\RequirePackage{Alegreya}
+\usepackage[T1]{fontenc}
+\usepackage{newpxtext}
 
-\RequirePackage{fontspec}
 \RequirePackage[italian]{babel}
 \RequirePackage[utf8]{inputenc}
 
