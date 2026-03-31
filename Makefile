@@ -11,7 +11,7 @@ ziemiomierstwo.pdf: src/ziemiomierstwo.tex src/chapters/*.tex src/chapters/*/*.t
 	cp src/ziemiomierstwo.pdf .
 
 ziemiomierstwo-wloskie.pdf: src/ziemiomierstwo.tex src/chapters/*.tex src/chapters/*/*.tex src/img.jpeg
-	sed -r 's/poltrue/itatrue/g' src/ziemiomierstwo.tex > src/ziemiomierstwo-wloskie.tex
+	sed -e 's/poltrue/itatrue/g' -e 's/greaseproof/greaseproofita/g' src/ziemiomierstwo.tex > src/ziemiomierstwo-wloskie.tex
 	cd src && lualatex ziemiomierstwo-wloskie.tex && bibtex ziemiomierstwo-wloskie && lualatex ziemiomierstwo-wloskie.tex && lualatex ziemiomierstwo-wloskie.tex
 	cp src/ziemiomierstwo-wloskie.pdf .
 	rm src/ziemiomierstwo-wloskie.tex
