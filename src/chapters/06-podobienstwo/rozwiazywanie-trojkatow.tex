@@ -1,84 +1,106 @@
 %
 
-\section{Rozwiązywanie trójkątów}
+\pol{\section{Rozwiązywanie trójkątów}}
+\ita{\section{Risoluzione dei triangoli}}
 % https://en.wikipedia.org/wiki/Solution_of_triangles
 
 % TODO: https://en.wikipedia.org/wiki/Skinny_triangle
 
-Rozwiązywanie trójkątów (łacińskie \emph{solutio triangulorum}) to najważniejsze rachunkowe zadanie w~trygonometrii.
-Dane są pewne informacje o trójkącie na płaszczyźnie lub sferze, takie jak: długości boków albo kąty wewnętrzne; należy ustalić miary pozostałych.
-Zastosowania obejmują geodezję, astronomię, nawigację i nie tylko.
+\pol{Rozwiązywanie trójkątów (łacińskie \emph{solutio triangulorum}) to najważniejsze rachunkowe zadanie w~trygonometrii.}
+\ita{La risoluzione dei triangoli (dal latino \emph{solutio triangulorum}) è il compito computazionale più importante in trigonometria.}
+\pol{Dane są pewne informacje o trójkącie na płaszczyźnie lub sferze, takie jak: długości boków albo kąty wewnętrzne; należy ustalić miary pozostałych.}
+\ita{Sono dati alcuni dati su un triangolo nel piano o sulla sfera, come: lunghezze dei lati o angoli interni; occorre determinare le misure degli altri.}
+\pol{Zastosowania obejmują geodezję, astronomię, nawigację i nie tylko.}
+\ita{Le applicazioni includono geodesia, astronomia, navigazione e non solo.}
 
-Ograniczymy się do płaszczyzny i podamy kilka nowych zależności trygonometrycznych, które pomagają w rozwiązywaniu trójkątów.
-Znamy już twierdzenia sinusów i kosinusów; w ogólności to drugie jest bezpieczniejsze od pierwszego (ponieważ z faktu, że $\sin \alpha = \frac 1 2$ nie wynika, czy kąt $\alpha$ jest ostry, czy rozwarty, kosinus zaś jest jednoznaczny).
+\pol{Ograniczymy się do płaszczyzny i podamy kilka nowych zależności trygonometrycznych, które pomagają w rozwiązywaniu trójkątów.}
+\ita{Ci limiteremo al piano e presenteremo alcune nuove relazioni trigonometriche che aiutano nella risoluzione dei triangoli.}
+\pol{Znamy już twierdzenia sinusów i kosinusów; w ogólności to drugie jest bezpieczniejsze od pierwszego (ponieważ z faktu, że $\sin \alpha = \frac 1 2$ nie wynika, czy kąt $\alpha$ jest ostry, czy rozwarty, kosinus zaś jest jednoznaczny).}
+\ita{Conosciamo già il teorema dei seni e dei coseni; in generale il secondo è più sicuro del primo (poiché dal fatto che $\sin \alpha = \frac 1 2$ non si deduce se l'angolo $\alpha$ è acuto o ottuso, mentre il coseno è univoco).}
 
-W każdym z poniższych stwierdzeń mamy trójkąt o kątach $\alpha, \beta, \gamma$, bokach $a, b, c$, połowie obsowdu $p = \frac 1 2 (a + b + c)$, promieniu okręgu opisanego $R$ i wpisanego $r$.
+\pol{W każdym z poniższych stwierdzeń mamy trójkąt o kątach $\alpha, \beta, \gamma$, bokach $a, b, c$, połowie obwodu $p = \frac 1 2 (a + b + c)$, promieniu okręgu opisanego $R$ i wpisanego $r$.}
+\ita{In ciascuna delle seguenti affermazioni consideriamo un triangolo con angoli $\alpha, \beta, \gamma$, lati $a, b, c$, semiperimetro $p = \frac 1 2 (a + b + c)$, raggio del circolo circoscritto $R$ e raggio del circolo inscritto $r$.}
 
 \begin{proposition}
-    Zachodzi
+    \pol{Zachodzi}
+    \ita{Vale}
     \begin{equation}
     S = 2 R^2 \sin \alpha \sin \beta \sin \gamma.
     \end{equation}
 \end{proposition}
 
 \begin{proposition}
-    Zachodzi
+    \pol{Zachodzi}
+    \ita{Vale}
     \begin{equation}
         p = R (\sin \alpha + \sin \beta + \sin \theta).
     \end{equation}
 \end{proposition}
 
 \begin{proposition}
-    Zachodzi
+    \pol{Zachodzi}
+    \ita{Vale}
     \begin{equation}
         r = 4R \sin \frac \alpha 2 \sin \frac \beta 2 \sin \frac \gamma 2.
     \end{equation}
 \end{proposition}
 
-\begin{proposition}[wzór Newtona]
-\index{wzór!Newtona}%
-    Zachodzi
+\begin{proposition}[\pol{wzór Newtona}\ita{formula di Newton}]
+\pol{\index{wzór!Newtona}}%
+\ita{\index{formula!di Newton}}%
+    \pol{Zachodzi}
+    \ita{Vale}
     \begin{equation}
         \frac{a + b}{c} = \frac{\cos \frac 1 2 (\alpha - \beta)}{\cos \frac 1 2 (\alpha + \beta)}.
     \end{equation}
 \end{proposition}
 
-\begin{proposition}[wzór Mollweidego]
-\index{wzór!Mollweidego}%
+\begin{proposition}[\pol{wzór Mollweidego}\ita{formula di Mollweide}]
+\pol{\index{wzór!Mollweidego}}%
+\ita{\index{formula!di Mollweide}}%
 \label{wzor_mollweidego}%
-    Zachodzi
+    \pol{Zachodzi}
+    \ita{Vale}
     \begin{equation}
         \frac{a - b}{c} = \frac{\sin \frac 1 2 (\alpha - \beta)}{\sin \frac 1 2 (\alpha + \beta)}.
     \end{equation}
 \end{proposition}
 
-(Nie ma zgodności co do powyższych nazw).
-Nieco bardziej geometryczną wersję wzorów poda Izaak Newton w 1707 roku, potem Friedrich von Oppel w 1746.
+\pol{(Nie ma zgodności co do powyższych nazw).}
+\ita{(Non c'è consenso sui nomi sopra riportati).}
+\pol{Nieco bardziej geometryczną wersję wzorów poda Izaak Newton w 1707 roku, potem Friedrich von Oppel w 1746.}
+\ita{Una versione leggermente più geometrica delle formule è data da Isaac Newton nel 1707, poi da Friedrich von Oppel nel 1746.}
 \index[persons]{Newton, Izaak}%
 \index[persons]{Oppel@von Oppel, Friedrich}%
-Wyrażenia, których używać będziemy do końca świata i jeden dzień dłużej zawdzięczymy Thomasowi Simpsonowi z 1748 roku, oraz Karlowi Mollweidemu, który opublikuje to samo w 1808 roku bez cytowania poprzedników.
+\pol{Wyrażenia, których używać będziemy do końca świata i jeden dzień dłużej zawdzięczymy Thomasowi Simpsonowi z 1748 roku, oraz Karlowi Mollweidemu, który opublikuje to samo w 1808 roku bez cytowania poprzedników.}
+\ita{Le espressioni che useremo fino alla fine del mondo e un giorno di più si devono a Thomas Simpson del 1748 e a Karl Mollweide, che pubblicò lo stesso nel 1808 senza citare i predecessori.}
 \index[persons]{Simpson, Thomas}%
 \index[persons]{Mollweide, Karl}%
 
-\begin{proposition}[wzór Regiomontanusa]
-\index{wzór!Regiomontanusa}%
-    Zachodzi
+\begin{proposition}[\pol{wzór Regiomontanusa}\ita{formula di Regiomontano}]
+\pol{\index{wzór!Regiomontanusa}}%
+\ita{\index{formula!di Regiomontano}}%
+    \pol{Zachodzi}
+    \ita{Vale}
     \begin{equation}
         \frac{a + b}{a- b} = \frac{\tan \frac 1 2 (\alpha + \beta)}{\tan \frac 1 2 (\alpha - \beta)}.
     \end{equation}
 \end{proposition}
 % TODO: https://en.wikipedia.org/wiki/Law_of_tangents
 
-Regiomontanus będzie znany gorzej jako Johannes Müller von Königsberg.
+\pol{Regiomontanus będzie znany gorzej jako Johannes Müller von Königsberg.}
+\ita{Regiomontano è meno noto come Johannes Müller von Königsberg.}
 \index[persons]{Königsberg@von Königsberg, Johannes|see{Regiomontanus}}%
 \index[persons]{Regiomontanus}%
 
 \begin{proposition}
-	Niech $\alpha, \beta, \gamma$ będą miarami kątów trójkąta o bokach $a, b, c$, polu $S$ i promieniu okręgu opisanego $R$.
-	Wtedy
-	\begin{equation}
-		\tan \alpha + \tan \beta + \tan \gamma = \frac{4S}{a^2 + b^2 + c^2 - 8R^2}
-	\end{equation}
+    \pol{Niech $\alpha, \beta, \gamma$ będą miarami kątów trójkąta o bokach $a, b, c$, polu $S$ i promieniu okręgu opisanego $R$.}
+    \ita{Siano $\alpha, \beta, \gamma$ le misure degli angoli di un triangolo con lati $a, b, c$, area $S$ e raggio del circolo circoscritto $R$.}
+    \pol{Wtedy}
+    \ita{Allora}
+    \begin{equation}
+        \tan \alpha + \tan \beta + \tan \gamma = \frac{4S}{a^2 + b^2 + c^2 - 8R^2}
+    \end{equation}
 \end{proposition}
 
 %
