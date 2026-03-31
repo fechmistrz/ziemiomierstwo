@@ -1,24 +1,33 @@
 %
 
-\section{Twierdzenie kosinusów}
-\index{twierdzenie!kosinusów}%
+\pol{\section{Twierdzenie kosinusów}}
+\ita{\section{Teorema del coseno}}
+\pol{\index{twierdzenie!kosinusów}}%
+\ita{\index{teorema!del coseno}}%
 
-Twierdzenie kosinusów jest bardzo stare.
-Euklides rozpatrzy je w Elementach osobno dla trójkątów rozwartokątnych (II.12) i ostrokątnych (II.13).
+\pol{Twierdzenie kosinusów jest bardzo stare.}
+\ita{Il teorema del coseno è molto antico.}
+\pol{Euklides rozpatrzy je w Elementach osobno dla trójkątów rozwartokątnych (II.12) i ostrokątnych (II.13).}
+\ita{Euclide lo tratta negli Elementi separatamente per i triangoli ottusangoli (II.12) e acutangoli (II.13).}
 % TODO: https://en.wikipedia.org/wiki/Law_of_cosines The cases of obtuse triangles and acute triangles (corresponding to the two cases of negative or positive cosine) are treated separately, in Propositions II.12 and II.13:[1]
-Perski matematyk Jamshid al-Kashi znajdzie wartość $2\pi$ z~dokładnością do szesnastu cyfr, będzie autorem najdokładniejszych tablic trygonometrycznych swoich czasów i poda równoważną postać wzoru,
+\pol{Perski matematyk Jamshid al-Kashi znajdzie wartość $2\pi$ z~dokładnością do szesnastu cyfr, będzie autorem najdokładniejszych tablic trygonometrycznych swoich czasów i poda równoważną postać wzoru,}
+\ita{Il matematico persiano Jamshid al-Kashi calcolerà il valore di $2\pi$ con precisione fino a sedici cifre, sarà autore delle tavole trigonometriche più precise del suo tempo e fornirà una forma equivalente della formula,}
 \index[persons]{al-Kashi, Jamshid}
 \begin{equation}
 	c = \sqrt{(b - a \cos \gamma)^2 + (a \sin \gamma)^2}
 \end{equation}
-dla ostrego kąta $\gamma$.
-Taka sama metoda rozwiązywania trójkątów pojawi się w Europie w 1464 roku, kiedy Regiomontanus opublikuje \emph{,,De triangulis omnimodis''} (czyli \emph{,,O trójkątach wszelkiego rodzaju''}).
+\pol{dla ostrego kąta $\gamma$.}
+\ita{per l'angolo acuto $\gamma$.}
+\pol{Taka sama metoda rozwiązywania trójkątów pojawi się w Europie w 1464 roku, kiedy Regiomontanus opublikuje \emph{,,De triangulis omnimodis''} (czyli \emph{,,O trójkątach wszelkiego rodzaju''}).}
+\ita{Lo stesso metodo per risolvere i triangoli apparirà in Europa nel 1464, quando Regiomontano pubblicherà \emph{De triangulis omnimodis} (cioè \emph{Sui triangoli di ogni tipo}).}
 \index[persons]{Regiomontanus}%
-Współczesna forma twierdzenia to zasługa François Viète'a.
+\pol{Współczesna forma twierdzenia to zasługa François Viète'a.}
+\ita{La forma moderna del teorema è merito di François Viète.}
 \index[persons]{Viète, François}%
 
-\begin{proposition}[twierdzenie kosinusów]
-	W trójkącie o bokach długości $a, b, c$ z kątem $\gamma$ naprzeciwko krawędzi $c$ zachodzi
+\begin{proposition}[\pol{twierdzenie kosinusów}\ita{teorema del coseno}]
+	\pol{W trójkącie o bokach długości $a, b, c$ z kątem $\gamma$ naprzeciwko krawędzi $c$ zachodzi}
+	\ita{In un triangolo con lati di lunghezza $a, b, c$ e angolo $\gamma$ opposto al lato $c$ vale}
 	\label{twierdzenie_kosinusow}%
 	\begin{equation}
 		c^2 = a^2 + b^2 - 2ab \cos \gamma.
@@ -26,15 +35,19 @@ Współczesna forma twierdzenia to zasługa François Viète'a.
 	% https://en.wikipedia.org/wiki/Law_of_cosines
 \end{proposition}
 
-Znamy różne dowody tego twierdzenia: korzystające z twierdzenia Pitagorasa, trzech wysokości trójkąta, twierdzenia Ptolemeusza, geometrii koła albo twierdzenia sinusów.
-We Francji twierdzenie kosinusów do późna będzie nazywane \emph{théorème d'Al-Kashi}, na cześć wspomnianego wyżej Persa.
+\pol{Znamy różne dowody tego twierdzenia: korzystające z twierdzenia Pitagorasa, trzech wysokości trójkąta, twierdzenia Ptolemeusza, geometrii koła albo twierdzenia sinusów.}
+\ita{Conosciamo varie dimostrazioni di questo teorema: basate sul teorema di Pitagora, sulle tre altezze del triangolo, sul teorema di Tolomeo, sulla geometria del cerchio o sul teorema dei seni.}
+\pol{We Francji twierdzenie kosinusów do późna będzie nazywane \emph{théorème d'Al-Kashi}, na cześć wspomnianego wyżej Persa.}
+\ita{In Francia il teorema del coseno sarà a lungo chiamato \emph{théorème d'Al-Kashi}, in onore del suddetto persiano.}
 
-Piszą o nim Guzicki \cite[s. 258]{guzicki_2021}, Hartshorne \cite[s. 185]{hartshorne2000} jako ćwiczenie.
+\pol{Piszą o nim Guzicki \cite[s. 258]{guzicki_2021}, Hartshorne \cite[s. 185]{hartshorne2000} jako ćwiczenie.}
+\ita{Ne scrivono Guzicki \cite[s. 258]{guzicki_2021}, Hartshorne \cite[s. 185]{hartshorne2000} come esercizio.}
 
-\begin{theorem}[Stewarta, 1746]
+\begin{theorem}[\pol{Stewarta, 1746}\ita{di Stewart, 1746}]
 \label{twierdzenie_stewarta}%
 \index{twierdzenie!Stewarta}%
-	W trójkącie $\triangle ABC$ o bokach długości $a, b, c$ poprowadzono czewianę z~wierzchołka $C$ do boku $AB$ o długości $d$, dzieląc ten bok na odcinki długości $n$ oraz $m$, jak na rysunku:
+	\pol{W trójkącie $\triangle ABC$ o bokach długości $a, b, c$ poprowadzono czewianę z~wierzchołka $C$ do boku $AB$ o długości $d$, dzieląc ten bok na odcinki długości $n$ oraz $m$, jak na rysunku:}
+	\ita{In un triangolo $\triangle ABC$ con lati di lunghezza $a, b, c$ è stata tracciata la ceviana dal vertice $C$ al lato $AB$ di lunghezza $d$, dividendo tale lato in segmenti di lunghezza $n$ e $m$, come mostrato nella figura:}
 	\begin{center}
 \begin{comment}
     \begin{tikzpicture}[scale=.4]
@@ -65,42 +78,54 @@ Piszą o nim Guzicki \cite[s. 258]{guzicki_2021}, Hartshorne \cite[s. 185]{harts
     \end{tikzpicture}
 \end{comment}
     \end{center}
-	Wtedy
+	\pol{Wtedy}
+	\ita{Allora}
 	\begin{equation}
 		b^2 m + c^2 n = a (d^2 + mn).
 	\end{equation}
 \end{theorem}
 
-Twierdzenie bez dowodu opublikuje Matthew Stewart w 1746 roku, chociaż Coxeter przypuści, że mogło być znane nawet Archimedesowi.
+\pol{Twierdzenie bez dowodu opublikuje Matthew Stewart w 1746 roku, chociaż Coxeter przypuści, że mogło być znane nawet Archimedesowi.}
+\ita{Il teorema, senza dimostrazione, sarà pubblicato da Matthew Stewart nel 1746, anche se Coxeter sospetta che fosse noto persino ad Archimede.}
 \index[persons]{Stewart, Matthew}%
 \index[persons]{Archimedes}%
 % Coxeter, H.S.M.; Greitzer, S.L. (1967), Geometry Revisited, New Mathematical Library #19, The Mathematical Association of America, ISBN 0-88385-619-0 strona 6
-Dowody podadzą też Simpson, Euler, Carnot i pewnie jeszcze ktoś.
+\pol{Dowody podadzą też Simpson, Euler, Carnot i pewnie jeszcze ktoś.}
+\ita{Dimostrazioni saranno fornite anche da Simpson, Euler, Carnot e probabilmente altri.}
 \index[persons]{Simpson, Thomas}%
 \index[persons]{Euler, Leonhard}%
 \index[persons]{Carnot, L.M.N.}%
-W przyszłości często pokazywać się będzie je jako zastosowanie twierdzenia kosinusów, tak jak Guzicki \cite[s. 265]{guzicki_2021}, Bogdańska, Neugebauer \cite[s. 90-91]{neugebauer_2018}; inne rozwiązanie skorzysta z~odcinków skierowanych.
-Znalezienie go to ćwiczenie podane przez Evesa \cite[s. 58]{eves1_1972}.
+\pol{W przyszłości często pokazywać się będzie je jako zastosowanie twierdzenia kosinusów, tak jak Guzicki \cite[s. 265]{guzicki_2021}, Bogdańska, Neugebauer \cite[s. 90-91]{neugebauer_2018}; inne rozwiązanie skorzysta z~odcinków skierowanych.}
+\ita{In futuro saranno spesso presentati come applicazione del teorema del coseno, come Guzicki \cite[s. 265]{guzicki_2021}, Bogdańska, Neugebauer \cite[s. 90-91]{neugebauer_2018}; un'altra soluzione utilizzerà segmenti orientati.}
+\pol{Znalezienie go to ćwiczenie podane przez Evesa \cite[s. 58]{eves1_1972}.}
+\ita{Trovarlo è un esercizio proposto da Eves \cite[s. 58]{eves1_1972}.}
 
-\begin{corollary}[twierdzenie Apoloniusza]
-	W trójkącie $ABC$ poprowadzono środkową $AD$.
-	Wtedy suma pól kwadratów zbudowanych na bokach $AB$ i $AC$ jest dwa razy mniejsza od sumy pól kwadratów zbudowanych na środkowej $AD$ i połowie podstawy ($BD$):
+\begin{corollary}[\pol{twierdzenie Apoloniusza}\ita{teorema di Apollonio}]
+	\pol{W trójkącie $ABC$ poprowadzono środkową $AD$.}
+	\ita{In un triangolo $ABC$ è stata tracciata la mediana $AD$.}
+	\pol{Wtedy suma pól kwadratów zbudowanych na bokach $AB$ i $AC$ jest dwa razy mniejsza od sumy pól kwadratów zbudowanych na środkowej $AD$ i połowie podstawy ($BD$):}
+	\ita{Allora la somma delle aree dei quadrati costruiti sui lati $AB$ e $AC$ è la metà della somma delle aree dei quadrati costruiti sulla mediana $AD$ e sulla metà della base ($BD$):}
 	\begin{equation}
 		|AB|^2 + |AC|^2 = 2|BD|^2 + 2 |AD|^2.
 	\end{equation}
 	% https://en.wikipedia.org/wiki/Apollonius%27s_theorem
 \end{corollary}
 
-Twierdzenie przetrwa jako fakt VII.122 w zbiorach Pappusa z Aleksandrii, choć nie brak będzie przypuszczeń, że występowało wcześniej w zaginionym tekście \emph{,,Plane Loci''} Apoloniusza z Pergi.
-(Tekst będzie wspomniany na stronie \pageref{plane_loci}).
+\pol{Twierdzenie przetrwa jako fakt VII.122 w zbiorach Pappusa z Aleksandrii, choć nie brak będzie przypuszczeń, że występowało wcześniej w zaginionym tekście \emph{,,Plane Loci''} Apoloniusza z Pergi.}
+\ita{Il teorema sopravvive come fatto VII.122 nelle collezioni di Pappo di Alessandria, anche se non mancheranno supposizioni che fosse presente in un testo perduto \emph{Plane Loci} di Apollonio di Perge.}
+\pol{(Tekst będzie wspomniany na stronie \pageref{plane_loci}).}
+\ita{(Il testo sarà menzionato a pagina \pageref{plane_loci}).}
 
 \begin{corollary}
-	W trójkącie $\triangle ABC$ o bokach długości $a, b, c$ poprowadzono środkową oraz dwusieczną z~wierzchołka $C$.
-	Długość środkowej wynosi
+	\pol{W trójkącie $\triangle ABC$ o bokach długości $a, b, c$ poprowadzono środkową oraz dwusieczną z~wierzchołka $C$.}
+	\ita{In un triangolo $\triangle ABC$ con lati di lunghezza $a, b, c$ è stata tracciata la mediana e la bisettrice dall'angolo $C$.}
+	\pol{Długość środkowej wynosi}
+	\ita{La lunghezza della mediana è}
 	\begin{equation}
 		\sqrt{\frac{a^2 + b^2}{2} - \frac{c^2}{4}},
 	\end{equation}
-	zaś dwusieczna ma długość
+	\pol{zaś dwusieczna ma długość}
+	\ita{mentre la bisettrice ha lunghezza}
 	\begin{equation}
 		\frac{\sqrt{ab (a+b+c)(a+b-c)}}{a+b}.
 	\end{equation}
