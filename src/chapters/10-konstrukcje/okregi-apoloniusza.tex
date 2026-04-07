@@ -1,0 +1,109 @@
+%
+
+\pol{\subsection{Okręgi Apoloniusza i Soddy'ego}}
+\ita{\subsection{Cerchi di Apollonio e di Soddy}}
+
+% https://en.wikipedia.org/wiki/Problem_of_Apollonius
+\begin{problem}
+    \label{problem_apoloniusza}%
+    \pol{Na płaszczyźnie dane są trzy okręgi.
+    Skonstruować czwarty, który jest styczny do każdego z~pozostałych.}
+    \ita{Nel piano sono dati tre cerchi.
+    Costruire un quarto che sia tangente a ciascuno degli altri.}
+    \pol{\index{okrąg!Apoloniusza}}%
+    \ita{\index{cerchio!di Apollonio}}%
+\end{problem}
+
+\pol{Dyskusję na temat problemu znajdziemy u Guzickiego \cite[s. 444-461]{guzicki_2021}.
+Eves \cite[s. 164]{eves1_1972} rozważa szczególny przypadek trzech współpękowych okręgów.
+W ogólności okręgi mogą mieć zerowy promień (i skurczyć się do punktu) lub nieskończony promień (i wydłużyć się do prostej).
+Zależnie od wyboru kształtów, mamy do rozwiązania dziesięć różnych zadań: PPP, PPL, PLL, LLL, PPC, PLC, LLC, PCC, LCC, CCC (klasyczne zadanie Apoloniusza).
+Tutaj P oznacza punkt, L prostą, zaś C okrąg, od pierwszych liter stosownych słów po angielsku.}%
+\ita{Una discussione del problema si trova in Guzicki \cite[s. 444-461]{guzicki_2021}.
+Eves \cite[s. 164]{eves1_1972} considera il caso particolare di tre cerchi coassiali.
+In generale i cerchi possono avere raggio nullo (riducendosi a un punto) oppure raggio infinito (diventando una retta).
+A seconda della scelta delle figure, si ottengono dieci problemi diversi: PPP, PPL, PLL, LLL, PPC, PLC, LLC, PCC, LCC, CCC (il problema classico di Apollonio).
+Qui P indica un punto, L una retta e C un cerchio, dalle iniziali dei termini inglesi corrispondenti.}%
+
+\pol{Z zadaniem wiąże się dużo późniejszy wynik.
+W dwóch listach z 1643 roku do czeskiej księżniczki Elżbiety z Palatynatu Kartezjusz przedstawi uproszczoną wersję, w której trzy okręgi są parami styczne i znajdzie (bez dowodu) relację wiążącą promienie okręgów.}%
+\pol{\index[persons]{van Pallandt, Elżbieta (z Palatynatu)}}%
+\ita{Al problema è legato un risultato molto più tardo.
+In due lettere del 1643 alla principessa Elisabetta di Boemia, Cartesio presentò una versione semplificata in cui tre cerchi sono a due a due tangenti e trovò (senza dimostrazione) una relazione tra i loro raggi.}%
+\ita{\index[persons]{di Boemia, Elisabetta (Principessa Palatina)}}%
+
+\begin{theorem}[\pol{Kartezjusza}\ita{di Cartesio}]
+\pol{Dane są trzy okręgi, parami styczne o promieniach $r_1, r_2, r_3$ oraz czwarty styczny do każdego z nich\footnote{istnieją dwa takie, jeden z~nich zazwyczaj styczny wewnętrznie, a w szczególnym przypadku może okazać się prostą.}.
+Definiujemy krzywiznę ze znakiem jako $\pm 1 / r$, gdzie znak $-$ odpowiada okręgowi stycznemu zewnętrznie.
+Wtedy}%
+\ita{Sono dati tre cerchi, a due a due tangenti, con raggi $r_1, r_2, r_3$ e un quarto tangente a ciascuno di essi\footnote{ne esistono due, uno dei quali è di solito tangente internamente e, in un caso particolare, può degenerare in una retta.}.
+Definiamo la curvatura con segno come $\pm 1 / r$, dove il segno $-$ corrisponde a una tangenza esterna.
+Allora}%
+\begin{equation}
+    \left(\pm \frac{1}{r_1} \pm  \frac{1}{r_2} \pm  \frac{1}{r_3} \pm  \frac{1}{r_4}\right)^2 = 2 \left(\frac{1}{r_1^2} + \frac{1}{r_2^2} + \frac{1}{r_3^2} + \frac{1}{r_4^2}\right),
+\end{equation}
+\pol{gdzie $r_4$ oznacza promień czwartego okręgu.}%
+\ita{dove $r_4$ indica il raggio del quarto cerchio.}%
+\end{theorem}
+
+\pol{Jeżeli jeden z okręgów (dajmy na to ten o promieniu $r_1$) staje się prostą, to jego zerowa krzywizna znika z równania.
+Jeżeli dwa okręgi stają się dwiema prostymi, to pozostałem dwa muszą być do siebie przystające, co należy uznać za zdegenerowany przypadek.}%
+\ita{Se uno dei cerchi (ad esempio quello di raggio $r_1$) diventa una retta, la sua curvatura nulla scompare dall'equazione.
+Se due cerchi diventano due rette, gli altri due devono essere congruenti, il che va considerato un caso degenere.}%
+
+\pol{Twierdzenie Kartezjusza odkryją na nowo Yamaji Nuchizumi (1751), Jakob Steiner (\emph{Fortsetzung der geometrischen Betrachtungen} z 1826), Philip Beecroft (\emph{Properties of circles in mutual contact} z 1842) i~wreszcie Frederick Soddy (\emph{The Kiss Precise} z 1936 jak opisane u Coxetera \cite[s. 29-31]{coxeter_1967}).}%
+\ita{Il teorema di Cartesio fu riscoperto da Yamaji Nuchizumi (1751), Jakob Steiner (\emph{Fortsetzung der geometrischen Betrachtungen}, 1826), Philip Beecroft (\emph{Properties of circles in mutual contact}, 1842) e infine Frederick Soddy (\emph{The Kiss Precise}, 1936, come descritto in Coxeter \cite[s. 29-31]{coxeter_1967}).}%
+\index[persons]{Nuchizumi, Yamaji}%
+\index[persons]{Steiner, Jakob}%
+\index[persons]{Beecroft, Philip}%
+\index[persons]{Soddy, Frederick}%
+
+\pol{Ten ostatni poda uogólnienie do sfer, a rok później Thorold Gosset przeskoczy do przestrzeni dowolnego wymiaru ($\mathbb R^n$), z $n$ w miejsce czynnika $2$.}%
+\ita{Quest'ultimo fornì una generalizzazione alle sfere, e un anno dopo Thorold Gosset passò allo spazio di dimensione arbitraria ($\mathbb R^n$), con $n$ al posto del fattore $2$.}%
+\pol{\index[persons]{Gosset, Thorold}}%
+\ita{\index[persons]{Gosset, Thorold}}%
+
+\pol{Dowody korzystają z inwersji, wzoru Herona, wyznacznika Cayleya-Mengera, albo łańcuchów Pappusa i twierdzenia Vivianiego.
+Patrz też $\Delta_{10}^6$.}%
+\ita{Le dimostrazioni utilizzano inversioni, la formula di Erone, il determinante di Cayley--Menger, oppure le catene di Pappo e il teorema di Viviani.%
+Si veda anche $\Delta_{10}^6$.}
+
+\begin{example}
+\pol{Dane są trzy styczne zewnętrznie okręgi o promieniach $r_1 = r_2 = r_3 = \sqrt{3}$.
+Czwarty okrąg styczny do nich wszystkich ma wtedy krzywiznę $\sqrt 3 \pm 2$.}%
+\ita{Sono dati tre cerchi tangenti esternamente con raggi $r_1 = r_2 = r_3 = \sqrt{3}$.
+Il quarto cerchio tangente a tutti ha allora curvatura $\sqrt 3 \pm 2$.}%
+\end{example}
+
+\pol{Jeszcze nie skończyliśmy z Soddym.
+W wierzchołkach trójkąta o obwodzie $2p = a + b + c$ wstawiamy okręgi o promieniach $p - a$, $p - b$, $p - c$.
+Wtedy czwarty okrąg (zwany okręgiem Soddy'ego) z twierdzenia Kartezjusza ma promień}%
+\ita{Non abbiamo ancora finito con Soddy.
+Nei vertici di un triangolo di perimetro $2p = a + b + c$ inseriamo cerchi di raggi $p - a$, $p - b$, $p - c$.
+Allora il quarto cerchio (detto cerchio di Soddy) dal teorema di Cartesio ha raggio}%
+\begin{equation}
+    \frac{4R + r \pm 2p}{S},
+\end{equation}
+\pol{gdzie $R, r$ to promienie okręgu opisanego i wpisanego, zaś $S$ to pole powierzchni.
+Napisze o tym Coxeter \cite[s. 29-31]{coxeter_1967}.}%
+\ita{dove $R, r$ sono i raggi del cerchio circoscritto e inscritto, e $S$ è l'area.
+Ne scrive Coxeter \cite[s. 29-31]{coxeter_1967}.}%
+
+\begin{definition}[\pol{prosta Soddy'ego}\ita{retta di Soddy}]
+    \pol{Prostą przechodzącą przez środki okręgów Soddy'ego nazywamy prostą Soddy'ego.}
+    \ita{La retta che passa per i centri dei cerchi di Soddy si chiama retta di Soddy.}
+\end{definition}
+
+\begin{proposition}
+\pol{Prosta Soddy'ego przechodzi przez środek okręgu wpisanego, punkt Gergonne'a i punkt Eppsteina (punkt, gdzie przecinają się trzy proste przechodzące przez trzy pary spośród sześciu punktów styczności czterech okręgów...)}%
+\ita{La retta di Soddy passa per il centro del cerchio inscritto, il punto di Gergonne e il punto di Eppstein (il punto di intersezione di tre rette che passano per tre coppie dei sei punti di tangenza dei quattro cerchi...).}%
+\pol{\index{punkt!Eppsteina}}%
+\ita{\index{punto!di Eppstein}}%
+\end{proposition}
+
+\pol{Prosta Soddy'ego ma pewien związek z punktem de Lonchampsa, którego nie opiszemy.}%
+\ita{La retta di Soddy ha una certa relazione con il punto di de Longchamps, che non descriveremo.}%
+\pol{\index{punkt!de Longchampsa}}%
+\ita{\index{punto!di de Longchamps}}%
+
+%
