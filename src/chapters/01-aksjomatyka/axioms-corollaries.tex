@@ -1,83 +1,144 @@
 %
 
-\section{Elementarne wyniki}
+\pol{\section{Elementarne wyniki}}
+\ita{\section{Risultati elementari}}
 
-\begin{definition}[symetralna]
+\begin{definition}[\pol{symetralna}\ita{asse del segmento}]
     \label{def_symetralna}
-	Prostą prostopadłą do odcinka i przechodzącą przez jego środek nazywamy symetralną.
-    \index{symetralna}
+	\pol{Prostą prostopadłą do odcinka i przechodzącą przez jego środek nazywamy symetralną.}
+    \ita{La retta perpendicolare a un segmento e passante per il suo punto medio si chiama asse del segmento.}
+    \pol{\index{symetralna}}
+    \ita{\index{asse del segmento}}
 \end{definition}
 
-Symetralna odcinka $AB$ jest miejscem geometrycznym punktów, które są równodległe od obu końców odcinka, a zatem są środkiem pewnego okręgu przechodzącego przez punkty $A$ oraz $B$ (Guzicki \cite[s. 14, 15]{guzicki_2021}).
-W szczególności, trzy współliniowe punkty nie leżą na jednym okręgu, ale już trzy niewspółliniowe punkty wyznaczają taki okrąg jednoznacznie.
-\index{współliniowy}
+\pol{Symetralna odcinka $AB$ jest miejscem geometrycznym punktów, które są równodległe od obu końców odcinka, a zatem są środkiem pewnego okręgu przechodzącego przez punkty $A$ oraz $B$ (Guzicki \cite[s. 14, 15]{guzicki_2021}).}
+\ita{L'asse del segmento $AB$ è il luogo geometrico dei punti equidistanti dai due estremi del segmento e quindi costituisce l'insieme dei centri delle circonferenze passanti per i punti $A$ e $B$ (Guzicki \cite[s. 14, 15]{guzicki_2021}).}
 
-Okrąg przechodzący przez wszystkie wierzchołki wielokąta nazywamy opisanym na nim, zatem poprzednie stwierdzenie można wysłowić krótko ,,na każdym trójkącie można opisać dokładnie jeden okrąg''.
-Mówimy też, że wielokąt jest wpisany w okrąg.
-\index{okrąg!opisany}%
+\pol{W szczególności, trzy współliniowe punkty nie leżą na jednym okręgu, ale już trzy niewspółliniowe punkty wyznaczają taki okrąg jednoznacznie.}
+\ita{In particolare, tre punti allineati non appartengono a una stessa circonferenza, mentre tre punti non allineati determinano univocamente una tale circonferenza.}
+
+\pol{\index{współliniowy}}
+\ita{\index{allineato}}
+
+\pol{Okrąg przechodzący przez wszystkie wierzchołki wielokąta nazywamy opisanym na nim, zatem poprzednie stwierdzenie można wysłowić krótko ,,na każdym trójkącie można opisać dokładnie jeden okrąg''.}
+\ita{La circonferenza passante per tutti i vertici di un poligono si dice circoscritta al poligono; pertanto l'affermazione precedente può essere formulata brevemente come ``per ogni triangolo esiste una e una sola circonferenza circoscritta''.}
+
+\pol{Mówimy też, że wielokąt jest wpisany w okrąg.}
+\ita{Si dice anche che il poligono è inscritto nella circonferenza.}
+
+\pol{\index{okrąg!opisany}}
+\ita{\index{circonferenza!circoscritta}}
 
 % TODO: https://en.wikipedia.org/wiki/Bisection#Line_segment_bisector
 % TODO: https://en.wikipedia.org/wiki/Circumcircle
 
 \begin{proposition}
 	\label{hartshorne_52x}
-    Niech $AB$ będzie odcinkiem.
-	Istnieje wtedy trójkąt równoramienny, którego podstawą jest $AB$.
-    \index{trójkąt!równoramienny}%
+    \pol{Niech $AB$ będzie odcinkiem.}
+    \ita{Sia $AB$ un segmento.}
+
+	\pol{Istnieje wtedy trójkąt równoramienny, którego podstawą jest $AB$.}
+    \ita{Allora esiste un triangolo isoscele avente $AB$ come base.}
+
+    \pol{\index{trójkąt!równoramienny}}
+    \ita{\index{triangolo!isoscele}}
 \end{proposition}
 
-Powyższe stwierdzenie jest ciekawe, bo jest prawdziwe na płaszczyźnie Hilberta: jego prawdziwość nie zależy od aksjomatu Pascha.
-\index{płaszczyzna!Hilberta}
-\index{aksjomat!Pascha}
-W geometrii nieeuklidesowej może nie istnieć trójkąt równoboczny o danej podstawie.
-Ale na płaszczyźnie Hilberta z aksjomatem (P), bez zakładania aksjomatu (E), istnieje trójkąt równoboczny o danej podstawie -- patrz ćwiczenie u Hartshorne'a \cite[s. 184]{hartshorne2000}.
+\pol{Powyższe stwierdzenie jest ciekawe, bo jest prawdziwe na płaszczyźnie Hilberta: jego prawdziwość nie zależy od aksjomatu Pascha.}
+\ita{L'affermazione precedente è interessante perché è valida nel piano di Hilbert: la sua validità non dipende dall'assioma di Pasch.}
+
+\pol{\index{płaszczyzna!Hilberta}}
+\ita{\index{piano!di Hilbert}}
+
+\pol{\index{aksjomat!Pascha}}
+\ita{\index{assioma!di Pasch}}
+
+\pol{W geometrii nieeuklidesowej może nie istnieć trójkąt równoboczny o danej podstawie.}
+\ita{Nella geometria non euclidea può non esistere un triangolo equilatero con una base assegnata.}
+
+\pol{Ale na płaszczyźnie Hilberta z aksjomatem (P), bez zakładania aksjomatu (E), istnieje trójkąt równoboczny o danej podstawie -- patrz ćwiczenie u Hartshorne'a \cite[s. 184]{hartshorne2000}.}
+\ita{Tuttavia, nel piano di Hilbert con l'assioma (P), senza assumere l'assioma (E), esiste un triangolo equilatero con una base assegnata; si veda l'esercizio in Hartshorne \cite[s. 184]{hartshorne2000}.}
 
 \begin{proposition}
 \label{hartshorne_52}%
-	Linia środkowa (odcinek łączący środki pewnych dwóch boków trójkąta) jest równoległa do trzeciego boku.
-\index{linia środkowa}%
-    Jej długość jest dwukrotnie mniejsza od długości tego boku.
+	\pol{Linia środkowa (odcinek łączący środki pewnych dwóch boków trójkąta) jest równoległa do trzeciego boku.}
+    \ita{Il segmento che congiunge i punti medi di due lati di un triangolo è parallelo al terzo lato.}
+
+    \pol{\index{linia środkowa}}
+    \ita{\index{segmento dei punti medi}}
+
+    \pol{Jej długość jest dwukrotnie mniejsza od długości tego boku.}
+    \ita{La sua lunghezza è pari alla metà della lunghezza di tale lato.}
 \end{proposition}
 % Hartshorne s. 52
 
-Tego stwierdzenia nie ma w Elementach Euklidesa, ale można wyprowadzić je z księgi I (I.29, I.26, I.34), jak wspomina Hartshorne \cite[s. 45, 52. 53]{hartshorne2000}.
-Patrz też Bogdańska, Neugebauer \cite[s. 15, 52]{neugebauer_2018}.
-Joanna Jaszuńska napisze ,,Niby nic'' w $\Delta_{17}^5$.
+\pol{Tego stwierdzenia nie ma w Elementach Euklidesa, ale można wyprowadzić je z księgi I (I.29, I.26, I.34), jak wspomina Hartshorne \cite[s. 45, 52. 53]{hartshorne2000}.}
+\ita{Questa affermazione non compare negli \emph{Elementi} di Euclide, ma può essere dedotta dal Libro I (I.29, I.26, I.34), come osserva Hartshorne \cite[s. 45, 52--53]{hartshorne2000}.}
+
+\pol{Patrz też Bogdańska, Neugebauer \cite[s. 15, 52]{neugebauer_2018}.}
+\ita{Si vedano anche Bogdańska e Neugebauer \cite[s. 15, 52]{neugebauer_2018}.}
+
+\pol{Joanna Jaszuńska napisze ,,Niby nic'' w $\Delta_{17}^5$.}
+\ita{Joanna Jaszuńska pubblicherà l'articolo ``Niby nic'' in $\Delta_{17}^5$.}
+
 % \todofoot{https://www.deltami.edu.pl/2017/05/niby-nic/}
 
 \begin{corollary}
-	Niech $ABC$ będzie trójkątem, zaś punkty $D$, $E$ i $F$ środkami jego boków.
-	Wtedy cztery małe trójkąty utworzone na bokach $DE$, $EF$, $FD$ są przystające do siebie.
+	\pol{Niech $ABC$ będzie trójkątem, zaś punkty $D$, $E$ i $F$ środkami jego boków.}
+    \ita{Sia $ABC$ un triangolo e siano $D$, $E$ e $F$ i punti medi dei suoi lati.}
+
+	\pol{Wtedy cztery małe trójkąty utworzone na bokach $DE$, $EF$, $FD$ są przystające do siebie.}
+    \ita{Allora i quattro piccoli triangoli determinati dai segmenti $DE$, $EF$ e $FD$ sono congruenti tra loro.}
 \end{corollary}
 
-Do tego wniosku potrzeba dodatkowo cechy przystawania bok-bok-bok (I.8).
-\index{cecha przystawania!bok-bok-bok}%
+\pol{Do tego wniosku potrzeba dodatkowo cechy przystawania bok-bok-bok (I.8).}
+\ita{Per ottenere questa conclusione è inoltre necessario utilizzare il criterio di congruenza lato-lato-lato (I.8).}
 
-Pompe \cite[s. 40]{pompe_2022} uogólnia fakt \ref{hartshorne_52} do czworokątów:
+\pol{\index{cecha przystawania!bok-bok-bok}}
+\ita{\index{criterio di congruenza!lato-lato-lato}}
+
+\pol{Pompe \cite[s. 40]{pompe_2022} uogólnia fakt \ref{hartshorne_52} do czworokątów:}
+\ita{Pompe \cite[s. 40]{pompe_2022} generalizza il fatto \ref{hartshorne_52} ai quadrilateri:}
 
 \begin{proposition}
-	Dany jest czworokąt wypukły $ABCD$ oraz punkty $K$ i $L$ leżące na środkach boków $AD$ i $BC$.
-	Wtedy $KL \le \frac 12 (AB +CD)$ z równością wtedy i tylko wtedy, gdy proste $AB$ i $CD$ są równoległe.
-	(Wtedy prosta $KL$ też jest równoległa do nich).
+	\pol{Dany jest czworokąt wypukły $ABCD$ oraz punkty $K$ i $L$ leżące na środkach boków $AD$ i $BC$.}
+    \ita{Siano dati un quadrilatero convesso $ABCD$ e i punti $K$ e $L$, punti medi rispettivamente dei lati $AD$ e $BC$.}
+
+	\pol{Wtedy $KL \le \frac 12 (AB +CD)$ z równością wtedy i tylko wtedy, gdy proste $AB$ i $CD$ są równoległe.}
+    \ita{Allora $KL \le \frac 12 (AB + CD)$, con uguaglianza se e solo se le rette $AB$ e $CD$ sono parallele.}
+
+	\pol{(Wtedy prosta $KL$ też jest równoległa do nich).}
+    \ita{(In tal caso anche la retta $KL$ è parallela ad esse).}
 \end{proposition}
 
 \begin{corollary}
-	Prosta przechodząca przez środek ramienia trapezu i równoległa do jego podstaw przechodzi przez środek drugiego ramienia oraz środki obu przekątnych.
+	\pol{Prosta przechodząca przez środek ramienia trapezu i równoległa do jego podstaw przechodzi przez środek drugiego ramienia oraz środki obu przekątnych.}
+    \ita{La retta passante per il punto medio di un lato obliquo di un trapezio e parallela alle sue basi passa per il punto medio dell'altro lato obliquo e per i punti medi di entrambe le diagonali.}
 \end{corollary}
 
-\begin{definition}[dwusieczna]
-	Niech $\angle ABC$ będzie kątem.
-	Półprostą $BD$ leżącą w jego wnętrzu taką, że kąty $\angle ABD = \angle DBC$ mają równe miary, nazywamy dwusieczną kąta $\angle ABC$.
+\begin{definition}[\pol{dwusieczna}\ita{bisettrice}]
+	\pol{Niech $\angle ABC$ będzie kątem.}
+    \ita{Sia $\angle ABC$ un angolo.}
+
+	\pol{Półprostą $BD$ leżącą w jego wnętrzu taką, że kąty $\angle ABD = \angle DBC$ mają równe miary, nazywamy dwusieczną kąta $\angle ABC$.}
+    \ita{La semiretta $BD$, contenuta nell'interno dell'angolo e tale che gli angoli $\angle ABD$ e $\angle DBC$ abbiano la stessa ampiezza, si chiama bisettrice dell'angolo $\angle ABC$.}
 \end{definition}
 
-Dwusieczna kąta (wypukłego) jest miejscem geometrycznym punktów, które leżą w jego wnętrzu i~są równoodległe od ramion.
-Zadania o niej znajdą się w $\Delta_{16}^{4}$.
-Symetralne i dwusieczne jako bliźnięta jedno- bądź dwujajowe będą tematem artykułu w $\Delta_{13}^8$.
+\pol{Dwusieczna kąta (wypukłego) jest miejscem geometrycznym punktów, które leżą w jego wnętrzu i~są równoodległe od ramion.}
+\ita{La bisettrice di un angolo (convesso) è il luogo geometrico dei punti che giacciono nel suo interno e sono equidistanti dai suoi lati.}
+
+\pol{Zadania o niej znajdą się w $\Delta_{16}^{4}$.}
+\ita{Esercizi su questo argomento compariranno in $\Delta_{16}^{4}$.}
+
+\pol{Symetralne i dwusieczne jako bliźnięta jedno- bądź dwujajowe będą tematem artykułu w $\Delta_{13}^8$.}
+\ita{Gli assi dei segmenti e le bisettrici, considerate come gemelli monozigoti o dizigoti, saranno il tema di un articolo in $\Delta_{13}^8$.}
+
 % \todofoot{https://www.deltami.edu.pl/2016/04/dwusieczne/}
 % \todofoot{https://www.deltami.edu.pl/2013/08/symetralna-i-dwusieczna-bliznieta-jedno-czy-dwujajowe} %  + www.deltami.edu.pl/media/issues/2013/08/delta-2013-08.pdf
 
 \begin{proposition}
-	Dwusieczna $t$ kąta przy podstawie trójkąta równoramiennego o podstawie $a$ oraz ramionach $b, b$ spełnia podwójną nierówność
+	\pol{Dwusieczna $t$ kąta przy podstawie trójkąta równoramiennego o podstawie $a$ oraz ramionach $b, b$ spełnia podwójną nierówność}
+	\ita{La bisettrice $t$ di un angolo alla base di un triangolo isoscele di base $a$ e lati congruenti $b, b$ soddisfa la doppia disuguaglianza}
 	\begin{equation}
 		\sqrt{2} \cdot \frac{ab}{a+b} < t < 2 \cdot \frac{ab}{a+b}.
 	\end{equation}
