@@ -1,34 +1,47 @@
 %
 
-\section{Problem Hansena}
-\index{problem!Hansena}%
-W trygonometrii problem Hansena to zagadnienie z zakresu pomiarów w terenie, nazwane na cześć astronoma Petra Andreasa Hansena, który będzie pracował przy mapach państwa duńskiego.
+\pol{\section{Problem Hansena}}
+\ita{\section{Problema di Hansen}}
+\pol{\index{problem!Hansena}}%
+\ita{\index{problema!di Hansen}}%
+\pol{W trygonometrii problem Hansena to zagadnienie z zakresu pomiarów w terenie, nazwane na cześć astronoma Petra Andreasa Hansena, który będzie pracował przy mapach państwa duńskiego.}
+\ita{In trigonometria, il problema di Hansen è un problema di topografia, intitolato all'astronomo Peter Andreas Hansen, che lavorò alla realizzazione delle carte del Regno di Danimarca.}
 
 \begin{problem}
-    Dane są dwa znane punkty $A$ i $B$ oraz dwa nieznane punkty $P_1$ i $P_2$.
-    Z punktów $P_1$ i $P_2$ obserwator mierzy kąty utworzone przez linie łączące go z każdym z pozostałych trzech punktów skierowane do każdego z pozostałych trzech punktów.
-    Wyznaczyć położenie punktów $P_1$ i $P_2$.
+    \pol{Dane są dwa znane punkty $A$ i $B$ oraz dwa nieznane punkty $P_1$ i $P_2$.}
+    \ita{Sono dati due punti noti $A$ e $B$ e due punti ignoti $P_1$ e $P_2$.}
+    \pol{Z punktów $P_1$ i $P_2$ obserwator mierzy kąty utworzone przez linie łączące go z każdym z pozostałych trzech punktów skierowane do każdego z pozostałych trzech punktów.}
+    \ita{Dai punti $P_1$ e $P_2$ un osservatore misura gli angoli formati dalle rette che lo collegano a ciascuno degli altri tre punti.}
+    \pol{Wyznaczyć położenie punktów $P_1$ i $P_2$.}
+    \ita{Determinare la posizione dei punti $P_1$ e $P_2$.}
 \end{problem}
 
-Znamy cztery kąty $\alpha_1 = \angle AP_1B$, $\beta_1 = \angle BP_1 P_2$, $\alpha_2 = \angle  AP_2B$, $\beta_2 = \angle AP_2P_1$.
-Wtedy jedno z~rozwiązań zaczyna się od wyznaczenia kątów
+\pol{Znamy cztery kąty $\alpha_1 = \angle AP_1B$, $\beta_1 = \angle BP_1 P_2$, $\alpha_2 = \angle  AP_2B$, $\beta_2 = \angle AP_2P_1$.}
+\ita{Sono noti i quattro angoli $\alpha_1 = \angle AP_1B$, $\beta_1 = \angle BP_1 P_2$, $\alpha_2 = \angle AP_2B$, $\beta_2 = \angle AP_2P_1$.}
+\pol{Wtedy jedno z~rozwiązań zaczyna się od wyznaczenia kątów}
+\ita{Una delle soluzioni inizia determinando gli angoli}
 \begin{equation}
     \gamma = \pi - \alpha_1 - \beta_1 - \beta_2, \quad
     \delta = \pi - \alpha_2 - \beta_1 - \beta_2
 \end{equation}
-oraz ilorazu
+\pol{oraz ilorazu}
+\ita{e il rapporto}
 \begin{equation}
     k = \frac{\sin \gamma \sin \alpha_2 \sin \beta_1}{\sin \delta \sin \alpha_1 \sin \beta_2}.
 \end{equation}
-Niech
+\pol{Niech}
+\ita{Sia}
 \begin{equation}
     \theta = 2 \arctan \left(\frac{k-1}{k+1} \tan \frac{\beta_1 + \beta_2}{2} \right).
 \end{equation}
-Wprowadzamy pomocnicze kąty $\varphi = \frac 1 2 (\beta_1 + \beta_2 + \theta)$ oraz $\psi = \frac 1 2 (\beta_1 + \beta_2 - \theta)$.
-Szukany odcinek ma długość
+\pol{Wprowadzamy pomocnicze kąty $\varphi = \frac 1 2 (\beta_1 + \beta_2 + \theta)$ oraz $\psi = \frac 1 2 (\beta_1 + \beta_2 - \theta)$.}
+\ita{Introduciamo gli angoli ausiliari $\varphi = \frac 1 2 (\beta_1 + \beta_2 + \theta)$ e $\psi = \frac 1 2 (\beta_1 + \beta_2 - \theta)$.}
+\pol{Szukany odcinek ma długość}
+\ita{Il segmento cercato ha lunghezza}
 \begin{equation}
     |P_1 P_2| = |AB| \cdot \frac{\sin \psi \sin \gamma}{\sin \alpha_1 \sin \beta_2} = |AB| \cdot \frac{\sin \varphi \sin \delta}{\sin \alpha_2 \sin \beta_1},
 \end{equation}
-przy czym by uniknąć błędów numerycznych bierzemy ten ułamek, którego mianownik ma większą wartość bezwzględną.
+\pol{przy czym by uniknąć błędów numerycznych bierzemy ten ułamek, którego mianownik ma większą wartość bezwzględną.}
+\ita{per evitare errori numerici si utilizza la frazione il cui denominatore ha valore assoluto maggiore.}
 
 %
