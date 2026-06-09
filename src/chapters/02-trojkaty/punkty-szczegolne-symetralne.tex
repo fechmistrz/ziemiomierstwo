@@ -1,40 +1,56 @@
 %
 
-\subsection{Okrąg opisany i trzy symetralne}
+\pol{\subsection{Okrąg opisany i trzy symetralne}}
+\ita{\subsection{Circonferenza circoscritta e tre assi dei segmenti}}
 
 \begin{proposition}
     \label{symetralne_przecinaja_sie}
-    Trzy symetralne boków trójkąta przecinają się w jednym punkcie, środku okręgu opisanego na tym trójkącie.
+    \pol{Trzy symetralne boków trójkąta przecinają się w jednym punkcie, środku okręgu opisanego na tym trójkącie.}
+    \ita{I tre assi dei lati di un triangolo si intersecano in un unico punto, il centro della circonferenza circoscritta al triangolo.}
 \end{proposition}
 
-Wynika to bezpośrednio z uwagi za definicją \ref{def_symetralna}: w trójkącie $\triangle ABC$, symetralna boku $AB$ (odpowiednio: $AC$) zawiera środki okręgów przechodzących przez punkty $A$ oraz $B$ (przez punkty $A$ oraz $C$), zatem trzecia symetralna musi przejść przez punkt wspólny dwóch pierwszych.
+\pol{Wynika to bezpośrednio z uwagi za definicją \ref{def_symetralna}: w trójkącie $\triangle ABC$, symetralna boku $AB$ (odpowiednio: $AC$) zawiera środki okręgów przechodzących przez punkty $A$ oraz $B$ (przez punkty $A$ oraz $C$), zatem trzecia symetralna musi przejść przez punkt wspólny dwóch pierwszych.}
+\ita{Ciò segue direttamente dall'osservazione successiva alla definizione \ref{def_symetralna}: nel triangolo $\triangle ABC$, l'asse del lato $AB$ (rispettivamente $AC$) contiene i centri delle circonferenze passanti per i punti $A$ e $B$ (rispettivamente per $A$ e $C$), dunque il terzo asse deve passare per il punto comune dei primi due.}
 
-Trzy różne punkty współliniowe nie leżą na jednym okręgu, zaś dowolne trzy niewspółliniowe punkty leżą na dokładnie jednym okręgu. % Guzicki s. 15
+\pol{Trzy różne punkty współliniowe nie leżą na jednym okręgu, zaś dowolne trzy niewspółliniowe punkty leżą na dokładnie jednym okręgu.}
+\ita{Tre punti distinti e allineati non appartengono a una stessa circonferenza, mentre tre punti qualsiasi non allineati appartengono a un'unica circonferenza.} % Guzicki s. 15
 
-Hartshorne \cite[s. 16]{hartshorne2000} podaje to w formie ćwiczenia ze wskazówką, by spojrzeć na (IV.5).
-Audin \cite[s. 61]{audin_2003} też, ale bez wskazówki.
-Zetel \cite[s. 151]{zetel_2020} poda ciekawe uzasadnienie z trójkątami rzutowymi.
-Inne odsyłacze to Neugebauer \cite[s. 19]{neugebauer_2018}.
+\pol{Hartshorne \cite[s. 16]{hartshorne2000} podaje to w formie ćwiczenia ze wskazówką, by spojrzeć na (IV.5).}
+\ita{Hartshorne \cite[p.~16]{hartshorne2000} lo propone come esercizio, suggerendo di consultare (IV.5).}
+\pol{Audin \cite[s. 61]{audin_2003} też, ale bez wskazówki.}
+\ita{Anche Audin \cite[p.~61]{audin_2003}, ma senza suggerimenti.}
+\pol{Zetel \cite[s. 151]{zetel_2020} poda ciekawe uzasadnienie z trójkątami rzutowymi.}
+\ita{Zetel \cite[p.~151]{zetel_2020} ne fornisce una dimostrazione interessante mediante triangoli proiettivi.}
+\pol{Inne odsyłacze to Neugebauer \cite[s. 19]{neugebauer_2018}.}
+\ita{Un altro riferimento è Neugebauer \cite[p.~19]{neugebauer_2018}.}
 
 \begin{proposition}
-	Środek okręgu opisanego na trójkącie leży wewnątrz tego trójkąta (odpowiednio: na jego brzegu, na zewnątrz trójkąta) wtedy i tylko wtedy, gdy trójkąt jest ostrokątny (odpowiednio: prostokątny, rozwartokątny).
+	\pol{Środek okręgu opisanego na trójkącie leży wewnątrz tego trójkąta (odpowiednio: na jego brzegu, na zewnątrz trójkąta) wtedy i tylko wtedy, gdy trójkąt jest ostrokątny (odpowiednio: prostokątny, rozwartokątny).}
+	\ita{Il centro della circonferenza circoscritta a un triangolo si trova all'interno del triangolo (rispettivamente sul suo bordo, all'esterno del triangolo) se e solo se il triangolo è acutangolo (rispettivamente rettangolo, ottusangolo).}
 \end{proposition}
 
-Uogólnieniem faktu \ref{symetralne_przecinaja_sie} o współpękowości symetralnych boków trójkąta jest:
+\pol{Uogólnieniem faktu \ref{symetralne_przecinaja_sie} o współpękowości symetralnych boków trójkąta jest:}
+\ita{Una generalizzazione del fatto \ref{symetralne_przecinaja_sie} sulla concorrenza degli assi dei lati di un triangolo è il seguente risultato:}
 
 \begin{theorem}[Carnota]
 \index{twierdzenie!Carnota}%
+\ita{\index{teorema!di Carnot}}%
 \label{guzicki_6_13}%
-	Dany jest trójkąt $ABC$ i punkty $D, E, F$ leżące odpowiednio na prostych $BC, CA, AB$.
-	Niech prosta $k$ (odpowiednio: $l$, $m$) przechodzi przez punkt $D$ ($E$, $F$) i będzie prostopadła do prostej $BC$ ($CA$, $AB$).
-	Wtedy proste $k$, $l$, $m$ mają punkt wspólny wtedy i tylko wtedy, gdy
+	\pol{Dany jest trójkąt $ABC$ i punkty $D, E, F$ leżące odpowiednio na prostych $BC, CA, AB$.}
+	\ita{Siano dati un triangolo $ABC$ e punti $D$, $E$, $F$ appartenenti rispettivamente alle rette $BC$, $CA$, $AB$.}
+	\pol{Niech prosta $k$ (odpowiednio: $l$, $m$) przechodzi przez punkt $D$ ($E$, $F$) i będzie prostopadła do prostej $BC$ ($CA$, $AB$).}
+	\ita{Sia la retta $k$ (rispettivamente $l$, $m$) passante per $D$ ($E$, $F$) e perpendicolare alla retta $BC$ ($CA$, $AB$).}
+	\pol{Wtedy proste $k$, $l$, $m$ mają punkt wspólny wtedy i tylko wtedy, gdy}
+	\ita{Allora le rette $k$, $l$, $m$ sono concorrenti se e solo se}
 	\begin{equation}
 		|AF|^2 + |BD|^2 + |CE|^2 = |AE|^2 + |BF|^2 + |CD|^2.
 	\end{equation}
 \end{theorem}
 % TODO: https://en.wikipedia.org/wiki/Carnot%27s_theorem_(perpendiculars)
 
-Guzicki \cite[s. 176]{guzicki_2021} wyprowadza je z twierdzenia Pitagorasa, co pozwala mu dojść do wniosku, że okręgi opisany i wpisany oraz ortocentrum istnieją.
+\pol{Guzicki \cite[s. 176]{guzicki_2021} wyprowadza je z twierdzenia Pitagorasa, co pozwala mu dojść do wniosku, że okręgi opisany i wpisany oraz ortocentrum istnieją.}
+\ita{Guzicki \cite[p.~176]{guzicki_2021} lo deduce dal teorema di Pitagora, ottenendo così l'esistenza della circonferenza circoscritta, della circonferenza inscritta e dell'ortocentro.}
 \index{twierdzenie!Pitagorasa}
+\ita{\index{teorema!di Pitagora}}
 
 %
