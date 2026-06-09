@@ -1,14 +1,19 @@
 %
 
-\subsection{Obroty}
+\pol{\subsection{Obroty}}
+\ita{\subsection{Rotazioni}}
 
-\begin{definition}[obrót]
-    Niech $A$ będziez punktem, zaś $\alpha$ miarą kąta.
-    Funkcję $R_A^\alpha$ zadaną następująco: $R_A^\alpha(X) = Y$ wtedy i tylko wtedy, gdy kąt $\angle XAY$ ma miarę $\alpha$ i $|AY| = |AX|$ nazywamy obrotem o kąt $\alpha$ wokół punktu $A$ zwanego środkiem obrotu.
+\begin{definition}[\pol{obrót}\ita{rotazione}]
+    \pol{Niech $A$ będzie punktem, zaś $\alpha$ miarą kąta.}
+    \ita{Siano $A$ un punto e $\alpha$ un angolo.}
+    \pol{Funkcję $R_A^\alpha$ zadaną następująco: $R_A^\alpha(X) = Y$ wtedy i tylko wtedy, gdy kąt $\angle XAY$ ma miarę $\alpha$ i $|AY| = |AX|$ nazywamy obrotem o kąt $\alpha$ wokół punktu $A$ zwanego środkiem obrotu.}
+    \ita{Chiamiamo rotazione di angolo $\alpha$ attorno al punto $A$, detto centro di rotazione, la funzione $R_A^\alpha$ definita come segue: $R_A^\alpha(X) = Y$ se e solo se l'angolo $\angle XAY$ ha ampiezza $\alpha$ e $|AY| = |AX|$.}
 \end{definition}
 
-Oczywiście i tutaj można podać wzór.
-Wyznacza się go najpierw dla obrotów wokół zera, by następnie zauważyć, że dowolny obrót sprowadza się do tamtego przy użyciu dwóch translacji (jednej, by przenieść się na początek i drugiej, by wrócić):
+\pol{Oczywiście i tutaj można podać wzór.}
+\ita{Naturalmente anche in questo caso si può fornire una formula esplicita.}
+\pol{Wyznacza się go najpierw dla obrotów wokół zera, by następnie zauważyć, że dowolny obrót sprowadza się do tamtego przy użyciu dwóch translacji (jednej, by przenieść się na początek i drugiej, by wrócić):}
+\ita{La si ricava dapprima per le rotazioni attorno all'origine e poi si osserva che ogni rotazione si riconduce a quel caso mediante due traslazioni (una per portarsi all'origine e una per tornare indietro):}
 
 \begin{equation}
     R_A^\alpha(x,y) = \begin{pmatrix}
@@ -17,20 +22,26 @@ Wyznacza się go najpierw dla obrotów wokół zera, by następnie zauważyć, 
     \end{pmatrix}.
 \end{equation}
 
-Symetrie środkowe nazywa się (rzadko) półobrotem, czyli obrotem o kąt $\pi$; robi tak Eves \cite[s. 105]{eves1_1972}.
+\pol{Symetrie środkowe nazywa się (rzadko) półobrotem, czyli obrotem o kąt $\pi$; robi tak Eves \cite[s. 105]{eves1_1972}.}
+\ita{Le simmetrie centrali vengono talvolta chiamate semirotazioni, cioè rotazioni di angolo $\pi$; così fa Eves \cite[p. 105]{eves1_1972}.}
 
 \begin{proposition}
-    Złożenie dwóch symetrii osiowych, których osie przecinają się pod kątem $\alpha$ jest obrotem o kąt $2 \alpha$ wokół punktu przecięcia wspomnianych osi.
+    \pol{Złożenie dwóch symetrii osiowych, których osie przecinają się pod kątem $\alpha$ jest obrotem o kąt $2 \alpha$ wokół punktu przecięcia wspomnianych osi.}
+    \ita{La composizione di due simmetrie assiali i cui assi si intersecano formando un angolo $\alpha$ è una rotazione di angolo $2\alpha$ attorno al punto d'intersezione di tali assi.}
 \end{proposition}
 
-To uogólnienie faktu \ref{two_axial_one_point}, tam było $\alpha = \pi$, a półobrót (obrót o kąt $\pi$) jest tym samym, co symetria środkowa.
+\pol{To uogólnienie faktu \ref{two_axial_one_point}, tam było $\alpha = \pi$, a półobrót (obrót o kąt $\pi$) jest tym samym, co symetria środkowa.}
+\ita{Si tratta di una generalizzazione del fatto \ref{two_axial_one_point}: lì si aveva $\alpha = \pi$ e una semirotazione (rotazione di angolo $\pi$) coincide con una simmetria centrale.}
 
 \begin{proposition}
 \label{for_banach_11}%
-    Niech $A \neq B$ będą dwoma punktami, zaś $\alpha, \beta$ dwiema miarami kątów.
-    Jeśli $\alpha + \beta$ nie jest wielokrotnością kąta pełnego, $2 \pi$, to $R_B^\beta \circ R_A^\alpha = R_C^{\alpha + \beta}$, gdzie $C$ jest takim punktem, by trójkąt $\triangle ABC$ miał kąty $\alpha/2$ przy $A$, $\beta / 2$ przy $B$.
+    \pol{Niech $A \neq B$ będą dwoma punktami, zaś $\alpha, \beta$ dwiema miarami kątów.}
+    \ita{Siano $A \neq B$ due punti e $\alpha, \beta$ due angoli.}
+    \pol{Jeśli $\alpha + \beta$ nie jest wielokrotnością kąta pełnego, $2 \pi$, to $R_B^\beta \circ R_A^\alpha = R_C^{\alpha + \beta}$, gdzie $C$ jest takim punktem, by trójkąt $\triangle ABC$ miał kąty $\alpha/2$ przy $A$, $\beta / 2$ przy $B$.}
+    \ita{Se $\alpha + \beta$ non è un multiplo dell'angolo giro $2\pi$, allora $R_B^\beta \circ R_A^\alpha = R_C^{\alpha + \beta}$, dove $C$ è tale che il triangolo $\triangle ABC$ abbia angolo $\alpha/2$ in $A$ e angolo $\beta/2$ in $B$.}
 
-    W przeciwnym przypadku złożenie tych dwóch obrotów jest translacją.
+    \pol{W przeciwnym przypadku złożenie tych dwóch obrotów jest translacją.}
+    \ita{In caso contrario, la composizione di queste due rotazioni è una traslazione.}
 \end{proposition}
 
 %

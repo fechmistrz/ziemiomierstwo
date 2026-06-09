@@ -1,51 +1,69 @@
 %
 
-\subsection{Symetrie środkowe}
+\pol{\subsection{Symetrie środkowe}}
+\ita{\subsection{Simmetrie centrali}}
 
-\begin{definition}[symetria środkowa]
-    Niech $A = (x_A, y_A)$ będzie ustalonym punktem.
-    Funkcję $S_A$ zadaną następująco:
+\begin{definition}[\pol{symetria środkowa}\ita{simmetria centrale}]
+    \pol{Niech $A = (x_A, y_A)$ będzie ustalonym punktem.}
+    \ita{Sia $A = (x_A, y_A)$ un punto fissato.}
+    \pol{Funkcję $S_A$ zadaną następująco:}
+    \ita{Chiamiamo simmetria centrale di centro $A$ la funzione $S_A$ definita da:}
     \begin{equation}
         S_A(x_0, y_0) = (2x_A - x_0, 2y_A - y_0)
     \end{equation}
-    nazywamy symetrią środkową o środku $A$.
+    \pol{nazywamy symetrią środkową o środku $A$.}
+    \ita{}
 \end{definition}
 
-(Chodzi o to, by punkt $A$ był środkiem odcinka łączącego argument oraz wartość funkcji $S_A$).
+\pol{(Chodzi o to, by punkt $A$ był środkiem odcinka łączącego argument oraz wartość funkcji $S_A$).}
+\ita{(Vale a dire che il punto $A$ è il punto medio del segmento che unisce l'argomento e il valore della funzione $S_A$).}
 
 \begin{example}
-    Symetrie osiowe oraz środkowe to przykłady inwolucji.
+    \pol{Symetrie osiowe oraz środkowe to przykłady inwolucji.}
+    \ita{Le simmetrie assiali e le simmetrie centrali sono esempi di involuzioni.}
 \end{example}
 
 \begin{proposition}
-    Złożenie dwóch symetrii środkowych jest translacją o wektor dwa razy dłuższy od tego, który łączy ich środki.
+    \pol{Złożenie dwóch symetrii środkowych jest translacją o wektor dwa razy dłuższy od tego, który łączy ich środki.}
+    \ita{La composizione di due simmetrie centrali è una traslazione di vettore doppio rispetto a quello che unisce i loro centri.}
 \end{proposition}
 
-Symetrie środkowe można emulować dwoma symetriami osiowymi:
+\pol{Symetrie środkowe można emulować dwoma symetriami osiowymi:}
+\ita{Le simmetrie centrali possono essere ottenute mediante due simmetrie assiali:}
 
 \begin{proposition}
 \label{two_axial_one_point}
-    Niech $k, l$ będą dwiema prostymi prostopadłymi do siebie, które przechodzą przez punkt $A$.
-    Wtedy $S_k \circ S_l = S_l \circ S_k = S_A$.
+    \pol{Niech $k, l$ będą dwiema prostymi prostopadłymi do siebie, które przechodzą przez punkt $A$.}
+    \ita{Siano $k$ e $l$ due rette perpendicolari tra loro passanti per il punto $A$.}
+    \pol{Wtedy $S_k \circ S_l = S_l \circ S_k = S_A$.}
+    \ita{Allora $S_k \circ S_l = S_l \circ S_k = S_A$.}
 \end{proposition}
 
-Równoważnie: jeżeli punkt $A$ leży na prostej $k$, to $S_A \circ S_k = S_k \circ S_A = S_l$, gdzie prosta $l$ jest prostopadła do prostej $k$ i przechodzi przez $A$.
+\pol{Równoważnie: jeżeli punkt $A$ leży na prostej $k$, to $S_A \circ S_k = S_k \circ S_A = S_l$, gdzie prosta $l$ jest prostopadła do prostej $k$ i przechodzi przez $A$.}
+\ita{Equivalentemente: se il punto $A$ appartiene alla retta $k$, allora $S_A \circ S_k = S_k \circ S_A = S_l$, dove la retta $l$ è perpendicolare a $k$ e passa per $A$.}
 % Ćwiczenie 4.26, Neugebauer s. 203
 
 \begin{proposition}
-    Złożenie trzech symetrii środkowych jest symetrią środkową: $S_A \circ S_B \circ S_C = S_D$, gdzie punkt $D$ jest przesunięciem punktu $A$ o wektor $BC$.
+    \pol{Złożenie trzech symetrii środkowych jest symetrią środkową: $S_A \circ S_B \circ S_C = S_D$, gdzie punkt $D$ jest przesunięciem punktu $A$ o wektor $BC$.}
+    \ita{La composizione di tre simmetrie centrali è una simmetria centrale: $S_A \circ S_B \circ S_C = S_D$, dove il punto $D$ si ottiene traslando il punto $A$ del vettore $BC$.}
 \end{proposition}
 
-To jest, po krótkim zastanowieniu, treść twierdzenia Varignona.
-\index{twierdzenie!Varignona}%
-Mamy odpowiednik faktu \ref{klkm1}:
+\pol{To jest, po krótkim zastanowieniu, treść twierdzenia Varignona.}
+\ita{A ben vedere, questo è proprio il contenuto del teorema di Varignon.}
+\pol{\index{twierdzenie!Varignona}}%
+\ita{\index{teorema!di Varignon}}%
+\pol{Mamy odpowiednik faktu \ref{klkm1}:}
+\ita{Abbiamo l'analogo del fatto \ref{klkm1}:}
 
 \begin{proposition}
 \label{klkm2}
-    Niech $K, L$ będą punktami.
-    Wtedy $S_K \circ S_L \circ S_K = S_M$, gdzie $M$ to punkt będący odbiciem punktu $L$ względem $K$.
+    \pol{Niech $K, L$ będą punktami.}
+    \ita{Siano $K$ e $L$ due punti.}
+    \pol{Wtedy $S_K \circ S_L \circ S_K = S_M$, gdzie $M$ to punkt będący odbiciem punktu $L$ względem $K$.}
+    \ita{Allora $S_K \circ S_L \circ S_K = S_M$, dove $M$ è il simmetrico del punto $L$ rispetto a $K$.}
 \end{proposition}
 
-Jeśli figura ma dwa środki symetrii, to ma ich nieskończenie wiele.
+\pol{Jeśli figura ma dwa środki symetrii, to ma ich nieskończenie wiele.}
+\ita{Se una figura possiede due centri di simmetria, allora ne possiede infinitamente molti.}
 
 %
