@@ -1,161 +1,204 @@
 %
 
-\section{Potęga punktu względem okręgu}
-\index{potęga punktu względem okręgu}%
+\pol{\section{Potęga punktu względem okręgu}}
+\ita{\section{Potenza di un punto rispetto a una circonferenza}}
+\pol{\index{potęga punktu względem okręgu}}
+\ita{\index{potenza di un punto rispetto a una circonferenza}}%
 
-Zdefiniujemy potęgę punktu względem okręgu, a potem potęgową oś i środek.
-\todofoot{Inwersja: Audin \cite[s. 84]{audin_2003}.}
-% zachowuje kąty 
+\pol{Zdefiniujemy potęgę punktu względem okręgu, a potem potęgową oś i środek.}
+\ita{Definiremo la potenza di un punto rispetto a una circonferenza e successivamente l'asse radicale e il centro radicale.}
+\todofoot{\pol{Inwersja: Audin \cite[s. 84]{audin_2003}.}\ita{Inversione: Audin \cite[p. 84]{audin_2003}.}}
+% zachowuje kąty
 \todofoot{Coxeter s. 85, coaxial circles}
 
-\begin{definition}[potęga punktu względem okręgu]
+\begin{definition}[\pol{potęga punktu względem okręgu}\ita{potenza di un punto rispetto a una circonferenza}]
 	\label{def_power_point}
-	Dane są okrąg $\Gamma$ o środku $O$ i promieniu $r$ oraz dowolny punkt $A$.
-	Liczbę rzeczywistą
+	\pol{Dane są okrąg $\Gamma$ o środku $O$ i promieniu $r$ oraz dowolny punkt $A$.}
+	\ita{Siano dati una circonferenza $\Gamma$ di centro $O$ e raggio $r$, nonché un punto arbitrario $A$.}
+	\pol{Liczbę rzeczywistą}
+	\ita{Il numero reale}
 	\begin{equation}
 		\Pi(A) := |OA|^2 - r^2
 	\end{equation}
-	nazywamy potęgą punktu $A$ względem okręgu $\Gamma$.
+	\pol{nazywamy potęgą punktu $A$ względem okręgu $\Gamma$.}
+	\ita{si chiama potenza del punto $A$ rispetto alla circonferenza $\Gamma$.}
 \end{definition}
 
-Pisze o tym Audin \cite[s. 89]{audin_2003}, nieznany autor w $\Delta_{84}^{11}$, Joanna Jaszuńska w $\Delta_{12}^2$ i $\Delta_{12}^3$, Bartłomiej Bzdęga w~$\Delta_{19}^{11}$.
+\pol{Pisze o tym Audin \cite[s. 89]{audin_2003}, nieznany autor w $\Delta_{84}^{11}$, Joanna Jaszuńska w $\Delta_{12}^2$ i $\Delta_{12}^3$, Bartłomiej Bzdęga w~$\Delta_{19}^{11}$.}
+\ita{Ne scrivono Audin \cite[p. 89]{audin_2003}, un autore anonimo in $\Delta_{84}^{11}$, Joanna Jaszuńska in $\Delta_{12}^2$ e $\Delta_{12}^3$, e Bartłomiej Bzdęga in $\Delta_{19}^{11}$.}
 % https://www.deltami.edu.pl/2012/02/potega-punktu/
 % https://www.deltami.edu.pl/2012/03/osie-potegowe/
 % https://www.deltami.edu.pl/2019/11/potega-punktu-wzgledem-okregu/
 
-O czymś na kształt potęgi punktu napisze Louis Gaultier w 1813 roku, ale sam termin (,,potęga punktu'') wprowadzi Jakob Steiner w 1826 roku. % \footnote{Praca \emph{Einige geometrische Betrachtungen}, strona 164} -- Steiner
+\pol{O czymś na kształt potęgi punktu napisze Louis Gaultier w 1813 roku, ale sam termin (,,potęga punktu'') wprowadzi Jakob Steiner w 1826 roku.}
+\ita{Louis Gaultier scriverà di un concetto simile alla potenza di un punto nel 1813, ma il termine stesso (``potenza di un punto'') sarà introdotto da Jakob Steiner nel 1826.}
 % Gaultier: published in the Journal de L'Lcole Polyttcknique, Cahier 16 (1813), pp. 124-214
 \index[persons]{Steiner, Jakob}%
 \index[persons]{Gaultier, Louis}%
-Użyje jej, aby znaleźć okrąg przecinający cztery dane okręgi pod tym samym kątem; rozwiązać problem Apoloniusza (problem \ref{problem_apoloniusza}: znaleźć okrąg styczny do trzech); skonstruować okręgi Malfattiego (problem \ref{malfatti_problem}: trzy okręgi, które są styczne do pozostałych dwóch oraz boków zadanego trójkąta).
+\pol{Użyje jej, aby znaleźć okrąg przecinający cztery dane okręgi pod tym samym kątem; rozwiązać problem Apoloniusza (problem \ref{problem_apoloniusza}: znaleźć okrąg styczny do trzech); skonstruować okręgi Malfattiego (problem \ref{malfatti_problem}: trzy okręgi, które są styczne do pozostałych dwóch oraz boków zadanego trójkąta).}
+\ita{La utilizzerà per trovare una circonferenza che intersechi quattro circonferenze date sotto lo stesso angolo; risolvere il problema di Apollonio (problema \ref{problem_apoloniusza}: trovare una circonferenza tangente a tre date); costruire le circonferenze di Malfatti (problema \ref{malfatti_problem}: tre circonferenze tangenti alle altre due e ai lati di un triangolo assegnato).}
 % TODO: index, ref
-\index{problem!Apoloniusza}%
-\index{okrąg!Malfattiego}%
-Wydaje się, że ta lista jest niekompletna.
+\pol{\index{problem!Apoloniusza}}
+\ita{\index{problema!di Apollonio}}%
+\pol{\index{okrąg!Malfattiego}}
+\ita{\index{circonferenza!di Malfatti}}%
+\pol{Wydaje się, że ta lista jest niekompletna.}
+\ita{Sembra che questo elenco non sia completo.}
 
-Wśród elementarnych zastosowań można wskazać dowód twierdzenia o przecinających się cięciwach (fakt \ref{prop_intersecting_chords}).
-Twierdzenie Pitagorasa dostarcza prostej interpretacji wielkości $\Pi(A)$, gdy punkt $A$ leży na zewnątrz okręgu: jest to długość stycznej do okręgu, która przechodzi przez punkt.
-\index{twierdzenie!Pitagorasa}
+\pol{Wśród elementarnych zastosowań można wskazać dowód twierdzenia o przecinających się cięciwach (fakt \ref{prop_intersecting_chords}).}
+\ita{Tra le applicazioni elementari si può citare la dimostrazione del teorema delle corde che si intersecano (fatto \ref{prop_intersecting_chords}).}
+\pol{Twierdzenie Pitagorasa dostarcza prostej interpretacji wielkości $\Pi(A)$, gdy punkt $A$ leży na zewnątrz okręgu: jest to długość stycznej do okręgu, która przechodzi przez punkt.}
+\ita{Il teorema di Pitagora fornisce una semplice interpretazione della quantità $\Pi(A)$ quando il punto $A$ si trova all'esterno della circonferenza: essa è la lunghezza della tangente alla circonferenza passante per il punto.}
+\pol{\index{twierdzenie!Pitagorasa}}
+\ita{\index{teorema!di Pitagora}}
 
 \begin{proposition}
-	Środki odcinków wspólnych stycznych do dwóch okręgów leżą na jednej prostej. % Neugebauer s. 70
+	\pol{Środki odcinków wspólnych stycznych do dwóch okręgów leżą na jednej prostej.}
+	\ita{I punti medi dei segmenti determinati dalle tangenti comuni a due circonferenze giacciono su una stessa retta.}
 \end{proposition}
 
-Nie wiemy, jak trudny jest dowód powyższego bez poniższego.
+\pol{Nie wiemy, jak trudny jest dowód powyższego bez poniższego.}
+\ita{Non sappiamo quanto sia difficile dimostrare il risultato precedente senza utilizzare quello seguente.}
 
-\begin{proposition}[oś potęgowa istnieje]
+\begin{proposition}[\pol{oś potęgowa istnieje}\ita{esistenza dell'asse radicale}]
 \label{guzicki_6_11}%
-    Dane są dwa niewspółśrodkowe okręgi $\Gamma_1(O_1, r_1)$ oraz $\Gamma_2(O_2, r_2)$.
-    Wtedy miejscem geometrycznym punktów $P$ mających równe potęgi względem obu okręgów:
+    \pol{Dane są dwa niewspółśrodkowe okręgi $\Gamma_1(O_1, r_1)$ oraz $\Gamma_2(O_2, r_2)$.}
+    \ita{Siano date due circonferenze non concentriche $\Gamma_1(O_1, r_1)$ e $\Gamma_2(O_2, r_2)$.}
+    \pol{Wtedy miejscem geometrycznym punktów $P$ mających równe potęgi względem obu okręgów:}
+    \ita{Allora il luogo geometrico dei punti $P$ aventi la stessa potenza rispetto a entrambe le circonferenze:}
 	\begin{equation}
 		\{S : \Pi(S, \Gamma_1) = \Pi(S, \Gamma_2)\}
 	\end{equation}
-	jest prosta prostopadła do prostej przechodzącej przez środki obu okręgów.
-	Nazywamy ją \emph{osią potęgową} okręgów $\Gamma_1$, $\Gamma_2$.
-	\index{oś potęgowa}%
-	\index{potęgowa!oś|see{oś potęgowa}}
+	\pol{jest prosta prostopadła do prostej przechodzącej przez środki obu okręgów.}
+	\ita{è una retta perpendicolare alla retta passante per i centri delle due circonferenze.}
+	\pol{Nazywamy ją \emph{osią potęgową} okręgów $\Gamma_1$, $\Gamma_2$.}
+	\ita{La chiamiamo \emph{asse radicale} delle circonferenze $\Gamma_1$, $\Gamma_2$.}
+	\pol{\index{oś potęgowa}}
+	\ita{\index{asse radicale}}%
+	\pol{\index{potęgowa!oś|see{oś potęgowa}}}
+	\ita{\index{radicale!asse|see{asse radicale}}}
 \end{proposition}
 
-O osi potęgowej piszą
-Guzicki \cite[s. 173, 174]{guzicki_2021},
-Bogdańska, Neugebauer \cite[s. 69]{neugebauer_2018},
-Audin \cite[s. 89]{audin_2003},
-Eves \cite[s. 92]{eves1_1972};
-patrz też \cite[s. 11]{komisarczyk_2024}.
-Oś potęgowa okręgów stycznych to prosta styczna do obydwu okręgów; oś potęgowa okręgów, które się przecinają w dwóch punktach, to prosta przez punkty przecięcia (to ćwiczenie u Hartshorne'a \cite[s. 182]{hartshorne2000}).
+\pol{O osi potęgowej piszą Guzicki \cite[s. 173, 174]{guzicki_2021}, Bogdańska, Neugebauer \cite[s. 69]{neugebauer_2018}, Audin \cite[s. 89]{audin_2003}, Eves \cite[s. 92]{eves1_1972}; patrz też \cite[s. 11]{komisarczyk_2024}.}
+\ita{Dell'asse radicale scrivono Guzicki \cite[p. 173, 174]{guzicki_2021}, Bogdańska e Neugebauer \cite[p. 69]{neugebauer_2018}, Audin \cite[p. 89]{audin_2003}, Eves \cite[p. 92]{eves1_1972}; si veda anche \cite[p. 11]{komisarczyk_2024}.}
+\pol{Oś potęgowa okręgów stycznych to prosta styczna do obydwu okręgów; oś potęgowa okręgów, które się przecinają w dwóch punktach, to prosta przez punkty przecięcia (to ćwiczenie u Hartshorne'a \cite[s. 182]{hartshorne2000}).}
+\ita{L'asse radicale di due circonferenze tangenti è la loro tangente comune; l'asse radicale di due circonferenze che si intersecano in due punti è la retta passante per tali punti di intersezione (si tratta di un esercizio in Hartshorne \cite[p. 182]{hartshorne2000}).}
 
-\begin{proposition}[środek potęgowy]
-	Dane są trzy parami niewspółśrodkowe okręgi $\Gamma_1, \Gamma_2, \Gamma_3$.
-	Wtedy albo środki tych okręgów są współliniowe (i trzy osie potęgowe każdej pary są równoległe), albo wszystkie trzy osie przecinają się w~jednym punkcie: \emph{środku potęgowym} okręgów.
-	\index{środek potęgowy}%
-	\index{potęgowy!środek|see{środek potęgowy}}
+\begin{proposition}[\pol{środek potęgowy}\ita{centro radicale}]
+	\pol{Dane są trzy parami niewspółśrodkowe okręgi $\Gamma_1, \Gamma_2, \Gamma_3$.}
+	\ita{Siano date tre circonferenze $\Gamma_1, \Gamma_2, \Gamma_3$ a due a due non concentriche.}
+	\pol{Wtedy albo środki tych okręgów są współliniowe (i trzy osie potęgowe każdej pary są równoległe), albo wszystkie trzy osie przecinają się w jednym punkcie: \emph{środku potęgowym} okręgów.}
+	\ita{Allora o i centri delle tre circonferenze sono allineati (e i tre assi radicali delle coppie di circonferenze sono paralleli), oppure tutti e tre gli assi si incontrano in un unico punto, detto \emph{centro radicale} delle circonferenze.}
+	\pol{\index{środek potęgowy}}
+	\ita{\index{centro radicale}}%
+	\pol{\index{potęgowy!środek|see{środek potęgowy}}}
+	\ita{\index{radicale!centro|see{centro radicale}}}
 \end{proposition}
 
-Terminy ,,oś potęgowa'' i ,,środek potęgowy'' to również pomysł wspomnianego Gaultiera.
+\pol{Terminy ,,oś potęgowa'' i ,,środek potęgowy'' to również pomysł wspomnianego Gaultiera.}
+\ita{Anche i termini ``asse radicale'' e ``centro radicale'' si devono al già citato Gaultier.}
 
-Nie jest jasne, dlaczego niektórzy nazywają to twierdzeniem Monge'a (jak Bogdańska, Neugebauer \cite[s. 70]{neugebauer_2018}) albo też rozwiązaniem problemu Monge'a (jak Dörrie \cite[s. 151]{dorrie_1965}).
-\index{twierdzenie!Monge'a}%
-Ale jest jasne, że pozwala łatwo skonstruować oś potęgową dwóch okręgów: wystarczy przeciąć je jednocześnie trzecim okręgiem na dwa różne sposoby.
+\pol{Nie jest jasne, dlaczego niektórzy nazywają to twierdzeniem Monge'a (jak Bogdańska, Neugebauer \cite[s. 70]{neugebauer_2018}) albo też rozwiązaniem problemu Monge'a (jak Dörrie \cite[s. 151]{dorrie_1965}).}
+\ita{Non è chiaro perché alcuni chiamino questo risultato teorema di Monge (come Bogdańska e Neugebauer \cite[p. 70]{neugebauer_2018}) oppure soluzione del problema di Monge (come Dörrie \cite[p. 151]{dorrie_1965}).}
+\pol{\index{twierdzenie!Monge'a}}
+\ita{\index{teorema!di Monge}}%
+\pol{Ale jest jasne, że pozwala łatwo skonstruować oś potęgową dwóch okręgów: wystarczy przeciąć je jednocześnie trzecim okręgiem na dwa różne sposoby.}
+\ita{È però chiaro che esso permette di costruire facilmente l'asse radicale di due circonferenze: basta intersecarle entrambe con una terza circonferenza in due modi differenti.}
 % TODO: dla innych to jest twierdzenie, że Theorem 1.1 (Monge’s theorem of three circles) For any three circles in a plane, none of which is inside one of the others, the intersection points of each of the three pairs of external tangent lines are collinear. jak w https://atcm.mathandtech.org/EP2016/contributed/4052016_21160.pdf
 
-Inną konstrukcję opisuje Hartshorne \cite[s. 182]{hartshorne2000}: dane są dwa okręgi o środkach w punktach $O_1, O_2$ oraz promieniach odpowiednio $O_1A_1$, $O_2A_2$.
-Niech $B$ będzie środkiem $A_1A_2$, zaś $P$ punktem przecięcia się prostych: prostopadłej do $O_1B$ przez $A_1$ oraz prostopadłej do $O_2B$ przez $A_2$.
-Wtedy prostopadła do $O_1O_2$ przez $P$ jest szukaną osią potęgową.
+\pol{Inną konstrukcję opisuje Hartshorne \cite[s. 182]{hartshorne2000}: dane są dwa okręgi o środkach w punktach $O_1, O_2$ oraz promieniach odpowiednio $O_1A_1$, $O_2A_2$.}
+\ita{Hartshorne \cite[p. 182]{hartshorne2000} descrive un'altra costruzione: siano date due circonferenze con centri nei punti $O_1$, $O_2$ e raggi rispettivamente $O_1A_1$, $O_2A_2$.}
+\pol{Niech $B$ będzie środkiem $A_1A_2$, zaś $P$ punktem przecięcia się prostych: prostopadłej do $O_1B$ przez $A_1$ oraz prostopadłej do $O_2B$ przez $A_2$.}
+\ita{Sia $B$ il punto medio di $A_1A_2$ e sia $P$ il punto d'intersezione delle rette: la perpendicolare a $O_1B$ passante per $A_1$ e la perpendicolare a $O_2B$ passante per $A_2$.}
+\pol{Wtedy prostopadła do $O_1O_2$ przez $P$ jest szukaną osią potęgową.}
+\ita{Allora la perpendicolare a $O_1O_2$ passante per $P$ è l'asse radicale cercato.}
 
-Patrz też Guzicki \cite[s. 174]{guzicki_2021}. % todo: po co tam patrzeć?
+\pol{Patrz też Guzicki \cite[s. 174]{guzicki_2021}.}
+\ita{Si veda anche Guzicki \cite[p. 174]{guzicki_2021}.}
 
 % Neugebauer s. 71
 \begin{proposition}
-	Ortocentrum trójkąta jest środkiem potęgowym rodziny wszystkich okręgów o średnicach będących czewianami (odcinkami łączącymi wierzchołek z przeciwległym bokiem).
+	\pol{Ortocentrum trójkąta jest środkiem potęgowym rodziny wszystkich okręgów o średnicach będących czewianami (odcinkami łączącymi wierzchołek z przeciwległym bokiem).}
+	\ita{L'ortocentro di un triangolo è il centro radicale della famiglia di tutte le circonferenze aventi come diametri le ceviane (segmenti che congiungono un vertice con il lato opposto).}
 \end{proposition}
 
-Bogdańska, Neugebauer \cite[s. 71]{neugebauer_2018} podają to jako ćwiczenie.
+\pol{Bogdańska, Neugebauer \cite[s. 71]{neugebauer_2018} podają to jako ćwiczenie.}
+\ita{Bogdańska e Neugebauer \cite[p. 71]{neugebauer_2018} propongono questo risultato come esercizio.}
 
-\begin{theorem}[Auberta]
-	Dane są cztery proste w położeniu ogólnym (żadne trzy nie przechodzą przez jeden punkt, żadne dwie nie są równoległe).
-	Wówczas ortocentra czterech trójkątów wyznaczonych przez trójki tych prostych leża na jednej prostej, zwanej prostą Auberta.
-	\index{twierdzenie!Auberta}
+\begin{theorem}[\pol{Auberta}\ita{di Aubert}]
+	\pol{Dane są cztery proste w położeniu ogólnym (żadne trzy nie przechodzą przez jeden punkt, żadne dwie nie są równoległe).}
+	\ita{Siano date quattro rette in posizione generale (nessuna terna passa per uno stesso punto e nessuna coppia è parallela).}
+	\pol{Wówczas ortocentra czterech trójkątów wyznaczonych przez trójki tych prostych leża na jednej prostej, zwanej prostą Auberta.}
+	\ita{Allora gli ortocentri dei quattro triangoli determinati dalle terne di tali rette giacciono su una stessa retta, detta retta di Aubert.}
+	\pol{\index{twierdzenie!Auberta}}
+	\ita{\index{teorema!di Aubert}}
 \end{theorem}
 
-Nie udało nam się ustalić, kim będzie Aubert, ale najprawdopodobniej udowodni to twierdzenie w~1899 roku.
+\pol{Nie udało nam się ustalić, kim będzie Aubert, ale najprawdopodobniej udowodni to twierdzenie w 1899 roku.}
+\ita{Non siamo riusciti a stabilire chi fosse Aubert, ma con ogni probabilità dimostrò questo teorema nel 1899.}
 \index[persons]{Aubert, urodzony przed 1899 rokiem}%
-Prosta Auberta znana jest czasami jako prosta Steinera.
+\pol{Prosta Auberta znana jest czasami jako prosta Steinera.}
+\ita{La retta di Aubert è talvolta nota anche come retta di Steiner.}
 % TODO: https://el-m-wikipedia-org.translate.goog/wiki/Ευθεία_Σίμσον_(τετράπλευρο)?_x_tr_sl=auto&_x_tr_tl=pl&_x_tr_hl=pl&_x_tr_pto=wapp
 % https://el-m-wikipedia-org.translate.goog/wiki/Θεώρημα_Miquel_(τετράπλευρο)?_x_tr_sl=auto&_x_tr_tl=pl&_x_tr_hl=pl&_x_tr_pto=wapp
 % https://el-m-wikipedia-org.translate.goog/wiki/Ευθεία_Νεύτωνα-Γκάους?_x_tr_sl=auto&_x_tr_tl=pl&_x_tr_hl=pl&_x_tr_pto=wapp
-Eves \cite[s. 95]{eves1_1972} dopowiada, że trzy okręgi ze średnicami na przekątnych czworoboku zupełnego są współosiowe; środki trzech przekątnych leżą na prostej prostopadłej do Auberta.
+\pol{Eves \cite[s. 95]{eves1_1972} dopowiada, że trzy okręgi ze średnicami na przekątnych czworoboku zupełnego są współosiowe; środki trzech przekątnych leżą na prostej prostopadłej do Auberta.}
+\ita{Eves \cite[p. 95]{eves1_1972} aggiunge che le tre circonferenze aventi come diametri le diagonali di un quadrilatero completo sono coassiali; i punti medi delle tre diagonali giacciono su una retta perpendicolare alla retta di Aubert.}
 % współosiowy = coaxial
 
-\subsection{Pęki okręgów}
-Pękiem (z angielskiego \emph{pencil}) będziemy nazywać dowolną rodziną geometrycznych obiektów (przede wszystkim prostych lub okręgów) o pewnej wspólnej cesze, którą można odtworzyć z każdej pary obiektów wspomnianej rodziny.
+\pol{\subsection{Pęki okręgów}}
+\ita{\subsection{Fasci di circonferenze}}
+
+\pol{Pękiem (z angielskiego \emph{pencil}) będziemy nazywać dowolną rodziną geometrycznych obiektów (przede wszystkim prostych lub okręgów) o pewnej wspólnej cesze, którą można odtworzyć z każdej pary obiektów wspomnianej rodziny.}
+\ita{Chiameremo fascio (in inglese \emph{pencil}) una qualunque famiglia di oggetti geometrici (soprattutto rette o circonferenze) caratterizzata da una proprietà comune che può essere ricostruita a partire da una qualsiasi coppia di oggetti della famiglia.}
 
 \begin{example}
-	Do pęku prostych należą wszystkie proste, które przechodzą przez ustalony punkt.
+	\pol{Do pęku prostych należą wszystkie proste, które przechodzą przez ustalony punkt.}
+	\ita{Appartengono a un fascio di rette tutte le rette che passano per un punto fissato.}
 \end{example}
 
 \begin{definition}
-	Dowolne dwa niewspółśrodkowe okręgi $K_1, K_2$ wyznaczają jedną maksymalną rodzinę okręgów współosiowych z okręgami $K_1, K_2$, zwaną pękiem okręgów.
+	\pol{Dowolne dwa niewspółśrodkowe okręgi $K_1, K_2$ wyznaczają jedną maksymalną rodzinę okręgów współosiowych z okręgami $K_1, K_2$, zwaną pękiem okręgów.}
+	\ita{Due qualunque circonferenze non concentriche $K_1$, $K_2$ determinano un'unica massima famiglia di circonferenze coassiali con $K_1$ e $K_2$, detta fascio di circonferenze.}
 \end{definition}
 
-O pękach okręgów pisze Neugebauer, Bogdańska \cite[s. 80]{neugebauer_2018}.
-Dla ustalonch punktów $P, Q$ wprowadzają tam rodzinę
+\pol{O pękach okręgów pisze Neugebauer, Bogdańska \cite[s. 80]{neugebauer_2018}.}
+\ita{Dei fasci di circonferenze scrivono Neugebauer e Bogdańska \cite[p. 80]{neugebauer_2018}.}
+\pol{Dla ustalonch punktów $P, Q$ wprowadzają tam rodzinę}
+\ita{Per punti fissati $P$, $Q$ introducono la famiglia}
 \begin{equation}
 	\mathcal H(PQ) := \{A(\lambda) : 0 \le \lambda \le + \infty, \lambda \neq 1 \},
 \end{equation}
-gdzie $A(\lambda)$ to okrąg Apoloniusza z definicji \ref{definicja_okregu_apoloniusza}.
-Okręgi $A(\lambda)$ są parami rozłączne, wszystkie są prostopadłe do wszystkich okręgów przechodzących przez punkty $P$ i $Q$.
-Uznają, że $A(\infty)$ to punkt $Q$, $A(0)$ to punkt $P$, zaś $A(1)$ to symetralna odcinka $PQ$.
-Wtedy przez każdy punkt płaszczyzny przechodzi dokładnie jeden okrąg $A(\lambda)$.
+\pol{gdzie $A(\lambda)$ to okrąg Apoloniusza z definicji \ref{definicja_okregu_apoloniusza}.}
+\ita{dove $A(\lambda)$ è la circonferenza di Apollonio della definizione \ref{definicja_okregu_apoloniusza}.}
+\pol{Okręgi $A(\lambda)$ są parami rozłączne, wszystkie są prostopadłe do wszystkich okręgów przechodzących przez punkty $P$ i $Q$.}
+\ita{Le circonferenze $A(\lambda)$ sono a due a due disgiunte e tutte ortogonali a tutte le circonferenze passanti per i punti $P$ e $Q$.}
+\pol{Uznają, że $A(\infty)$ to punkt $Q$, $A(0)$ to punkt $P$, zaś $A(1)$ to symetralna odcinka $PQ$.}
+\ita{Assumono che $A(\infty)$ sia il punto $Q$, che $A(0)$ sia il punto $P$ e che $A(1)$ sia l'asse del segmento $PQ$.}
+\pol{Wtedy przez każdy punkt płaszczyzny przechodzi dokładnie jeden okrąg $A(\lambda)$.}
+\ita{Allora per ogni punto del piano passa esattamente una circonferenza $A(\lambda)$.}
 
-Maksymalną współosiową rodzinę okręgów parami rozłącznych nazywają pękiem hiperbolicznym okręgów, każdy jest postaci $\mathcal H(PQ)$ i punkty $P \neq Q$ są wyznaczone jednoznacznie.
+\pol{Maksymalną współosiową rodzinę okręgów parami rozłącznych nazywają pękiem hiperbolicznym okręgów, każdy jest postaci $\mathcal H(PQ)$ i punkty $P \neq Q$ są wyznaczone jednoznacznie.}
+\ita{Chiamano fascio iperbolico di circonferenze una massima famiglia coassiale di circonferenze a due a due disgiunte; ciascuna è della forma $\mathcal H(PQ)$ e i punti $P \neq Q$ sono determinati univocamente.}
 
 \begin{definition}
-	Punkty $P, Q$ nazywamy punktami Ponceleta, prostą $PQ$ linią środków, zaś symetralną odcinka $PQ$ -- osią pęku hiperbolicznego $\mathcal H(PQ)$.
+	\pol{Punkty $P, Q$ nazywamy punktami Ponceleta, prostą $PQ$ linią środków, zaś symetralną odcinka $PQ$ -- osią pęku hiperbolicznego $\mathcal H(PQ)$.}
+	\ita{I punti $P$, $Q$ si chiamano punti di Poncelet, la retta $PQ$ si chiama linea dei centri e l'asse del segmento $PQ$ si chiama asse del fascio iperbolico $\mathcal H(PQ)$.}
 \end{definition}
 
-Nazwisko Ponceleta pojawia się tu nieprzypadkowo, ma związek z (małym) twierdzeniem Ponceleta.
+\pol{Nazwisko Ponceleta pojawia się tu nieprzypadkowo, ma związek z (małym) twierdzeniem Ponceleta.}
+\ita{Il nome di Poncelet non compare qui per caso: è legato al (piccolo) teorema di Poncelet.}
 
-(Nie jest trudno się domyślić, że istnieją też pęki paraboliczne i eliptyczne).
+\pol{(Nie jest trudno się domyślić, że istnieją też pęki paraboliczne i eliptyczne).}
+\ita{(Non è difficile immaginare che esistano anche fasci parabolici ed ellittici).}
 
 % en-Wiki: A pencil of circles (or coaxial system) is the set of all circles in the plane with the same radical axis.
 % https://en.wikipedia.org/wiki/Pencil_(geometry) -> dowolne dwa obiekty pozwalają wyznaczyć wszystkie
 
-Okręgi koncentryczne mają oś potęgową w nieskończoności.
+\pol{Okręgi koncentryczne mają oś potęgową w nieskończoności.}
+\ita{Le circonferenze concentriche hanno l'asse radicale all'infinito.}
 % pencil - pokok po rosyjsku, po polsku raczej pęk
-O pęku piszą Audin \cite[s. 92-98]{audin_2003}, Eves \cite[s. 94]{eves1_1972}.
-
-
-% \index{okrąg!ortogonalny}
-% \index{pęk okręgów}
-% \index{twierdzenie!Ponceleta}
-
-% Choć pojęcie potęgi punktu względem okręgu można dostrzec już w Propozycjach 35 i 36 Księgi III Elementów Euklidesa, to w pełni zostało ono sformułowane i rozwinięte dopiero przez Louisa Gaultiera w artykule opublikowanym w 1813 roku w Journal de l'École Polytechnique. Właśnie tam po raz pierwszy pojawiają się terminy oś i środek potęgowy, zaś samo określenie „potęga'' wprowadził nieco później Jacob Steiner. Badania nad okręgami ortogonalnymi oraz wiązkami współśrodkowymi prowadzili na początku XIX wieku Gaultier, Poncelet, Steiner, J. B. Durrende i inni. Ta stosunkowo nowa geometria elementarna okręgu znalazła cenne zastosowania w różnych działach matematyki i fizyki. Rozpoczniemy od definicji krzywych ortogonalnych. (potęga: zamiana radical ax na power ax itd.)
-
-% % TODO: straight line albo circle to stircle, Eves ps. 88/89
-% Eves \cite[s. 88-90]{eves1_1972} rozpatruje pary prostopadłych okręgów, co prowadzo do definicji potęgi punktu względem okręgu.
-
-% O pękach okręgów pisze Delta $\Delta_{24}^{12}$.
-
-% T2.19 tutaj?
+\pol{O pęku piszą Audin \cite[s. 92-98]{audin_2003}, Eves \cite[s. 94]{eves1_1972}.}
+\ita{Dei fasci scrivono Audin \cite[p. 92--98]{audin_2003} ed Eves \cite[p. 94]{eves1_1972}.}
 
 %

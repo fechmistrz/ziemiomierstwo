@@ -1,5 +1,90 @@
 %
 
+\pol{\subsection{Aksjomaty incydencji}}
+\ita{\subsection{Assiomi di incidenza}}
+\pol{\index{aksjomat!incydencji}}
+\ita{\index{assioma!di incidenza}}%
+
+\begin{axiom}[\pol{incydencji}\ita{di incidenza}, I1]
+    \pol{Dla każdej pary punktów $A$ oraz $B$ istnieje dokładnie jedna prosta $l$, która przechodzi przez te punkty.}
+    \ita{Per ogni coppia di punti $A$ e $B$ esiste un'unica retta $l$ che passa per tali punti.}
+\end{axiom}
+
+\pol{Zdania ,,prosta $l$ przechodzi przez punkt $A$'' oraz ,,punkt $A$ leży na prostej $l$'' mają dokładnie to samo znaczenie i będziemy je stosować zamiennie.}
+\ita{Le espressioni ``la retta $l$ passa per il punto $A$'' e ``il punto $A$ appartiene alla retta $l$'' hanno esattamente lo stesso significato e le useremo come sinonimi.}
+
+\begin{axiom}[\pol{incydencji}\ita{di incidenza}, I2]
+    \pol{Na każdej prostej leżą co najmniej dwa punkty.}
+    \ita{Su ogni retta giacciono almeno due punti.}
+\end{axiom}
+
+\begin{axiom}[\pol{incydencji}\ita{di incidenza}, I3]
+    \pol{Istnieją co najmniej trzy punkty, które nie są współliniowe.}
+    \ita{Esistono almeno tre punti che non sono allineati.}
+\end{axiom}
+
+\pol{,,Być współliniowym'' to synonim leżenia na jednej prostej.}
+\ita{``Essere allineati'' significa giacere sulla stessa retta.}
+\pol{\index{współliniowy}}
+\ita{\index{allineato}}%
+\pol{Analogicznie mówimy, że wiele prostych, które przechodzą przez jeden punkt, jest współpękowych.}
+\ita{Analogamente, diciamo che più rette che passano per uno stesso punto sono concorrenti.}
+
+\begin{proposition}
+    \pol{Dwie różne proste mogą mieć co najwyżej jeden punkt wspólny.}
+    \ita{Due rette distinte possono avere al più un punto in comune.}
+\end{proposition}
+
+\begin{definition}
+    \pol{Dwie różne proste, które nie są współpękowe (nie mają punktów wspólnych), nazywamy równoległymi.}
+    \ita{Due rette distinte che non sono concorrenti (non hanno punti in comune) si dicono parallele.}
+    \pol{Każda prosta jest też równoległa do siebie.}
+    \ita{Ogni retta è inoltre parallela a sé stessa.}
+\end{definition}
+\pol{\index{prosta!równoległa}}
+\ita{\index{retta!parallela}}%
+
+\pol{Symbolicznie: $k \parallel l$.}
+\ita{Simbolicamente: $k \parallel l$.}
+\pol{Trzeba uważać, bo dla niektórych dwie proste równoległe są współpękowe, bo przechodzą przez punkt w nieskończoności, jak zwykło się mawiać w geometrii rzutowej.}
+\ita{Bisogna fare attenzione, perché per alcuni due rette parallele sono concorrenti, poiché passano per un punto all'infinito, come si usa dire nella geometria proiettiva.}
+
+\pol{Na dwóch prostych, które nie są równoległe ($k \nparallel l$), leży dokładnie jeden punkt.}
+\ita{Su due rette che non sono parallele ($k \nparallel l$) giace esattamente un punto.}
+\pol{Mówimy, że proste się przecinają, a wspomniany punkt jest ich punktem przecięcia.}
+\ita{Diciamo che le rette si intersecano e che il punto menzionato è il loro punto di intersezione.}
+\pol{Oznaczamy go $k \cdot l$.}
+\ita{Lo indichiamo con $k \cdot l$.}
+
+\pol{Hartshorne \cite[s. 38]{hartshorne2000} przywoła:}
+\ita{Hartshorne \cite[p. 38]{hartshorne2000} presenta il seguente assioma:}
+
+\begin{axiom}[\pol{Playfaira}\ita{di Playfair}, P]
+    \pol{Dla każdej prostej $l$ oraz punktu $A$, istnieje co najwyżej jedna prosta, która przechodzi przez $A$ i jest równoległa do $l$.}
+    \ita{Per ogni retta $l$ e punto $A$, esiste al più una retta che passa per $A$ ed è parallela a $l$.}
+\end{axiom}
+\pol{\index{aksjomat!Playfaira}}
+\ita{\index{assioma!di Playfair}}%
+% TODO: https://en.wikipedia.org/wiki/Playfair%27s_axiom
+
+\pol{John Playfair opublikuje ten aksjomat w 1795 roku, chociaż już wtedy stwierdzi, że inni używali go przed nim (np. William Ludlam).}
+\ita{John Playfair pubblicò questo assioma nel 1795, pur osservando che altri lo avevano già utilizzato prima di lui (ad esempio William Ludlam).}
+\index[persons]{Playfair, John}%
+\index[persons]{Ludlam, William}%
+
+\begin{example}
+    \pol{Rozważmy geometrię, gdzie płaszczyzna składa się z pięciu punktów $A$, $B$, $C$, $D$, $E$ i leży na niej dziesięć różnych prostych, każda z nich przechodząca przez dokładnie dwa różne punkty.}
+    \ita{Consideriamo una geometria in cui il piano è costituito da cinque punti $A$, $B$, $C$, $D$, $E$ e contiene dieci rette distinte, ciascuna passante per esattamente due punti distinti.}
+    \pol{Wtedy proste $AB$ i $AC$ mają punkt wspólny $A$, chociaż obydwie są równoległe do prostej $DE$.}
+    \ita{Allora le rette $AB$ e $AC$ hanno in comune il punto $A$, sebbene entrambe siano parallele alla retta $DE$.}
+    \pol{Aksjomat Playfaira nie jest spełniony.}
+    \ita{L'assioma di Playfair non è soddisfatto.}
+    \pol{\index{aksjomat!Playfaira}}
+    \ita{\index{assioma!di Playfair}}
+\end{example}
+
+%
+
 \subsection{Aksjomaty incydencji}
 \index{aksjomat!incydencji}%
 
@@ -56,67 +141,91 @@ John Playfair opublikuje ten aksjomat w 1795 roku, chociaż już wtedy stwierdzi
     Aksjomat Playfaira nie jest spełniony. \index{aksjomat!Playfaira}
 \end{example}
 
-Aksjomat Playfaira jest równoważny z (piątym) postulatem Euklidesa i dlatego wiele osób spróbuje wyprowadzić go z czterech wcześniejszych postulatów.
-Marek Kordos opisze  w $\Delta_{12}^5$ (i $\Delta_{12}^6$) trzy ,,dowody'': Bolyaia, Legendre'a i Saccheriego.
+\pol{Aksjomat Playfaira jest równoważny z (piątym) postulatem Euklidesa i dlatego wiele osób spróbuje wyprowadzić go z czterech wcześniejszych postulatów.}
+\ita{L'assioma di Playfair è equivalente al (quinto) postulato di Euclide e per questo motivo molte persone tenteranno di dedurlo dai quattro postulati precedenti.}
+\pol{Marek Kordos opisze w $\Delta_{12}^5$ (i $\Delta_{12}^6$) trzy ,,dowody'': Bolyaia, Legendre'a i Saccheriego.}
+\ita{Marek Kordos descriverà in $\Delta_{12}^5$ (e $\Delta_{12}^6$) tre ``dimostrazioni'': quelle di Bolyai, Legendre e Saccheri.}
 \index[persons]{Bolyai, Farkas}%
 \index[persons]{Legendre, Adrien-Marie}%
 \index[persons]{Saccheri, Girolamo}%
 % https://www.deltami.edu.pl/2012/05/dowody-v-postulatu-euklidesa/
-Za każdym razem okaże się, że w ,,dowodzie'' użyte jest zdanie będące równoważnikiem piątego postulatu, na przykład:
+\pol{Za każdym razem okaże się, że w ,,dowodzie'' użyte jest zdanie będące równoważnikiem piątego postulatu, na przykład:}
+\ita{Ogni volta si scoprirà che nella ``dimostrazione'' viene utilizzata un'affermazione equivalente al quinto postulato, ad esempio:}
 \begin{itemize}
-    \item suma kątów wewnętrznych pewnego trójkąta jest kątem półpełnym,\index{suma kątów}%
-    \item suma kątów wewnętrznych każdego trójkąta jest kątem półpełnym,\index{suma kątów}%
-    \item suma kątów wewnętrznych każdego trójkąta jest taka sama,\index{suma kątów}%
-    \item istnieją dwa trójkąty, które są do siebie podobne, ale nie przystające,\index{podobieństwo}\index{przystawanie}%
-    \item na każdym trójkącie można opisać okrąg,\index{okrąg!opisany}%
-    \item istnieje para prostych, które są w stałej odległości od siebie,
-    \item dwie proste, które są równoległe do danej prostej, są też równoległe do siebie,\index{prosta!równoległa}%
-    \item twierdzenie Pitagorasa lub jego uogólnienie, twierdzenie kosinusów,\index{twierdzenie!Pitagorasa}\index{twierdzenie!kosinusów}%
-    \item aksjomat Wallisa: nie ma górnego ograniczenia na pole trójkąta,\index{aksjomat!Wallisa}%
-    \item aksjomat Proklosa: jeśli prosta przecina jedną z dwóch równoległych prostych, to przecina także tę drugą,\index{aksjomat!Proklosa}%
-    \item kąty przy górnej podstawie czworokąta Saccheriego (czworokąta $ABCD$ o dwóch kątach prostych przy dolnej podstawie $AB$, w którym boki $AD$ i $BC$ mają równe długości) są proste,\index{czworokąt!Saccheriego}%
-    \item jeśli trzy kąty wewnętrzne czworokąta są proste, to czwarty kąt także jest prosty (czworokąt Lamberta jest prostokątem).\index{czworokąt!Lamberta}%
+    \item \pol{suma kątów wewnętrznych pewnego trójkąta jest kątem półpełnym,}\ita{la somma degli angoli interni di un certo triangolo è un angolo piatto,}\index{suma kątów}\index{somma degli angoli}%
+    \item \pol{suma kątów wewnętrznych każdego trójkąta jest kątem półpełnym,}\ita{la somma degli angoli interni di ogni triangolo è un angolo piatto,}\index{suma kątów}\index{somma degli angoli}%
+    \item \pol{suma kątów wewnętrznych każdego trójkąta jest taka sama,}\ita{la somma degli angoli interni di ogni triangolo è la stessa,}\index{suma kątów}\index{somma degli angoli}%
+    \item \pol{istnieją dwa trójkąty, które są do siebie podobne, ale nie przystające,}\ita{esistono due triangoli simili ma non congruenti,}\index{podobieństwo}\index{przystawanie}\index{similitudine}\index{congruenza}%
+    \item \pol{na każdym trójkącie można opisać okrąg,}\ita{attorno a ogni triangolo si può circoscrivere una circonferenza,}\index{okrąg!opisany}\index{circonferenza!circoscritta}%
+    \item \pol{istnieje para prostych, które są w stałej odległości od siebie,}\ita{esiste una coppia di rette che si trovano a distanza costante l'una dall'altra,}
+    \item \pol{dwie proste, które są równoległe do danej prostej, są też równoległe do siebie,}\ita{due rette parallele a una stessa retta sono parallele anche tra loro,}\index{prosta!równoległa}\index{retta!parallela}%
+    \item \pol{twierdzenie Pitagorasa lub jego uogólnienie, twierdzenie kosinusów,}\ita{il teorema di Pitagora oppure la sua generalizzazione, il teorema del coseno,}\index{twierdzenie!Pitagorasa}\index{twierdzenie!kosinusów}\index{teorema!di Pitagora}\index{teorema!del coseno}%
+    \item \pol{aksjomat Wallisa: nie ma górnego ograniczenia na pole trójkąta,}\ita{assioma di Wallis: non esiste un limite superiore per l'area di un triangolo,}\index{aksjomat!Wallisa}\index{assioma!di Wallis}%
+    \item \pol{aksjomat Proklosa: jeśli prosta przecina jedną z dwóch równoległych prostych, to przecina także tę drugą,}\ita{assioma di Proclo: se una retta interseca una di due rette parallele, allora interseca anche l'altra,}\index{aksjomat!Proklosa}\index{assioma!di Proclo}%
+    \item \pol{kąty przy górnej podstawie czworokąta Saccheriego (czworokąta $ABCD$ o dwóch kątach prostych przy dolnej podstawie $AB$, w którym boki $AD$ i $BC$ mają równe długości) są proste,}\ita{gli angoli alla base superiore del quadrilatero di Saccheri (il quadrilatero $ABCD$ con due angoli retti alla base inferiore $AB$ e con i lati $AD$ e $BC$ di uguale lunghezza) sono retti,}\index{czworokąt!Saccheriego}\index{quadrilatero!di Saccheri}%
+    \item \pol{jeśli trzy kąty wewnętrzne czworokąta są proste, to czwarty kąt także jest prosty (czworokąt Lamberta jest prostokątem).}\ita{se tre angoli interni di un quadrilatero sono retti, allora anche il quarto è retto (il quadrilatero di Lambert è un rettangolo).}\index{czworokąt!Lamberta}\index{quadrilatero!di Lambert}%
 % https://en.wikipedia.org/wiki/Saccheri_quadrilateral
 \end{itemize}
 
 % TODO: https://en.wikipedia.org/wiki/Parallel_postulate
 
 \begin{proposition}
-    Aksjomaty incydencji I1, I2, I3 oraz aksjomat P (Playfaira) są od siebie niezależne. \index{aksjomat!Playfaira}
+    \pol{Aksjomaty incydencji I1, I2, I3 oraz aksjomat P (Playfaira) są od siebie niezależne.}
+    \ita{Gli assiomi di incidenza I1, I2, I3 e l'assioma P (di Playfair) sono indipendenti tra loro.}
+    \pol{\index{aksjomat!Playfaira}}
+    \ita{\index{assioma!di Playfair}}
 \end{proposition}
 
-Hartshorne \cite[s. 69-70]{hartshorne2000} konstruuje modele geometrii, w których spełnione są dowolne trzy, ale nie czwarty z nich.
+\pol{Hartshorne \cite[s. 69-70]{hartshorne2000} konstruuje modele geometrii, w których spełnione są dowolne trzy, ale nie czwarty z nich.}
+\ita{Hartshorne \cite[p. 69--70]{hartshorne2000} costruisce modelli geometrici nei quali sono soddisfatti tre qualsiasi di essi, ma non il quarto.}
 
-\subsubsection{Wstęp do geometrii rzutowej}
+\pol{\subsubsection{Wstęp do geometrii rzutowej}}
+\ita{\subsubsection{Introduzione alla geometria proiettiva}}
 
 \begin{proposition}
-    Płaszczyzna rzutowa to taki zbiór punktów oraz prostych (podzbiorów zbioru punktów), że: \index{płaszczyzna!rzutowa}
+    \pol{Płaszczyzna rzutowa to taki zbiór punktów oraz prostych (podzbiorów zbioru punktów), że:}
+    \ita{Un piano proiettivo è un insieme di punti e rette (sottoinsiemi dell'insieme dei punti) tale che:}
+    \pol{\index{płaszczyzna!rzutowa}}
+    \ita{\index{piano!proiettivo}}
     \begin{itemize}
-        \item przez dwa różne punkty przechodzi dokładnie jedna prosta,
-        \item każde dwie proste mają punkt wspólny,
-        \item każda prosta ma co najmniej trzy punkty i
-        \item nie wszystkie punkty są współliniowe.
+        \item \pol{przez dwa różne punkty przechodzi dokładnie jedna prosta,}\ita{per due punti distinti passa una e una sola retta,}
+        \item \pol{każde dwie proste mają punkt wspólny,}\ita{ogni due rette hanno un punto in comune,}
+        \item \pol{każda prosta ma co najmniej trzy punkty i}\ita{ogni retta contiene almeno tre punti e}
+        \item \pol{nie wszystkie punkty są współliniowe.}\ita{non tutti i punti sono allineati.}
     \end{itemize}
-    (Każdy z wymienionych aksjomatów jest niezależny od pozostałych, ze wszystkich razem wynikają aksjomaty incydencji).
-    Każda płaszczyzna rzutowa ma co najmniej 7 punktów, dokładnie jedna płaszczyzna rzutowa ma dokładnie 7 punktów.
-    Jeśli istnieje prosta, która ma $n+1$ punktów, to płaszczyzna ma $n^2 + n + 1$ punktów.
-\end{proposition} % Hartshorne 71
+    \pol{(Każdy z wymienionych aksjomatów jest niezależny od pozostałych, ze wszystkich razem wynikają aksjomaty incydencji).}
+    \ita{(Ciascuno degli assiomi elencati è indipendente dagli altri; tutti insieme implicano gli assiomi di incidenza).}
+    \pol{Każda płaszczyzna rzutowa ma co najmniej 7 punktów, dokładnie jedna płaszczyzna rzutowa ma dokładnie 7 punktów.}
+    \ita{Ogni piano proiettivo ha almeno 7 punti ed esiste un unico piano proiettivo con esattamente 7 punti.}
+    \pol{Jeśli istnieje prosta, która ma $n+1$ punktów, to płaszczyzna ma $n^2 + n + 1$ punktów.}
+    \ita{Se esiste una retta che contiene $n+1$ punti, allora il piano contiene $n^2+n+1$ punti.}
+\end{proposition}
 
-Marek Kordos opisze dziewięć twarzy płaszczyzny rzutowej w $\Delta_{13}^5$, wcześniej czymś podobnym zajmie się Maria Donten-Bury w $\Delta_{11}^6$.
+\pol{Marek Kordos opisze dziewięć twarzy płaszczyzny rzutowej w $\Delta_{13}^5$, wcześniej czymś podobnym zajmie się Maria Donten-Bury w $\Delta_{11}^6$.}
+\ita{Marek Kordos descriverà i nove volti del piano proiettivo in $\Delta_{13}^5$; in precedenza Maria Donten-Bury si occuperà di un argomento simile in $\Delta_{11}^6$.}
 % https://www.deltami.edu.pl/2013/05/dziewiec-twarzy-plaszczyzny-rzutowej/ % TODO
-Temat będzie wracać: w $\Delta_{19}^4$ podejmie go Michał Krych.
+\pol{Temat będzie wracać: w $\Delta_{19}^4$ podejmie go Michał Krych.}
+\ita{L'argomento tornerà più volte: in $\Delta_{19}^4$ sarà ripreso da Michał Krych.}
 % https://www.deltami.edu.pl/2019/04/co-to-jest-geometria-rzutowa/
 
 
-\begin{example}[płaszczyzna Fana]
-    Zbiór złożony z siedmiu elementów (,,punktów''), w którym wyróżniono rodzinę siedmiu podzbiorów (,,prostych'') spełniający następujące warunki: \index{płaszczyzna!Fana}
+\begin{example}[\pol{płaszczyzna Fana}\ita{piano di Fano}]
+    \pol{Zbiór złożony z siedmiu elementów (,,punktów''), w którym wyróżniono rodzinę siedmiu podzbiorów (,,prostych'') spełniający następujące warunki:}
+    \ita{Chiamiamo piano di Fano un insieme costituito da sette elementi (``punti''), nel quale è stata distinta una famiglia di sette sottoinsiemi (``rette'') che soddisfano le seguenti condizioni:}
+    \pol{\index{płaszczyzna!Fana}}
+    \ita{\index{piano!di Fano}}
     \begin{itemize}
-        \item każde dwie różne proste mają dokładnie jeden punkt wspólny,
-        \item każde dwa różne punkty należą do dokładnie jednej prostej
+        \item \pol{każde dwie różne proste mają dokładnie jeden punkt wspólny,}
+              \ita{ogni due rette distinte hanno esattamente un punto in comune,}
+        \item \pol{każde dwa różne punkty należą do dokładnie jednej prostej}
+              \ita{ogni due punti distinti appartengono a una e una sola retta}
     \end{itemize}
-    nazywamy płaszczyzną Fana.
-    Jest przykładem płaszczyzny rzutowej, która nie spełnia aksjomatu Fana (że trzy punkty przekątne czworoboku zupełnego nie są współliniowe).
-    \index{aksjomat!Fana}5
+    \pol{nazywamy płaszczyzną Fana.}
+    \ita{}
+    \pol{Jest przykładem płaszczyzny rzutowej, która nie spełnia aksjomatu Fana (że trzy punkty przekątne czworoboku zupełnego nie są współliniowe).}
+    \ita{È un esempio di piano proiettivo che non soddisfa l'assioma di Fano (secondo il quale i tre punti diagonali di un quadrilatero completo non sono allineati).}
+    \pol{\index{aksjomat!Fana}}
+    \ita{\index{assioma!di Fano}}5
     \begin{figure}[H]
         \centering
         \begin{tikzpicture}[
@@ -133,46 +242,69 @@ Temat będzie wracać: w $\Delta_{19}^4$ podejmie go Michał Krych.
         \coordinate (O) at
         (barycentric cs:A=1,B=1,C=1);
         \draw (O) circle [radius=4cm*1.717/6];
-        \draw (C) -- ($ (A)!.5!(B) $) coordinate (LC); 
-        \draw (A) -- ($ (B)!.5!(C) $) coordinate (LA); 
-        \draw (B) -- ($ (C)!.5!(A) $) coordinate (LB); 
+        \draw (C) -- ($ (A)!.5!(B) $) coordinate (LC);
+        \draw (A) -- ($ (B)!.5!(C) $) coordinate (LA);
+        \draw (B) -- ($ (C)!.5!(A) $) coordinate (LB);
         \foreach \Nodo in {A,B,C,O,LC,LA,LB}
-        \node[mydot] at (\Nodo) {};    
+        \node[mydot] at (\Nodo) {};
     \end{tikzpicture}%
-    \caption{Płaszczyzna Fana z 1892 roku}
+    \caption{\pol{Płaszczyzna Fana z 1892 roku}\ita{Piano di Fano del 1892}}
 \end{figure}
 \end{example}
 
-Jest po jednej płaszczyźnie rzutowej dla $n = 3, 4, 5, 6, 8$ punktów na każdej prostej; żadnej dla $n = 7$, co najmniej jedna dla $n = 9$ i co najmniej cztery dla $n = 10$.
-O płaszczyźnie Fana napisze Eves \cite[s. 366]{eves1_1972}.
+\pol{Jest po jednej płaszczyźnie rzutowej dla $n = 3, 4, 5, 6, 8$ punktów na każdej prostej; żadnej dla $n = 7$, co najmniej jedna dla $n = 9$ i co najmniej cztery dla $n = 10$.}
+\ita{Esiste un unico piano proiettivo con $n = 3, 4, 5, 6, 8$ punti su ogni retta; nessuno per $n = 7$, almeno uno per $n = 9$ e almeno quattro per $n = 10$.}
+\pol{O płaszczyźnie Fana napisze Eves \cite[s. 366]{eves1_1972}.}
+\ita{Del piano di Fano scriverà Eves \cite[p. 366]{eves1_1972}.}
 
-W momencie pisania tego tekstu nie interesuje nas jeszcze geometria rzutowa, więc wymienimy tylko kilka terminów:
-dwustosunek,
-\index{dwustosunek}%
-rzutowe przekształcenia łańcuchów, stożkowych oraz pęków stycznych do stożkowych.
-\index{stożkowa}%
-Oprócz tego są dwa twierdzenia: Steinera i Braikendridge'a-Maclaurina.
-\index{twierdzenie!Steinera}%
-\index{twierdzenie!Braikendridge'a-Maclaurina}%
+\pol{W momencie pisania tego tekstu nie interesuje nas jeszcze geometria rzutowa, więc wymienimy tylko kilka terminów:}
+\ita{Al momento della stesura di questo testo non ci interessa ancora la geometria proiettiva, quindi citeremo soltanto alcuni termini:}
+\pol{dwustosunek,}
+\ita{birapporto,}
+\pol{\index{dwustosunek}}
+\ita{\index{birapporto}}%
+\pol{rzutowe przekształcenia łańcuchów, stożkowych oraz pęków stycznych do stożkowych.}
+\ita{trasformazioni proiettive di catene, coniche e fasci tangenti a coniche.}
+\pol{\index{stożkowa}}
+\ita{\index{conica}}%
+\pol{Oprócz tego są dwa twierdzenia: Steinera i Braikendridge'a-Maclaurina.}
+\ita{Inoltre vi sono due teoremi: quello di Steiner e quello di Braikenridge--Maclaurin.}
+\pol{\index{twierdzenie!Steinera}}
+\ita{\index{teorema!di Steiner}}%
+\pol{\index{twierdzenie!Braikendridge'a-Maclaurina}}
+\ita{\index{teorema!di Braikenridge-Maclaurin}}%
 
-Patrz też do Audina \cite[s. 143-182]{audin_2003}.
+\pol{Patrz też do Audina \cite[s. 143-182]{audin_2003}.}
+\ita{Si veda anche Audin \cite[p. 143--182]{audin_2003}.}
 % Delta: 2024/lipiec.
 
-\subsubsection{Wstęp do geometrii afinicznej}
+\pol{\subsubsection{Wstęp do geometrii afinicznej}}
+\ita{\subsubsection{Introduzione alla geometria affine}}
 
 \begin{proposition}
-    Płaszczyzna afiniczna to taki zbiór punktów i prostych, które spełniają: \index{płaszczyzna!afiniczna}
+    \pol{Płaszczyzna afiniczna to taki zbiór punktów i prostych, które spełniają:}
+    \ita{Un piano affine è un insieme di punti e rette che soddisfa:}
+    \pol{\index{płaszczyzna!afiniczna}}
+    \ita{\index{piano!affine}}
     \begin{itemize}
-        \item aksjomaty incydencji oraz
-        \item mocniejszą wersję aksjomatu Playfaira: dla każdej prostej $l$ i punktu $A$, dokładnie jedna prosta przechodzi przez punkt $A$ i jest równoległa do $l$.
+        \item \pol{aksjomaty incydencji oraz}
+              \ita{gli assiomi di incidenza e}
+        \item \pol{mocniejszą wersję aksjomatu Playfaira: dla każdej prostej $l$ i punktu $A$, dokładnie jedna prosta przechodzi przez punkt $A$ i jest równoległa do $l$.}
+              \ita{una versione più forte dell'assioma di Playfair: per ogni retta $l$ e punto $A$, passa per $A$ una e una sola retta parallela a $l$.}
     \end{itemize}
-    Każda prosta na płaszczyźnie afinicznej ma tyle samo punktów.
-    Jeśli pewna prosta ma $n$ punktów, to płaszczyzna ma dokładnie $n^2$ punktów.
-    Istnieją płaszczyzny afiniczne o $4$, $9$, $16$ i $25$ punktach, ale nie istnieje taka, która miałaby $36$ punktów.
+    \pol{Każda prosta na płaszczyźnie afinicznej ma tyle samo punktów.}
+    \ita{Ogni retta di un piano affine contiene lo stesso numero di punti.}
+    \pol{Jeśli pewna prosta ma $n$ punktów, to płaszczyzna ma dokładnie $n^2$ punktów.}
+    \ita{Se una retta contiene $n$ punti, allora il piano contiene esattamente $n^2$ punti.}
+    \pol{Istnieją płaszczyzny afiniczne o $4$, $9$, $16$ i $25$ punktach, ale nie istnieje taka, która miałaby $36$ punktów.}
+    \ita{Esistono piani affini con $4$, $9$, $16$ e $25$ punti, ma non ne esiste alcuno con $36$ punti.}
 \end{proposition} % Hartshorne 71, 72
 
-Podręcznik Audina \cite[s. 7]{audin_2003} zaczyna się od definicji przestrzeni afinicznej.
-Natomiast Coxeter \cite[s. 209]{coxeter_1967} wspomni, że według Blaschkego słowo ,,afiniczny'' utworzył Euler.
-Powinowactwo (bo tak tłumaczy się na polski \emph{,,affinity''}) znajdzie się w niektórych numerach czasopisma Delta: $\Delta_{24}^6$, ale nie za bardzo u nas.
+\pol{Podręcznik Audina \cite[s. 7]{audin_2003} zaczyna się od definicji przestrzeni afinicznej.}
+\ita{Il manuale di Audin \cite[p. 7]{audin_2003} inizia con la definizione di spazio affine.}
+\pol{Natomiast Coxeter \cite[s. 209]{coxeter_1967} wspomni, że według Blaschkego słowo ,,afiniczny'' utworzył Euler.}
+\ita{Coxeter \cite[p. 209]{coxeter_1967} ricorda invece che, secondo Blaschke, il termine ``affine'' fu coniato da Euler.}
+\pol{Powinowactwo (bo tak tłumaczy się na polski \emph{,,affinity''}) znajdzie się w niektórych numerach czasopisma Delta: $\Delta_{24}^6$, ale nie za bardzo u nas.}
+\ita{L'affinità (che è il significato del termine inglese \emph{``affinity''}) compare in alcuni numeri della rivista Delta, ad esempio in $\Delta_{24}^6$, ma non avrà grande spazio in questo testo.}
 
 %
