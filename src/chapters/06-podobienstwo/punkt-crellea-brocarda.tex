@@ -1,44 +1,25 @@
 %
 
-\section{Zastosowanie: punkt i kąt Crelle'a-Brocarda}
+\pol{\section{Zastosowanie: punkt i kąt Crelle'a-Brocarda}}
+\ita{\section{Applicazione: punto e angolo di Crelle-Brocard}}
 
-Poznamy teraz dwa wyróżnione punkty trójkąta, opisane w 1875 roku przez oficera francuskiej armii, Henriego Brocarda oraz wiele lat wcześniej przez Augusta Crelle'a \cite{crelle_1816}, założyciela słynnego czasopisma matematycznego.
+\pol{Poznamy teraz dwa wyróżnione punkty trójkąta, opisane w 1875 roku przez oficera francuskiej armii, Henriego Brocarda oraz wiele lat wcześniej przez Augusta Crelle'a \cite{crelle_1816}, założyciela słynnego czasopisma matematycznego.}
+\ita{Studieremo ora due punti notevoli del triangolo, descritti nel 1875 dall'ufficiale dell'esercito francese Henri Brocard e molti anni prima da August Crelle \cite{crelle_1816}, fondatore di una celebre rivista matematica.}
 \index[persons]{Brocard, Henri}%
 \index[persons]{Crelle, August}%
 
 \begin{definition}
 \label{punkty_brocarda}%
-    Niech $\triangle ABC$ będzie trójkątem.
-    Punkt $X$ leżący w jego wnętrzu taki, że kąty $\angle XAB$, $\angle XBC$, $\angle XCA$ są równej miary, nazywamy (pierwszym) punktem Crelle'a-Brocarda.
-    \index{punkt!Crelle'a-Brocarda}%
+    \pol{Niech $\triangle ABC$ będzie trójkątem.}
+    \ita{Sia $\triangle ABC$ un triangolo.}
+    \pol{Punkt $X$ leżący w jego wnętrzu taki, że kąty $\angle XAB$, $\angle XBC$, $\angle XCA$ są równej miary, nazywamy (pierwszym) punktem Crelle'a-Brocarda.}
+    \ita{Il punto $X$ interno al triangolo tale che gli angoli $\angle XAB$, $\angle XBC$, $\angle XCA$ abbiano la stessa ampiezza è chiamato (primo) punto di Crelle-Brocard.}
+    \pol{\index{punkt!Crelle'a-Brocarda}}%
+    \ita{\index{punto!di Crelle-Brocard}}%
     \begin{center}
 \begin{comment}
     \begin{tikzpicture}[scale=.75]
-        \tkzInit[xmin=-0.5,xmax=6.5, ymin=-0.5,ymax=4.5]
-        \tkzClip
-        \tkzDefPoint(0, 0){A}
-        \tkzDefPoint(6, 1){B}
-        \tkzDefPoint(1.5, 4){C}
-        \tkzLabelPoint[below left](A){$A$}
-        \tkzLabelPoint[right](B){$B$}
-        \tkzLabelPoint[above](C){$C$}
-
-        \tkzDefLine[mediator](A,B) \tkzGetPoints{AB1}{AB2}
-        \tkzDefLine[orthogonal=through B](B,C) \tkzGetPoint{BC3}
-        \tkzInterLL(AB1,AB2)(B,BC3) \tkzGetPoint{S1}
-        %
-        \tkzDefLine[mediator](B,C) \tkzGetPoints{BC1}{BC2}
-        \tkzDefLine[orthogonal=through C](A,C) \tkzGetPoint{AC3}
-        \tkzInterLL(BC1,BC2)(C,AC3) \tkzGetPoint{S2}
-        %
-        \tkzInterCC(S1,B)(S2,C) \tkzGetPoints{Bro1}{Bro2} % two circles
-        \tkzLabelPoint[above right](Bro1){$X$}
-        \tkzDrawSegments[line width=0.2mm](A,Bro1 B,Bro1 C,Bro1)
-        \tkzFillAngle[fill=black!30,size=1](B,A,Bro1)
-        \tkzFillAngle[fill=black!30,size=1](C,B,Bro1)
-        \tkzFillAngle[fill=black!30,size=1](A,C,Bro1)
-        \tkzDrawPolygon[line width=0.4mm](A,B,C)
-        \tkzDrawPoints[size=3,color=black,fill=black!50](Bro1)
+        ...
     \end{tikzpicture}
 \end{comment}
     \end{center}
@@ -48,61 +29,88 @@ Poznamy teraz dwa wyróżnione punkty trójkąta, opisane w 1875 roku przez ofic
     % https://www.geogebra.org/m/MT679Keu
 \end{definition}
 
-Miarę wspomnianych kątów nazywamy kątem Crelle'a-Brocarda.
-\index{kąt!Crelle'a-Brocarda}%
-Jest jeszcze drugi punkt Crelle'a-Brocarda, gdzie odwracamy kolejność punktów: $\angle XBA = \angle XCB = \angle XAC$.
+\pol{Miarę wspomnianych kątów nazywamy kątem Crelle'a-Brocarda.}
+\ita{La misura dei suddetti angoli è chiamata angolo di Crelle-Brocard.}
+\pol{\index{kąt!Crelle'a-Brocarda}}%
+\ita{\index{angolo!di Crelle-Brocard}}%
+\pol{Jest jeszcze drugi punkt Crelle'a-Brocarda, gdzie odwracamy kolejność punktów: $\angle XBA = \angle XCB = \angle XAC$.}
+\ita{Esiste anche un secondo punto di Crelle-Brocard, ottenuto invertendo l'ordine dei punti: $\angle XBA = \angle XCB = \angle XAC$.}
 
 \begin{proposition}
 \label{miara_kata_crellea_brocarda}%
-    W każdym trójkącie istnieje (jedyny) punkt Crelle'a-Brocarda.
-    Miara kąta Crelle'a-Brocarda $\omega$ spełnia związek
+    \pol{W każdym trójkącie istnieje (jedyny) punkt Crelle'a-Brocarda.}
+    \ita{In ogni triangolo esiste un unico punto di Crelle-Brocard.}
+    \pol{Miara kąta Crelle'a-Brocarda $\omega$ spełnia związek}
+    \ita{La misura dell'angolo di Crelle-Brocard $\omega$ soddisfa la relazione}
     \begin{equation}
         \frac 1 {\tan \omega} = \frac 1 {\tan \alpha} + \frac 1 {\tan \beta} + \frac 1 {\tan \gamma},
     \end{equation}
-    gdzie $\alpha, \beta, \gamma$ to miary kątów trójkąta.
-    Ponadto, $0 \le \omega \le \pi/6$.
+    \pol{gdzie $\alpha, \beta, \gamma$ to miary kątów trójkąta.}
+    \ita{dove $\alpha, \beta, \gamma$ sono le ampiezze degli angoli del triangolo.}
+    \pol{Ponadto, $0 \le \omega \le \pi/6$.}
+    \ita{Inoltre, $0 \le \omega \le \pi/6$.}
 \end{proposition}
 
-Zetel \cite[s. 176]{zetel_2020} pochwali się, że Szebarszin zauważył, że funkcje trygonometryczne kąta Brocarda można obliczyć prosto i że wynikiem będzie
+\pol{Zetel \cite[s. 176]{zetel_2020} pochwali się, że Szebarszin zauważył, że funkcje trygonometryczne kąta Brocarda można obliczyć prosto i że wynikiem będzie}
+\ita{Zetel \cite[p. 176]{zetel_2020} osserva che Šebaršin notò come le funzioni trigonometriche dell'angolo di Brocard possano essere calcolate facilmente e che il risultato è}
 \index[persons]{Szebarszin, M N}%
 \begin{equation}
     \cos = \frac{a^2 + b^2 + c^2}{2\sqrt{a^2b^2 + a^2c^2 + b^2c^2}}.
 \end{equation}
 
-Na 32. Międzynarodowej Olimpiadzie Matematycznej pojawi się następujące zadanie:
+\pol{Na 32. Międzynarodowej Olimpiadzie Matematycznej pojawi się następujące zadanie:}
+\ita{Alla 32ª Olimpiade Internazionale della Matematica comparve il seguente problema:}
 
 \begin{problem}
-    Niech $P$ będzie dowolnym punktem wewnątrz trójkąta $\triangle ABC$.
-    Wykazać, że co najmniej jeden z kątów $\angle PAB$, $\angle PBC$, $\angle PCA$ jest mniejszy lub równy $\pi /6$.
+    \pol{Niech $P$ będzie dowolnym punktem wewnątrz trójkąta $\triangle ABC$.}
+    \ita{Sia $P$ un punto arbitrario all'interno del triangolo $\triangle ABC$.}
+    \pol{Wykazać, że co najmniej jeden z kątów $\angle PAB$, $\angle PBC$, $\angle PCA$ jest mniejszy lub równy $\pi /6$.}
+    \ita{Dimostrare che almeno uno degli angoli $\angle PAB$, $\angle PBC$, $\angle PCA$ è minore o uguale a $\pi /6$.}
 \end{problem}
 
-Waldemar Pompe (w $\Delta_{92}^{3}$) przedstawi siedem wskazówek, po których zadanie rozwiąże się nieomal samo. % https://www.deltami.edu.pl/1992/03/krok-po-kroku/
+\pol{Waldemar Pompe (w $\Delta_{92}^{3}$) przedstawi siedem wskazówek, po których zadanie rozwiąże się nieomal samo.}
+\ita{Waldemar Pompe (in $\Delta_{92}^{3}$) presenterà sette suggerimenti dopo i quali il problema si risolverà quasi da solo.}
+% https://www.deltami.edu.pl/1992/03/krok-po-kroku/
 
-Bogdańska, Neugebauer \cite[s. 100]{neugebauer_2018} podadzą jako ćwiczenie, (Zetel \cite[s. 148]{zetel_2020} zaś z dowodem):
+\pol{Bogdańska, Neugebauer \cite[s. 100]{neugebauer_2018} podadzą jako ćwiczenie, (Zetel \cite[s. 148]{zetel_2020} zaś z dowodem):}
+\ita{Bogdańska e Neugebauer \cite[p. 100]{neugebauer_2018} lo propongono come esercizio (mentre Zetel \cite[p. 148]{zetel_2020} ne fornisce una dimostrazione):}
 
 \begin{proposition}
-    Niech $X$ będzie punktem Crelle'a-Brocarda trójkąta $\triangle ABC$.
-    Niech $R_a$, $R_b$ i $R_c$ oznaczają promienie okręgów opisanych na trójkątach $\triangle XBC$, $\triangle AXC$, $\triangle ABX$, zaś $R$ będzie jak zwykle promieniem okręgu opisanego na trójkącie $\triangle ABC$.
-    Wtedy
+    \pol{Niech $X$ będzie punktem Crelle'a-Brocarda trójkąta $\triangle ABC$.}
+    \ita{Sia $X$ il punto di Crelle-Brocard del triangolo $\triangle ABC$.}
+    \pol{Niech $R_a$, $R_b$ i $R_c$ oznaczają promienie okręgów opisanych na trójkątach $\triangle XBC$, $\triangle AXC$, $\triangle ABX$, zaś $R$ będzie jak zwykle promieniem okręgu opisanego na trójkącie $\triangle ABC$.}
+    \ita{Siano $R_a$, $R_b$ e $R_c$ i raggi delle circonferenze circoscritte ai triangoli $\triangle XBC$, $\triangle AXC$, $\triangle ABX$, mentre $R$ sia il raggio della circonferenza circoscritta al triangolo $\triangle ABC$.}
+    \pol{Wtedy}
+    \ita{Allora}
     \begin{equation}
         R = \sqrt[3]{R_a R_b R_c}.
     \end{equation}
 \end{proposition}
 
-Peter Yiff \cite{yff_1963} postawi w 1963 roku (!) hipotezę, że $8 \omega^3 \le \alpha \beta \gamma$.
+\pol{Peter Yiff \cite{yff_1963} postawi w 1963 roku (!) hipotezę, że $8 \omega^3 \le \alpha \beta \gamma$.}
+\ita{Peter Yiff \cite{yff_1963} formulò nel 1963 (!) la congettura che $8 \omega^3 \le \alpha \beta \gamma$.}
 \index[persons]{Yiff, Peter}%
-Dowód znajdzie w 1974 roku Faruk Abi-Khuzam \cite{abikhuzam_1974}.
+\pol{Dowód znajdzie w 1974 roku Faruk Abi-Khuzam \cite{abikhuzam_1974}.}
+\ita{La dimostrazione sarà trovata nel 1974 da Faruk Abi-Khuzam \cite{abikhuzam_1974}.}
 \index[persons]{Abi-Khuzam, Faruk}%
 
-Mamy jeszcze mało ciekawy dla kogoś o wiedzy tak nikłej jak my okrąg Crelle'a-Brocarda.
+\pol{Mamy jeszcze mało ciekawy dla kogoś o wiedzy tak nikłej jak my okrąg Crelle'a-Brocarda.}
+\ita{Abbiamo inoltre la circonferenza di Crelle-Brocard, poco interessante per chi possiede conoscenze limitate come le nostre.}
 % PRZECZYTANO: https://mathworld.wolfram.com/BrocardCircle.html
-\index{okrąg!Crelle'a-Brocarda}%
-Jego średnicą jest odcinek łączący środek okręgu opisanego z punktem Lemoine'a.
-\index{okrąg!opisany}%
-\index{punkt!Lemoine'a}%
-Przechodzi przez pierwszy i drugi punkt Crelle'a-Brocarda oraz wierzchołki celowo niezdefiniowanego tu trójkąta Brocarda, co uzasadnia stosowaną czasami nazwę ,,okrąg siedmiu punktów''.
-\index{okrąg!siedmiu punktów}%
-Ma promień równy
+\pol{\index{okrąg!Crelle'a-Brocarda}}%
+\ita{\index{circonferenza!di Crelle-Brocard}}%
+\pol{Jego średnicą jest odcinek łączący środek okręgu opisanego z punktem Lemoine'a.}
+\ita{Il suo diametro è il segmento che unisce il circocentro al punto di Lemoine.}
+\pol{\index{okrąg!opisany}}%
+\ita{\index{circonferenza!circoscritta}}%
+\pol{\index{punkt!Lemoine'a}}%
+\ita{\index{punto!di Lemoine}}%
+\pol{Przechodzi przez pierwszy i drugi punkt Crelle'a-Brocarda oraz wierzchołki celowo niezdefiniowanego tu trójkąta Brocarda, co uzasadnia stosowaną czasami nazwę ,,okrąg siedmiu punktów''.}
+\ita{Passa per il primo e il secondo punto di Crelle-Brocard e per i vertici del triangolo di Brocard, volutamente non definito qui, il che giustifica il nome talvolta usato di \emph{circonferenza dei sette punti}.}
+\pol{\index{okrąg!siedmiu punktów}}%
+\ita{\index{circonferenza!dei sette punti}}%
+\pol{Ma promień równy}
+\ita{Ha raggio pari a}
 \begin{equation}
     R \cdot \frac{\sqrt{1 - 4 \sin^2 \omega}}{2 \cos \omega}.
 \end{equation}

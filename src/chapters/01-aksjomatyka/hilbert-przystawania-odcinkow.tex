@@ -1,76 +1,115 @@
 %
 
-\subsection{Aksjomaty przystawania odcinków}
-\index{aksjomat!przystawania odcinków}%
+\pol{\subsection{Aksjomaty przystawania odcinków}}
+\ita{\subsection{Assiomi di congruenza dei segmenti}}
+\pol{\index{aksjomat!przystawania odcinków}}%
+\ita{\index{assioma!di congruenza dei segmenti}}%
 
-Listę aksjomatów rozszerzymy o trzy, które opisują niezdefiniowane pojęcie przystawania odcinków: relacji między odcinkami, którą oznaczamy przez $\cong$.
-(Pompe \cite[s. 25]{pompe_2022} nazywa dwie figury na płaszczyźnie przystającymi, jeśli istnieje izometria, która przekształca jedną na drugą, ale my nie możemy tak zrobić).
+\pol{Listę aksjomatów rozszerzymy o trzy, które opisują niezdefiniowane pojęcie przystawania odcinków: relacji między odcinkami, którą oznaczamy przez $\cong$.}
+\ita{Estenderemo la lista degli assiomi con tre nuovi assiomi che descrivono il concetto non definito di congruenza dei segmenti: una relazione tra segmenti che indichiamo con $\cong$.}
+\pol{(Pompe \cite[s. 25]{pompe_2022} nazywa dwie figury na płaszczyźnie przystającymi, jeśli istnieje izometria, która przekształca jedną na drugą, ale my nie możemy tak zrobić).}
+\ita{(Pompe \cite[p. 25]{pompe_2022} chiama congruenti due figure del piano se esiste un'isometria che trasforma l'una nell'altra, ma noi non possiamo procedere in questo modo).}
 
-\begin{axiom}[przystawania, C1]
-    Niech $A$ i $B$ będą punktami, zaś $l$ prostą przechodzącą przez punkt $C$.
-    Wtedy po każdej stronie punktu $C$ istnieje punkt $D$ taki, że odcinki $AB \cong CD$ są przystające.
+\begin{axiom}[\pol{przystawania, C1}\ita{congruenza, C1}]
+    \pol{Niech $A$ i $B$ będą punktami, zaś $l$ prostą przechodzącą przez punkt $C$.}
+    \ita{Siano $A$ e $B$ punti, e sia $l$ una retta passante per il punto $C$.}
+    \pol{Wtedy po każdej stronie punktu $C$ istnieje punkt $D$ taki, że odcinki $AB \cong CD$ są przystające.}
+    \ita{Allora, da ciascun lato del punto $C$, esiste un punto $D$ tale che i segmenti $AB \cong CD$ siano congruenti.}
 \end{axiom}
 
-Ten aksjomat odpowiada konstrukcji (I.3) Euklidesa i pozwala przenosić odcinki.
-\index{odcinek!przenoszenie}%
+\pol{Ten aksjomat odpowiada konstrukcji (I.3) Euklidesa i pozwala przenosić odcinki.}
+\ita{Questo assioma corrisponde alla costruzione (I.3) di Euclide e permette di trasportare segmenti.}
+\pol{\index{odcinek!przenoszenie}}%
+\ita{\index{segmento!trasporto}}%
 
-\begin{axiom}[przystawania, C2]
-    Jeśli $AB \cong CD$ oraz $AB \cong EF$, to $CD \cong EF$.
-    Każdy odcinek jest przystający do siebie.
+\begin{axiom}[\pol{przystawania, C2}\ita{congruenza, C2}]
+    \pol{Jeśli $AB \cong CD$ oraz $AB \cong EF$, to $CD \cong EF$.}
+    \ita{Se $AB \cong CD$ e $AB \cong EF$, allora $CD \cong EF$.}
+    \pol{Każdy odcinek jest przystający do siebie.}
+    \ita{Ogni segmento è congruente a sé stesso.}
 \end{axiom}
 
-To będzie pierwsze pojęcie pierwotne dla Euklidesa.
+\pol{To będzie pierwsze pojęcie pierwotne dla Euklidesa.}
+\ita{Questo sarà il primo concetto primitivo per Euclide.}
 
-\begin{axiom}[przystawania, C3]
-    Niech $A$, $B$, $C$, $D$, $E$, $F$ będą takimi punktami, że $B$ leży między $A$ i $C$, zaś $E$ leży między $D$ i $F$.
-    Jeśli $AB \cong DE$ i $BC \cong EF$, to $AC \cong DF$.
+\begin{axiom}[\pol{przystawania, C3}\ita{congruenza, C3}]
+    \pol{Niech $A$, $B$, $C$, $D$, $E$, $F$ będą takimi punktami, że $B$ leży między $A$ i $C$, zaś $E$ leży między $D$ i $F$.}
+    \ita{Siano $A$, $B$, $C$, $D$, $E$, $F$ punti tali che $B$ si trovi tra $A$ e $C$, mentre $E$ si trovi tra $D$ e $F$.}
+    \pol{Jeśli $AB \cong DE$ i $BC \cong EF$, to $AC \cong DF$.}
+    \ita{Se $AB \cong DE$ e $BC \cong EF$, allora $AC \cong DF$.}
 \end{axiom}
 
-Ten aksjomat pozwala nam dodawać odcinki i znowu zastępuje pojęcie pierwotne Euklidesa.
-Patrz też \cite[s. 168]{hartshorne2000}.
-Dodawanie jest łączne i przemienne.
+\pol{Ten aksjomat pozwala nam dodawać odcinki i znowu zastępuje pojęcie pierwotne Euklidesa.}
+\ita{Questo assioma ci permette di sommare segmenti e sostituisce nuovamente un concetto primitivo di Euclide.}
+\pol{Patrz też \cite[s. 168]{hartshorne2000}.}
+\ita{Si veda anche \cite[p. 168]{hartshorne2000}.}
+\pol{Dodawanie jest łączne i przemienne.}
+\ita{L'addizione è associativa e commutativa.}
 
-\begin{proposition}[odejmowanie odcinków]
-    Niech $A$, $B$, $C$, $D$, $E$, $F$ będą takimi punktami, że $B$ leży między $A$ i $C$, zaś $E$ i $F$ leżą na półprostej zaczynającej się w $D$.
-    Jeśli $AB \cong DE$ i $AC \cong DF$, to punkt $E$ leży między $D$ i $F$, co więcej $BC \cong EF$.
+\begin{proposition}[\pol{odejmowanie odcinków}\ita{sottrazione di segmenti}]
+    \pol{Niech $A$, $B$, $C$, $D$, $E$, $F$ będą takimi punktami, że $B$ leży między $A$ i $C$, zaś $E$ i $F$ leżą na półprostej zaczynającej się w $D$.}
+    \ita{Siano $A$, $B$, $C$, $D$, $E$, $F$ punti tali che $B$ si trovi tra $A$ e $C$, mentre $E$ e $F$ appartengano alla semiretta avente origine in $D$.}
+    \pol{Jeśli $AB \cong DE$ i $AC \cong DF$, to punkt $E$ leży między $D$ i $F$, co więcej $BC \cong EF$.}
+    \ita{Se $AB \cong DE$ e $AC \cong DF$, allora il punto $E$ si trova tra $D$ e $F$ e inoltre $BC \cong EF$.}
 \end{proposition}
 
-Odcinek $BC$ traktujemy jako różnicę między $AC$ i $AB$.
-Dla Euklidesa to będzie pojęcie pierwotne (że całość jest większa od części).
+\pol{Odcinek $BC$ traktujemy jako różnicę między $AC$ i $AB$.}
+\ita{Consideriamo il segmento $BC$ come la differenza tra $AC$ e $AB$.}
+\pol{Dla Euklidesa to będzie pojęcie pierwotne (że całość jest większa od części).}
+\ita{Per Euclide questo sarà un concetto primitivo (il tutto è maggiore della parte).}
 
 \begin{definition}
-    Niech $AB$ i $CD$ będą odcinkami.
-    Jeśli istnieje punkt $E$ między $C$ i $D$ taki, że $AB \cong CE$, to powiemy, że odcinek $AB$ jest krótszy niż odcinek $CD$ (zaś odcinek $CD$ jest dłuższy niż odcinek $AB$).
+    \pol{Niech $AB$ i $CD$ będą odcinkami.}
+    \ita{Siano $AB$ e $CD$ segmenti.}
+    \pol{Jeśli istnieje punkt $E$ między $C$ i $D$ taki, że $AB \cong CE$, to powiemy, że odcinek $AB$ jest krótszy niż odcinek $CD$ (zaś odcinek $CD$ jest dłuższy niż odcinek $AB$).}
+    \ita{Se esiste un punto $E$ tra $C$ e $D$ tale che $AB \cong CE$, diremo che il segmento $AB$ è più corto del segmento $CD$ (e che il segmento $CD$ è più lungo del segmento $AB$).}
 \end{definition} % Hartshorne 85
 
-Relacja bycia krótszym odcinkiem jest zgodna z przystawaniem i zadaje zupełny porządek na klasach równoważności.
-Dodawanie odcinków zachowuje nierówności między nimi.
+\pol{Relacja bycia krótszym odcinkiem jest zgodna z przystawaniem i zadaje zupełny porządek na klasach równoważności.}
+\ita{La relazione di essere più corto è compatibile con la congruenza e definisce un ordine totale sulle classi di equivalenza.}
+\pol{Dodawanie odcinków zachowuje nierówności między nimi.}
+\ita{L'addizione dei segmenti preserva le disuguaglianze tra essi.}
 
-\begin{definition}[okrąg]
-    Niech $O$, $A$ będą dwoma różnymi punktami.
-    Zbiór punktów $B$ takich, że $OA \cong OB$ nazywamy okręgiem o środku $O$ oraz promieniu $OA$.
-    \index{okrąg}
-\end{definition} % Hartshorne 89
-
-Okręgi często oznacza się literą $\Gamma$ albo $\Omega$.
-Część płaszczyzny ograniczona przez okrąg nazywa się kołem, ale koła nie pojawiają się w części poświęconej planimetrii prawie wcale (poza ustępem o~polu koła).
-
-\begin{proposition}
-    Każda prosta, która przechodzi przez środek okręgu, przecina go w dwóch punktach.
-    Okrąg składa się z nieskończenie wielu punktów.
-\end{proposition}
-
-(Nie jest jasne, ile środków może mieć okrąg, ale Hartshorne \cite[s. 89]{hartshorne2000} obiecuje pokazać póżniej, że tylko jeden.
-\index{okrąg!środek okręgu}%
-Później ma miejsce na stronie 104).
-
-\begin{definition}[styczna]
-    Niech $\Gamma$ będzie okręgiem, zaś $l$ prostą, która przecina $\Gamma$ w dokładnie jednym punkcie $A$.
-    Mówimy, że $l$ jest styczną do okręgu $\Gamma$ w punkcie $A$.
-    \index{styczność}
+\begin{definition}[\pol{okrąg}\ita{cerchio}]
+    \pol{Niech $O$, $A$ będą dwoma różnymi punktami.}
+    \ita{Siano $O$ e $A$ due punti distinti.}
+    \pol{Zbiór punktów $B$ takich, że $OA \cong OB$ nazywamy okręgiem o środku $O$ oraz promieniu $OA$.}
+    \ita{L'insieme dei punti $B$ tali che $OA \cong OB$ si chiama cerchio di centro $O$ e raggio $OA$.}
+    \pol{\index{okrąg}}
+    \ita{\index{cerchio}}
 \end{definition}
 
-Podobnie mówimy, że dwa okręgi są styczne, jeśli mają jeden punkt wspólny.
-Neugebauer \cite[s. 20]{neugebauer_2018} podaje w formie ćwiczenia, że prosta i okrąg mają zawsze mniej niż trzy punkty wspólne.
+\pol{Okręgi często oznacza się literą $\Gamma$ albo $\Omega$.}
+\ita{I cerchi vengono spesso indicati con le lettere $\Gamma$ oppure $\Omega$.}
+\pol{Część płaszczyzny ograniczona przez okrąg nazywa się kołem, ale koła nie pojawiają się w części poświęconej planimetrii prawie wcale (poza ustępem o~polu koła).}
+\ita{La parte di piano delimitata da un cerchio si chiama disco, ma i dischi compaiono molto raramente nella parte dedicata alla planimetria (a eccezione della sezione sull'area del disco).}
+
+\begin{proposition}
+    \pol{Każda prosta, która przechodzi przez środek okręgu, przecina go w dwóch punktach.}
+    \ita{Ogni retta che passa per il centro di un cerchio lo interseca in due punti.}
+    \pol{Okrąg składa się z nieskończenie wielu punktów.}
+    \ita{Un cerchio è composto da infiniti punti.}
+\end{proposition}
+
+\pol{(Nie jest jasne, ile środków może mieć okrąg, ale Hartshorne \cite[s. 89]{hartshorne2000} obiecuje pokazać póżniej, że tylko jeden.}
+\ita{(Non è chiaro quanti centri possa avere un cerchio, ma Hartshorne \cite[p. 89]{hartshorne2000} promette di mostrare più avanti che ne ha uno solo.}
+\pol{\index{okrąg!środek okręgu}}%
+\ita{\index{cerchio!centro del cerchio}}%
+\pol{Później ma miejsce na stronie 104).}
+\ita{La dimostrazione compare poi a pagina 104).}
+
+\begin{definition}[\pol{styczna}\ita{tangente}]
+    \pol{Niech $\Gamma$ będzie okręgiem, zaś $l$ prostą, która przecina $\Gamma$ w dokładnie jednym punkcie $A$.}
+    \ita{Sia $\Gamma$ un cerchio e sia $l$ una retta che interseca $\Gamma$ in un unico punto $A$.}
+    \pol{Mówimy, że $l$ jest styczną do okręgu $\Gamma$ w punkcie $A$.}
+    \ita{Diremo che $l$ è tangente al cerchio $\Gamma$ nel punto $A$.}
+    \pol{\index{styczność}}
+    \ita{\index{tangenza}}
+\end{definition}
+
+\pol{Podobnie mówimy, że dwa okręgi są styczne, jeśli mają jeden punkt wspólny.}
+\ita{Analogamente, diciamo che due cerchi sono tangenti se hanno un solo punto in comune.}
+\pol{Neugebauer \cite[s. 20]{neugebauer_2018} podaje w formie ćwiczenia, że prosta i okrąg mają zawsze mniej niż trzy punkty wspólne.}
+\ita{Neugebauer \cite[p. 20]{neugebauer_2018} propone come esercizio il fatto che una retta e un cerchio hanno sempre meno di tre punti in comune.}
 
 %

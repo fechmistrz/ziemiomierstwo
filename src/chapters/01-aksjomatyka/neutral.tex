@@ -1,58 +1,88 @@
 %
 
-\section{Geometrie neutralna oraz uporządkowana}
-Geometrię opartą o ten sam zestaw aksjomatów, co nasz (czyli aksjomaty Hilberta), ale bez piątego postulatu, nazywamy geometrią neutralną; prawdziwe są w niej na przykład (I.1) do (I.28) oraz (I.31).
-Jej twierdzenia obowiązują w geometrii euklidesowej oraz hiperbolicznej (gdzie przez każdy punkt poza daną prostą można przeprowadzić co najmniej dwie proste równległe!), ale nie eliptycznej lub sferycznej, ponieważ uporządkowanie punktów na prostej wszystko psuje.
-% https://scispace.com/pdf/old-and-new-results-in-the-foundations-of-elementary-plane-2ps6tog87x.pdf -> Ctrl F -> elliptic na górze strona 201
-Geometria absolutna jest przedłużeniem geometrii uporządkowanej, która stanowi trzon wcześniej wymienionej oraz geometrii afinicznej, czyli takiej, gdzie nie ma odległości ani kątów.
-No i jest jeszcze geometria rzutowa...
-Napiszą coś o tym lub części tego Coxeter \cite[s. 193, 194]{coxeter_1967}, Audin \cite[s. 13]{audin_2003}.
+%
 
-\index{twierdzenie!Sylvestera-Gallaia|(}%
+\pol{\section{Geometrie neutralna oraz uporządkowana}}
+\ita{\section{Geometria neutrale e geometria ordinata}}
 
-\subsection{Twierdzenie Sylvestera-Gallaia}
+\pol{Geometrię opartą o ten sam zestaw aksjomatów, co nasz (czyli aksjomaty Hilberta), ale bez piątego postulatu, nazywamy geometrią neutralną; prawdziwe są w niej na przykład (I.1) do (I.28) oraz (I.31).}
+\ita{La geometria basata sullo stesso sistema di assiomi della nostra (cioè gli assiomi di Hilbert), ma senza il quinto postulato, è detta geometria neutrale; in essa sono validi, per esempio, (I.1)--(I.28) e (I.31).}
+\pol{Jej twierdzenia obowiązują w geometrii euklidesowej oraz hiperbolicznej (gdzie przez każdy punkt poza daną prostą można przeprowadzić co najmniej dwie proste równległe!), ale nie eliptycznej lub sferycznej, ponieważ uporządkowanie punktów na prostej wszystko psuje.}
+\ita{I suoi teoremi valgono sia nella geometria euclidea sia in quella iperbolica (dove per ogni punto esterno a una retta passano almeno due rette parallele!), ma non in quella ellittica o sferica, poiché l'ordinamento dei punti su una retta fa fallire tutto.}
+\pol{Geometria absolutna jest przedłużeniem geometrii uporządkowanej, która stanowi trzon wcześniej wymienionej oraz geometrii afinicznej, czyli takiej, gdzie nie ma odległości ani kątów.}
+\ita{La geometria assoluta estende la geometria ordinata, che costituisce il nucleo sia della geometria appena descritta sia della geometria affine, nella quale non esistono né distanze né angoli.}
+\pol{No i jest jeszcze geometria rzutowa...}
+\ita{E poi c'è anche la geometria proiettiva...}
+\pol{Napiszą coś o tym lub części tego Coxeter \cite[s. 193, 194]{coxeter_1967}, Audin \cite[s. 13]{audin_2003}.}
+\ita{Di questi argomenti, o di parte di essi, scriveranno Coxeter \cite[p. 193, 194]{coxeter_1967} e Audin \cite[p. 13]{audin_2003}.}
 
-Podamy teraz (jedyny nam znany) przykład interesującego twierdzenia geometrii neutralnej.
+\pol{\index{twierdzenie!Sylvestera-Gallaia|(}}%
+\ita{\index{teorema!di Sylvester-Gallai|(}}%
 
-\begin{theorem}[Sylvestera-Gallaia]
-	Dla każdego skończonego zbioru punktów na płaszczyźnie istnieje prosta, która przechodzi przez dokładnie dwa albo wszystkie punkty.
+\pol{\subsection{Twierdzenie Sylvestera-Gallaia}}
+\ita{\subsection{Teorema di Sylvester-Gallai}}
+
+\pol{Podamy teraz (jedyny nam znany) przykład interesującego twierdzenia geometrii neutralnej.}
+\ita{Presenteremo ora l'unico esempio a noi noto di un interessante teorema della geometria neutrale.}
+
+\begin{theorem}[\pol{Sylvestera-Gallaia}\ita{di Sylvester-Gallai}]
+    \pol{Dla każdego skończonego zbioru punktów na płaszczyźnie istnieje prosta, która przechodzi przez dokładnie dwa albo wszystkie punkty.}
+    \ita{Per ogni insieme finito di punti del piano esiste una retta che passa per esattamente due punti oppure per tutti i punti dell'insieme.}
 \end{theorem}
 
-W 1893 roku James Sylvester postawi ten problem, zainspirowany konfiguracją Hessego\footnote{Konfiguracja Hessego to 12 prostych przez 9 punktów na zespolonej płaszczyźnie rzutowej, gdzie każdy punkt leży na 4 prostych, a każda prosta przechodzi przez 3 punkty.} (albo czymś innym, kto go tam wie).
+\pol{W 1893 roku James Sylvester postawi ten problem, zainspirowany konfiguracją Hessego\footnote{Konfiguracja Hessego to 12 prostych przez 9 punktów na zespolonej płaszczyźnie rzutowej, gdzie każdy punkt leży na 4 prostych, a każda prosta przechodzi przez 3 punkty.} (albo czymś innym, kto go tam wie).}
+\ita{Nel 1893 James Sylvester pose questo problema, ispirato dalla configurazione di Hesse\footnote{La configurazione di Hesse consiste di 12 rette passanti per 9 punti nel piano proiettivo complesso, dove ogni punto appartiene a 4 rette e ogni retta passa per 3 punti.} (oppure da qualcos'altro, chi lo sa).}
 \index[persons]{Sylvester, James}%
-\index{kofinguracja Hessego}%
-Herbert Woodall szybko zaproponuje rozwiązanie z usterką, która zostanie równie szybko dostrzeżona.
+\pol{\index{kofinguracja Hessego}}%
+\ita{\index{configurazione di Hesse}}%
+\pol{Herbert Woodall szybko zaproponuje rozwiązanie z usterką, która zostanie równie szybko dostrzeżona.}
+\ita{Herbert Woodall proporrà rapidamente una soluzione con un difetto che verrà individuato altrettanto rapidamente.}
 \index[persons]{Woodall, Herbert}%
-Dopiero w 1941 roku Eberhard Melchior udowodni trochę mocniejsze stwierdzenie niż rzutowy dual ówczesnej hipotezy (że prostych przez dokładnie dwa punkty jest co najmniej trzy).
+\pol{Dopiero w 1941 roku Eberhard Melchior udowodni trochę mocniejsze stwierdzenie niż rzutowy dual ówczesnej hipotezy (że prostych przez dokładnie dwa punkty jest co najmniej trzy).}
+\ita{Solo nel 1941 Eberhard Melchior dimostrerà un'affermazione leggermente più forte del duale proiettivo dell'ipotesi allora nota (ossia che esistono almeno tre rette passanti per esattamente due punti).}
 \index[persons]{Melchior, Eberhard}%
-Nieświadomy tego, Paul Erdős postawi hipotezę na nowo w~1943 roku, a Tibor Gallai w 1944 roku doda swój dowód (ponownie wykorzystując elementy geometrii rzutowej).
+\pol{Nieświadomy tego, Paul Erdős postawi hipotezę na nowo w~1943 roku, a Tibor Gallai w 1944 roku doda swój dowód (ponownie wykorzystując elementy geometrii rzutowej).}
+\ita{Ignaro di ciò, Paul Erdős formulerà nuovamente la congettura nel 1943, mentre Tibor Gallai nel 1944 aggiungerà una propria dimostrazione (utilizzando ancora elementi di geometria proiettiva).}
 \index[persons]{Erdős, Paul}%
 \index[persons]{Gallai, Tibor}%
-Wraz z upływem czasu pojawią się inne, ciekawe rozumowania.
-Na przykład Leroy Kelly wykorzysta własności metryki, co oburzy Harolda Coxetera \cite[s. 199-201]{coxeter_1967} i skłoni go do opublikowania kolejnego dowodu, korzystającego jedynie z aksjomatów geometrii uporządkowania.
-\index{geometria!uporządkowania}
+\pol{Wraz z upływem czasu pojawią się inne, ciekawe rozumowania.}
+\ita{Con il passare del tempo appariranno altre dimostrazioni interessanti.}
+\pol{Na przykład Leroy Kelly wykorzysta własności metryki, co oburzy Harolda Coxetera \cite[s. 199-201]{coxeter_1967} i skłoni go do opublikowania kolejnego dowodu, korzystającego jedynie z aksjomatów geometrii uporządkowania.}
+\ita{Per esempio, Leroy Kelly sfrutterà proprietà metriche, cosa che indignarà Harold Coxeter \cite[p. 199-201]{coxeter_1967} e lo spingerà a pubblicare un'altra dimostrazione, basata unicamente sugli assiomi della geometria ordinata.}
+\pol{\index{geometria!uporządkowania}}
+\ita{\index{geometria!ordinata}}
 \index[persons]{Kelly, Leroy}%
 \index[persons]{Coxeter, Harold}%
-(Aigner, Ziegler uznają dowód Kelly'ego za najlepszy).
+\pol{(Aigner, Ziegler uznają dowód Kelly'ego za najlepszy).}
+\ita{(Aigner e Ziegler considerano la dimostrazione di Kelly la migliore).}
 
-Niech $t_2(n)$ oznacza minimalną liczbę prostych przez dwa punkty w dowolnym ułożeniu $n$ punktów.
-Melchior pokaże, że $t_2(n) \ge 3$.
-Wynik sukcesywnie poprawią:
-de Bruijn \cite{debruijn_1948} zapyta, czy $t_2(n)$ dąży do nieskończoności,
+\pol{Niech $t_2(n)$ oznacza minimalną liczbę prostych przez dwa punkty w dowolnym ułożeniu $n$ punktów.}
+\ita{Sia $t_2(n)$ il numero minimo di rette passanti per esattamente due punti in una qualunque configurazione di $n$ punti.}
+\pol{Melchior pokaże, że $t_2(n) \ge 3$.}
+\ita{Melchior mostrerà che $t_2(n) \ge 3$.}
+\pol{Wynik sukcesywnie poprawią:}
+\ita{Questo risultato verrà progressivamente migliorato:}
+\pol{de Bruijn \cite{debruijn_1948} zapyta, czy $t_2(n)$ dąży do nieskończoności,}
+\ita{de Bruijn \cite{debruijn_1948} chiederà se $t_2(n)$ tende all'infinito,}
 \index[persons]{de Bruijn, Nicolas}%
-Theodore Motzkin \cite{motzkin_1951} udzieli twierdzącej odpowiedz, bo $t_2(n) \ge \sqrt{n}$.
+\pol{Theodore Motzkin \cite{motzkin_1951} udzieli twierdzącej odpowiedz, bo $t_2(n) \ge \sqrt{n}$.}
+\ita{Theodore Motzkin \cite{motzkin_1951} darà una risposta affermativa, poiché $t_2(n) \ge \sqrt{n}$.}
 \index[persons]{Motzkin, Theodore}%
-Potem Gabriel Dirac \cite{dirac_1951} przypuści, że $t_2(n) \ge \lfloor n/2\rfloor$, co nie zostawia wiele miejsca na poprawki, bo dla parzystych $n \ge 6$ zachodzi $t_2(n) \le n/2$, jak pokaże pomysłową konstrukcją Károly Böröczky.
+\pol{Potem Gabriel Dirac \cite{dirac_1951} przypuści, że $t_2(n) \ge \lfloor n/2\rfloor$, co nie zostawia wiele miejsca na poprawki, bo dla parzystych $n \ge 6$ zachodzi $t_2(n) \le n/2$, jak pokaże pomysłową konstrukcją Károly Böröczky.}
+\ita{Successivamente Gabriel Dirac \cite{dirac_1951} congetturerà che $t_2(n) \ge \lfloor n/2\rfloor$, lasciando poco margine per ulteriori miglioramenti, poiché per gli $n$ pari con $n \ge 6$ vale $t_2(n) \le n/2$, come mostrerà un'ingegnosa costruzione di Károly Böröczky.}
 \index[persons]{Dirac, Gabriel}%
 \index[persons]{Böröczky, Károly}%
-Dla nieparzystych $n$ wiemy tylko, że ten kres jest realizowany dla $n = 7$ (Kelly, Moser \cite{kelly_1958} w 1958) i $n = 13$ (Crowe, McKee \cite{mckee_1968} w 1968).
+\pol{Dla nieparzystych $n$ wiemy tylko, że ten kres jest realizowany dla $n = 7$ (Kelly, Moser \cite{kelly_1958} w 1958) i $n = 13$ (Crowe, McKee \cite{mckee_1968} w 1968).}
+\ita{Per gli $n$ dispari sappiamo soltanto che questo limite è raggiunto per $n = 7$ (Kelly, Moser \cite{kelly_1958} nel 1958) e per $n = 13$ (Crowe, McKee \cite{mckee_1968} nel 1968).}
 \index[persons]{Moser, William}%
 \index[persons]{Crowe, Donald}%
 \index[persons]{McKee, Terry}%
-Najpóźniejszy wynik, o jakim nam wiadomo, to Csimy, Sawyera \cite{csima_1993}: że $t_2(n) \ge \lceil 6n/13 \rceil$.
+\pol{Najpóźniejszy wynik, o jakim nam wiadomo, to Csimy, Sawyera \cite{csima_1993}: że $t_2(n) \ge \lceil 6n/13 \rceil$.}
+\ita{Il risultato più recente di cui siamo a conoscenza è quello di Csima e Sawyer \cite{csima_1993}: $t_2(n) \ge \lceil 6n/13 \rceil$.}
 \index[persons]{Sawyer, Eric}%
 \index[persons]{Csima, Joseph}%
 
-\index{twierdzenie!Sylvestera-Gallaia|)}%
+\pol{\index{twierdzenie!Sylvestera-Gallaia|)}}%
+\ita{\index{teorema!di Sylvester-Gallai|)}}%
 
 %

@@ -1,12 +1,16 @@
 %
 
-\index{nierówność!Erdősa-Mordella|(}
+\pol{\index{nierówność!Erdősa-Mordella|(}}
+\ita{\index{disuguaglianza!di Erdős-Mordell|(}}
 
-\subsection{Nierówność Erdősa-Mordella i jej uogólnienie}
+\pol{\subsection{Nierówność Erdősa-Mordella i jej uogólnienie}}
+\ita{\subsection{Disuguaglianza di Erdős-Mordell e sua generalizzazione}}
 
-\begin{theorem}[nierówność Erdősa-Mordella]
-    Niech $P$ będzie punktem wewnątrz trójkąta $\triangle ABC$, zaś $A_p, B_p, C_p$ spodkami punktu $P$ na boki trójkąta jak na rysunku \ref{erdos_mordell_barrowa}.
-    Wtedy
+\begin{theorem}[\pol{nierówność Erdősa-Mordella}\ita{disuguaglianza di Erdős-Mordell}]
+    \pol{Niech $P$ będzie punktem wewnątrz trójkąta $\triangle ABC$, zaś $A_p, B_p, C_p$ spodkami punktu $P$ na boki trójkąta jak na rysunku \ref{erdos_mordell_barrowa}.}
+    \ita{Sia $P$ un punto interno al triangolo $\triangle ABC$, e siano $A_p, B_p, C_p$ le proiezioni ortogonali del punto $P$ sui lati del triangolo, come nella figura \ref{erdos_mordell_barrowa}.}
+    \pol{Wtedy}
+    \ita{Allora}
     \begin{equation}
         |PA| + |PB| + |PC| \ge 2 (|PA_p| + |PB_p| + |PC_p|).
     \end{equation}
@@ -16,117 +20,80 @@
 \begin{minipage}[b]{.45\linewidth}
 \begin{center}
     \begin{comment}
-    \begin{tikzpicture}[scale=.4]
-    \tkzDefPoint(0, 0){A}
-    \tkzDefPoint(10, 2){B}
-    \tkzDefPoint(6, 7){C}
-    \tkzDefPoint(5, 3){P}
-    \tkzLabelPoint[below left](A){$A$}
-    \tkzLabelPoint[below right](B){$B$}
-    \tkzLabelPoint[above](C){$C$}
-    \tkzLabelPoint[below left](P){$P$}
-    \tkzDefPointsBy[projection=onto A--B](P){Pc}
-    \tkzDefPointsBy[projection=onto B--C](P){Pa}
-    \tkzDefPointsBy[projection=onto C--A](P){Pb}
-    \tkzLabelPoint[above right](Pa){$A_p$}
-    \tkzLabelPoint[above left](Pb){$B_p$}
-    \tkzLabelPoint[below](Pc){$C_p$}
-
-    \tkzDrawSegments[line width=0.2mm,dashed](P,Pa P,Pb P,Pc)
-    \tkzDrawPolygon[line width=0.3mm](A,B,C)
-    \tkzMarkRightAngles[size=0.5](P,Pa,C P,Pb,A P,Pc,B)
-    \tkzDrawPoints[size=3,color=black,fill=black!50](A,B,C,P,Pc,Pb,Pa)
-\end{tikzpicture}
+    ...
 \end{comment}
     \end{center}
-    \subcaption{nierówność Erdősa-Mordella}
+    \subcaption{\pol{nierówność Erdősa-Mordella}\ita{disuguaglianza di Erdős-Mordell}}
     \label{erdos_mordell_barrowa}
 \end{minipage}
 %
 \begin{minipage}[b]{.45\linewidth}
 \begin{center}\begin{comment}
-    \begin{tikzpicture}[scale=.4]
-    \tkzDefPoint(0, 0){A}
-    \tkzDefPoint(10, 2){B}
-    \tkzDefPoint(6, 7){C}
-    \tkzDefPoint(5, 3){P}
-
-    \tkzDefLine[bisector](A,P,B) \tkzGetPoint{prePc}
-    \tkzInterLL(P,prePc)(A,B) \tkzGetPoint{Pc}
-    \tkzDefLine[bisector](B,P,C) \tkzGetPoint{prePa}
-    \tkzInterLL(P,prePa)(B,C) \tkzGetPoint{Pa}
-    \tkzDefLine[bisector](C,P,A) \tkzGetPoint{prePb}
-    \tkzInterLL(P,prePb)(C,A) \tkzGetPoint{Pb}
-
-    \tkzLabelPoint[below left](A){$A$}
-    \tkzLabelPoint[below right](B){$B$}
-    \tkzLabelPoint[above](C){$C$}
-    %\tkzLabelPoint[below left](P){$P$}
-    \tkzLabelPoint[above right](Pa){$A_p$}
-    \tkzLabelPoint[above left](Pb){$B_p$}
-    \tkzLabelPoint[below](Pc){$C_p$}
-
-    \tkzMarkAngle[arc=lll,size=1.2,mark=|||](A,P,Pc)
-    \tkzMarkAngle[arc=lll,size=1.2,mark=|||](Pc,P,B)
-    \tkzMarkAngle[arc=ll,size=1.2,mark=||](B,P,Pa)
-    \tkzMarkAngle[arc=ll,size=1.2,mark=||](Pa,P,C)
-    \tkzMarkAngle[arc=l,size=1.2,mark=|](C,P,Pb)
-    \tkzMarkAngle[arc=l,size=1.2,mark=|](Pb,P,A)
-
-    \tkzDrawSegments[line width=0.2mm](P,A P,B P,C)
-    \tkzDrawSegments[line width=0.2mm,dashed](P,Pa P,Pb P,Pc)
-    \tkzDrawPolygon[line width=0.3mm](A,B,C)
-    \tkzDrawPoints[size=3,color=black,fill=black!50](A,B,C,P,Pc,Pb,Pa)
-\end{tikzpicture}
+    ...
 \end{comment}
     \end{center}
-    \subcaption{nierówność Barrowa}
+    \subcaption{\pol{nierówność Barrowa}\ita{disuguaglianza di Barrow}}
     \label{erdos_mordell_barrowb}
 \end{minipage}
 \caption{}
 \end{figure}
 
 \label{subsection_erdos_mordell}
-Nierówność pojawi się w wakacyjnym wydaniu American Mathematical Monthly z 1935 roku jako problem 3740 od Erdősa.
+\pol{Nierówność pojawi się w wakacyjnym wydaniu American Mathematical Monthly z 1935 roku jako problem 3740 od Erdősa.}
+\ita{La disuguaglianza apparve nel numero estivo dell'\emph{American Mathematical Monthly} del 1935 come problema 3740 proposto da Erdős.}
 \index[persons]{Erdős, Paul}%
-Na dowód przyjdzie poczekać.
-Pierwszy podadzą Louis Mordell i~David Barrow \cite{mordell_barrow_1937} w 1937 roku.
+\pol{Na dowód przyjdzie poczekać.}
+\ita{Per una dimostrazione si dovrà attendere ancora qualche tempo.}
+\pol{Pierwszy podadzą Louis Mordell i~David Barrow \cite{mordell_barrow_1937} w 1937 roku.}
+\ita{La prima sarà fornita da Louis Mordell e David Barrow \cite{mordell_barrow_1937} nel 1937.}
 \index[persons]{Mordell, Louis Joel}%
 \index[persons]{Barrow, David}%
-Po dwudziestoletniej przerwie pojawi się prostszy dowód Kazarinowa \cite{kazarinoff_1957};
+\pol{Po dwudziestoletniej przerwie pojawi się prostszy dowód Kazarinowa \cite{kazarinoff_1957};}
+\ita{Dopo una pausa di vent'anni comparirà una dimostrazione più semplice di Kazarinoff \cite{kazarinoff_1957};}
 \index[persons]{Kazarinoff, Donat}% Donat Konstantinovich Kazarinoff
-Leon Bankoff \cite{bankoff_1958} uzasadni nierówność wykorzystując jedynie podobieństwo trójkątów oraz fakt, że $t + 1/t \ge 2$ dla $t \ge 0$; cały dowód zmieści się na połowie strony w $\Delta_{90}^8$.
+\pol{Leon Bankoff \cite{bankoff_1958} uzasadni nierówność wykorzystując jedynie podobieństwo trójkątów oraz fakt, że $t + 1/t \ge 2$ dla $t \ge 0$; cały dowód zmieści się na połowie strony w $\Delta_{90}^8$.}
+\ita{Leon Bankoff \cite{bankoff_1958} dimostrerà la disuguaglianza utilizzando soltanto la similitudine dei triangoli e il fatto che $t + 1/t \ge 2$ per $t \ge 0$; l'intera dimostrazione occuperà mezza pagina in $\Delta_{90}^8$.}
 \index[persons]{Bankoff, Leon}%
-Ostatni współczesny dowód pochodzi od Claudi Alsiny i Rogera Nelsena \cite{alsina_2007}.
+\pol{Ostatni współczesny dowód pochodzi od Claudi Alsiny i Rogera Nelsena \cite{alsina_2007}.}
+\ita{L'ultima dimostrazione moderna è dovuta a Claudi Alsina e Roger Nelsen \cite{alsina_2007}.}
 \index[persons]{Alsina, Claudi}%
 \index[persons]{Nelsen, Roger}%
 
 % https://en.wikipedia.org/wiki/Erdős-Mordell_inequality
-Coxeter \cite[s. 25]{coxeter_1967} przetworzy je po latach w ćwiczenie dla Czytelnika;
-podobnie postąpi Audin \cite[s. 102]{audin_2003}, nie szczędząc przy tym wskazówek.
-Guzicki \cite[s. 380-385]{guzicki_2021} pokaże cztery dowody.
-W geometrii absolutnej nierówność Erdősa-Mordella jest równoważna temu, że suma kątów trójkąta nie przekracza $\pi$ (patrz Pambuccian \cite{pambuccian_2008}).
+\pol{Coxeter \cite[s. 25]{coxeter_1967} przetworzy je po latach w ćwiczenie dla Czytelnika; podobnie postąpi Audin \cite[s. 102]{audin_2003}, nie szczędząc przy tym wskazówek.}
+\ita{Anni dopo Coxeter \cite[p. 25]{coxeter_1967} la trasformerà in un esercizio per il lettore; lo stesso farà Audin \cite[p. 102]{audin_2003}, senza risparmiare suggerimenti.}
+\pol{Guzicki \cite[s. 380-385]{guzicki_2021} pokaże cztery dowody.}
+\ita{Guzicki \cite[p. 380-385]{guzicki_2021} presenterà quattro dimostrazioni.}
+\pol{W geometrii absolutnej nierówność Erdősa-Mordella jest równoważna temu, że suma kątów trójkąta nie przekracza $\pi$ (patrz Pambuccian \cite{pambuccian_2008}).}
+\ita{Nella geometria assoluta, la disuguaglianza di Erdős-Mordell è equivalente all'affermazione che la somma degli angoli di un triangolo non supera $\pi$ (si veda Pambuccian \cite{pambuccian_2008}).}
 \index[persons]{Pambuccian, Victor}%
 
-Wzmocnieniem nierówności Erdősa-Mordella będzie nierówność Barrowa:
-\index{nierówność!Barrowa}
+\pol{Wzmocnieniem nierówności Erdősa-Mordella będzie nierówność Barrowa:}
+\ita{Un rafforzamento della disuguaglianza di Erdős-Mordell è la disuguaglianza di Barrow:}
+\pol{\index{nierówność!Barrowa}}
+\ita{\index{disuguaglianza!di Barrow}}
 
 % TODO: https://en.wikipedia.org/wiki/Barrow%27s_inequality
 
-\begin{theorem}[nierówność Barrowa]
-    Niech $P$ będzie punktem wewnątrz trójkąta $\triangle ABC$, zaś $A_p$, $B_p$, $C_p$ punktami przecięć dwusiecznych trzech kątów wyznaczanych przez $P$ i pary wierzchołków trójkąta; tak jak na rysunku \ref{erdos_mordell_barrowb}.
-    Wtedy
+\begin{theorem}[\pol{nierówność Barrowa}\ita{disuguaglianza di Barrow}]
+    \pol{Niech $P$ będzie punktem wewnątrz trójkąta $\triangle ABC$, zaś $A_p$, $B_p$, $C_p$ punktami przecięć dwusiecznych trzech kątów wyznaczanych przez $P$ i pary wierzchołków trójkąta; tak jak na rysunku \ref{erdos_mordell_barrowb}.}
+    \ita{Sia $P$ un punto interno al triangolo $\triangle ABC$, e siano $A_p$, $B_p$, $C_p$ i punti d'intersezione delle bisettrici dei tre angoli determinati da $P$ e dalle coppie di vertici del triangolo, come nella figura \ref{erdos_mordell_barrowb}.}
+    \pol{Wtedy}
+    \ita{Allora}
     \begin{equation}
         |PA| + |PB| + |PC| \ge 2 (|PA_p| + |PB_p| + |PC_p|).
     \end{equation}
 \end{theorem}
 
-Dowód Barrowa i Mordella \cite{mordell_barrow_1937} zostanie opublikowany w 1937 roku, ale nazwa ,,nierówność Barrowa'' przyjmie się nieco później, na pewno w 1961 roku Alexander Oppenheim będzie już jej używać.
+\pol{Dowód Barrowa i Mordella \cite{mordell_barrow_1937} zostanie opublikowany w 1937 roku, ale nazwa ,,nierówność Barrowa'' przyjmie się nieco później, na pewno w 1961 roku Alexander Oppenheim będzie już jej używać.}
+\ita{La dimostrazione di Barrow e Mordell \cite{mordell_barrow_1937} sarà pubblicata nel 1937, ma il nome \emph{disuguaglianza di Barrow} si affermerà solo più tardi; certamente nel 1961 Alexander Oppenheim lo utilizzava già.}
 \index[persons]{Oppenheim, Alexander}%
 % Oppenheim, A. (1961), "New inequalities for a triangle and an internal point", Annali di Matematica Pura ed Applicata, 53: 157–163, doi:10.1007/BF02417793, MR 0124774
-Mordell \cite{mordell_1962} wróci do nierówności po latach i poda prostszy dowód.
+\pol{Mordell \cite{mordell_1962} wróci do nierówności po latach i poda prostszy dowód.}
+\ita{Mordell \cite{mordell_1962} tornerà sulla disuguaglianza dopo molti anni e ne fornirà una dimostrazione più semplice.}
 \index[persons]{Mordell, Louis Joel}%
 
-\index{nierówność!Erdősa-Mordella|)}
+\pol{\index{nierówność!Erdősa-Mordella|)}}
+\ita{\index{disuguaglianza!di Erdős-Mordell|)}}
 
 %
