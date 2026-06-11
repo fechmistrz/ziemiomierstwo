@@ -1,71 +1,103 @@
+```latex
 %
 
-\section{Konstrukcje bez cyrkla}
+\pol{\section{Konstrukcje bez cyrkla}}
+\ita{\section{Costruzioni senza compasso}}
 
-\begin{theorem}[Ponceleta-Steinera]
+\begin{theorem}[\pol{twierdzenie Ponceleta-Steinera}\ita{teorema di Poncelet-Steiner}]
 \label{thm:poncelet_steiner}%
 \index{twierdzenie!Ponceleta-Steinera}%
-    Jeśli dana konstrukcja jest wykonalna za pomocą cyrkla i linijki, to jest ona wykonalna za pomocą samej linijki, o ile dany jest na płaszczyźnie pewien okrąg wraz ze środkiem.
+\pol{    Jeśli dana konstrukcja jest wykonalna za pomocą cyrkla i linijki, to jest ona wykonalna za pomocą samej linijki, o ile dany jest na płaszczyźnie pewien okrąg wraz ze środkiem.}
+\ita{    Se una costruzione è realizzabile con riga e compasso, allora è realizzabile con la sola riga, purché nel piano sia dato un cerchio insieme al suo centro.}
     \index{twierdzenie!Ponceleta-Steinera}%
 \end{theorem}
 
-Nazwa twierdzenia pochodzi od dwóch panów: Jeana Ponceleta, który postawi w 1822 roku hipotezę oraz Jakoba Steinera, który dostarczy brakujący dowód w 1833 roku.
+\pol{Nazwa twierdzenia pochodzi od dwóch panów: Jeana Ponceleta, który postawi w 1822 roku hipotezę oraz Jakoba Steinera, który dostarczy brakujący dowód w 1833 roku.}
+\ita{Il nome del teorema deriva da due studiosi: Jean Poncelet, che formulò la congettura nel 1822, e Jakob Steiner, che fornì la dimostrazione mancante nel 1833.}
 \index[persons]{Poncelet, Jean}%
 \index[persons]{Steiner, Jakob}%
-Zamiast całego okręgu, wystarczy, że mamy do dyspozycji mały jego łuk -- to wzmocnienie, o które pokusi się Francesco Severi w 1904 roku.
+\pol{Zamiast całego okręgu, wystarczy, że mamy do dyspozycji mały jego łuk -- to wzmocnienie, o które pokusi się Francesco Severi w 1904 roku.}
+\ita{Al posto dell'intero cerchio, è sufficiente avere a disposizione un suo piccolo arco: questo rafforzamento fu ottenuto da Francesco Severi nel 1904.}
 \index[persons]{Severi, Francesco}%
 
-Sama linijka to za mało, bo nie pozwala na wyciąganie pierwiastków kwadratowych, tak jak opisze to Łukasz Rajkowski w $\Delta_{15}^8$.
+\pol{Sama linijka to za mało, bo nie pozwala na wyciąganie pierwiastków kwadratowych, tak jak opisze to Łukasz Rajkowski w $\Delta_{15}^8$.}
+\ita{La sola riga non basta, poiché non permette di estrarre radici quadrate, come descrive Łukasz Rajkowski in $\Delta_{15}^8$.}
 \index[persons]{Rajkowski, Łukasz}%
-Ale zamiast środka okręgu możemy wymagać:
+\pol{Ale zamiast środka okręgu możemy wymagać:}
+\ita{Tuttavia, al posto del centro del cerchio possiamo richiedere:}
 \begin{itemize}
-    \item równoległoboku,
-    \item drugiego koncentrycznego okręgu,
-    \item drugiego okręgu przecinającego pierwszy,
-    \item drugiego okręgu rozłącznego z pierwszym i punktu na prostej łączącej ich środki albo ich osi potęgowej...
+    \item \pol{równoległoboku,}\ita{un parallelogramma,}
+    \item \pol{drugiego koncentrycznego okręgu,}\ita{un secondo cerchio concentrico,}
+    \item \pol{drugiego okręgu przecinającego pierwszy,}\ita{un secondo cerchio che interseca il primo,}
+    \item \pol{drugiego okręgu rozłącznego z pierwszym i punktu na prostej łączącej ich środki albo ich osi potęgowej...}\ita{un secondo cerchio disgiunto dal primo e un punto sulla retta che congiunge i loro centri oppure sul loro asse radicale...}
 \end{itemize}
 
-Zapewne istnieje jeszcze więcej takich warunków; o części napisze Eves \cite[s. 174-182]{eves1_1972}.
-August Adler wspomniany we wcześniejszej sekcji zauważy, że linijka z dwoma brzegami albo ekierka pozwalają wykonać wszystkie klasyczne konstrukcje.
+\pol{Zapewne istnieje jeszcze więcej takich warunków; o części napisze Eves \cite[s. 174-182]{eves1_1972}.}
+\ita{Esistono probabilmente molte altre condizioni di questo tipo; alcune sono descritte da Eves \cite[p. 174-182]{eves1_1972}.}
+\pol{August Adler wspomniany we wcześniejszej sekcji zauważy, że linijka z dwoma brzegami albo ekierka pozwalają wykonać wszystkie klasyczne konstrukcje.}
+\ita{August Adler, menzionato nella sezione precedente, osservò che una riga a doppio bordo oppure una squadra consentono di eseguire tutte le costruzioni classiche.}
 
-Dwie trójkątne linijki (w kształcie litery L) pozwalają podwoić sześcian (problem \ref{problem_delijski}) i dzielić kąt na trzy równe (problem \ref{trysekcja_kata}).
+\pol{Dwie trójkątne linijki (w kształcie litery L) pozwalają podwoić sześcian (problem \ref{problem_delijski}) i dzielić kąt na trzy równe (problem \ref{trysekcja_kata}).}
+\ita{Due righe triangolari (a forma di L) permettono di duplicare il cubo (problema \ref{problem_delijski}) e di trisecare un angolo (problema \ref{trysekcja_kata}).}
 
 \begin{problem}
-    Dany jest okrąg $\Gamma$ ze środkiem $O$ oraz odcinek.
-    Skonstruować środek odcinka. \hfill \emph{(15 kroków)}. % Hartshorne s. 192
+    \pol{Dany jest okrąg $\Gamma$ ze środkiem $O$ oraz odcinek.}
+    \ita{Sono dati un cerchio $\Gamma$ con centro $O$ e un segmento.}
+    \pol{Skonstruować środek odcinka.}
+    \ita{Costruire il punto medio del segmento.}
+    \hfill \emph{\pol{(15 kroków)}\ita{(15 passi)}}. % Hartshorne s. 192
 \end{problem}
 
 \begin{problem}
-    Dany jest okrąg $\Gamma$ ze środkiem $O$, prosta $l$ oraz punkt $P$.
-    Skonstruować prostą równoległą do $l$, która przechodzi przez $P$. \hfill \emph{(16 kroków)}. % Hartshorne s. 192
+    \pol{Dany jest okrąg $\Gamma$ ze środkiem $O$, prosta $l$ oraz punkt $P$.}
+    \ita{Sono dati un cerchio $\Gamma$ con centro $O$, una retta $l$ e un punto $P$.}
+    \pol{Skonstruować prostą równoległą do $l$, która przechodzi przez $P$.}
+    \ita{Costruire la retta parallela a $l$ passante per $P$.}
+    \hfill \emph{\pol{(16 kroków)}\ita{(16 passi)}}. % Hartshorne s. 192
 \end{problem}
 
 \begin{problem}
-    Dany jest okrąg $\Gamma$ ze środkiem $O$, odcinek $OA$ oraz półprosta $OB$.
-    Skonstruować punkt $C$ na półprostej taki, że $OA$ i $OC$ są przystające. \hfill \emph{(17 kroków)}. % Hartshorne s. 193
+    \pol{Dany jest okrąg $\Gamma$ ze środkiem $O$, odcinek $OA$ oraz półprosta $OB$.}
+    \ita{Sono dati un cerchio $\Gamma$ con centro $O$, il segmento $OA$ e la semiretta $OB$.}
+    \pol{Skonstruować punkt $C$ na półprostej taki, że $OA$ i $OC$ są przystające.}
+    \ita{Costruire un punto $C$ sulla semiretta tale che $OA$ e $OC$ siano congruenti.}
+    \hfill \emph{\pol{(17 kroków)}\ita{(17 passi)}}. % Hartshorne s. 193
 \end{problem}
 
 \begin{problem}
-    Dany jest okrąg $\Gamma$ ze środkiem $O$, prosta $l$ oraz punkt $P$.
-    Skonstruować prostą prostopadłą do $l$, która przechodzi przez $P$. \hfill \emph{(33 kroki)}. % Hartshorne s. 193
+    \pol{Dany jest okrąg $\Gamma$ ze środkiem $O$, prosta $l$ oraz punkt $P$.}
+    \ita{Sono dati un cerchio $\Gamma$ con centro $O$, una retta $l$ e un punto $P$.}
+    \pol{Skonstruować prostą prostopadłą do $l$, która przechodzi przez $P$.}
+    \ita{Costruire la retta perpendicolare a $l$ passante per $P$.}
+    \hfill \emph{\pol{(33 kroki)}\ita{(33 passi)}}. % Hartshorne s. 193
 \end{problem}
 
-Zetel \cite[s. 17]{zetel_2020} poda wariację tego problemu: jego prosta $l$ jest średnicą okręgu.
-Premier Rosji Michaił Miszustin odwiedzi we wrześniu 2021 roku liceum imienia P. L. Kapicy w Dołgoprudnym i~poprosi uczniów o~rozwiązanie jeszcze prostszego zadania, gdzie punkt $P$ leży na okręgu $\Gamma$. % https://www.theguardian.com/science/2021/sep/20/did-you-solve-it-russias-prime-minister-sets-a-geometry-puzzle
+\pol{Zetel \cite[s. 17]{zetel_2020} poda wariację tego problemu: jego prosta $l$ jest średnicą okręgu.}
+\ita{Zetel \cite[p. 17]{zetel_2020} propone una variante di questo problema: la sua retta $l$ è un diametro del cerchio.}
+\pol{Premier Rosji Michaił Miszustin odwiedzi we wrześniu 2021 roku liceum imienia P. L. Kapicy w Dołgoprudnym i~poprosi uczniów o~rozwiązanie jeszcze prostszego zadania, gdzie punkt $P$ leży na okręgu $\Gamma$.}
+\ita{Nel settembre 2021 il primo ministro russo Michail Mišustin visiterà il liceo P. L. Kapica di Dolgoprudnyj e chiederà agli studenti di risolvere un problema ancora più semplice, nel quale il punto $P$ giace sul cerchio $\Gamma$.} % https://www.theguardian.com/science/2021/sep/20/did-you-solve-it-russias-prime-minister-sets-a-geometry-puzzle
 
 \begin{problem}
-    Dany jest okrąg $\Gamma$ ze środkiem $O$, prosta $l$ oraz dwa punkty $A$, $B$.
-    Skonstruować punkt, gdzie prosta $l$ przecina okrąg o środku $A$ i promieniu $AB$. \hfill \emph{(54 kroki)}. % Hartshorne s. 193
+    \pol{Dany jest okrąg $\Gamma$ ze środkiem $O$, prosta $l$ oraz dwa punkty $A$, $B$.}
+    \ita{Sono dati un cerchio $\Gamma$ con centro $O$, una retta $l$ e due punti $A$, $B$.}
+    \pol{Skonstruować punkt, gdzie prosta $l$ przecina okrąg o środku $A$ i promieniu $AB$.}
+    \ita{Costruire il punto in cui la retta $l$ interseca il cerchio di centro $A$ e raggio $AB$.}
+    \hfill \emph{\pol{(54 kroki)}\ita{(54 passi)}}. % Hartshorne s. 193
 \end{problem}
 
 \begin{problem}
-    Dany jest okrąg $\Gamma$ ze środkiem $O$ oraz punkt $A$ poza okręgiem.
-    Skonstruować styczne do $\Gamma$ przechodzące przez $A$.
+    \pol{Dany jest okrąg $\Gamma$ ze środkiem $O$ oraz punkt $A$ poza okręgiem.}
+    \ita{Sono dati un cerchio $\Gamma$ con centro $O$ e un punto $A$ esterno al cerchio.}
+    \pol{Skonstruować styczne do $\Gamma$ przechodzące przez $A$.}
+    \ita{Costruire le tangenti a $\Gamma$ passanti per $A$.}
 \end{problem}
 
 \begin{problem}
-    Dany jest okrąg $\Gamma$ ze środkiem $O$.
-    Skonstruować pięciokąt foremny wpisany w $\Gamma$. \hfill \emph{(około 50 kroków)}. % Hartshorne s. 193
+    \pol{Dany jest okrąg $\Gamma$ ze środkiem $O$.}
+    \ita{È dato un cerchio $\Gamma$ con centro $O$.}
+    \pol{Skonstruować pięciokąt foremny wpisany w $\Gamma$.}
+    \ita{Costruire un pentagono regolare inscritto in $\Gamma$.}
+    \hfill \emph{\pol{(około 50 kroków)}\ita{(circa 50 passi)}}. % Hartshorne s. 193
 \end{problem}
 
 https://www.deltami.edu.pl/2017/06/z-sama-linijka-na-okrag-styczna-do-okregu-brakujacy-punkt/
@@ -73,3 +105,4 @@ https://www.deltami.edu.pl/2017/06/z-sama-linijka-na-okrag-styczna-do-okregu-bra
 https://www.deltami.edu.pl/2014/02/sama-linijka-mozna-nakreslic-okrag/
 
 %
+```
