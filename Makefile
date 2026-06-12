@@ -41,6 +41,7 @@ experimental-pl: src-pl
 	lualatex ziemiomierstwo.tex && \
 	lualatex ziemiomierstwo.tex
 	cp src-pl/ziemiomierstwo.pdf ziemiomierstwo-pl.pdf
+	rm -rf src-pl
 
 experimental-it: src-it
 	cd src-it && \
@@ -49,6 +50,7 @@ experimental-it: src-it
 	lualatex ziemiomierstwo.tex && \
 	lualatex ziemiomierstwo.tex
 	cp src-it/ziemiomierstwo.pdf ziemiomierstwo-it.pdf
+	rm -rf src-it
 
 experimental-clean:
 	rm -rf src-pl src-it
