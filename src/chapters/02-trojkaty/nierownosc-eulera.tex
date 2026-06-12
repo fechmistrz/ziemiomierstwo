@@ -1,43 +1,51 @@
-% eksperymentalne tłumaczenie na włoski
-
 %
 
-\pol{\subsection{Nierówność Eulera}}
-\ita{\subsection{Disuguaglianza di Eulero}}
+\subsection{Nierówność Eulera} % lang-pl
+\subsection{Disuguaglianza di Eulero} % lang-it
 
-\begin{proposition}[\pol{nierówność Eulera}\ita{disuguaglianza di Eulero}]
-\pol{\index{nierówność!Eulera}}%
-\ita{\index{disuguaglianza!di Eulero}}%
-	\pol{Niech $R, r, d$ oznaczają kolejno promienie okręgu opisanego i wpisanego w~trójkąt oraz odległość między środkami tych okręgów.}
-	\ita{Siano $R, r, d$ rispettivamente i raggi della circonferenza circoscritta e inscritta a un triangolo e la distanza tra i centri di tali circonferenze.}
-	\pol{Wtedy}
-	\ita{Allora}
+\begin{proposition}
+[nierówność Eulera] % lang-pl
+[disuguaglianza di Eulero] % lang-it
+\index{nierówność!Eulera}% % lang-pl
+\index{disuguaglianza!di Eulero}% % lang-it
+	Niech $R, r, d$ oznaczają kolejno promienie okręgu opisanego i wpisanego w~trójkąt oraz odległość między środkami tych okręgów. % lang-pl
+	Wtedy % lang-pl
+	Siano $R, r, d$ rispettivamente i raggi della circonferenza circoscritta e inscritta a un triangolo e la distanza tra i centri di tali circonferenze. % lang-it
+	Allora % lang-it
 	\begin{equation}
-	\frac{1}{R-d} + \frac{1}{R+d} = \frac 1 r,
+		\frac{1}{R-d} + \frac{1}{R+d} = \frac 1 r,
 	\end{equation}
-	\pol{lub równoważnie $d^2 = R \cdot (R - 2r)$.}
-	\ita{oppure, equivalentemente, $d^2 = R \cdot (R - 2r)$.}
-	\pol{Wynika stąd, że $R \ge 2r$.}
-	\ita{Ne segue che $R \ge 2r$.}
+	lub równoważnie $d^2 = R \cdot (R - 2r)$. % lang-pl
+	oppure, equivalentemente, $d^2 = R \cdot (R - 2r)$. % lang-it
 \end{proposition}
 
-\pol{Leonhard Euler opublikuje ten wynik w 1765 roku, chociaż wcześniej zrobi to William Chapple, w pracy \emph{,,An essay on the properties of triangles inscribed in and circumscribed about two given circles''} z 1746 roku, na dole strony 123.}
-\ita{Leonhard Euler pubblicò questo risultato nel 1765, sebbene William Chapple lo avesse già pubblicato in precedenza, nel lavoro \emph{``An essay on the properties of triangles inscribed in and circumscribed about two given circles''} del 1746, in fondo a pagina 123.}
+Leonhard Euler opublikuje ten wynik w 1765 roku, chociaż wcześniej zrobi to William Chapple, w pracy \emph{,,An essay on the properties of triangles inscribed in and circumscribed about two given circles''} z 1746 roku, na dole strony 123. % lang-pl
+Leonhard Euler pubblicò questo risultato nel 1765, sebbene William Chapple lo avesse già pubblicato in precedenza, nel lavoro \emph{``An essay on the properties of triangles inscribed in and circumscribed about two given circles''} del 1746, in fondo a pagina 123. % lang-it
 % Leversha, Gerry; Smith, G. C. (November 2007), "Euler and triangle geometry", The Mathematical Gazette, 91 (522): 436–452, doi:10.1017/S0025557200182087, JSTOR 40378417, S2CID 125341434
 % TODO: https://en.wikipedia.org/wiki/Euler%27s_theorem_in_geometry a stornger version... [6]
-\pol{Wspomni go Zetel \cite[s. 75]{zetel_2020}, Guzicki \cite[s. 362, 368-370]{guzicki_2021}.}
-\ita{Lo menzionano Zetel \cite[p. 75]{zetel_2020} e Guzicki \cite[pp. 362, 368-370]{guzicki_2021}.}
+Wspomni go Zetel \cite[s. 75]{zetel_2020}, Guzicki \cite[s. 362, 368-370]{guzicki_2021}. % lang-pl
+Lo menzionano Zetel \cite[p. 75]{zetel_2020} e Guzicki \cite[pp. 362, 368-370]{guzicki_2021}. % lang-it
 
-\pol{Trójwymiarowym odpowiednikiem jest:}
-\ita{L'analogo tridimensionale è il seguente:}
+\begin{corollary}
+	Wynika stąd, że $R \ge 2r$. % lang-pl
+	Ne segue che $R \ge 2r$. % lang-it
+\end{corollary}
 
-\begin{proposition}[\pol{nierówność Grace'a-Danielssona}\ita{disuguaglianza di Grace-Danielsson}]
-\pol{\index{nierówność!Grace'a-Danielssona}}%
-\ita{\index{disuguaglianza!di Grace-Danielsson}}%
-	\pol{Dla każdej pary sfer o promieniach $r, R$ takich, że $r < R$ istnieje czworościan zawarty w dużej sferze i zawierający małą sferę wtedy i tylko wtedy, gdy}
-	\ita{Per ogni coppia di sfere di raggi $r, R$ tali che $r < R$ esiste un tetraedro inscritto nella sfera maggiore e circoscritto alla sfera minore se e solo se}
-	\begin{equation}d^2 \le (R+r)(R - 3r).\end{equation}
+Trójwymiarowym odpowiednikiem jest: % lang-pl
+L'analogo tridimensionale è il seguente: % lang-it
+
+\begin{proposition}
+[nierówność Grace'a-Danielssona] % lang-pl
+[disuguaglianza di Grace-Danielsson] % lang-it
+\index{nierówność!Grace'a-Danielssona}% % lang-pl
+\index{disuguaglianza!di Grace-Danielsson}% % lang-it
+	Dla każdej pary sfer o promieniach $r, R$ takich, że $r < R$ istnieje czworościan zawarty w dużej sferze i zawierający małą sferę wtedy i tylko wtedy, gdy % lang-pl
+	Per ogni coppia di sfere di raggi $r, R$ tali che $r < R$ esiste un tetraedro inscritto nella sfera maggiore e circoscritto alla sfera minore se e solo se % lang-it
+	\begin{equation}
+		d^2 \le (R+r)(R - 3r).
+	\end{equation}
 \end{proposition}
+
 % TODO: Grace, J.H. (1918), Proc. London Math. (ed.), Tetrahedra in relation to spheres and quadrics, vol. Soc.17, pp. 259–271
 % Danielsson, G. (1952), Johan Grundt Tanums Forlag (ed.), Proof of the inequality d2≤(R+r)(R−3r) for the distance between the centres of the circumscribed and inscribed spheres of a tetrahedron, pp. 101–105
 
