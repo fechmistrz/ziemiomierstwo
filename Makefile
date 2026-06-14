@@ -1,6 +1,10 @@
+ifeq ($(shell uname),Darwin)
+    SED_INPLACE = sed -i ''
+else
+    SED_INPLACE = sed -i
+endif
 
 .PHONY: experimental-all experimental-pl experimental-it experimental-clean
-
 experimental-all: experimental-pl experimental-it
 
 experimental-pl: src-pl
@@ -46,14 +50,12 @@ fast: src/ziemiomierstwo.tex src/chapters/*.tex src/chapters/*/*.tex
 src-pl:
 	rm -rf src-pl
 	cp -R src src-pl
-	find src-pl -type f \( -name '*.tex' -o -name '*.bib' \) -print0 | xargs -0 sed -i '' '/% lang-it$$/d'
+	find src-pl -type f \( -name '*.tex' -o -name '*.bib' \) -print0 | xargs -0 $(SED_INPLACE) '/% lang-it$$/d'
 
 src-it:
 	rm -rf src-it
 	cp -R src src-it
-	find src-it -type f \( -name '*.tex' -o -name '*.bib' \) -print0 | xargs -0 sed -i '' '/% lang-pl$$/d'
-
-
+	find src-it -type f \( -name '*.tex' -o -name '*.bib' \) -print0 | xargs -0 $(SED_INPLACE) '/% lang-pl$$/d'
 
 experimental-clean:
 	rm -rf src-pl src-it
