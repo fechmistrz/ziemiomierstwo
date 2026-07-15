@@ -3,41 +3,36 @@
 \section{Pole powierzchni}
 \label{sekcja_pole_powierzchni}
 
-Euklides nie zdefiniuje figur o równych polach, ale czytając jego dowody możemy domyślić się, że równopolowe figury mają następujące właściwości:
-\begin{itemize}
+Pole powierzchni opisuje, jak duża jest dana figura płaska.
+Opiszemy, jak na przestrzeni wieków zmieniać się będzie matematyczny opis pola, skupiając się na rozcięciach.
+Sekcję zwieńczy twierdzenie Wallace'a-Bolyaia-Gerwiena, charakteryzujące figury o równych polach.
+Miarę Lebesgue'a wzmiankujemy krótko na koniec w formie ciekawostki, nie będzie nam do niczego potrzebna.
+
+Euklides nawet nie zdefiniuje on figur o równych polach, a tym bardziej samego pola jako liczby.
+(Będzie unikać problemu kwadratury koła, ale w księdze XII napisze, że pola dwóch kół mają się do siebie tak, jak kwadraty ich promieni.
+Czytaj dalej w sekcji \ref{sekcja_przyblizenia_pi}.)
+Ale czytając jego dowody możemy domyślić się, że równopolowe figury mają następujące właściwości:
+\begin{enumerate}
 \item przystające figury mają równe pola;
 \item suma, różnica i połówki figur o równych polach mają równe pola;
 \item całość jest większa od części i wreszcie
 \item boki kwadratów o równych polach są równej długości.
-\end{itemize}
+\end{enumerate}
 
-% hartshorne 196
-(Ostatni punkt okazuje się być wnioskiem z poprzedniego).
-Hartshorne \cite[s. 196--204]{hartshorne2000} lepiej niż my sformalizuje pojęcie pola dla płaszczyzny Hilberta; wspomni po drodze aksjomat de Zolta:
-\index{aksjomat de Zolta}%
+Czwarty punkt jest wnioskiem z trzeciego.
+Hartshorne \cite[s. 196--204]{hartshorne2000} podczas formalizacji pojęcia pola dla płaszczyzny Hilberta wspomni aksjomat de Zolta:
 
 \begin{axiom}[Z, de Zolta]
+\index{aksjomat!de Zolta}%
     Jeśli $Q$ jest figurą zawartą wewnątrz figury $P$ tak, że różnica $P \setminus Q$ ma niepuste wnętrze, to figury $P$ oraz $Q$ nie są równopolowe.
 \end{axiom}
 
-Tysiące lat po Euklidesie pojęcie rozmiaru (nie tylko długości, ale przede wszystkim pola figur płaskich oraz objętości brył) sformalizuje się przez miarę Jordana, albo jej uogólnienie --- miarę Lebesgue'a.
-O mierze wspomina Hartshorne \cite[s. 205]{hartshorne2000}; jest to funkcja, która przyporządkowuje każdej figurze $P$ pewną nieujemną liczbę $[P]$ (zwaną polem) taką, że:
-\begin{itemize}
-    \item pole każdego trójkąta jest dodatnie: $[\triangle] > 0$;
-    \item przystające trójkąty mają równe pola;
-    \item jeśli dwie figury $P, Q$ nie nachodzą na siebie, to $[P \cup Q] = [P] + [Q]$.
-\end{itemize}
-
-(Z istnienia takiej funkcji wynika aksjomat (Z).)
-Pole jest wyznaczone jednoznacznie z dokładnością do stałej.
-Przyjęcie, że trójkąt o podstawie $a$ oraz wysokości $h$ ma pole $\frac 1 2 ah$ daje jednoznaczność.
-
-Starożytni będą jednak postępować inaczej: wykorzystają raczej zapomniane przez ich potomków rozcięcia. % dissections.
+Starożytni oczywiście nie będą znać teorii miary i postąpią inaczej: wykorzystają zapomniane przez ich potomków rozcięcia. % dissections.
 Technika ta pojawi się wielokrotnie, na przykład w dowodzie (I.35), że równoległoboki o~tej samej podstawie i równych wysokościach mają równe pola.
-W 1873 roku Henry Perigal (a w 1917 inny Henry,  Dudeney) poda dowód twierdzenia Pitagorasa wykorzystujący rozcięcia.
+W 1873 roku Henry Perigal (a w 1917 inny Henry, Dudeney) poda dowód twierdzenia Pitagorasa wykorzystujący rozcięcia.
 \index[persons]{Dudeney, Henry}%
 \index[persons]{Perigal, Henry}%
-Dokładnie opisze to Eves \cite[s. 194-239]{eves1_1972}, będzie używać dokładnie tej samej notacji, co my, ale też Hartshorne \cite[s. 212-221]{hartshorne2000} z nieco inną notacją.
+Dokładnie opiszą to Eves \cite[s. 194-239]{eves1_1972} i (z nieco inną notacją) Hartshorne \cite[s. 212-221]{hartshorne2000}.
 
 Niech $P, Q$ będą jakimiś figurami o tej samej powierzchni.
 Będziemy mówić, że są równopolowe (\emph{equivalent}) i pisać $P \simeq Q$.
@@ -53,7 +48,7 @@ Oznaczenie $P \cong Q$ zachowujemy dla zwykłego przystawania.
     Oznaczamy to $P \cong_+ Q$.
 \end{definition}
 
-Eves będzie mówić o przystawaniu przez dodawanie, ale w użyciu będą inne określenia, takie jak \emph{equidecomposable} albo {scissors-congruent}.
+Eves będzie mówić o przystawaniu przez dodawanie, ale w użyciu będą inne określenia, takie jak \emph{equidecomposable} albo \emph{scissors-congruent}.
 Rozcinanie wielokątów będzie przewijać się przez wiele artykułów w Delcie:
 Joanny Jaszuńskiej w $\Delta_{15}^{8}$, % {https://www.deltami.edu.pl/2015/08/nozyczki-matematyczne/}
 Marka Kordosa w $\Delta_{17}^4$, % {https://www.deltami.edu.pl/2017/04/dedukcja-lokalna-na-przykladzie/}
@@ -105,6 +100,7 @@ Doszliśmy wreszcie do wyniku Williama Wallace'a (z 1807 roku), znalezionego nie
 % W. Bolyai de Bolya, Tentamen. Iuventutem studiosam in ele- menta matheseos purae, elementaris ac sublı`mioris, methodo intuitiva, evidentiaque huic propria, introducendi. Cum appendice triplici, Maros Va´ sa´ rhelyini; tomus primus 1932, tomus secudus 1933.
 
 \begin{theorem}[Wallace'a-Bolyaia-Gerwiena]
+\label{twierdzenie_wallace_bolyai_gerwien}%
     Następujące warunki są równoważne:
     \begin{itemize}
     \item dwie figury są równopolowe,
@@ -118,8 +114,23 @@ Laczkovich wzmocni później ten wynik: każdy wielokąt można rozciąć na kaw
 % M. Laczkovich, Equidecomposability and discrepancy: a solution to Tarski’s circle squaring problem, Journal fu¨ r die reine und angewandte Mathematik 404(1990), 77–117.
 % M. Laczkovich, Paradoxical decompositions: a survey of recent results, Proc. First European Congress of Mathematics, Vol. II (Paris, 1992), Progress in Mathematics 120, Birkha¨ user, Basel 1994
 
-Euklides nie zdefiniuje pola koła i będzie unikać problemu kwadratury, ale w księdze XII napisze, że pola dwóch kół mają się do siebie tak, jak kwadraty ich promieni.
-Czytaj dalej w sekcji \ref{sekcja_przyblizenia_pi}.
+\subsection{Miara Lebesgue'a}
+
+Skończymy na odległych czasach.
+Tysiące lat po Euklidesie pojęcie rozmiaru (nie tylko długości, ale przede wszystkim pola figur płaskich oraz objętości brył) sformalizuje się przez miarę Jordana, albo jej uogólnienie --- miarę Lebesgue'a.
+O mierze wspomina Hartshorne \cite[s. 205]{hartshorne2000}; jest to funkcja, która przyporządkowuje każdej figurze $P$ pewną nieujemną liczbę $[P]$ (zwaną polem) taką, że:
+\begin{itemize}
+    \item pole każdego trójkąta jest dodatnie: $[\triangle] > 0$;
+    \item przystające trójkąty mają równe pola;
+    \item jeśli dwie figury $P, Q$ nie nachodzą na siebie, to $[P \cup Q] = [P] + [Q]$.
+\end{itemize}
+
+Z istnienia takiej funkcji wynika aksjomat (Z), wysłowiony przez nas niżej.
+Guzicki \cite[s. 38-68]{guzicki_2021} również wspomni o mierze Jordana.
+Zauważy jednak, że w polskich szkołach każdą figurę można rozciąć na wielokąty i wycinki kołowe, co prowadzi do prostszej aksjoamtyzacji (i naturalnie do dowodu twierdzenia \ref{twierdzenie_wallace_bolyai_gerwien}, Wallace'a-Bolyaia-Gerwiena).
+
+Pole jest wyznaczone jednoznacznie z dokładnością do stałej.
+Wartość stałej ustala się zazwyczaj przez przyjęcie, że trójkąt o podstawie $a$ oraz wysokości $h$ ma pole $\frac 1 2 ah$.
 
 \subsection{Zasada Cavalieriego}
 
@@ -128,4 +139,3 @@ Eves pokaże w 1991 roku, że każde dwa równopolowe trójkąty można umieści
 % {https://www.deltami.edu.pl/2011/11/osobliwosc-trojkatow/}
 
 %
-\ita{}
