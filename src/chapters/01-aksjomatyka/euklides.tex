@@ -2,104 +2,147 @@
 
 %
 
-\pol{\section{Aksjomaty Euklidesa}}
-\ita{\section{Assiomi di Euclide}}
-\pol{\index{aksjomat!Euklidesa}}%
-\ita{\index{assioma!di Euclide}}%
+\section{Aksjomaty Euklidesa} % lang-pl
+\section{Assiomi di Euclide} % lang-it
+\index{aksjomat!Euklidesa}% % lang-pl
+\index{assioma!di Euclide}% % lang-it
 
 \todofoot{https://kpbc.umk.pl/dlibra/publication/37/edition/66/content}
 
 \todofoot{https://www.claymath.org/library/historical/euclid/}
 
-\pol{Opowiemy krótko o rozwoju geometrii w okresie klasycznym starożytnej Grecji, pomijając przy tym liczne szczegóły, ponieważ światu przekaże je lepiej Proklos zwany Diadochem, operając się na wcześniejszej pracy Eudemosa z Rodos, obejmującej okres do 355 roku przed Chrystusem.}
-\ita{Racconteremo brevemente lo sviluppo della geometria nella Grecia classica, tralasciando molti dettagli, poiché Proclo detto Diadoco lo descriverà meglio, basandosi sull'opera precedente di Eudemo di Rodi, che copriva il periodo fino al 355 a.C.}
-\index[persons]{Proklos zwany Diadochem}%
-\index[persons]{Eudemos z Rodos}%
-\pol{Później przytoczymy definicje i twierdzenia zgromadzone przez Euklidesa z Aleksandrii.}
-\ita{Successivamente presenteremo le definizioni e i teoremi raccolti da Euclide di Alessandria.}
-\index[persons]{Euklides z Aleksandrii}%
-\pol{(Imię Euklidesa znamy z tylko jednego źródła: komentarza Proklosa! Pozostali nazywali go autorem Στοιχεῖα, znaczy \emph{Stoicheia}, znaczy \emph{Elementów}).}
-\ita{(Conosciamo il nome di Euclide da una sola fonte: il commento di Proclo! Gli altri lo chiamavano semplicemente autore degli Στοιχεῖα, cioè degli \emph{Elementi}).}
-\pol{Interesować nas będzie nie wszystkie trzynaście ksiąg, a:}
-\ita{Non ci interesseranno tutti e tredici i libri, ma:}
+Opowiemy krótko o rozwoju geometrii w okresie klasycznym starożytnej Grecji, pomijając przy tym liczne szczegóły, ponieważ światu przekaże je lepiej Proklos zwany Diadochem, operając się na wcześniejszej pracy Eudemosa z Rodos, obejmującej okres do 355 roku przed Chrystusem. % lang-pl
+Racconteremo brevemente lo sviluppo della geometria nella Grecia classica, tralasciando molti dettagli, poiché Proclo detto Diadoco lo descriverà meglio, basandosi sull'opera precedente di Eudemo di Rodi, che copriva il periodo fino al 355 a.C. % lang-it
+\index[persons]{Proklos zwany Diadochem}% % lang-pl
+\index[persons]{TODO Proklos zwany Diadochem}% % lang-it
+\index[persons]{Eudemos z Rodos}% % lang-pl
+\index[persons]{TODO Eudemos z Rodos}% % lang-it
+Później przytoczymy definicje i twierdzenia zgromadzone przez Euklidesa z Aleksandrii. % lang-pl
+Successivamente presenteremo le definizioni e i teoremi raccolti da Euclide di Alessandria. % lang-it
+\index[persons]{Euklides z Aleksandrii}% % lang-pl
+\index[persons]{TODO Euklides z Aleksandrii}% % lang-it
+(Imię Euklidesa znamy z tylko jednego źródła: komentarza Proklosa! Pozostali nazywali go autorem Στοιχεῖα, znaczy \emph{Stoicheia}, znaczy \emph{Elementów}). % lang-pl
+(Conosciamo il nome di Euclide da una sola fonte: il commento di Proclo! Gli altri lo chiamavano semplicemente autore degli Στοιχεῖα, cioè degli \emph{Elementi}). % lang-it
+Interesować nas będzie nie wszystkie trzynaście ksiąg, a: % lang-pl
+Non ci interesseranno tutti e tredici i libri, ma: % lang-it
 \begin{itemize}
-    \item \pol{I~(o~trójkątach),}\ita{I (sui triangoli),}
-    \item \pol{II (o~prostokątach),}\ita{II (sui rettangoli),}
-    \item \pol{III (o~okręgach),}\ita{III (sulle circonferenze),}
-    \item \pol{IV (o~wielokątach),}\ita{IV (sui poligoni),}
-    \item \pol{V (o~proporcjach),}\ita{V (sulle proporzioni),}
-    \item \pol{VI (o~podobieństwie), ale także, choć w~mniejszym stopniu,}\ita{VI (sulla similitudine), ma anche, sebbene in misura minore,}
-    \item \pol{XI i~XIII (o~wielościanach).}\ita{XI e XIII (sui poliedri).}
+    \item I~(o~trójkątach), % lang-pl
+    \item I (sui triangoli), % lang-it
+    \item II (o~prostokątach), % lang-pl
+    \item II (sui rettangoli), % lang-it
+    \item III (o~okręgach), % lang-pl
+    \item III (sulle circonferenze), % lang-it
+    \item IV (o~wielokątach), % lang-pl
+    \item IV (sui poligoni), % lang-it
+    \item V (o~proporcjach), % lang-pl
+    \item V (sulle proporzioni), % lang-it
+    \item VI (o~podobieństwie), ale także, choć w~mniejszym stopniu, % lang-pl
+    \item VI (sulla similitudine), ma anche, sebbene in misura minore, % lang-it
+    \item XI i~XIII (o~wielościanach). % lang-pl
+    \item XI e XIII (sui poliedri). % lang-it
 \end{itemize}
 
-\pol{Według Eudemosa/Proklosa, początków geometrii greckiej należy szukać w dokonaniach Talesa z Miletu, a więc mniej więcej w VI wieku p.n.e.}
-\ita{Secondo Eudemo e Proclo, le origini della geometria greca vanno ricercate nelle opere di Talete di Mileto, cioè all'incirca nel VI secolo a.C.}
-\pol{Tales zacznie stosować metody dedukcyjne.}
-\ita{Talete iniziò a utilizzare metodi deduttivi.}
-\index[persons]{Tales z Miletu}%
-\pol{Potem będzie na pewno pobierający (a być może u Talesa) nauki Pitagoras i jego szkoła, której uczniowie zaczną tworzyć łańcuchy różnych geometrycznych faktów oraz wniosków z nich.}
-\ita{Successivamente vi saranno certamente Pitagora e la sua scuola, i cui allievi inizieranno a costruire catene di fatti geometrici e delle loro conseguenze.}
-\index[persons]{Pitagoras}%
-\pol{Hipokrates z Chios postara się uporządkować twierdzenia i częściowo uda mu się to.}
-\ita{Ippocrate di Chio cercherà di organizzare i teoremi e vi riuscirà in parte.}
-\index[persons]{Hipokrates z Chios}%
-\pol{Podobne próby podejmą Teudios z Magnezji oraz Leon (hehe); ale nie wiadomo za dużo ani o nich, ani o ich dziełach poza tym, że miały tytuł \emph{Elementy}.}
-\ita{Tentativi analoghi saranno compiuti da Teudio di Magnesia e da Leone (hehe); tuttavia sappiamo ben poco sia di loro sia delle loro opere, se non che portavano il titolo di \emph{Elementi}.}
-\index[persons]{Teudios z Magnezji}%
-\index[persons]{Leon, uczeń Neokleidesa}%
+Według Eudemosa/Proklosa, początków geometrii greckiej należy szukać w dokonaniach Talesa z Miletu, a więc mniej więcej w VI wieku p.n.e. % lang-pl
+Secondo Eudemo e Proclo, le origini della geometria greca vanno ricercate nelle opere di Talete di Mileto, cioè all'incirca nel VI secolo a.C. % lang-it
+Tales zacznie stosować metody dedukcyjne. % lang-pl
+Talete iniziò a utilizzare metodi deduttivi. % lang-it
+\index[persons]{Tales z Miletu}% % lang-pl
+\index[persons]{TODO Tales z Miletu}% % lang-it
+Potem będzie na pewno pobierający (a być może u Talesa) nauki Pitagoras i jego szkoła, której uczniowie zaczną tworzyć łańcuchy różnych geometrycznych faktów oraz wniosków z nich. % lang-pl
+Successivamente vi saranno certamente Pitagora e la sua scuola, i cui allievi inizieranno a costruire catene di fatti geometrici e delle loro conseguenze. % lang-it
+\index[persons]{Pitagoras}% % lang-pl
+\index[persons]{TODO Pitagoras}% % lang-it
+Hipokrates z Chios postara się uporządkować twierdzenia i częściowo uda mu się to. % lang-pl
+Ippocrate di Chio cercherà di organizzare i teoremi e vi riuscirà in parte. % lang-it
+\index[persons]{Hipokrates z Chios}% % lang-pl
+\index[persons]{TODO Hipokrates z Chios}% % lang-it
+Podobne próby podejmą Teudios z Magnezji oraz Leon (hehe); ale nie wiadomo za dużo ani o nich, ani o ich dziełach poza tym, że miały tytuł \emph{Elementy}. % lang-pl
+Tentativi analoghi saranno compiuti da Teudio di Magnesia e da Leone (hehe); tuttavia sappiamo ben poco sia di loro sia delle loro opere, se non che portavano il titolo di \emph{Elementi}. % lang-it
+\index[persons]{Teudios z Magnezji}% % lang-pl
+\index[persons]{Leon, uczeń Neokleidesa}% % lang-pl
+\index[persons]{Teudios z Magnezji}% % lang-it
+\index[persons]{Leon, uczeń Neokleidesa}% % lang-it
 
-\pol{Proces przekształcania empirycznej geometrii Egipcjan i Babilończyków w systematyczną naukę, której fakty ustala się nie przez obserwacje, ale na drodze rozumowania dedukcyjnego, będzie mieć swoje ukoronowanie około 300 roku p.n.e.}
-\ita{Il processo di trasformazione della geometria empirica degli Egizi e dei Babilonesi in una scienza sistematica, nella quale i fatti vengono stabiliti non tramite osservazioni ma attraverso il ragionamento deduttivo, raggiungerà il suo culmine intorno al 300 a.C.}
-\pol{Wtedy wielki sukces odniesie Euklides ze swoim epokowym dziełem -- także \emph{Elementami}, spójnym ciągiem 465 twierdzeń dotyczących geometrii płaskiej, przestrzennej, teorii liczb oraz częściowo algebry.}
-\ita{Fu allora che Euclide ottenne un grande successo con la sua opera epocale, anch'essa intitolata \emph{Elementi}, una raccolta coerente di 465 teoremi riguardanti la geometria piana, la geometria dello spazio, la teoria dei numeri e, in parte, l'algebra.}
+Proces przekształcania empirycznej geometrii Egipcjan i Babilończyków w systematyczną naukę, której fakty ustala się nie przez obserwacje, ale na drodze rozumowania dedukcyjnego, będzie mieć swoje ukoronowanie około 300 roku p.n.e. % lang-pl
+Il processo di trasformazione della geometria empirica degli Egizi e dei Babilonesi in una scienza sistematica, nella quale i fatti vengono stabiliti non tramite osservazioni ma attraverso il ragionamento deduttivo, raggiungerà il suo culmine intorno al 300 a.C. % lang-it
+Wtedy wielki sukces odniesie Euklides ze swoim epokowym dziełem -- także \emph{Elementami}, spójnym ciągiem 465 twierdzeń dotyczących geometrii płaskiej, przestrzennej, teorii liczb oraz częściowo algebry. % lang-pl
+Fu allora che Euclide ottenne un grande successo con la sua opera epocale, anch'essa intitolata \emph{Elementi}, una raccolta coerente di 465 teoremi riguardanti la geometria piana, la geometria dello spazio, la teoria dei numeri e, in parte, l'algebra. % lang-it
 \index[persons]{Euklides z Aleksandrii}%
-\pol{Grek formułuje tam pewien minimalny zbiór aksjomatów (czyli zdań przyjętych bez dowodu), z którego sukcesywnie wyprowadza co raz bardziej skomplikowane twierdzenia.}
-\ita{Il matematico greco vi formula un insieme minimo di assiomi (cioè enunciati accettati senza dimostrazione), dal quale deduce progressivamente teoremi sempre più complessi.}
-\pol{Pogląd, że tak powinno uprawiać się naukę, utrzyma się przez tysiące lat, jeśli nie wieczność; jego książka zaś ukształtuje wykład geometrii aż do początków XIX wieku.}
-\ita{L'idea che la scienza debba essere praticata in questo modo sopravvivrà per migliaia di anni, se non per l'eternità; il suo libro modellerà invece l'insegnamento della geometria fino agli inizi del XIX secolo.}
-\pol{Imponujące!}
-\ita{Impressionante!}
+Grek formułuje tam pewien minimalny zbiór aksjomatów (czyli zdań przyjętych bez dowodu), z którego sukcesywnie wyprowadza co raz bardziej skomplikowane twierdzenia. % lang-pl
+Il matematico greco vi formula un insieme minimo di assiomi (cioè enunciati accettati senza dimostrazione), dal quale deduce progressivamente teoremi sempre più complessi. % lang-it
+Pogląd, że tak powinno uprawiać się naukę, utrzyma się przez tysiące lat, jeśli nie wieczność; jego książka zaś ukształtuje wykład geometrii aż do początków XIX wieku. % lang-pl
+L'idea che la scienza debba essere praticata in questo modo sopravvivrà per migliaia di anni, se non per l'eternità; il suo libro modellerà invece l'insegnamento della geometria fino agli inizi del XIX secolo. % lang-it
+Imponujące! % lang-pl
+Impressionante! % lang-it
 
-% TODO NIEPRZETŁUMACZONE
+Oprócz \emph{Elementów}, Euklides napisze jeszcze dzieła takie jak: % lang-pl
+Oltre agli \emph{Elementi}, Euclide scriverà anche opere quali: % lang-it
 
-Oprócz \emph{Elementów}, Euklides napisze jeszcze dzieła takie jak:
 \begin{itemize}
-    \item \emph{Δεδομένα} (\emph{Dedomena}, czyli po polsku \emph{Dane}) o problemach, gdzie musimy odtworzyć brakujące informacje o szczątkowo opisanej figurze, na przykład: znamy bok trójkąta, kąt naprzeciw niego oraz promień okręgu opisanego, szukamy położenia trzeciego wierzchołka.
-    \item \emph{Περὶ Διαιρέσεων} (\emph{Peri diaipeseon}, czyli \emph{O podziałach}), które znamy tylko częściowo z arabskiego tłumaczenia, zajmuje się podziałem danych figur na części w ustalonych proporcjach.
-    \item \emph{Ὀπτικά} (\emph{Optika} czyli \emph{Optyka} \texttt{:D}) jest najstarszym greckim traktatem o perspektywie.
-    \item \emph{Φαινόμενα} (\emph{Feinomena} czyli \emph{Zjawiska}) o astronomii sferycznej.
+\item \emph{Δεδομένα} (\emph{Dedomena}, czyli po polsku \emph{Dane}) o problemach, gdzie musimy odtworzyć brakujące informacje o szczątkowo opisanej figurze, na przykład: znamy bok trójkąta, kąt naprzeciw niego oraz promień okręgu opisanego, szukamy położenia trzeciego wierzchołka. % lang-pl
+\item \emph{Δεδομένα} (\emph{Dedomena}, cioè \emph{Dati}) tratta problemi nei quali occorre ricostruire le informazioni mancanti di una figura descritta solo parzialmente; ad esempio, conosciamo un lato di un triangolo, l'angolo opposto e il raggio della circonferenza circoscritta e cerchiamo la posizione del terzo vertice. % lang-it
+
+\item \emph{Περὶ Διαιρέσεων} (\emph{Peri diaireseon}, czyli \emph{O podziałach}), które znamy tylko częściowo z arabskiego tłumaczenia, zajmuje się podziałem danych figur na części w ustalonych proporcjach. % lang-pl
+\item \emph{Περὶ Διαιρέσεων} (\emph{Peri diaireseon}, cioè \emph{Sulle divisioni}), nota solo parzialmente grazie a una traduzione araba, tratta della suddivisione di figure date in parti secondo rapporti prefissati. % lang-it
+
+\item \emph{Ὀπτικά} (\emph{Optika} czyli \emph{Optyka} \texttt{:D}) jest najstarszym greckim traktatem o perspektywie. % lang-pl
+\item \emph{Ὀπτικά} (\emph{Optika}, cioè \emph{Ottica} \texttt{:D}) è il più antico trattato greco sulla prospettiva. % lang-it
+
+\item \emph{Φαινόμενα} (\emph{Fainomena} czyli \emph{Zjawiska}) o astronomii sferycznej. % lang-pl
+\item \emph{Φαινόμενα} (\emph{Fainomena}, cioè \emph{Fenomeni}) dedicata all'astronomia sferica. % lang-it
 \end{itemize}
 
-O czterech pracach podejrzewa się, że spisze je Euklides, ale ponieważ przepadną (i pojawią się później tylko w komentarzach innych uczonych), trudno jest coś więcej napisać:
+O czterech pracach podejrzewa się, że spisze je Euklides, ale ponieważ przepadną (i pojawią się później tylko w komentarzach innych uczonych), trudno jest coś więcej napisać: % lang-pl
+Si ritiene che anche le quattro opere seguenti siano state scritte da Euclide, ma poiché sono andate perdute (e riappariranno solo nelle citazioni e nei commenti di altri studiosi), è difficile dire molto di più: % lang-it
+
 \begin{itemize}
-    \item \emph{Ψευδάρια} (\emph{Pseudaria}, czyli \emph{Błędy rozumowania}) o tym, jak unikać powszechnych błędów logicznych.
-    \item \emph{Πορίσματα} (\emph{Porismata}, czyli \emph{Poryzmy}) pomimo tytułu nie dotyczy wniosków z twierdzeń, ale raczej czegoś pomiędzy twierdzeniem i problemem, celem czego jest odkrycie własności już istniejącego obiektu, np. środku danego okręgu.
-    Chasles podejrzewa, że dzieło to obejmuje teorię transwersali i geometrii rzutowej.
+\item \emph{Ψευδάρια} (\emph{Pseudaria}, czyli \emph{Błędy rozumowania}) o tym, jak unikać powszechnych błędów logicznych. % lang-pl
+\item \emph{Ψευδάρια} (\emph{Pseudaria}, cioè \emph{Errori di ragionamento}) su come evitare i più comuni errori logici. % lang-it
+
+\item \emph{Πορίσματα} (\emph{Porismata}, czyli \emph{Poryzmy}) pomimo tytułu nie dotyczy wniosków z twierdzeń, ale raczej czegoś pomiędzy twierdzeniem i problemem, celem czego jest odkrycie własności już istniejącego obiektu, np. środku danego okręgu. % lang-pl
+\item \emph{Πορίσματα} (\emph{Porismata}, cioè \emph{Porismi}), nonostante il titolo, non riguarda le conseguenze dei teoremi, ma piuttosto qualcosa a metà tra un teorema e un problema, con lo scopo di scoprire proprietà di un oggetto già esistente, ad esempio il centro di una circonferenza data. % lang-it
+Chasles podejrzewa, że dzieło to obejmuje teorię transwersali i geometrii rzutowej. % lang-pl
+Chasles riteneva che quest'opera comprendesse la teoria delle trasversali e della geometria proiettiva. % lang-it
 \index[persons]{Chasles, Michel}%
-    \item \emph{Κωνικά} (\emph{Konika} czyli \emph{Stożkowe}) o stożkowych, traktat w czterech książkach, później uzupełniony i~rozszerzony przez Apoloniusza.
-    \item \emph{Τόποι πρὸς ἐπιφανείᾳ} (\emph{Topi pros epifania} czyli \emph{Obszary przy powierzchniach}) o którym prawie nic nie wiemy.
+
+\item \emph{Κωνικά} (\emph{Konika} czyli \emph{Stożkowe}) o stożkowych, traktat w czterech książkach, później uzupełniony i rozszerzony przez Apoloniusza. % lang-pl
+\item \emph{Κωνικά} (\emph{Konika}, cioè \emph{Coniche}), un trattato in quattro libri dedicato alle sezioni coniche, successivamente ampliato e sviluppato da Apollonio. % lang-it
+
+\item \emph{Τόποι πρὸς ἐπιφανείᾳ} (\emph{Topi pros epifaneia} czyli \emph{Obszary przy powierzchniach}) o którym prawie nic nie wiemy. % lang-pl
+\item \emph{Τόποι πρὸς ἐπιφανείᾳ} (\emph{Topi pros epifaneia}, cioè \emph{Luoghi sulle superfici}), di cui non sappiamo praticamente nulla. % lang-it
 \end{itemize}
 
-Powszechnie przyjmuje się, że szczytowy punkt rozwoju greckiej geometrii jest reprezentowany (oprócz Euklidesa, ma się rozumieć) przez Archimedesa oraz Apoloniusza.
-Spotkamy tych panów wielokrotnie na następnych stronach książki: tego pierwszego jako autora dobrego przybliżenia liczby $\pi$;
-drugiego jako osobę, która szukała czwartego okręgu stycznego do trzech danych i rozwinęła teorię krzywych stożkowych.
+Powszechnie przyjmuje się, że szczytowy punkt rozwoju greckiej geometrii jest reprezentowany (oprócz Euklidesa, ma się rozumieć) przez Archimedesa oraz Apoloniusza. % lang-pl
+Si ritiene generalmente che il culmine dello sviluppo della geometria greca sia rappresentato (oltre che da Euclide, naturalmente) da Archimede e da Apollonio. % lang-it
+Spotkamy tych panów wielokrotnie na następnych stronach książki: tego pierwszego jako autora dobrego przybliżenia liczby $\pi$; % lang-pl
+Incontreremo questi due studiosi molte volte nelle pagine successive del libro: il primo come autore di un'eccellente approssimazione del numero $\pi$; % lang-it
+drugiego jako osobę, która szukała czwartego okręgu stycznego do trzech danych i rozwinęła teorię krzywych stożkowych. % lang-pl
+il secondo come colui che cercò la quarta circonferenza tangente a tre circonferenze date e sviluppò la teoria delle sezioni coniche. % lang-it
 
-Wiele twierdzeń zawartych w Elementach Euklidesa to jawne przepisy, jak korzystając z cyrkla i~linijki otrzymać żądane figury.
-Dlatego nigdzie w~tekście nie pojawia się na przykład siedmiokąt foremny, chociaż w trzecim tysiącleciu każdy akceptuje, że ten istnieje.
-Ale nie można go wykreślić wspomnianymi przed chwilą przyrządami, więc Euklides nie zaczyna nawet badania jego własności.
+Wiele twierdzeń zawartych w Elementach Euklidesa to jawne przepisy, jak korzystając z cyrkla i linijki otrzymać żądane figury. % lang-pl
+Molti teoremi contenuti negli \emph{Elementi} di Euclide sono istruzioni esplicite su come costruire le figure desiderate usando soltanto compasso e riga. % lang-it
+Dlatego nigdzie w tekście nie pojawia się na przykład siedmiokąt foremny, chociaż w trzecim tysiącleciu każdy akceptuje, że ten istnieje. % lang-pl
+Per questo motivo nel testo non compare mai, ad esempio, l'eptagono regolare, benché nel terzo millennio tutti accettino che esso esista. % lang-it
+Ale nie można go wykreślić wspomnianymi przed chwilą przyrządami, więc Euklides nie zaczyna nawet badania jego własności. % lang-pl
+Poiché però non può essere costruito con gli strumenti appena citati, Euclide non inizia nemmeno a studiarne le proprietà. % lang-it
 
-Cztery pierwsze tomy spisane przez Euklidesa nie wprowadzają w ogóle liczb rzeczywistych do świata geometrii.
-Nie korzysta on tam bezpośrednio z długości odcinka, wystarcza mu przystawanie odcinków (i porównywanie ich, jak w definicji V.1: ,,wielkość jest częściąinnej wielkości, mniejsza większej, jeśli mniejsza mierzy większą'').
-Podobnie nie pojawia się nigdzie miara kątów (ale jest ich przystawanie) ani nic na kształt miary Lebesgue'a albo chociaż Jordana (pola przystających figur można dodawać i odejmować). 
+Cztery pierwsze tomy spisane przez Euklidesa nie wprowadzają w ogóle liczb rzeczywistych do świata geometrii. % lang-pl
+I primi quattro libri di Euclide non introducono affatto i numeri reali nel mondo della geometria. % lang-it
+Nie korzysta on tam bezpośrednio z długości odcinka, wystarcza mu przystawanie odcinków (i porównywanie ich, jak w definicji V.1: ,,wielkość jest częścią innej wielkości, mniejsza większej, jeśli mniejsza mierzy większą''). % lang-pl
+Non utilizza direttamente la lunghezza di un segmento: gli basta la congruenza dei segmenti (e il loro confronto, come nella definizione V.1: «una grandezza è parte di un'altra grandezza, la minore della maggiore, se la minore misura la maggiore»). % lang-it
+Podobnie nie pojawia się nigdzie miara kątów (ale jest ich przystawanie) ani nic na kształt miary Lebesgue'a albo chociaż Jordana (pola przystających figur można dodawać i odejmować). % lang-pl
+Allo stesso modo non compare da nessuna parte una misura degli angoli (ma compare la loro congruenza), né qualcosa di simile alla misura di Lebesgue o almeno a quella di Jordan (le aree di figure congruenti possono essere sommate e sottratte). % lang-it
 
-O niechęci do zbioru liczb rzeczywistych $\mathbb R$ piszą Hartshorne \cite[s. 165-168]{hartshorne2000}, Greenberg \cite[s. 198]{greenberg_2010} i~wiele innych osób.
-My nie będziemy tak wstrzemięźliwi i zdarzy się nam wspomnieć o mierze, na przykład na stronie \pageref{miara_kata_crellea_brocarda}, gdzie znajdujemy miarę kąta Crelle'a-Brocarda.
-Guzicki \cite[s. ???]{guzicki_2021} wprowadza pole w drugim rozdziale książki.
+O niechęci do zbioru liczb rzeczywistych $\mathbb R$ piszą Hartshorne \cite[s. 165-168]{hartshorne2000}, Greenberg \cite[s. 198]{greenberg_2010} i wiele innych osób. % lang-pl
+Dell'avversione nei confronti dell'insieme dei numeri reali $\mathbb R$ scrivono Hartshorne \cite[p. 165--168]{hartshorne2000}, Greenberg \cite[p. 198]{greenberg_2010} e molti altri autori. % lang-it
+My nie będziemy tak wstrzemięźliwi i zdarzy się nam wspomnieć o mierze, na przykład na stronie \pageref{miara_kata_crellea_brocarda}, gdzie znajdujemy miarę kąta Crelle'a-Brocarda. % lang-pl
+Noi non saremo altrettanto rigorosi e ci capiterà di parlare di misura, ad esempio a pagina \pageref{miara_kata_crellea_brocarda}, dove introdurremo la misura dell'angolo di Crelle--Brocard. % lang-it
+Guzicki \cite[s. ???]{guzicki_2021} wprowadza pole w drugim rozdziale książki. % lang-pl
+Guzicki \cite[p. ???]{guzicki_2021} introduce il concetto di area nel secondo capitolo del suo libro. % lang-it
 
 \input{chapters/01-aksjomatyka/euklides-1}
 \input{chapters/01-aksjomatyka/euklides-2}
 \input{chapters/01-aksjomatyka/euklides-3}
 \input{chapters/01-aksjomatyka/euklides-4}
-% TODO NIEPRZETŁUMACZONE
 
 %
