@@ -2,94 +2,100 @@
 
 %
 
-\pol{\section{Podobieństwa}}
-\ita{\section{Similitudini}}
+\section{Podobieństwa} % lang-pl
+\section{Similitudini} % lang-it
 
-\pol{Wprowadzamy w tej sekcji terminy: dylatacja (zwana homotetią), jednokładność, podobieństwo.}
-\ita{In questa sezione introduciamo i termini: dilatazione (detta anche omotetia), omotetia centrale e similitudine.}
+Wprowadzamy w tej sekcji terminy: dylatacja (zwana homotetią), jednokładność, podobieństwo. % lang-pl
+In questa sezione introduciamo i termini: dilatazione (detta anche omotetia), omotetia centrale e similitudine. % lang-it
 
-\pol{Przyjęte przez nas definicje nie muszą pasować do każdego podręcznika geometrii: po angielsku często mówi się, że \emph{homotheties} (nasze jednokładności) oraz \emph{translations} (nasze translacje) tworzą razem grupę \emph{dilations} (dylatacji).}
-\ita{Le definizioni adottate qui non coincidono necessariamente con quelle di ogni manuale di geometria: in inglese si dice spesso che le \emph{homotheties} (le nostre omotetie centrali) e le \emph{translations} (le nostre traslazioni) formano insieme il gruppo delle \emph{dilations} (dilatazioni).}
+Przyjęte przez nas definicje nie muszą pasować do każdego podręcznika geometrii: po angielsku często mówi się, że \emph{homotheties} (nasze jednokładności) oraz \emph{translations} (nasze translacje) tworzą razem grupę \emph{dilations} (dylatacji). % lang-pl
+Le definizioni adottate qui non coincidono necessariamente con quelle di ogni manuale di geometria: in inglese si dice spesso che le \emph{homotheties} (le nostre omotetie centrali) e le \emph{translations} (le nostre traslazioni) formano insieme il gruppo delle \emph{dilations} (dilatazioni). % lang-it
 
 % TODO może to olać i skasować homotetię jako synonim dylatacji? czemu to jest? polski Coxeter?
 
 % In projective geometry, a homothetic transformation is a similarity transformation (i.e., fixes a given elliptic involution) that leaves the line at infinity pointwise invariant.[2]
 
-\begin{definition}[\pol{homotetia}\ita{omotetia}]
-    \pol{Przekształcenie, które zachowuje (lub odwraca) kierunek, czyli przekształca każdą prostą na prostą do niej równległą, nazywamy dylatacją albo homotetią.}
-    \ita{Una trasformazione che preserva (oppure inverte) la direzione, cioè che trasforma ogni retta in una retta ad essa parallela, si chiama dilatazione oppure omotetia.}
+\begin{definition}
+[homotetia] % lang-pl
+[omotetia] % lang-it
+    Przekształcenie, które zachowuje (lub odwraca) kierunek, czyli przekształca każdą prostą na prostą do niej równległą, nazywamy dylatacją albo homotetią. % lang-pl
+    Una trasformazione che preserva (oppure inverte) la direzione, cioè che trasforma ogni retta in una retta ad essa parallela, si chiama dilatazione oppure omotetia. % lang-it
 \end{definition}
 
-\pol{Nazwy ,,dylatacja'' używa Coxeter \cite[s. 84]{coxeter_1967}: dwie figury są homotetyczne, jeśli są podobne i podobnie położone, to znaczy można je przekształcić przez dylatację lub homotetię.}
-\ita{Coxeter \cite[p.~84]{coxeter_1967} usa il termine ``dilatazione'': due figure sono omotetiche se sono simili e disposte nello stesso modo, cioè se una può essere trasformata nell'altra mediante una dilatazione o un'omotetia.}
+Nazwy ,,dylatacja'' używa Coxeter \cite[s. 84]{coxeter_1967}: dwie figury są homotetyczne, jeśli są podobne i podobnie położone, to znaczy można je przekształcić przez dylatację lub homotetię. % lang-pl
+Coxeter \cite[p.~84]{coxeter_1967} usa il termine ``dilatazione'': due figure sono omotetiche se sono simili e disposte nello stesso modo, cioè se una può essere trasformata nell'altra mediante una dilatazione o un'omotetia. % lang-it
 
 \begin{proposition}
-    \pol{Każda dylatacja, która nie jest translacją, ma punkt stały.}
-    \ita{Ogni dilatazione che non sia una traslazione possiede un punto fisso.}
+    Każda dylatacja, która nie jest translacją, ma punkt stały. % lang-pl
+    Ogni dilatazione che non sia una traslazione possiede un punto fisso. % lang-it
 \end{proposition}
 
-\pol{Wystarczy dobrać dwa punkty $A$ i $B$ takie, że $A$ nie jest punktem niezmienniczym, zaś odcinek $AB$ nie leży na prostej niezmienniczej i sprawdzić przecięcie odcinków $AA'$, $BB'$.}
-\ita{È sufficiente scegliere due punti $A$ e $B$ tali che $A$ non sia un punto fisso e che il segmento $AB$ non giaccia su una retta invariante, quindi considerare l'intersezione dei segmenti $AA'$ e $BB'$.}
+Wystarczy dobrać dwa punkty $A$ i $B$ takie, że $A$ nie jest punktem niezmienniczym, zaś odcinek $AB$ nie leży na prostej niezmienniczej i sprawdzić przecięcie odcinków $AA'$, $BB'$. % lang-pl
+È sufficiente scegliere due punti $A$ e $B$ tali che $A$ non sia un punto fisso e che il segmento $AB$ non giaccia su una retta invariante, quindi considerare l'intersezione dei segmenti $AA'$ e $BB'$. % lang-it
 
-\pol{Dylatacja z punktem stałym to jednokładność.}
-\ita{Una dilatazione con un punto fisso è un'omotetia centrale.}
+Dylatacja z punktem stałym to jednokładność. % lang-pl
+Una dilatazione con un punto fisso è un'omotetia centrale. % lang-it
 
-\pol{Pisze o nich Joanna Jaszuńska w $\Delta_{10}^3$.}
-\ita{Ne scrive Joanna Jaszuńska in $\Delta_{10}^3$.}
+Pisze o nich Joanna Jaszuńska w $\Delta_{10}^3$. % lang-pl
+Ne scrive Joanna Jaszuńska in $\Delta_{10}^3$. % lang-it
 
 % https://www.deltami.edu.pl/2010/03/dobrze-sie-sklada/
 
-\begin{definition}[\pol{jednokładność}\ita{omotetia centrale}]
-    \pol{Jednokładność o środku $O$ oraz skali $k \neq 0$ to przekształcenie, które punktowi $A$ przypisuje punkt $A'$ taki, że $OA' = k \cdot OA$.}
-    \ita{L'omotetia centrale di centro $O$ e rapporto $k \neq 0$ è la trasformazione che associa a ogni punto $A$ un punto $A'$ tale che $OA' = k \cdot OA$.}
+\begin{definition}
+[jednokładność] % lang-pl
+[omotetia centrale] % lang-it
+    Jednokładność o środku $O$ oraz skali $k \neq 0$ to przekształcenie, które punktowi $A$ przypisuje punkt $A'$ taki, że $OA' = k \cdot OA$. % lang-pl
+    L'omotetia centrale di centro $O$ e rapporto $k \neq 0$ è la trasformazione che associa a ogni punto $A$ un punto $A'$ tale che $OA' = k \cdot OA$. % lang-it
 \end{definition}
 
 \begin{example}
-    \pol{Jednokładność o skali $1$ to identyczność, zaś o skali $-1$ to półobrót.}
-    \ita{L'omotetia centrale di rapporto $1$ è l'identità, mentre quella di rapporto $-1$ è una rotazione di $180^\circ$.}
+    Jednokładność o skali $1$ to identyczność, zaś o skali $-1$ to półobrót. % lang-pl
+    L'omotetia centrale di rapporto $1$ è l'identità, mentre quella di rapporto $-1$ è una rotazione di $180^\circ$. % lang-it
 \end{example}
 
-\pol{Uogólnieniem dylatacji jest podobieństwo:}
-\ita{Una generalizzazione delle dilatazioni è la similitudine:}
+Uogólnieniem dylatacji jest podobieństwo: % lang-pl
+Una generalizzazione delle dilatazioni è la similitudine: % lang-it
 
-\begin{definition}[\pol{podobieństwo}\ita{similitudine}]
-    \pol{Przekształcenie płaszczyzny w siebie, które przeprowadza każdy odcinek $AB$ na jakiś odcinek $A'B'$ o długości określonej wzorem}
-    \ita{Una trasformazione del piano in sé che manda ogni segmento $AB$ in un segmento $A'B'$ la cui lunghezza soddisfa}
+\begin{definition}
+[podobieństwo] % lang-pl
+[similitudine] % lang-it
+    Przekształcenie płaszczyzny w siebie, które przeprowadza każdy odcinek $AB$ na jakiś odcinek $A'B'$ o długości określonej wzorem % lang-pl
+    Una trasformazione del piano in sé che manda ogni segmento $AB$ in un segmento $A'B'$ la cui lunghezza soddisfa % lang-it
     \begin{equation}
         \frac{|A'B'|}{|AB|} = \mu
     \end{equation}
-    \pol{nazywamy podobieństwem o skali (rzadziej: współczynniku rozciągania) $\mu$.}
-    \ita{si chiama similitudine di rapporto (più raramente: fattore di dilatazione) $\mu$.}
+    nazywamy podobieństwem o skali (rzadziej: współczynniku rozciągania) $\mu$. % lang-pl
+    si chiama similitudine di rapporto (più raramente: fattore di dilatazione) $\mu$. % lang-it
 \end{definition}
 
-\pol{Podobieństwa są bijekcjami i zachowują miary kątów.}
-\ita{Le similitudini sono biiezioni e preservano l'ampiezza degli angoli.}
+Podobieństwa są bijekcjami i zachowują miary kątów. % lang-pl
+Le similitudini sono biiezioni e preservano l'ampiezza degli angoli. % lang-it
 
-\pol{Eves \cite[s. 105]{eves1_1972} nazywa te przekształcenia \emph{homothety, expansion, dilatation or stretch}.}
-\ita{Eves \cite[p.~105]{eves1_1972} chiama queste trasformazioni \emph{homothety, expansion, dilatation or stretch}.}
+Eves \cite[s. 105]{eves1_1972} nazywa te przekształcenia \emph{homothety, expansion, dilatation or stretch}. % lang-pl
+Eves \cite[p.~105]{eves1_1972} chiama queste trasformazioni \emph{homothety, expansion, dilatation or stretch}. % lang-it
 
 \begin{proposition}
-    \pol{Niech $\Gamma_1, \Gamma_2$ będą dwoma różnymi okręgami o środkach $C_1, C_2$ oraz nierównych promieniach $r_1, r_2$.}
-    \ita{Siano $\Gamma_1$ e $\Gamma_2$ due circonferenze distinte con centri $C_1$, $C_2$ e raggi diversi $r_1$, $r_2$.}
+    Niech $\Gamma_1, \Gamma_2$ będą dwoma różnymi okręgami o środkach $C_1, C_2$ oraz nierównych promieniach $r_1, r_2$. % lang-pl
+    Siano $\Gamma_1$ e $\Gamma_2$ due circonferenze distinte con centri $C_1$, $C_2$ e raggi diversi $r_1$, $r_2$. % lang-it
 
-    \pol{Wtedy dwie jednokładności przekształcają pierwszy okrąg na drugi:}
-    \ita{Allora esistono due omotetie centrali che trasformano la prima circonferenza nella seconda:}
+    Wtedy dwie jednokładności przekształcają pierwszy okrąg na drugi: % lang-pl
+    Allora esistono due omotetie centrali che trasformano la prima circonferenza nella seconda: % lang-it
     \begin{itemize}
-    \item \pol{pierwsza o środku $O_1$ i skali $r_2/r_1$,}
-          \ita{la prima di centro $O_1$ e rapporto $r_2/r_1$,}
-    \item \pol{druga o środku $O_2$ i skali $-r_2/r_1$.}
-          \ita{la seconda di centro $O_2$ e rapporto $-r_2/r_1$.}
+    \item pierwsza o środku $O_1$ i skali $r_2/r_1$, % lang-pl
+    \item druga o środku $O_2$ i skali $-r_2/r_1$. % lang-pl
+    \item la prima di centro $O_1$ e rapporto $r_2/r_1$, % lang-it
+    \item la seconda di centro $O_2$ e rapporto $-r_2/r_1$. % lang-it
     \end{itemize}
 
-    \pol{Punkty $O_1$ i $O_2$ dzielą odcinek $C_1 C_2$ zewnętrznie i wewnętrznie w stosunku $r_1 : r_2$.}
-    \ita{I punti $O_1$ e $O_2$ dividono il segmento $C_1C_2$ rispettivamente esternamente e internamente nel rapporto $r_1 : r_2$.}
+    Punkty $O_1$ i $O_2$ dzielą odcinek $C_1 C_2$ zewnętrznie i wewnętrznie w stosunku $r_1 : r_2$. % lang-pl
+    I punti $O_1$ e $O_2$ dividono il segmento $C_1C_2$ rispettivamente esternamente e internamente nel rapporto $r_1 : r_2$. % lang-it
 \end{proposition}
 
-\pol{Wspomniane punkty nazywa się środkami podobieństwa dwóch okręgów.}
-\ita{I punti appena descritti sono chiamati centri di similitudine delle due circonferenze.}
+Wspomniane punkty nazywa się środkami podobieństwa dwóch okręgów. % lang-pl
+I punti appena descritti sono chiamati centri di similitudine delle due circonferenze. % lang-it
 
-\pol{Pisze o tym Eves \cite[s. 108]{eves1_1972}.}
-\ita{Si veda Eves \cite[p.~108]{eves1_1972}.}
+Pisze o tym Eves \cite[s. 108]{eves1_1972}. % lang-pl
+Si veda Eves \cite[p.~108]{eves1_1972}. % lang-it
 
 % \begin{proposition}
 %     Dane są dwa okręgi o różnych środkach $O_1, O_2$ i promieniach $r_1, r_2$.
@@ -99,46 +105,50 @@
 % TODO: zamień O1, O2 na I, E albo E, I
 
 \begin{proposition}
-    \pol{Każde dwa trójkąty podobne przekształcają się na siebie za pomocą dokładnie jednego podobieństwa.}
-    \ita{Due triangoli simili qualsiasi vengono trasformati l'uno nell'altro da un'unica similitudine.}
+    Każde dwa trójkąty podobne przekształcają się na siebie za pomocą dokładnie jednego podobieństwa. % lang-pl
+    Due triangoli simili qualsiasi vengono trasformati l'uno nell'altro da un'unica similitudine. % lang-it
 \end{proposition}
 
-\begin{definition}[\pol{podobieństwo spiralne}\ita{similitudine spirale}]
-    \pol{Złożenie obrotu i jednokładnści o tym samym środku nazywamy podobieństwem spiralnym.}
-    \ita{La composizione di una rotazione e di un'omotetia centrale aventi lo stesso centro si chiama similitudine spirale.}
+\begin{definition}
+[podobieństwo spiralne] % lang-pl
+[similitudine spirale] % lang-it
+    Złożenie obrotu i jednokładnści o tym samym środku nazywamy podobieństwem spiralnym. % lang-pl
+    La composizione di una rotazione e di un'omotetia centrale aventi lo stesso centro si chiama similitudine spirale. % lang-it
 \end{definition}
 
-\begin{definition}[\pol{symetria dylatacyjna}\ita{simmetria dilatativa}]
-    \pol{Złożenie symetrii osiowej i jednokładnści o środku leżącym na osi symetrii nazywamy symetrią dylatacyjną.}
-    \ita{La composizione di una simmetria assiale e di un'omotetia centrale il cui centro giace sull'asse di simmetria si chiama simmetria dilatativa.}
+\begin{definition}
+[symetria dylatacyjna] % lang-pl
+[simmetria dilatativa] % lang-it
+    Złożenie symetrii osiowej i jednokładnści o środku leżącym na osi symetrii nazywamy symetrią dylatacyjną. % lang-pl
+    La composizione di una simmetria assiale e di un'omotetia centrale il cui centro giace sull'asse di simmetria si chiama simmetria dilatativa. % lang-it
 \end{definition}
 
 \begin{proposition}
-    \pol{Jeżeli $\lambda \mu \neq 1$, to $J_A^\lambda \circ J_B^\mu = J_C^{\lambda \mu}$, gdzie $[CBA] = (1-\lambda) / (\lambda \mu - 1)$.}
-    \ita{Se $\lambda \mu \neq 1$, allora $J_A^\lambda \circ J_B^\mu = J_C^{\lambda \mu}$, dove $[CBA] = (1-\lambda) / (\lambda \mu - 1)$.}
+    Jeżeli $\lambda \mu \neq 1$, to $J_A^\lambda \circ J_B^\mu = J_C^{\lambda \mu}$, gdzie $[CBA] = (1-\lambda) / (\lambda \mu - 1)$. % lang-pl
+    Se $\lambda \mu \neq 1$, allora $J_A^\lambda \circ J_B^\mu = J_C^{\lambda \mu}$, dove $[CBA] = (1-\lambda) / (\lambda \mu - 1)$. % lang-it
 \end{proposition}
 
-\pol{To jest ćwiczenie u Bogdańskiej, Neugebauera \cite[s. 217]{neugebauer_2018}; stwierdzenie bez dowodu u Jaszuńskiej w $\Delta_{10}^3$.}
-\ita{Si tratta di un esercizio in Bogdańska e Neugebauer \cite[p.~217]{neugebauer_2018}; l'enunciato compare senza dimostrazione in Jaszuńska, $\Delta_{10}^3$.}
+To jest ćwiczenie u Bogdańskiej, Neugebauera \cite[s. 217]{neugebauer_2018}; stwierdzenie bez dowodu u Jaszuńskiej w $\Delta_{10}^3$. % lang-pl
+Si tratta di un esercizio in Bogdańska e Neugebauer \cite[p.~217]{neugebauer_2018}; l'enunciato compare senza dimostrazione in Jaszuńska, $\Delta_{10}^3$. % lang-it
 
 \begin{proposition}
 \label{podobienstwa_klasyfikacja}%
-    \pol{Każde podobieństwo jest:}
-    \ita{Ogni similitudine è:}
+    Każde podobieństwo jest: % lang-pl
+    Ogni similitudine è: % lang-it
     \begin{itemize}
-        \item \pol{izometrią,}
-              \ita{un'isometria,}
-        \item \pol{symetrią dylatacyjną albo}
-              \ita{una simmetria dilatativa oppure}
-        \item \pol{podobieństwem spiralnym.}
-              \ita{una similitudine spirale.}
+        \item izometrią, % lang-pl
+        \item symetrią dylatacyjną albo % lang-pl
+        \item podobieństwem spiralnym. % lang-pl
+        \item un'isometria, % lang-it
+        \item una simmetria dilatativa oppure % lang-it
+        \item una similitudine spirale. % lang-it
     \end{itemize}
 \end{proposition}
 
-\pol{Wynika to z klasyfikacji izometrii, patrz Bogdańska, Neugebauer \cite[s. 220]{neugebauer_2018}; Eves \cite[s. 118]{eves1_1972}.}
-\ita{Ciò segue dalla classificazione delle isometrie, si vedano Bogdańska e Neugebauer \cite[p.~220]{neugebauer_2018} ed Eves \cite[p.~118]{eves1_1972}.}
+Wynika to z klasyfikacji izometrii, patrz Bogdańska, Neugebauer \cite[s. 220]{neugebauer_2018}; Eves \cite[s. 118]{eves1_1972}. % lang-pl
+Ciò segue dalla classificazione delle isometrie, si vedano Bogdańska e Neugebauer \cite[p.~220]{neugebauer_2018} ed Eves \cite[p.~118]{eves1_1972}. % lang-it
 
-\pol{Pantograf Scheinera Krzysztofa z około 1630 (albo 1603?) roku: patrz Eves \cite[s. 107]{eves1_1972}.}
-\ita{Il pantografo di Christoph Scheiner, risalente a circa il 1630 (oppure al 1603?): si veda Eves \cite[p.~107]{eves1_1972}.}
+Pantograf Scheinera Krzysztofa z około 1630 (albo 1603?) roku: patrz Eves \cite[s. 107]{eves1_1972}. % lang-pl
+Il pantografo di Christoph Scheiner, risalente a circa il 1630 (oppure al 1603?): si veda Eves \cite[p.~107]{eves1_1972}. % lang-it
 
 % TODO

@@ -2,93 +2,96 @@
 
 %
 
-\pol{\section{Twierdzenie Pitagorasa}}
-\ita{\section{Teorema di Pitagora}}
+\section{Twierdzenie Pitagorasa} % lang-pl
+\section{Teorema di Pitagora} % lang-it
 
-\pol{Najważniejszym twierdzeniem dotyczącym trójkątów prostokątnych jest twierdzenie Pitagorasa oraz twierdzenie do niego odwrotne.}
-\ita{Il più importante teorema riguardante i triangoli rettangoli è il teorema di Pitagora e il suo inverso.}
-\pol{Piszą o nim Guzicki \cite[s. 160]{guzicki_2021}.}
-\ita{Ne scrive Guzicki \cite[p. 160]{guzicki_2021}.}
+Najważniejszym twierdzeniem dotyczącym trójkątów prostokątnych jest twierdzenie Pitagorasa oraz twierdzenie do niego odwrotne. % lang-pl
+Piszą o nim Guzicki \cite[s. 160]{guzicki_2021}. % lang-pl
+Il più importante teorema riguardante i triangoli rettangoli è il teorema di Pitagora e il suo inverso. % lang-it
+Ne scrive Guzicki \cite[p. 160]{guzicki_2021}. % lang-it
 
 % PRZECZYTANO: https://en.wikipedia.org/wiki/Pythagorean_theorem
 
-\pol{Do sformułowania twierdzenia Pitagorasa potrzebne jest pojęcie pola, którego z pewnych powodów nigdzie formalnie nie opisaliśmy.}
-\ita{Per formulare il teorema di Pitagora è necessario il concetto di area, che per varie ragioni non abbiamo mai definito formalmente.}
-\pol{Wystarczy nam wiedzieć, że dla każdej odpowiednio regularnej figury na płaszczyźnie $F$ istnieje liczba rzeczywista $S_F \ge 0$ (zwana polem) taka, że:}
-\ita{Ci basterà sapere che per ogni figura sufficientemente regolare del piano $F$ esiste un numero reale $S_F \ge 0$ (detto area) tale che:}
+Do sformułowania twierdzenia Pitagorasa potrzebne jest pojęcie pola, którego z pewnych powodów nigdzie formalnie nie opisaliśmy. % lang-pl
+Wystarczy nam wiedzieć, że dla każdej odpowiednio regularnej figury na płaszczyźnie $F$ istnieje liczba rzeczywista $S_F \ge 0$ (zwana polem) taka, że: % lang-pl
+Per formulare il teorema di Pitagora è necessario il concetto di area, che per varie ragioni non abbiamo mai definito formalmente. % lang-it
+Ci basterà sapere che per ogni figura sufficientemente regolare del piano $F$ esiste un numero reale $S_F \ge 0$ (detto area) tale che: % lang-it
 \begin{itemize}
-    \item \pol{pole prostokąta o bokach długości $a$ oraz $b$ to $ab$;}
-          \ita{l'area di un rettangolo di lati $a$ e $b$ è uguale ad $ab$;}
-    \item \pol{pole sumy (,,unii'') dwóch rozłącznych figur $F_1 \cup F_2$ jest sumą ich pól;}
-          \ita{l'area dell'unione di due figure disgiunte $F_1 \cup F_2$ è la somma delle loro aree;}
-    \item \pol{pola przystających trójkątów są sobie równe.}
-          \ita{i triangoli congruenti hanno la stessa area.}
+    \item pole prostokąta o bokach długości $a$ oraz $b$ to $ab$; % lang-pl
+    \item pole sumy (,,unii'') dwóch rozłącznych figur $F_1 \cup F_2$ jest sumą ich pól; % lang-pl
+    \item pola przystających trójkątów są sobie równe. % lang-pl
+    \item l'area di un rettangolo di lati $a$ e $b$ è uguale ad $ab$; % lang-it
+    \item l'area dell'unione di due figure disgiunte $F_1 \cup F_2$ è la somma delle loro aree; % lang-it
+    \item i triangoli congruenti hanno la stessa area. % lang-it
 \end{itemize}
 
-\pol{(Można poczytać o tym u Neugebauera \cite[s. 37]{neugebauer_2018}).}
-\ita{(Si può leggere qualcosa in proposito in Neugebauer \cite[p. 37]{neugebauer_2018}).}
+(Można poczytać o tym u Neugebauera \cite[s. 37]{neugebauer_2018}). % lang-pl
+(Si può leggere qualcosa in proposito in Neugebauer \cite[p. 37]{neugebauer_2018}). % lang-it
 
-\begin{theorem}[\pol{Pitagorasa}\ita{di Pitagora}]
+\begin{theorem}
+[Pitagorasa] % lang-pl
+[di Pitagora] % lang-it
 \label{theorem_pythagorean}%
-\pol{\index{twierdzenie!Pitagorasa}}
-\ita{\index{teorema!di Pitagora}}%
-    \pol{Dany jest trójkąt prostokątny $\triangle ABC$, w którym kąt przy wierzchołku $C$ jest prosty.}
-    \ita{Sia dato un triangolo rettangolo $\triangle ABC$, nel quale l'angolo al vertice $C$ è retto.}
-    \pol{Na jego bokach zbudowano trzy kwadraty.}
-    \ita{Sui suoi lati sono costruiti tre quadrati.}
+\index{twierdzenie!Pitagorasa}% % lang-pl
+    Dany jest trójkąt prostokątny $\triangle ABC$, w którym kąt przy wierzchołku $C$ jest prosty. % lang-pl
+    Na jego bokach zbudowano trzy kwadraty. % lang-pl
+\index{teorema!di Pitagora}% % lang-it
+    Sia dato un triangolo rettangolo $\triangle ABC$, nel quale l'angolo al vertice $C$ è retto. % lang-it
+    Sui suoi lati sono costruiti tre quadrati. % lang-it
     \begin{center}
 \begin{comment}
 ...
 \end{comment}
     \end{center}
-    \pol{Suma pól jasnych kwadratów jest równa polu ciemnego kwadratu:}
-    \ita{La somma delle aree dei quadrati chiari è uguale all'area del quadrato scuro:}
+    Suma pól jasnych kwadratów jest równa polu ciemnego kwadratu: % lang-pl
+    La somma delle aree dei quadrati chiari è uguale all'area del quadrato scuro: % lang-it
     \begin{equation}
         |AC|^2 + |BC|^2 = |AB|^2.
     \end{equation}
-    \pol{Odwrotnie, jeśli $ABC$ jest trójkątem takim, że $|AC|^2 + |BC|^2 = |AB|^2$, to trójkąt ten jest prostokątny, zaś kąt przy wierzchołku $C$ jest prosty.}
-    \ita{Viceversa, se $ABC$ è un triangolo tale che $|AC|^2 + |BC|^2 = |AB|^2$, allora il triangolo è rettangolo e l'angolo al vertice $C$ è retto.}
+    Odwrotnie, jeśli $ABC$ jest trójkątem takim, że $|AC|^2 + |BC|^2 = |AB|^2$, to trójkąt ten jest prostokątny, zaś kąt przy wierzchołku $C$ jest prosty. % lang-pl
+    Viceversa, se $ABC$ è un triangolo tale che $|AC|^2 + |BC|^2 = |AB|^2$, allora il triangolo è rettangolo e l'angolo al vertice $C$ è retto. % lang-it
 \end{theorem}
 
-\pol{Powyższe twierdzenie przypiszemy kiedyś Pitagorasowi z Samos, choć nie wiemy dokładnie, kto i kiedy odkryje je jako pierwszy.}
-\ita{In seguito attribuiremo questo teorema a Pitagora di Samo, sebbene non sappiamo con precisione chi lo abbia scoperto per primo né quando.}
-\index[persons]{Pitagoras z Samos}%
-\pol{Będzie powszechnie stosowane w okresie Starego Babilonu (XX-XVI wiek p.n.e.), a więc na długo przed narodzinami Pitagorasa; pojawi się też w indyjskich i chińskich tekstach matematycznych.}
-\ita{Esso sarà ampiamente utilizzato nel periodo dell'Antica Babilonia (XX-XVI secolo a.C.), molto prima della nascita di Pitagora; comparirà inoltre in testi matematici indiani e cinesi.}
-\pol{Papirus Berlin 6619 spisany ok. 1800 roku p.n.e. na terenach państwa egipskiego zawrze zadanie, którego rozwiązaniem jest trójka $(6, 8, 10)$.}
-\ita{Il papiro Berlin 6619, redatto intorno al 1800 a.C. in territorio egiziano, conterrà un problema la cui soluzione è la terna $(6, 8, 10)$.}
-\pol{\index{papirus Berlin 6619}}
-\ita{\index{papiro Berlin 6619}}%
-\pol{Jest jeszcze babilońska tabliczka Plimpton 322, także spisana ok. 1800 roku p.n.e., gdzie pojawia się trójka}
-\ita{Vi è inoltre la tavoletta babilonese Plimpton 322, anch'essa datata intorno al 1800 a.C., nella quale compare la terna}
+Powyższe twierdzenie przypiszemy kiedyś Pitagorasowi z Samos, choć nie wiemy dokładnie, kto i kiedy odkryje je jako pierwszy. % lang-pl
+In seguito attribuiremo questo teorema a Pitagora di Samo, sebbene non sappiamo con precisione chi lo abbia scoperto per primo né quando. % lang-it
+\index[persons]{Pitagoras z Samos}% % lang-pl
+\index[persons]{Pitagora di Samo}% % lang-it
+Będzie powszechnie stosowane w okresie Starego Babilonu (XX-XVI wiek p.n.e.), a więc na długo przed narodzinami Pitagorasa; pojawi się też w indyjskich i chińskich tekstach matematycznych. % lang-pl
+Papirus Berlin 6619 spisany ok. 1800 roku p.n.e. na terenach państwa egipskiego zawrze zadanie, którego rozwiązaniem jest trójka $(6, 8, 10)$. % lang-pl
+\index{papirus Berlin 6619}% % lang-pl
+Jest jeszcze babilońska tabliczka Plimpton 322, także spisana ok. 1800 roku p.n.e., gdzie pojawia się trójka % lang-pl
+Esso sarà ampiamente utilizzato nel periodo dell'Antica Babilonia (XX-XVI secolo a.C.), molto prima della nascita di Pitagora; comparirà inoltre in testi matematici indiani e cinesi. % lang-it
+Il papiro Berlin 6619, redatto intorno al 1800 a.C. in territorio egiziano, conterrà un problema la cui soluzione è la terna $(6, 8, 10)$. % lang-it
+\index{papiro Berlin 6619}% % lang-it
+Vi è inoltre la tavoletta babilonese Plimpton 322, anch'essa datata intorno al 1800 a.C., nella quale compare la terna % lang-it
 \begin{equation}
     12709^2 + 13500^2 = 18541^2,
 \end{equation}
-\pol{co sugeruje, że jej autor znał pewną systematyczną metodę.}
-\ita{il che suggerisce che il suo autore conoscesse un metodo sistematico.}
-\pol{\index{tabliczka Plimpton 322}}
-\ita{\index{tavoletta Plimpton 322}}%
+co sugeruje, że jej autor znał pewną systematyczną metodę. % lang-pl
+\index{tabliczka Plimpton 322}% % lang-pl
+il che suggerisce che il suo autore conoscesse un metodo sistematico. % lang-it
+\index{tavoletta Plimpton 322}% % lang-it
 
-\pol{Być może twierdzenie Pitagorasa ma więcej znanych dowodów niż jakiekolwiek inne (poza prawem wzajemności reszt kwadratowych).}
-\ita{Forse il teorema di Pitagora possiede più dimostrazioni conosciute di qualsiasi altro teorema (a eccezione della legge di reciprocità quadratica).}
-\pol{Będzie ich tak bardzo bez liku, że nie wiadomo, ile dokładnie.}
-\ita{Saranno così numerose da rendere impossibile stabilirne il numero esatto.}
-\pol{Niektóre opierają się na rozcięciu pewnej układanki na fragmenty, przestawieniu ich i zbudowaniu innego kształtu.}
-\ita{Alcune si basano sul taglio di una figura in pezzi, sul loro riordinamento e sulla costruzione di una nuova figura.}
-\pol{Inne korzystają z podobieństwa trójkątów.}
-\ita{Altre utilizzano la similitudine dei triangoli.}
-\pol{Dowód Euklidesa urzekł nas tak bardzo swoją pomysłowością, że będzie jedynym, jaki przedstawimy w całej książce!}
-\ita{La dimostrazione di Euclide ci ha affascinato così tanto per la sua ingegnosità che sarà l'unica presentata in tutto il libro!}
-\pol{\index{zasada!Cavalieriego}}
-\ita{\index{principio!di Cavalieri}}
-\pol{Patrz też: Neugebauer \cite[s. 39-41]{neugebauer_2018}.}
-\ita{Si veda anche Neugebauer \cite[p. 39--41]{neugebauer_2018}.}
+Być może twierdzenie Pitagorasa ma więcej znanych dowodów niż jakiekolwiek inne (poza prawem wzajemności reszt kwadratowych). % lang-pl
+Będzie ich tak bardzo bez liku, że nie wiadomo, ile dokładnie. % lang-pl
+Niektóre opierają się na rozcięciu pewnej układanki na fragmenty, przestawieniu ich i zbudowaniu innego kształtu. % lang-pl
+Inne korzystają z podobieństwa trójkątów. % lang-pl
+Dowód Euklidesa urzekł nas tak bardzo swoją pomysłowością, że będzie jedynym, jaki przedstawimy w całej książce! % lang-pl
+\index{zasada!Cavalieriego} % lang-pl
+Patrz też: Neugebauer \cite[s. 39-41]{neugebauer_2018}. % lang-pl
+Forse il teorema di Pitagora possiede più dimostrazioni conosciute di qualsiasi altro teorema (a eccezione della legge di reciprocità quadratica). % lang-it
+Saranno così numerose da rendere impossibile stabilirne il numero esatto. % lang-it
+Alcune si basano sul taglio di una figura in pezzi, sul loro riordinamento e sulla costruzione di una nuova figura. % lang-it
+Altre utilizzano la similitudine dei triangoli. % lang-it
+La dimostrazione di Euclide ci ha affascinato così tanto per la sua ingegnosità che sarà l'unica presentata in tutto il libro! % lang-it
+\index{principio!di Cavalieri} % lang-it
+Si veda anche Neugebauer \cite[p. 39--41]{neugebauer_2018}. % lang-it
 
 \begin{proof}
-    \pol{Niech $\triangle ABC$ będzie trójkątem prostokątnym, z kątem prostym przy wierzchołku $C$.}
-    \ita{Sia $\triangle ABC$ un triangolo rettangolo con angolo retto nel vertice $C$.}
-    \pol{Na bokach $BC$, $AB$, $CA$ kreślimy kolejno kwadraty $BCDE$, $ABFG$, $ACHI$ (konstrukcja kwadratu Euklidesa korzysta z postulatu równoległości).}
-    \ita{Sui lati $BC$, $AB$, $CA$ costruiamo rispettivamente i quadrati $BCDE$, $ABFG$, $ACHI$ (la costruzione euclidea del quadrato utilizza il postulato delle parallele).}
+    Niech $\triangle ABC$ będzie trójkątem prostokątnym, z kątem prostym przy wierzchołku $C$. % lang-pl
+    Na bokach $BC$, $AB$, $CA$ kreślimy kolejno kwadraty $BCDE$, $ABFG$, $ACHI$ (konstrukcja kwadratu Euklidesa korzysta z postulatu równoległości). % lang-pl
+    Sia $\triangle ABC$ un triangolo rettangolo con angolo retto nel vertice $C$. % lang-it
+    Sui lati $BC$, $AB$, $CA$ costruiamo rispettivamente i quadrati $BCDE$, $ABFG$, $ACHI$ (la costruzione euclidea del quadrato utilizza il postulato delle parallele). % lang-it
 
     \begin{center}
 \begin{comment}
@@ -96,109 +99,110 @@
 \end{comment}
     \end{center}
 
-    \pol{Z punktu $C$ opuszczamy wysokość na przeciwprostokątną $AB$ i przedłużamy tak, by przecięła kwadrat $ABFG$ w punktach $K$ i $L$.}
-    \ita{Dal punto $C$ tracciamo l'altezza all'ipotenusa $AB$ e la prolunghiamo in modo che intersechi il quadrato $ABFG$ nei punti $K$ e $L$.}
-    \pol{Łączymy punkty $B$ i $I$ oraz $C$ i $G$.}
-    \ita{Congiungiamo i punti $B$ e $I$, nonché $C$ e $G$.}
-    \pol{Otrzymane trójkąty $\triangle BAI$ oraz $\triangle GAC$ są przystające na mocy cechy bok-kąt-bok.}
-    \ita{I triangoli ottenuti $\triangle BAI$ e $\triangle GAC$ sono congruenti per il criterio lato-angolo-lato.}
-    \pol{Niebieski prostokąt $AGLK$ (odpowiednio: kwadrat $ACHI$) ma dwukrotnie większe pole niż trójkąt $\triangle GAC$ (trójkąt $\triangle BAI$).}
-    \ita{Il rettangolo blu $AGLK$ (rispettivamente il quadrato $ACHI$) ha area doppia rispetto al triangolo $\triangle GAC$ (rispettivamente al triangolo $\triangle BAI$).}
-    \pol{(To jest zamaskowana zasada Cavalieriego!).}
-    \ita{(Questo è un principio di Cavalieri mascherato!).}
-    \pol{\index{zasada Cavalieriego}}
-    \ita{\index{principio di Cavalieri}}%
-    \pol{Zatem prostokąt $AGLK$ i kwadrat $ACHI$ mają równe pola.}
-    \ita{Pertanto il rettangolo $AGLK$ e il quadrato $ACHI$ hanno la stessa area.}
+    Z punktu $C$ opuszczamy wysokość na przeciwprostokątną $AB$ i przedłużamy tak, by przecięła kwadrat $ABFG$ w punktach $K$ i $L$. % lang-pl
+    Łączymy punkty $B$ i $I$ oraz $C$ i $G$. % lang-pl
+    Otrzymane trójkąty $\triangle BAI$ oraz $\triangle GAC$ są przystające na mocy cechy bok-kąt-bok. % lang-pl
+    Niebieski prostokąt $AGLK$ (odpowiednio: kwadrat $ACHI$) ma dwukrotnie większe pole niż trójkąt $\triangle GAC$ (trójkąt $\triangle BAI$). % lang-pl
+    (To jest zamaskowana zasada Cavalieriego!). % lang-pl
+    \index{zasada Cavalieriego}% % lang-pl
+    Zatem prostokąt $AGLK$ i kwadrat $ACHI$ mają równe pola. % lang-pl
+    Dal punto $C$ tracciamo l'altezza all'ipotenusa $AB$ e la prolunghiamo in modo che intersechi il quadrato $ABFG$ nei punti $K$ e $L$. % lang-it
+    Congiungiamo i punti $B$ e $I$, nonché $C$ e $G$. % lang-it
+    I triangoli ottenuti $\triangle BAI$ e $\triangle GAC$ sono congruenti per il criterio lato-angolo-lato. % lang-it
+    Il rettangolo blu $AGLK$ (rispettivamente il quadrato $ACHI$) ha area doppia rispetto al triangolo $\triangle GAC$ (rispettivamente al triangolo $\triangle BAI$). % lang-it
+    (Questo è un principio di Cavalieri mascherato!). % lang-it
+    \index{principio di Cavalieri}% % lang-it
+    Pertanto il rettangolo $AGLK$ e il quadrato $ACHI$ hanno la stessa area. % lang-it
 
-    \pol{Analogicznie pokazujemy, że czerwony prostokąt $BFLK$ i kwadrat $BCDE$ mają równe pola.}
-    \ita{In modo analogo si dimostra che il rettangolo rosso $BFLK$ e il quadrato $BCDE$ hanno la stessa area.}
-    \pol{Dodajemy dwie równości stronami i otrzymujemy, że suma pól kwadratów $ACIH$ oraz $BCDE$ jest równa polu kwadratu $ABFG$.}
-    \ita{Sommando membro a membro le due uguaglianze otteniamo che la somma delle aree dei quadrati $ACIH$ e $BCDE$ è uguale all'area del quadrato $ABFG$.}
+    Analogicznie pokazujemy, że czerwony prostokąt $BFLK$ i kwadrat $BCDE$ mają równe pola. % lang-pl
+    Dodajemy dwie równości stronami i otrzymujemy, że suma pól kwadratów $ACIH$ oraz $BCDE$ jest równa polu kwadratu $ABFG$. % lang-pl
+    In modo analogo si dimostra che il rettangolo rosso $BFLK$ e il quadrato $BCDE$ hanno la stessa area. % lang-it
+    Sommando membro a membro le due uguaglianze otteniamo che la somma delle aree dei quadrati $ACIH$ e $BCDE$ è uguale all'area del quadrato $ABFG$. % lang-it
 \end{proof}
 
-\pol{Według legendy Hippazos z Metapontu odkryje, że przekątna kwadratu (albo, według innej legendy, pięciokąta) nie jest współmierna z jego bokiem.}
-\ita{Secondo la leggenda, Ippaso di Metaponto scoprirà che la diagonale del quadrato (oppure, secondo un'altra versione, del pentagono) non è commensurabile con il suo lato.}
-\index[persons]{Hippazos z Metapontu}%
-\pol{Niewymierność liczb $\sqrt{2}$ (albo $(1 + \sqrt 5) /2$) zrujnuje pogląd szkoły pitagorejskiej, że świat opiera się na liczbach (...) i doprowadzi do utopienia Hippazosa.}
-\ita{L'irrazionalità di $\sqrt{2}$ (oppure di $(1+\sqrt5)/2$) distruggerà la concezione pitagorica secondo cui il mondo si fonda sui numeri (...) e porterà all'annegamento di Ippaso.}
-\pol{\index{utopienie}}
-\ita{\index{annegamento}}%
-\pol{Ale jego śmierć nie cofnie rozłamu, jaki powstanie w szkole.}
-\ita{Ma la sua morte non porrà fine alla frattura che si produrrà nella scuola.}
+Według legendy Hippazos z Metapontu odkryje, że przekątna kwadratu (albo, według innej legendy, pięciokąta) nie jest współmierna z jego bokiem. % lang-pl
+Secondo la leggenda, Ippaso di Metaponto scoprirà che la diagonale del quadrato (oppure, secondo un'altra versione, del pentagono) non è commensurabile con il suo lato. % lang-it
+\index[persons]{Hippazos z Metapontu}% % lang-pl
+\index[persons]{Ippaso di Metaponto}% % lang-it
+Niewymierność liczb $\sqrt{2}$ (albo $(1 + \sqrt 5) /2$) zrujnuje pogląd szkoły pitagorejskiej, że świat opiera się na liczbach (...) i doprowadzi do utopienia Hippazosa. % lang-pl
+\index{utopienie}% % lang-pl
+Ale jego śmierć nie cofnie rozłamu, jaki powstanie w szkole. % lang-pl
+L'irrazionalità di $\sqrt{2}$ (oppure di $(1+\sqrt5)/2$) distruggerà la concezione pitagorica secondo cui il mondo si fonda sui numeri (...) e porterà all'annegamento di Ippaso. % lang-it
+\index{annegamento}% % lang-it
+Ma la sua morte non porrà fine alla frattura che si produrrà nella scuola. % lang-it
 
-\pol{(Być może w tym miejscu warto dowiedzieć się o cegle Eulera.)}
-\ita{(Forse questo è il momento giusto per conoscere il mattone di Eulero.)}
+(Być może w tym miejscu warto dowiedzieć się o cegle Eulera.) % lang-pl
+(Forse questo è il momento giusto per conoscere il mattone di Eulero.) % lang-it
 
 \begin{corollary}
-    \pol{Długość przekątnej prostokąta o bokach długości $a$ i $b$ wynosi $c = \sqrt{a^2 + b^2}$.}
-    \ita{La lunghezza della diagonale di un rettangolo di lati $a$ e $b$ è $c = \sqrt{a^2+b^2}$.}
+    Długość przekątnej prostokąta o bokach długości $a$ i $b$ wynosi $c = \sqrt{a^2 + b^2}$. % lang-pl
+    La lunghezza della diagonale di un rettangolo di lati $a$ e $b$ è $c = \sqrt{a^2+b^2}$. % lang-it
 \end{corollary}
 
-\pol{Kto umie rozwijać funkcje w szeregi potęgowe może wpaść na pomysł, by zapisać}
-\ita{Chi sa sviluppare le funzioni in serie di potenze potrebbe scrivere}
+Kto umie rozwijać funkcje w szeregi potęgowe może wpaść na pomysł, by zapisać % lang-pl
+Chi sa sviluppare le funzioni in serie di potenze potrebbe scrivere % lang-it
 \begin{equation}
     c = a + \frac{b^2}{2a} - \frac{b^4}{8a^3} + \frac{b^6}{16a^5} - \frac{5b^8}{127a^7} + \ldots,
 \end{equation}
-\pol{co po obcięciu do pierwszych dwóch wyrazów daje przybliżenie znane Babilończykom (\cite[s. 6]{eves1_1972}):}
-\ita{che, troncata ai primi due termini, fornisce l'approssimazione già nota ai Babilonesi (\cite[p. 6]{eves1_1972}):}
+co po obcięciu do pierwszych dwóch wyrazów daje przybliżenie znane Babilończykom (\cite[s. 6]{eves1_1972}): % lang-pl
+che, troncata ai primi due termini, fornisce l'approssimazione già nota ai Babilonesi (\cite[p. 6]{eves1_1972}): % lang-it
 \begin{equation}
     c \approx a + \frac{b^2}{2a}.
 \end{equation}
 
-\pol{Metoda ta daje największy błąd względny, gdy $a = b$ i wynosi on $6.06601\ldots \%$.}
-\ita{Questo metodo produce il massimo errore relativo quando $a=b$, e tale errore è pari a $6.06601\ldots \%$.}
+Metoda ta daje największy błąd względny, gdy $a = b$ i wynosi on $6.06601\ldots \%$. % lang-pl
+Questo metodo produce il massimo errore relativo quando $a=b$, e tale errore è pari a $6.06601\ldots \%$. % lang-it
 
 \begin{problem}
-    \pol{Miasto jest otoczone okrągłym murem o nieznanej średnicy, z czterema bramami.}
-    \ita{Una città è circondata da una cinta muraria circolare di diametro sconosciuto, con quattro porte.}
-    \pol{Drzewo leży trzy nible na północ od północnej bramy.}
-    \ita{Un albero si trova tre nibli a nord della porta settentrionale.}
-    \pol{Jeśli idziemy dziewięć nibli na wschód od południowej bramy, drzewo staje się widoczne.}
-    \ita{Se ci spostiamo di nove nibli a est della porta meridionale, l'albero diventa visibile.}
-    \pol{Znajdź średnicę miasta.}
-    \ita{Determinare il diametro della città.}
+    Miasto jest otoczone okrągłym murem o nieznanej średnicy, z czterema bramami. % lang-pl
+    Drzewo leży trzy nible na północ od północnej bramy. % lang-pl
+    Jeśli idziemy dziewięć nibli na wschód od południowej bramy, drzewo staje się widoczne. % lang-pl
+    Znajdź średnicę miasta. % lang-pl
+    Una città è circondata da una cinta muraria circolare di diametro sconosciuto, con quattro porte. % lang-it
+    Un albero si trova tre nibli a nord della porta settentrionale. % lang-it
+    Se ci spostiamo di nove nibli a est della porta meridionale, l'albero diventa visibile. % lang-it
+    Determinare il diametro della città. % lang-it
 \end{problem}
 
-\pol{Problem pochodzi z chińskiego tekstu \emph{Shu shu jiu zhang} (,,Traktat matematyczny w dziewięciu sekcjach'') z XIII wieku.}
-\ita{Il problema proviene dal testo cinese \emph{Shu shu jiu zhang} (``Trattato matematico in nove sezioni'') del XIII secolo.}
-\pol{Jeżeli oznaczymy średnicę miasta przez $x$, odległość drzewa od miasta przez $b$, odległość do przejścia przez $a$, zaś kąt środek miasta -- punkt widoczności -- południowa brama przez $\alpha$, to dostaniemy równanie}
-\ita{Se indichiamo con $x$ il diametro della città, con $b$ la distanza dell'albero dalla città, con $a$ la distanza percorsa e con $\alpha$ l'angolo formato dal centro della città, dal punto di osservazione e dalla porta meridionale, otteniamo l'equazione}
+Problem pochodzi z chińskiego tekstu \emph{Shu shu jiu zhang} (,,Traktat matematyczny w dziewięciu sekcjach'') z XIII wieku. % lang-pl
+Jeżeli oznaczymy średnicę miasta przez $x$, odległość drzewa od miasta przez $b$, odległość do przejścia przez $a$, zaś kąt środek miasta -- punkt widoczności -- południowa brama przez $\alpha$, to dostaniemy równanie % lang-pl
+Il problema proviene dal testo cinese \emph{Shu shu jiu zhang} (``Trattato matematico in nove sezioni'') del XIII secolo. % lang-it
+Se indichiamo con $x$ il diametro della città, con $b$ la distanza dell'albero dalla città, con $a$ la distanza percorsa e con $\alpha$ l'angolo formato dal centro della città, dal punto di osservazione e dalla porta meridionale, otteniamo l'equazione % lang-it
 \begin{equation}
     \tan 2 \alpha = 2 \tan \alpha + \frac ba,
 \end{equation}
-\pol{co po prostych przekształceniach i przyjęciu $y = \tan \alpha$ daje}
-\ita{che, dopo semplici trasformazioni e ponendo $y=\tan\alpha$, diventa}
+co po prostych przekształceniach i przyjęciu $y = \tan \alpha$ daje % lang-pl
+che, dopo semplici trasformazioni e ponendo $y=\tan\alpha$, diventa % lang-it
 $
     2ay^3 + by^2 - b = 0
 $,
-\pol{albo (pamiętając, że $y = x/2a$)}
-\ita{oppure (ricordando che $y=x/2a$)}
+albo (pamiętając, że $y = x/2a$) % lang-pl
+oppure (ricordando che $y=x/2a$) % lang-it
 $
     x^3 + bx^2 - 4a^2 b = 0
 $.
-\pol{To równanie ma jedno rozwiązanie rzeczywiste, $x = 9$.}
-\ita{Questa equazione possiede un'unica soluzione reale, $x=9$.}
+To równanie ma jedno rozwiązanie rzeczywiste, $x = 9$. % lang-pl
+Questa equazione possiede un'unica soluzione reale, $x=9$. % lang-it
 
-\pol{Względnie pierwsze liczby naturalne $a, b, c$ takie, że $a^2 + b^2 = c^2$ nazywamy (pierwotną) trójką pitagorejską.}
-\ita{Chiamiamo terna pitagorica (primitiva) tre numeri naturali coprimi $a,b,c$ tali che $a^2+b^2=c^2$.}
-\pol{\index{trójka pitagorejska}}
-\ita{\index{terna pitagorica}}%
-\pol{Każdą taką trójkę można otrzymać biorąc względnie pierwsze liczby $m, n$ różnej parzystości takie, że $m > n$ i kładąc $a = m^2 - n^2$, $b = 2 mn$, $c = m^2 + n^2$.}
-\ita{Ogni tale terna può essere ottenuta scegliendo numeri coprimi $m$, $n$ di parità diversa con $m>n$ e ponendo $a=m^2-n^2$, $b=2mn$, $c=m^2+n^2$.}
-\pol{Najmniejszą taką trójką jest $(3, 4, 5)$; inna legenda (nie było w niej ani smoków, ani Hippazosa) głosi, że Egipcjanie używali tego trójkąta do wyznaczania kątów prostych u podstawy piramid.}
-\ita{La più piccola di tali terne è $(3,4,5)$; un'altra leggenda (nella quale non compaiono né draghi né Ippaso) racconta che gli Egizi usassero questo triangolo per tracciare angoli retti alla base delle piramidi.}
+Względnie pierwsze liczby naturalne $a, b, c$ takie, że $a^2 + b^2 = c^2$ nazywamy (pierwotną) trójką pitagorejską. % lang-pl
+\index{trójka pitagorejska}% % lang-pl
+Każdą taką trójkę można otrzymać biorąc względnie pierwsze liczby $m, n$ różnej parzystości takie, że $m > n$ i kładąc $a = m^2 - n^2$, $b = 2 mn$, $c = m^2 + n^2$. % lang-pl
+Najmniejszą taką trójką jest $(3, 4, 5)$; inna legenda (nie było w niej ani smoków, ani Hippazosa) głosi, że Egipcjanie używali tego trójkąta do wyznaczania kątów prostych u podstawy piramid. % lang-pl
+Chiamiamo terna pitagorica (primitiva) tre numeri naturali coprimi $a,b,c$ tali che $a^2+b^2=c^2$. % lang-it
+\index{terna pitagorica}% % lang-it
+Ogni tale terna può essere ottenuta scegliendo numeri coprimi $m$, $n$ di parità diversa con $m>n$ e ponendo $a=m^2-n^2$, $b=2mn$, $c=m^2+n^2$. % lang-it
+La più piccola di tali terne è $(3,4,5)$; un'altra leggenda (nella quale non compaiono né draghi né Ippaso) racconta che gli Egizi usassero questo triangolo per tracciare angoli retti alla base delle piramidi. % lang-it
 
 \begin{proposition}
-    \pol{Niech $\triangle ABC$ będzie trójkątem prostokątnym, z kątem prostym przy wierzchołku $C$:}
-    \ita{Sia $\triangle ABC$ un triangolo rettangolo con angolo retto nel vertice $C$:}
+    Niech $\triangle ABC$ będzie trójkątem prostokątnym, z kątem prostym przy wierzchołku $C$: % lang-pl
+    Sia $\triangle ABC$ un triangolo rettangolo con angolo retto nel vertice $C$: % lang-it
     \begin{center}
 \begin{comment}
 ...
 \end{comment}
     \end{center}
-    \pol{Mają wtedy miejsce następujące równości:}
-    \ita{Valgono allora le seguenti uguaglianze:}
+    Mają wtedy miejsce następujące równości: % lang-pl
+    Valgono allora le seguenti uguaglianze: % lang-it
     \begin{equation}
         h = \frac{ab}{c}, \quad
         p = \frac{b^2}{c}, \quad
@@ -207,41 +211,43 @@ $.
     \end{equation}
 \end{proposition}
 
-\pol{Twierdzenie Pitagorasa znajduje zastosowanie także przy wyznaczaniu niektórych miejsc geometrycznych.}
-\ita{Il teorema di Pitagora trova applicazione anche nella determinazione di alcuni luoghi geometrici.}
+Twierdzenie Pitagorasa znajduje zastosowanie także przy wyznaczaniu niektórych miejsc geometrycznych. % lang-pl
+Il teorema di Pitagora trova applicazione anche nella determinazione di alcuni luoghi geometrici. % lang-it
 
 \begin{proposition}
-    \pol{Dane są dwa różne punkty $A$ i $B$ na płaszczyźnie oraz liczba rzeczywista $c$ taka, że $2c > |AB|^2$.}
-    \ita{Siano dati due punti distinti $A$ e $B$ del piano e un numero reale $c$ tale che $2c>|AB|^2$.}
-    \pol{Miejscem geometrycznym punktów $P$ o własności $|AP|^2 + |BP|^2 = c$ jest okrąg o środku w środku odcinka $AB$ i średnicy $r = \sqrt{2c - |AB|^2}$.}
-    \ita{Il luogo geometrico dei punti $P$ che soddisfano $|AP|^2+|BP|^2=c$ è una circonferenza avente centro nel punto medio di $AB$ e diametro $r=\sqrt{2c-|AB|^2}$.}
+    Dane są dwa różne punkty $A$ i $B$ na płaszczyźnie oraz liczba rzeczywista $c$ taka, że $2c > |AB|^2$. % lang-pl
+    Miejscem geometrycznym punktów $P$ o własności $|AP|^2 + |BP|^2 = c$ jest okrąg o środku w środku odcinka $AB$ i średnicy $r = \sqrt{2c - |AB|^2}$. % lang-pl
+    Siano dati due punti distinti $A$ e $B$ del piano e un numero reale $c$ tale che $2c>|AB|^2$. % lang-it
+    Il luogo geometrico dei punti $P$ che soddisfano $|AP|^2+|BP|^2=c$ è una circonferenza avente centro nel punto medio di $AB$ e diametro $r=\sqrt{2c-|AB|^2}$. % lang-it
 \end{proposition}
 
 \begin{proposition}
-    \pol{Dane są dwa różne punkty $A$ i $B$ na płaszczyźnie oraz liczba rzeczywista $c$.}
-    \ita{Siano dati due punti distinti $A$ e $B$ del piano e un numero reale $c$.}
-    \pol{Wtedy miejscem geometrycznym punktów $P$ o własności $|AP|^2 - |BP|^2 = c$ jest prosta prostopadła do prostej $AB$.}
-    \ita{Allora il luogo geometrico dei punti $P$ tali che $|AP|^2-|BP|^2=c$ è una retta perpendicolare alla retta $AB$.}
+    Dane są dwa różne punkty $A$ i $B$ na płaszczyźnie oraz liczba rzeczywista $c$. % lang-pl
+    Wtedy miejscem geometrycznym punktów $P$ o własności $|AP|^2 - |BP|^2 = c$ jest prosta prostopadła do prostej $AB$. % lang-pl
+    Siano dati due punti distinti $A$ e $B$ del piano e un numero reale $c$. % lang-it
+    Allora il luogo geometrico dei punti $P$ tali che $|AP|^2-|BP|^2=c$ è una retta perpendicolare alla retta $AB$. % lang-it
 \end{proposition}
 
-\pol{Patrz Guzicki \cite[s. 170-173]{guzicki_2021} (Guzicki wprowadza potem osie i środki potęgowe jak w fakcie \ref{guzicki_6_11}, a następnie twierdzenie \ref{guzicki_6_13} (Carnota)).}
-\ita{Si veda Guzicki \cite[p. 170--173]{guzicki_2021} (Guzicki introduce successivamente gli assi e i centri radicali come nel fatto \ref{guzicki_6_11}, e poi il teorema \ref{guzicki_6_13} (di Carnot)).}
+Patrz Guzicki \cite[s. 170-173]{guzicki_2021} (Guzicki wprowadza potem osie i środki potęgowe jak w fakcie \ref{guzicki_6_11}, a następnie twierdzenie \ref{guzicki_6_13} (Carnota)). % lang-pl
+Si veda Guzicki \cite[p. 170--173]{guzicki_2021} (Guzicki introduce successivamente gli assi e i centri radicali come nel fatto \ref{guzicki_6_11}, e poi il teorema \ref{guzicki_6_13} (di Carnot)). % lang-it
 
-\pol{Spirala Teodor(os)a z Cyreny składa się z trójkątów prostokątnych stykających się ze sobą wzdłuż boków.}
-\ita{La spirale di Teodoro di Cirene è composta da triangoli rettangoli adiacenti lungo i lati.}
-\pol{\index{spirala Teodor(os)a}}
-\ita{\index{spirale di Teodoro}}%
-\index[persons]{Teodor(os) z Cyreny}%
-\pol{Zaczynamy od trójkąta prostokątnego równoramiennego, o bokach długości $1$, $1$, $\sqrt{2}$, by następnie kreślić jednostkowy odcinek prostopadły do końca przeciwprostokątnej, łączymy go z początkiem i powtarzamy (Teodoros zatrzyma się na trójkącie, którego najdłuższy bok to $\sqrt{17}$, ponieważ następny naszedłby na ten, od którego zaczynaliśmy).}
-\ita{Si parte da un triangolo rettangolo isoscele con lati di lunghezza $1$, $1$, $\sqrt2$; quindi si costruisce un segmento unitario perpendicolare all'estremità dell'ipotenusa, lo si collega all'origine e si ripete il procedimento (Teodoro si fermò al triangolo il cui lato più lungo misura $\sqrt{17}$, poiché il successivo si sarebbe sovrapposto a quello iniziale).}
+Spirala Teodor(os)a z Cyreny składa się z trójkątów prostokątnych stykających się ze sobą wzdłuż boków. % lang-pl
+\index{spirala Teodor(os)a}% % lang-pl
+La spirale di Teodoro di Cirene è composta da triangoli rettangoli adiacenti lungo i lati. % lang-it
+\index{spirale di Teodoro}% % lang-it
+\index[persons]{Teodor(os) z Cyreny}% % lang-pl
+\index[persons]{Teodoro di Cirene}% % lang-it
+Zaczynamy od trójkąta prostokątnego równoramiennego, o bokach długości $1$, $1$, $\sqrt{2}$, by następnie kreślić jednostkowy odcinek prostopadły do końca przeciwprostokątnej, łączymy go z początkiem i powtarzamy (Teodoros zatrzyma się na trójkącie, którego najdłuższy bok to $\sqrt{17}$, ponieważ następny naszedłby na ten, od którego zaczynaliśmy). % lang-pl
+Si parte da un triangolo rettangolo isoscele con lati di lunghezza $1$, $1$, $\sqrt2$; quindi si costruisce un segmento unitario perpendicolare all'estremità dell'ipotenusa, lo si collega all'origine e si ripete il procedimento (Teodoro si fermò al triangolo il cui lato più lungo misura $\sqrt{17}$, poiché il successivo si sarebbe sovrapposto a quello iniziale). % lang-it
 \begin{figure}[H]\centering
 \begin{comment}
 ...
 \end{comment}
-\caption{\pol{Spirala Teodor(os)a, zwany czasami ślimakiem pitagorejskim}\ita{Spirale di Teodoro, talvolta chiamata chiocciola pitagorica}}
+\caption{Spirala Teodor(os)a, zwany czasami ślimakiem pitagorejskim} % lang-pl
+\caption{Spirale di Teodoro, talvolta chiamata chiocciola pitagorica} % lang-it
 \end{figure}
-\pol{\index{ślimak pitagorejski}}
-\ita{\index{chiocciola pitagorica}}%
+\index{ślimak pitagorejski}% % lang-pl
+\index{chiocciola pitagorica}% % lang-it
 
 \input{chapters/02-trojkaty/wzor-herona} % 2.4.x, nie 2.5
 

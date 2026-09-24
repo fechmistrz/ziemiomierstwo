@@ -4,35 +4,37 @@
 
 % PRZECZYTANO: https://en.wikipedia.org/wiki/Triangle_inequality
 
-\pol{\section{Nierówność trójkąta}}
-\ita{\section{Disuguaglianza triangolare}}
+\section{Nierówność trójkąta} % lang-pl
+\section{Disuguaglianza triangolare} % lang-it
 
 \todofoot{https://www.deltami.edu.pl/2012/06/punkt-w-trojkacie/ zadanie 4 z odnośnikiem do tw. Ptolemeusza.}
 
-\pol{Zajmiemy się teraz (I.20).}
-\ita{Occupiamoci ora di (I.20).}
+Zajmiemy się teraz (I.20). % lang-pl
+Occupiamoci ora di (I.20). % lang-it
 
-\begin{proposition}[\pol{nierówność trójkąta}\ita{disuguaglianza triangolare}]
+\begin{proposition}
+[nierówność trójkąta] % lang-pl
+[disuguaglianza triangolare] % lang-it
 \index{nierówność!trójkąta}%
-\ita{\index{disuguaglianza!triangolare}}%
-	\pol{Niech $ABC$ będzie trojkątem.}
-	\ita{Sia $ABC$ un triangolo.}
-	\pol{Wtedy suma odcinków $AB$ i $BC$ jest dłuższa niż $AC$.}
-	\ita{Allora la somma delle lunghezze dei segmenti $AB$ e $BC$ è maggiore della lunghezza di $AC$.}
+	Niech $ABC$ będzie trojkątem. % lang-pl
+	Wtedy suma odcinków $AB$ i $BC$ jest dłuższa niż $AC$. % lang-pl
+\index{disuguaglianza!triangolare}% % lang-it
+	Sia $ABC$ un triangolo. % lang-it
+	Allora la somma delle lunghezze dei segmenti $AB$ e $BC$ è maggiore della lunghezza di $AC$. % lang-it
 \end{proposition}
 
 % TODO: https://www.deltami.edu.pl/2013/09/siatka-czworoscianu/ to samo w R3
 
 \begin{proof}
-	\pol{Wynika to ze wzoru Herona (fakt \ref{prp_heron}) i tego, że pole trójkąta jest nieujemne.}
-	\ita{Segue dalla formula di Erone (fatto \ref{prp_heron}) e dal fatto che l'area di un triangolo è non negativa.}
+	Wynika to ze wzoru Herona (fakt \ref{prp_heron}) i tego, że pole trójkąta jest nieujemne. % lang-pl
+	Segue dalla formula di Erone (fatto \ref{prp_heron}) e dal fatto che l'area di un triangolo è non negativa. % lang-it
 \end{proof}
 
 \begin{corollary}
-	\pol{Niech $a \ge b \ge c$ będą bokami trójkąta.}
-	\ita{Siano $a \ge b \ge c$ i lati di un triangolo.}
-	\pol{Wtedy}
-	\ita{Allora}
+	Niech $a \ge b \ge c$ będą bokami trójkąta. % lang-pl
+	Wtedy % lang-pl
+	Siano $a \ge b \ge c$ i lati di un triangolo. % lang-it
+	Allora % lang-it
 	% \begin{equation}
 	% 	1 < \frac{a + c}{b} < 3 
 	% \end{equation}
@@ -43,32 +45,34 @@
 	\end{equation}
 \end{corollary}
 
-\pol{Nierówność trójkąta nie jest wnioskiem z aksjomatów I1-I3, B1-B4, C1-C3, ponieważ nie zachodzi w następującym modelu (ukradniętym Hartshorne'owi \cite[s. 90]{hartshorne2000}):}
-\ita{La disuguaglianza triangolare non è una conseguenza degli assiomi I1--I3, B1--B4, C1--C3, poiché non vale nel seguente modello (preso in prestito da Hartshorne \cite[p.~90]{hartshorne2000}):}
+Nierówność trójkąta nie jest wnioskiem z aksjomatów I1-I3, B1-B4, C1-C3, ponieważ nie zachodzi w następującym modelu (ukradniętym Hartshorne'owi \cite[s. 90]{hartshorne2000}): % lang-pl
+La disuguaglianza triangolare non è una conseguenza degli assiomi I1--I3, B1--B4, C1--C3, poiché non vale nel seguente modello (preso in prestito da Hartshorne \cite[p.~90]{hartshorne2000}): % lang-it
 
 \begin{example}
-	\pol{Rozpatrujemy zbiór $\mathbb R^2$ jako płaszczyznę ze standardowymi punktami oraz prostymi, ale niestandardową metryką}
-	\ita{Consideriamo l'insieme $\mathbb R^2$ come piano con i punti e le rette usuali, ma dotato della seguente metrica non standard}
+	Rozpatrujemy zbiór $\mathbb R^2$ jako płaszczyznę ze standardowymi punktami oraz prostymi, ale niestandardową metryką % lang-pl
+	Consideriamo l'insieme $\mathbb R^2$ come piano con i punti e le rette usuali, ma dotato della seguente metrica non standard % lang-it
 	\begin{equation}
 		d((x_1, y_1), (x_2, y_2)) = \begin{cases}
-			\sqrt{(x_1-x_2)^2 + (y_1-y_2)^2} & \text{\pol{jeśli}\ita{se }} x_1 = x_2 \vee y_1 = y_2, \\
-			2 \sqrt{(x_1-x_2)^2 + (y_1-y_2)^2} & \text{\pol{w przeciwnym wypadku}\ita{altrimenti}}
+			\sqrt{(x_1-x_2)^2 + (y_1-y_2)^2} & \text{jeśli} x_1 = x_2 \vee y_1 = y_2, \\ % lang-pl
+			2 \sqrt{(x_1-x_2)^2 + (y_1-y_2)^2} & \text{w przeciwnym wypadku} % lang-pl
+			\sqrt{(x_1-x_2)^2 + (y_1-y_2)^2} & \text{se } x_1 = x_2 \vee y_1 = y_2, \\ % lang-it
+			2 \sqrt{(x_1-x_2)^2 + (y_1-y_2)^2} & \text{altrimenti} % lang-it
 		\end{cases}.
 	\end{equation}
-	\pol{Wtedy nierówność trójkąta nie zachodzi.}
-	\ita{In tal caso la disuguaglianza triangolare non vale.}
+	Wtedy nierówność trójkąta nie zachodzi. % lang-pl
+	In tal caso la disuguaglianza triangolare non vale. % lang-it
 \end{example}
 
-\pol{Odpowiednikiem nierówności trójkąta w trzech wymiarach zdaje się być ćwiczenie od Kiezy \cite[s. 31]{kieza_2017}:}
-\ita{Un analogo tridimensionale della disuguaglianza triangolare sembra essere il seguente esercizio di Kieza \cite[p.~31]{kieza_2017}:}
+Odpowiednikiem nierówności trójkąta w trzech wymiarach zdaje się być ćwiczenie od Kiezy \cite[s. 31]{kieza_2017}: % lang-pl
+Un analogo tridimensionale della disuguaglianza triangolare sembra essere il seguente esercizio di Kieza \cite[p.~31]{kieza_2017}: % lang-it
 
 \begin{proposition}
-	\pol{W każdym czworościanie suma pól trzech dowolnych ścian jest większa od pola czwartej ściany.}
-	\ita{In ogni tetraedro la somma delle aree di tre facce qualsiasi è maggiore dell'area della quarta faccia.}
+	W każdym czworościanie suma pól trzech dowolnych ścian jest większa od pola czwartej ściany. % lang-pl
+	In ogni tetraedro la somma delle aree di tre facce qualsiasi è maggiore dell'area della quarta faccia. % lang-it
 \end{proposition}
 
-\pol{Przytoczone niżej dwa zadania: Fagnano i Fermata będą prawie zawsze omawiane razem.}
-\ita{I due problemi riportati qui sotto, quello di Fagnano e quello di Fermat, vengono quasi sempre trattati insieme.}
+Przytoczone niżej dwa zadania: Fagnano i Fermata będą prawie zawsze omawiane razem. % lang-pl
+I due problemi riportati qui sotto, quello di Fagnano e quello di Fermat, vengono quasi sempre trattati insieme. % lang-it
 
 \input{chapters/02-trojkaty/nierownosc-trojkata-fagnano}
 \input{chapters/02-trojkaty/nierownosc-trojkata-fermat}
