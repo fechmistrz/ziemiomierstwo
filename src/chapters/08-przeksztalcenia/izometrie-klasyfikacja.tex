@@ -3,16 +3,15 @@
 %
 
 \subsection{Klasyfikacja izometrii} % lang-pl
-
 \subsection{Classificazione delle isometrie} % lang-it
 
-\begin{theorem}[Chasles'a, 1830] % lang-pl
+\begin{theorem}
+[Chasles'a, 1830] % lang-pl
+[di Chasles, 1830] % lang-it
 \index{twierdzenie!Chasles'a}% % lang-pl
-\begin{theorem}[di Chasles, 1830] % lang-it
 \index{teorema!di Chasles}% % lang-it
 \label{theorem_chasles}
     Każda izometria płaszczyzny jest złożeniem co najwyżej trzech symetrii osiowych. % lang-pl
-    
     Ogni isometria del piano è composta al massimo da tre simmetrie assiali. % lang-it
 \end{theorem}
 
@@ -24,48 +23,37 @@
 \todofoot{https://www.deltami.edu.pl/2017/01/uczniowie/}
 
 Piszą o nim Eves \cite[s. 113]{eves1_1972}; Audin \cite[s. 49]{audin_2003} (w ogólniejszej wersji dla przestrzeni $\mathbb R^n$ i $n+1$ odbić). % lang-pl
-
 Poza symetriami osiowymi oraz złożeniami dwóch takich, pozostał przypadek trzech symetrii. % lang-pl
 Ne parlano Eves \cite[s. 113]{eves1_1972}; Audin \cite[s. 49]{audin_2003} (nella versione più generale per lo spazio $\mathbb R^n$ e $n+1$ riflessioni). % lang-it
-
 Oltre alle simmetrie assiali e alle composizioni di due di esse, resta il caso di tre simmetrie. % lang-it
 % TODO: https://en.wikipedia.org/wiki/Cartan–Dieudonné_theorem
 
 \begin{definition}[symetria z poślizgiem]
     Niech $p$ będzie prostą, zaś $w$ wektorem równoległym do niej. % lang-pl
-    
     Złożenie $T_w \circ S_p$ nazywamy symetrią osiową z poślizgiem. % lang-pl
     Sia $p$ una retta e $w$ un vettore parallelo ad essa. % lang-it
-    
     La composizione $T_w \circ S_p$ si chiama simmetria assiale traslante. % lang-it
 \end{definition}
 
 Wektor $w$ nie musi być równoległy do prostej $p$, ale jeśli założymy, że tak jest, to nie musimy pamiętać kolejności składania, bo mamy równość $T_w \circ S_p = S_p \circ T_w$. % lang-pl
 Il vettore $w$ non deve essere parallelo alla retta $p$, ma se assumiamo che lo sia, non dobbiamo ricordare l'ordine delle composizioni, poiché $T_w \circ S_p = S_p \circ T_w$. % lang-it
-\begin{corollary} % lang-it
-    Ogni isometria del piano è una traslazione, una rotazione o una simmetria traslante, e solo i primi due tipi conservano l'orientamento. % lang-it
-\end{corollary} % lang-it
 
-
-\begin{corollary} % lang-pl
+\begin{corollary}
     Każda izometria płaszczyzny jest przesunięciem, obrotem albo symetrią z poślizgiem, przy czym orientację zachowują dokładnie pierwsze dwa typy izometrii. % lang-pl
-\end{corollary} % lang-pl
-La classificazione delle isometrie del piano elimina il paradosso di Banach-Tarski dal piano, poiché non esiste un sottogruppo libero nel gruppo delle sue isometrie. % lang-it
+    Ogni isometria del piano è una traslazione, una rotazione o una simmetria traslante, e solo i primi due tipi conservano l'orientamento. % lang-it
+\end{corollary}
 
 Klasyfikacja izometrii płaszczyzny eliminuje paradoks Banacha-Tarskiego z płaszczyzny, bo nie ma podgrupy wolnej w grupie jej izometrii. % lang-pl
-Ecco i dettagli. % lang-it
-
 Oto szczegóły. % lang-pl
-Se $f$ è un'isometria, allora $f^2$ è una traslazione o una rotazione. % lang-it
-
 Jeśli $f$ jest izometrią, to $f^2$ jest przesunięciem albo obrotem. % lang-pl
-Se $g$ è anch'esso un'isometria, allora $f^2 g^2 f^{-2} g^{-2}$ è sempre una traslazione; per dimostrarlo bisogna considerare quattro casi, il più difficile è la coppia rotazione-rotazione. % lang-it
-
 Gdy $g$ też jest izometrią, to $f^2g^2f^{-2}g^{-2}$ jest zawsze przesunięciem; dla dowodu tego należy rozpatrzeć cztery przypadki, z których najtrudniejszy to para obrót-obrót. % lang-pl
-Può essere utile notare che se abbiamo due rotazioni $f$, $g$ con centri diversi e la loro composizione è una rotazione, allora $fg$ e $gf$ sono rotazioni dello stesso angolo ma con centri diversi. % lang-it
-
 Pomocne może być zauważenie, że jeśli mamy dwa obroty $f$, $g$ o różnych środkach i ich złożenie jest obrotem, to $fg$ i $gf$ są obrotami o ten sam kąt, ale różnych środkach. % lang-pl
 A więc % lang-pl
+La classificazione delle isometrie del piano elimina il paradosso di Banach-Tarski dal piano, poiché non esiste un sottogruppo libero nel gruppo delle sue isometrie. % lang-it
+Ecco i dettagli. % lang-it
+Se $f$ è un'isometria, allora $f^2$ è una traslazione o una rotazione. % lang-it
+Se $g$ è anch'esso un'isometria, allora $f^2 g^2 f^{-2} g^{-2}$ è sempre una traslazione; per dimostrarlo bisogna considerare quattro casi, il più difficile è la coppia rotazione-rotazione. % lang-it
+Può essere utile notare che se abbiamo due rotazioni $f$, $g$ con centri diversi e la loro composizione è una rotazione, allora $fg$ e $gf$ sono rotazioni dello stesso angolo ma con centri diversi. % lang-it
 Quindi % lang-it
 
 \begin{align}
@@ -75,14 +63,11 @@ Quindi % lang-it
     & = \operatorname{Id},
 \end{align}
 co kończy dowód. % lang-pl
-
 (Po drodze skorzystaliśmy z faktów \ref{delta_1997_9_start} do \ref{delta_1997_9_end}, twierdzenia \ref{theorem_chasles}, że złożenie przesunięć jest przesunięciem oraz faktu \ref{for_banach_11}). % lang-pl
-ciò conclude la dimostrazione. % lang-it
-
 Napis \ref{slowo_banacha} to tak zwane słowo Banacha. % lang-pl
+ciò conclude la dimostrazione. % lang-it
 (Nel procedimento abbiamo usato i fatti \ref{delta_1997_9_start} fino a \ref{delta_1997_9_end}, il teorema \ref{theorem_chasles}, che la composizione di traslazioni è una traslazione e il fatto \ref{for_banach_11}). % lang-it
 L'espressione \ref{slowo_banacha} è la cosiddetta parola di Banach. % lang-it
-
 
 Istnieje podobna klasyfikacja izometrii przestrzeni $\mathbb R^3$, jak u Coxetera \cite[s. 113-122]{coxeter_1967}, Evesa \cite[s. 148]{eves1_1972}: % lang-pl
 Esiste una classificazione simile delle isometrie dello spazio $\mathbb R^3$, come in Coxeter \cite[s. 113-122]{coxeter_1967}, Eves \cite[s. 148]{eves1_1972}: % lang-it
@@ -91,7 +76,6 @@ Esiste una classificazione simile delle isometrie dello spazio $\mathbb R^3$, co
     Każda izometria przestrzeni $\mathbb R^3$ % lang-pl
     zachowuje orientację (i jest odwzorowaniem tożsamościowym; przesunięciem; obrotem wokół prostej albo ruchem śrubowym, czyli obrotem wokół prostej z przesunięciem) % lang-pl
     albo nie (i jest odbiciem względem płaszczyzny; odbiciem z poślizgiem; obrotem niewłaściwym, czyli obrotem wokół prostej z odbiciem w płaszczyźnie prostopadłej do niej). % lang-pl
-    
     Ogni isometria dello spazio $\mathbb R^3$ % lang-it
     conserva l'orientamento (ed è l'identità, una traslazione, una rotazione attorno a una retta o un moto elicoidale, cioè rotazione attorno a una retta con traslazione) % lang-it
     oppure no (ed è una riflessione rispetto a un piano, una simmetria traslante o una rotazione impropria, cioè rotazione attorno a una retta con riflessione in un piano perpendicolare ad essa). % lang-it
