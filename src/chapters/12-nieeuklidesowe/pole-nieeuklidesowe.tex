@@ -1,0 +1,56 @@
+% Źródła: Hartshorne s. 326--333 (§36, zad. 36.1); por. Eves s. 301--304.
+
+\section{Pole w geometrii nieeuklidesowej} % lang-pl
+\section{L'area nella geometria non euclidea} % lang-it
+\label{sekcja_pole_hartshorne}
+
+O polu w geometrii nieeuklidesowej pomyśli Gauss już w 1799 roku, na długo przed odkryciem samej geometrii. % lang-pl
+W tej sekcji zobaczymy, że defekt trójkąta jest naturalną miarą pola, absolutną -- niezależną od wyboru jednostki -- i że twierdzenie Wallace'a--Bolyaia--Gerwiena da się przenieść do płaszczyzny hiperbolicznej. % lang-pl
+Gauss penserà all'area nella geometria non euclidea già nel 1799, molto prima di scoprire la geometria stessa. % lang-it
+In questa sezione vedremo che il difetto di un triangolo è una misura naturale dell'area, assoluta -- indipendente dalla scelta dell'unità -- e che il teorema di Wallace--Bolyai--Gerwien si può trasferire al piano iperbolico. % lang-it
+
+W liście z 1799 roku do Farkasa (Wolfganga) Bolyaia Gauss napisze: gdyby udało się udowodnić, że istnieje trójkąt o polu większym od dowolnej figury, to potrafiłby udowodnić całą geometrię \cite[s. 332, zad. 36.1]{hartshorne_2000}. % lang-pl
+Hartshorne nazywa to zdanie aksjomatem Gaussa: dla każdej figury prostoliniowej istnieje trójkąt o większym polu; w płaszczyźnie Hilberta z aksjomatem Archimedesa aksjomat Gaussa pociąga piąty postulat \cite[s. 332]{hartshorne_2000}. % lang-pl
+Nel 1799, in una lettera a Farkas (Wolfgang) Bolyai, Gauss scriverà: se si potesse dimostrare che esiste un triangolo di area maggiore di qualsiasi figura data, saprebbe dimostrare tutta la geometria \cite[p. 332, es. 36.1]{hartshorne_2000}. % lang-it
+Hartshorne chiama questo enunciato assioma di Gauss: per ogni figura rettilinea esiste un triangolo di area maggiore; in un piano di Hilbert con l'assioma di Archimede l'assioma di Gauss implica il quinto postulato \cite[p. 332]{hartshorne_2000}. % lang-it
+\index[persons]{Gauss, Carl Friedrich}%
+
+Hartshorne \cite[s. 326]{hartshorne_2000} zauważa, że defekt trójkąta daje miarę pola, która jest \emph{absolutna}, bo nie zależy od arbitralnego wyboru jednostki, jak w geometrii euklidesowej. % lang-pl
+Wartości tej miary nie są liczbami rzeczywistymi (zgodnie z zasadą książki, by unikać liczb rzeczywistych), lecz elementami uporządkowanej grupy abelowej zbudowanej ze skończonych sum kątów -- „grupy okręgu nieskręconego'' \cite[s. 326--327]{hartshorne_2000}. % lang-pl
+Hartshorne \cite[p. 326]{hartshorne_2000} nota che il difetto di un triangolo fornisce una misura dell'area che è \emph{assoluta}, perché non dipende dalla scelta arbitraria di un'unità, come nella geometria euclidea. % lang-it
+I valori di questa misura non sono numeri reali (secondo il principio del libro di evitare i numeri reali), ma elementi di un gruppo abeliano ordinato costruito da somme finite di angoli -- il «gruppo del cerchio svolto» \cite[p. 326--327]{hartshorne_2000}. % lang-it
+
+\begin{theorem}
+	W półhiperbolicznej płaszczyźnie Hilberta istnieje funkcja miary pola o wartościach w grupie okręgu nieskręconego, jednoznacznie wyznaczona przez warunek, że jej wartością dla trójkąta jest jego defekt. % lang-pl
+	Nel piano di Hilbert semiiperbolico esiste una funzione misura dell'area a valori nel gruppo del cerchio svolto, univocamente determinata dalla condizione che il suo valore su un triangolo sia il suo difetto. % lang-it
+\end{theorem}
+
+Dowód: Hartshorne \cite[s. 328]{hartshorne_2000} (tw. 36.2); poprawność definicji wynika z addytywności defektu (zobacz sekcję \ref{sekcja_trzy_typy}). % lang-pl
+Dimostrazione: Hartshorne \cite[p. 328]{hartshorne_2000} (teor. 36.2); la buona definizione discende dall'additività del difetto (si veda la sezione \ref{sekcja_trzy_typy}). % lang-it
+
+Analogiem twierdzenia I.37 Euklidesa („trójkąty o wspólnej podstawie leżące między tymi samymi równoległymi mają równe pola'') jest fakt, że każdy trójkąt ma taką samą zawartość jak pewien czworokąt Saccheriego, a trójkąty o wspólnej podstawie i wspólnej środkowej -- równe pola \cite[s. 328--329]{hartshorne_2000} (prop. 36.3, wniosek 36.4). % lang-pl
+Zamiast „leżących między równoległymi'' trzeba wtedy powiedzieć, że wierzchołki leżą na jednej krzywej równoodległej od prostej środkowej \cite[s. 329]{hartshorne_2000}. % lang-pl
+L'analogo della proposizione I.37 di Euclide («triangoli con la stessa base compresi tra le stesse parallele hanno aree uguali») è il fatto che ogni triangolo ha lo stesso contenuto di un opportuno quadrilatero di Saccheri, e che triangoli con base comune e stessa mediana hanno la stessa area \cite[p. 328--329]{hartshorne_2000} (prop. 36.3, corollario 36.4). % lang-it
+Al posto di «comprese tra le parallele» bisogna allora dire che i vertici stanno su una stessa curva equidistante dalla retta mediana \cite[p. 329]{hartshorne_2000}. % lang-it
+
+\begin{theorem}
+[Bolyaia--Gerwiena, wersja nieeuklidesowa] % lang-pl
+[di Bolyai--Gerwien, versione non euclidea] % lang-it
+\index{twierdzenie!Wallace'a--Bolyaia--Gerwiena (nieeuklidesowe)} % lang-pl
+\index{teorema!di Wallace--Bolyai--Gerwien (non euclideo)} % lang-it
+	W półhiperbolicznej płaszczyźnie Hilberta dwie figury prostoliniowe o równych polach mają równą zawartość; przy aksjomacie Archimedesa są równoważne przez rozkład. % lang-pl
+	Nel piano di Hilbert semiiperbolico due figure rettilinee della stessa area hanno lo stesso contenuto; con l'assioma di Archimede sono equiscomponibili. % lang-it
+\end{theorem}
+
+Dowody: Hartshorne \cite[s. 330--332]{hartshorne_2000} (prop. 36.5, tw. 36.6, lemat 36.7); przy dodatkowym aksjomacie (E) z rozdziału o płaszczyznach Hilberta. % lang-pl
+Odpowiednik euklidesowy to twierdzenie \ref{twierdzenie_wallace_bolyai_gerwien}. % lang-pl
+Dimostrazioni: Hartshorne \cite[p. 330--332]{hartshorne_2000} (prop. 36.5, teor. 36.6, lemma 36.7); con l'assioma aggiuntivo (E) del capitolo sui piani di Hilbert. % lang-it
+L'analogo euclideo è il teorema \ref{twierdzenie_wallace_bolyai_gerwien}. % lang-it
+
+Hartshorne \cite[s. 332--333]{hartshorne_2000} zauważa też, że pole trójkąta nie da się porównywać tak jak w geometrii euklidesowej (gdzie środkowy trójkąt ma czterokrotnie mniejsze pole): dla każdej stałej $k > 1$ istnieje trójkąt równoramienny, którego pole jest mniejsze niż $k$ razy pole trójkąta łączącego środki jego boków (zad. 36.2). % lang-pl
+Pole koła nie ma w geometrii półhiperbolicznej ograniczenia z góry (zad. 36.3); analogiczna teoria dla płaszczyzny półeliptycznej używa nadmiaru zamiast defektu (zad. 36.9). % lang-pl
+Hartshorne \cite[p. 332--333]{hartshorne_2000} nota anche che l'area di un triangolo non si può confrontare come nella geometria euclidea (dove il triangolo mediano ha area quattro volte minore): per ogni costante $k > 1$ esiste un triangolo isoscele la cui area è minore di $k$ volte l'area del triangolo che unisce i punti medi dei suoi lati (es. 36.2). % lang-it
+L'area di un cerchio nella geometria semiiperbolica non ha limite superiore (es. 36.3); la teoria analoga per il piano semiellittico usa l'eccesso al posto del difetto (es. 36.9). % lang-it
+
+Zobacz też sekcję \ref{sekcja_suma_katow}, gdzie ten sam wynik przedstawiony jest za Evesem. % lang-pl
+Si veda anche la sezione \ref{sekcja_suma_katow}, dove lo stesso risultato è presentato secondo Eves. % lang-it
