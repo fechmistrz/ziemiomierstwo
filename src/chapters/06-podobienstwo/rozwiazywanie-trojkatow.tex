@@ -3,35 +3,28 @@
 %
 
 \section{Rozwiązywanie trójkątów} % lang-pl
-
 \section{Risoluzione dei triangoli} % lang-it
 % https://en.wikipedia.org/wiki/Solution_of_triangles
 
 % TODO: https://en.wikipedia.org/wiki/Skinny_triangle
 
 Rozwiązywanie trójkątów (łacińskie \emph{solutio triangulorum}) to najważniejsze rachunkowe zadanie w~trygonometrii. % lang-pl
-
 Dane są pewne informacje o trójkącie na płaszczyźnie lub sferze, takie jak: długości boków albo kąty wewnętrzne; należy ustalić miary pozostałych. % lang-pl
-La risoluzione dei triangoli (dal latino \emph{solutio triangulorum}) è il compito computazionale più importante in trigonometria. % lang-it
-
 Zastosowania obejmują geodezję, astronomię, nawigację i nie tylko. % lang-pl
+La risoluzione dei triangoli (dal latino \emph{solutio triangulorum}) è il compito computazionale più importante in trigonometria. % lang-it
 Sono dati alcuni dati su un triangolo nel piano o sulla sfera, come: lunghezze dei lati o angoli interni; occorre determinare le misure degli altri. % lang-it
 Le applicazioni includono geodesia, astronomia, navigazione e non solo. % lang-it
 
-
 Ograniczymy się do płaszczyzny i podamy kilka nowych zależności trygonometrycznych, które pomagają w rozwiązywaniu trójkątów. % lang-pl
-Ci limiteremo al piano e presenteremo alcune nuove relazioni trigonometriche che aiutano nella risoluzione dei triangoli. % lang-it
-
 Znamy już twierdzenia sinusów i kosinusów; w ogólności to drugie jest bezpieczniejsze od pierwszego (ponieważ z faktu, że $\sin \alpha = \frac 1 2$ nie wynika, czy kąt $\alpha$ jest ostry, czy rozwarty, kosinus zaś jest jednoznaczny). % lang-pl
+Ci limiteremo al piano e presenteremo alcune nuove relazioni trigonometriche che aiutano nella risoluzione dei triangoli. % lang-it
 Conosciamo già il teorema dei seni e dei coseni; in generale il secondo è più sicuro del primo (poiché dal fatto che $\sin \alpha = \frac 1 2$ non si deduce se l'angolo $\alpha$ è acuto o ottuso, mentre il coseno è univoco). % lang-it
-
 
 W każdym z poniższych stwierdzeń mamy trójkąt o kątach $\alpha, \beta, \gamma$, bokach $a, b, c$, połowie obwodu $p = \frac 1 2 (a + b + c)$, promieniu okręgu opisanego $R$ i wpisanego $r$. % lang-pl
 In ciascuna delle seguenti affermazioni consideriamo un triangolo con angoli $\alpha, \beta, \gamma$, lati $a, b, c$, semiperimetro $p = \frac 1 2 (a + b + c)$, raggio del circolo circoscritto $R$ e raggio del circolo inscritto $r$. % lang-it
 
 \begin{proposition}
     Zachodzi % lang-pl
-    
     Vale % lang-it
     \begin{equation}
     S = 2 R^2 \sin \alpha \sin \beta \sin \gamma.
@@ -40,7 +33,6 @@ In ciascuna delle seguenti affermazioni consideriamo un triangolo con angoli $\a
 
 \begin{proposition}
     Zachodzi % lang-pl
-    
     Vale % lang-it
     \begin{equation}
         p = R (\sin \alpha + \sin \beta + \sin \theta).
@@ -49,32 +41,31 @@ In ciascuna delle seguenti affermazioni consideriamo un triangolo con angoli $\a
 
 \begin{proposition}
     Zachodzi % lang-pl
-    
     Vale % lang-it
     \begin{equation}
         r = 4R \sin \frac \alpha 2 \sin \frac \beta 2 \sin \frac \gamma 2.
     \end{equation}
 \end{proposition}
 
-\begin{proposition}[wzór Newtona] % lang-pl
+\begin{proposition}
+[wzór Newtona] % lang-pl
+[formula di Newton] % lang-it
 \index{wzór!Newtona}% % lang-pl
     Zachodzi % lang-pl
-\begin{proposition}[formula di Newton] % lang-it
 \index{formula!di Newton}% % lang-it
-    
     Vale % lang-it
     \begin{equation}
         \frac{a + b}{c} = \frac{\cos \frac 1 2 (\alpha - \beta)}{\cos \frac 1 2 (\alpha + \beta)}.
     \end{equation}
 \end{proposition}
 
-\begin{proposition}[wzór Mollweidego] % lang-pl
+\begin{proposition}
+[wzór Mollweidego] % lang-pl
+[formula di Mollweide] % lang-it
 \index{wzór!Mollweidego}% % lang-pl
-\begin{proposition}[formula di Mollweide] % lang-it
 \index{formula!di Mollweide}% % lang-it
 \label{wzor_mollweidego}%
     Zachodzi % lang-pl
-    
     Vale % lang-it
     \begin{equation}
         \frac{a - b}{c} = \frac{\sin \frac 1 2 (\alpha - \beta)}{\sin \frac 1 2 (\alpha + \beta)}.
@@ -82,26 +73,23 @@ In ciascuna delle seguenti affermazioni consideriamo un triangolo con angoli $\a
 \end{proposition}
 
 (Nie ma zgodności co do powyższych nazw). % lang-pl
-
 Nieco bardziej geometryczną wersję wzorów poda Izaak Newton w 1707 roku, potem Friedrich von Oppel w 1746. % lang-pl
 (Non c'è consenso sui nomi sopra riportati). % lang-it
-
 Una versione leggermente più geometrica delle formule è data da Isaac Newton nel 1707, poi da Friedrich von Oppel nel 1746. % lang-it
 \index[persons]{Newton, Izaak}% % lang-pl
 \index[persons]{Newton, Isaac}% % lang-it
 \index[persons]{Oppel@von Oppel, Friedrich}%
 Wyrażenia, których używać będziemy do końca świata i jeden dzień dłużej zawdzięczymy Thomasowi Simpsonowi z 1748 roku, oraz Karlowi Mollweidemu, który opublikuje to samo w 1808 roku bez cytowania poprzedników. % lang-pl
-
 Le espressioni che useremo fino alla fine del mondo e un giorno di più si devono a Thomas Simpson del 1748 e a Karl Mollweide, che pubblicò lo stesso nel 1808 senza citare i predecessori. % lang-it
 \index[persons]{Simpson, Thomas}%
 \index[persons]{Mollweide, Karl}%
 
-\begin{proposition}[wzór Regiomontanusa] % lang-pl
+\begin{proposition}
+[wzór Regiomontanusa] % lang-pl
+[formula di Regiomontano] % lang-it
 \index{wzór!Regiomontanusa}% % lang-pl
     Zachodzi % lang-pl
-\begin{proposition}[formula di Regiomontano] % lang-it
 \index{formula!di Regiomontano}% % lang-it
-    
     Vale % lang-it
     \begin{equation}
         \frac{a + b}{a- b} = \frac{\tan \frac 1 2 (\alpha + \beta)}{\tan \frac 1 2 (\alpha - \beta)}.
@@ -110,17 +98,14 @@ Le espressioni che useremo fino alla fine del mondo e un giorno di più si devon
 % TODO: https://en.wikipedia.org/wiki/Law_of_tangents
 
 Regiomontanus będzie znany gorzej jako Johannes Müller von Königsberg. % lang-pl
-
 Regiomontano è meno noto come Johannes Müller von Königsberg. % lang-it
 \index[persons]{Königsberg@von Königsberg, Johannes|see{Regiomontanus}}%
 \index[persons]{Regiomontanus}%
 
 \begin{proposition}
     Niech $\alpha, \beta, \gamma$ będą miarami kątów trójkąta o bokach $a, b, c$, polu $S$ i promieniu okręgu opisanego $R$. % lang-pl
-    
     Wtedy % lang-pl
     Siano $\alpha, \beta, \gamma$ le misure degli angoli di un triangolo con lati $a, b, c$, area $S$ e raggio del circolo circoscritto $R$. % lang-it
-    
     Allora % lang-it
     \begin{equation}
         \tan \alpha + \tan \beta + \tan \gamma = \frac{4S}{a^2 + b^2 + c^2 - 8R^2}
