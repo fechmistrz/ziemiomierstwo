@@ -1,141 +1,212 @@
 % eksperymentalne tłumaczenie na włoski
 
-\section{Pole powierzchni}
+\section{Pole powierzchni} % lang-pl
+\section{Area} % lang-it
 \label{sekcja_pole_powierzchni}
 
-Pole powierzchni opisuje, jak duża jest dana figura płaska.
-Opiszemy, jak na przestrzeni wieków zmieniać się będzie matematyczny opis pola, skupiając się na rozcięciach.
-Sekcję zwieńczy twierdzenie Wallace'a-Bolyaia-Gerwiena, charakteryzujące figury o równych polach.
-Miarę Lebesgue'a wzmiankujemy krótko na koniec w formie ciekawostki, nie będzie nam do niczego potrzebna.
+Pole powierzchni opisuje, jak duża jest dana figura płaska. % lang-pl
+L'area descrive quanto è grande una data figura piana. % lang-it
+Opiszemy, jak na przestrzeni wieków zmieniać się będzie matematyczny opis pola, skupiając się na rozcięciach. % lang-pl
+Descriveremo come, nel corso dei secoli, cambierà la descrizione matematica dell'area, concentrandoci sulle dissezioni. % lang-it
+Sekcję zwieńczy twierdzenie Wallace'a-Bolyaia-Gerwiena, charakteryzujące figury o równych polach. % lang-pl
+La sezione si concluderà con il teorema di Wallace-Bolyai-Gerwien, che caratterizza le figure di area uguale. % lang-it
+Miarę Lebesgue'a wzmiankujemy krótko na koniec w formie ciekawostki, nie będzie nam do niczego potrzebna. % lang-pl
+Accenneremo brevemente alla misura di Lebesgue alla fine, come curiosità: non ci servirà a nulla. % lang-it
 
-Euklides nawet nie zdefiniuje on figur o równych polach, a tym bardziej samego pola jako liczby.
-(Będzie unikać problemu kwadratury koła, ale w księdze XII napisze, że pola dwóch kół mają się do siebie tak, jak kwadraty ich promieni.
-Czytaj dalej w sekcji \ref{sekcja_przyblizenia_pi}.)
-Ale czytając jego dowody możemy domyślić się, że równopolowe figury mają następujące właściwości:
+Euklides nawet nie zdefiniuje on figur o równych polach, a tym bardziej samego pola jako liczby. % lang-pl
+Euclide non definirà nemmeno le figure di area uguale, tanto meno l'area stessa come numero. % lang-it
+(Będzie unikać problemu kwadratury koła, ale w księdze XII napisze, że pola dwóch kół mają się do siebie tak, jak kwadraty ich promieni. % lang-pl
+(Eviterà il problema della quadratura del cerchio, ma nel libro XII scriverà che le aree di due cerchi stanno tra loro come i quadrati dei loro raggi. % lang-it
+Czytaj dalej w sekcji \ref{sekcja_przyblizenia_pi}.) % lang-pl
+Continua a leggere nella sezione \ref{sekcja_przyblizenia_pi}.) % lang-it
+Ale czytając jego dowody możemy domyślić się, że równopolowe figury mają następujące właściwości: % lang-pl
+Ma leggendo le sue dimostrazioni possiamo intuire che le figure equivalenti (equal-area) hanno le seguenti proprietà: % lang-it
 \begin{enumerate}
-\item przystające figury mają równe pola;
-\item suma, różnica i połówki figur o równych polach mają równe pola;
-\item całość jest większa od części i wreszcie
-\item boki kwadratów o równych polach są równej długości.
+\item przystające figury mają równe pola; % lang-pl
+\item le figure congruenti hanno aree uguali; % lang-it
+\item suma, różnica i połówki figur o równych polach mają równe pola; % lang-pl
+\item la somma, la differenza e le metà di figure di area uguale hanno aree uguali; % lang-it
+\item całość jest większa od części i wreszcie % lang-pl
+\item il tutto è maggiore della parte e, infine, % lang-it
+\item boki kwadratów o równych polach są równej długości. % lang-pl
+\item i lati di quadrati di area uguale hanno la stessa lunghezza. % lang-it
 \end{enumerate}
 
-Czwarty punkt jest wnioskiem z trzeciego.
-Hartshorne \cite[s. 196--204]{hartshorne2000} podczas formalizacji pojęcia pola dla płaszczyzny Hilberta wspomni aksjomat de Zolta:
+Czwarty punkt jest wnioskiem z trzeciego. % lang-pl
+Il quarto punto è una conseguenza del terzo. % lang-it
+Hartshorne \cite[s. 196--204]{hartshorne2000} podczas formalizacji pojęcia pola dla płaszczyzny Hilberta wspomni aksjomat de Zolta: % lang-pl
+Hartshorne \cite[p. 196--204]{hartshorne2000}, formalizzando il concetto di area per il piano di Hilbert, menzionerà l'assioma di De Zolt: % lang-it
 
-\begin{axiom}[Z, de Zolta]
-\index{aksjomat!de Zolta}%
-    Jeśli $Q$ jest figurą zawartą wewnątrz figury $P$ tak, że różnica $P \setminus Q$ ma niepuste wnętrze, to figury $P$ oraz $Q$ nie są równopolowe.
+\begin{axiom}[Z, de Zolta] % lang-pl
+\begin{axiom}[Z, di De Zolt] % lang-it
+\index{aksjomat!de Zolta}% % lang-pl
+\index{assioma!di De Zolt}% % lang-it
+    Jeśli $Q$ jest figurą zawartą wewnątrz figury $P$ tak, że różnica $P \setminus Q$ ma niepuste wnętrze, to figury $P$ oraz $Q$ nie są równopolowe. % lang-pl
+    Se $Q$ è una figura contenuta all'interno di una figura $P$ in modo tale che la differenza $P \setminus Q$ abbia interno non vuoto, allora le figure $P$ e $Q$ non sono equivalenti. % lang-it
 \end{axiom}
 
-Starożytni oczywiście nie będą znać teorii miary i postąpią inaczej: wykorzystają zapomniane przez ich potomków rozcięcia. % dissections.
-Technika ta pojawi się wielokrotnie, na przykład w dowodzie (I.35), że równoległoboki o~tej samej podstawie i równych wysokościach mają równe pola.
-W 1873 roku Henry Perigal (a w 1917 inny Henry, Dudeney) poda dowód twierdzenia Pitagorasa wykorzystujący rozcięcia.
+Starożytni oczywiście nie będą znać teorii miary i postąpią inaczej: wykorzystają zapomniane przez ich potomków rozcięcia. % dissections. % lang-pl
+Gli antichi, ovviamente, non conosceranno la teoria della misura e procederanno diversamente: utilizzeranno le dissezioni, dimenticate dai loro posteri. % lang-it
+Technika ta pojawi się wielokrotnie, na przykład w dowodzie (I.35), że równoległoboki o~tej samej podstawie i równych wysokościach mają równe pola. % lang-pl
+Questa tecnica comparirà più volte, per esempio nella dimostrazione (I.35) che i parallelogrammi con la stessa base e altezze uguali hanno aree uguali. % lang-it
+W 1873 roku Henry Perigal (a w 1917 inny Henry, Dudeney) poda dowód twierdzenia Pitagorasa wykorzystujący rozcięcia. % lang-pl
+Nel 1873 Henry Perigal (e nel 1917 un altro Henry, Dudeney) fornirà una dimostrazione del teorema di Pitagora basata sulle dissezioni. % lang-it
 \index[persons]{Dudeney, Henry}%
 \index[persons]{Perigal, Henry}%
-Dokładnie opiszą to Eves \cite[s. 194-239]{eves1_1972} i (z nieco inną notacją) Hartshorne \cite[s. 212-221]{hartshorne2000}.
+Dokładnie opiszą to Eves \cite[s. 194-239]{eves1_1972} i (z nieco inną notacją) Hartshorne \cite[s. 212-221]{hartshorne2000}. % lang-pl
+Lo descriveranno in dettaglio Eves \cite[p. 194-239]{eves1_1972} e (con una notazione leggermente diversa) Hartshorne \cite[p. 212-221]{hartshorne2000}. % lang-it
 
-Niech $P, Q$ będą jakimiś figurami o tej samej powierzchni.
-Będziemy mówić, że są równopolowe (\emph{equivalent}) i pisać $P \simeq Q$.
-Oznaczenie $P \cong Q$ zachowujemy dla zwykłego przystawania.
+Niech $P, Q$ będą jakimiś figurami o tej samej powierzchni. % lang-pl
+Siano $P, Q$ due figure di area uguale. % lang-it
+Będziemy mówić, że są równopolowe (\emph{equivalent}) i pisać $P \simeq Q$. % lang-pl
+Diremo che sono equivalenti (\emph{equivalent}) e scriveremo $P \simeq Q$. % lang-it
+Oznaczenie $P \cong Q$ zachowujemy dla zwykłego przystawania. % lang-pl
+Riserviamo la notazione $P \cong Q$ per la consueta congruenza. % lang-it
 
 \begin{definition}
     \label{definicja_rownowazne_przez_dodawanie}%
-    Dwa wielokąty $P$, $Q$ nazywamy równoważnymi przez rozcinanie, jeśli można rozciąć każdy na skończoną liczbę wielokątnych kawałków o rozłącznych wnętrzach:   
+    Dwa wielokąty $P$, $Q$ nazywamy równoważnymi przez rozcinanie, jeśli można rozciąć każdy na skończoną liczbę wielokątnych kawałków o rozłącznych wnętrzach:   % lang-pl
+    Due poligoni $P$, $Q$ si dicono equiscomponibili se si può ritagliare ciascuno di essi in un numero finito di pezzi poligonali con interni disgiunti: % lang-it
     \begin{equation}
         P = \bigcup_{k=1}^n P_k, \quad\quad\quad Q = \bigcup_{k=1}^n Q_k,
     \end{equation}
-    że kawałek $P_k$ przystaje do $Q_k$ (istnieje pewna izometria $f_k$ taka, że $f_k[P_k] = Q_k$).
-    Oznaczamy to $P \cong_+ Q$.
+    że kawałek $P_k$ przystaje do $Q_k$ (istnieje pewna izometria $f_k$ taka, że $f_k[P_k] = Q_k$). % lang-pl
+    tali che il pezzo $P_k$ sia congruente a $Q_k$ (esiste cioè un'isometria $f_k$ tale che $f_k[P_k] = Q_k$). % lang-it
+    Oznaczamy to $P \cong_+ Q$. % lang-pl
+    Lo denotiamo con $P \cong_+ Q$. % lang-it
 \end{definition}
 
-Eves będzie mówić o przystawaniu przez dodawanie, ale w użyciu będą inne określenia, takie jak \emph{equidecomposable} albo \emph{scissors-congruent}.
-Rozcinanie wielokątów będzie przewijać się przez wiele artykułów w Delcie:
-Joanny Jaszuńskiej w $\Delta_{15}^{8}$, % {https://www.deltami.edu.pl/2015/08/nozyczki-matematyczne/}
-Marka Kordosa w $\Delta_{17}^4$, % {https://www.deltami.edu.pl/2017/04/dedukcja-lokalna-na-przykladzie/}
-Bartłomieja Bzdęgi w $\Delta_{20}^6$ (rozcinanie na równoległoboki), % \todofoot{https://www.deltami.edu.pl/2020/06/rownoleglobok/ zad. 8}
-Miłosza Kwiatkowskiego w $\Delta_{25}^3$. % {https://www.deltami.edu.pl/2025/03/wycinanki-i-ukladanki/}
+Eves będzie mówić o przystawaniu przez dodawanie, ale w użyciu będą inne określenia, takie jak \emph{equidecomposable} albo \emph{scissors-congruent}. % lang-pl
+Eves parlerà di congruenza per addizione, ma saranno in uso anche altri termini, come \emph{equidecomposable} oppure \emph{scissors-congruent}. % lang-it
+Rozcinanie wielokątów będzie przewijać się przez wiele artykułów w Delcie: % lang-pl
+Le dissezioni di poligoni ricorreranno in molti articoli su Delta: % lang-it
+Joanny Jaszuńskiej w $\Delta_{15}^{8}$, % {https://www.deltami.edu.pl/2015/08/nozyczki-matematyczne/} % lang-pl
+di Joanna Jaszuńska in $\Delta_{15}^{8}$, % lang-it
+Marka Kordosa w $\Delta_{17}^4$, % {https://www.deltami.edu.pl/2017/04/dedukcja-lokalna-na-przykladzie/} % lang-pl
+di Marek Kordos in $\Delta_{17}^4$, % lang-it
+Bartłomieja Bzdęgi w $\Delta_{20}^6$ (rozcinanie na równoległoboki), % \todofoot{https://www.deltami.edu.pl/2020/06/rownoleglobok/ zad. 8} % lang-pl
+di Bartłomiej Bzdęga in $\Delta_{20}^6$ (dissezione in parallelogrammi), % lang-it
+Miłosza Kwiatkowskiego w $\Delta_{25}^3$. % {https://www.deltami.edu.pl/2025/03/wycinanki-i-ukladanki/} % lang-pl
+di Miłosz Kwiatkowski in $\Delta_{25}^3$. % lang-it
 
 \begin{definition}
-    Dwa wielokąty nazywamy równoważnymi przez doklejanie, jeśli możemy dołączyć do nich pary przystających kawałków tak, by końcowe figury były przystające przez dodawanie.
-    Formalnie: istnieją przystające przez dodawanie wielokąty $R \cong_+ S$ oraz pewne wielokąty $U_1, U_2, \ldots, U_n$ i $V_1, V_2, \ldots, V_n$ takie, że: $U_1 \cong V_i$, $R = P \sqcup U_1 \sqcup \ldots \sqcup U_n$ oraz $S = Q \sqcup V_1 \sqcup \ldots \sqcup V_n$.
-    Oznaczamy to $P \cong_- Q$.
+    Dwa wielokąty nazywamy równoważnymi przez doklejanie, jeśli możemy dołączyć do nich pary przystających kawałków tak, by końcowe figury były przystające przez dodawanie. % lang-pl
+    Due poligoni si dicono equicompletabili se a ciascuno di essi possiamo aggiungere coppie di pezzi congruenti in modo che le figure finali risultino equiscomponibili. % lang-it
+    Formalnie: istnieją przystające przez dodawanie wielokąty $R \cong_+ S$ oraz pewne wielokąty $U_1, U_2, \ldots, U_n$ i $V_1, V_2, \ldots, V_n$ takie, że: $U_1 \cong V_i$, $R = P \sqcup U_1 \sqcup \ldots \sqcup U_n$ oraz $S = Q \sqcup V_1 \sqcup \ldots \sqcup V_n$. % lang-pl
+    Formalmente: esistono poligoni equiscomponibili $R \cong_+ S$ e alcuni poligoni $U_1, U_2, \ldots, U_n$ e $V_1, V_2, \ldots, V_n$ tali che: $U_1 \cong V_i$, $R = P \sqcup U_1 \sqcup \ldots \sqcup U_n$ e $S = Q \sqcup V_1 \sqcup \ldots \sqcup V_n$. % lang-it
+    Oznaczamy to $P \cong_- Q$. % lang-pl
+    Lo denotiamo con $P \cong_- Q$. % lang-it
 \end{definition}
 
 \begin{proposition}
     \label{congruent_addition_subtraction}%
-    Prawdziwe są implikacje:
+    Prawdziwe są implikacje: % lang-pl
+    Valgono le seguenti implicazioni: % lang-it
     \begin{itemize}
-        \item jeśli $P \cong Q$, to $P \cong_+ Q$.
-        \item jeśli $P \cong_+ Q$, to $P \cong_- Q$.
-        \item jeśli $P \cong_- Q$, to $P$ oraz $Q$ są równopolowe.
+        \item jeśli $P \cong Q$, to $P \cong_+ Q$. % lang-pl
+        \item se $P \cong Q$, allora $P \cong_+ Q$. % lang-it
+        \item jeśli $P \cong_+ Q$, to $P \cong_- Q$. % lang-pl
+        \item se $P \cong_+ Q$, allora $P \cong_- Q$. % lang-it
+        \item jeśli $P \cong_- Q$, to $P$ oraz $Q$ są równopolowe. % lang-pl
+        \item se $P \cong_- Q$, allora $P$ e $Q$ sono equivalenti. % lang-it
     \end{itemize}
 \end{proposition}
 
-Konieczność dowodu tego twierdzenia dostrzeże W. H. Jackson w 1912 roku, szczegóły można znaleźć u Evesa \cite[s. 198, 199]{eves1_1972} (gdzie pokazuje też, że relacje $\cong_+$ i $\cong_-$ są przechodnie).
+Konieczność dowodu tego twierdzenia dostrzeże W. H. Jackson w 1912 roku, szczegóły można znaleźć u Evesa \cite[s. 198, 199]{eves1_1972} (gdzie pokazuje też, że relacje $\cong_+$ i $\cong_-$ są przechodnie). % lang-pl
+La necessità di dimostrare questo fatto sarà notata da W. H. Jackson nel 1912; i dettagli si possono trovare in Eves \cite[p. 198, 199]{eves1_1972} (dove si mostra anche che le relazioni $\cong_+$ e $\cong_-$ sono transitive). % lang-it
 
-Eves wprowadza pojęcie wierzchołka rzutującego (z angielskiego \emph{projecting vertex}, czyli taki, który można oddzielić prostą od pozostałych wierzchołków) i pokazuje, że każdy wielokąt ma co najmniej trzy niewspółliniowe wierzchołki rzutujące.
-Jest to potrzebne do uzasadnienia, że:
+Eves wprowadza pojęcie wierzchołka rzutującego (z angielskiego \emph{projecting vertex}, czyli taki, który można oddzielić prostą od pozostałych wierzchołków) i pokazuje, że każdy wielokąt ma co najmniej trzy niewspółliniowe wierzchołki rzutujące. % lang-pl
+Eves introduce il concetto di vertice proiettante (dall'inglese \emph{projecting vertex}, cioè un vertice che si può separare dagli altri vertici mediante una retta) e mostra che ogni poligono ha almeno tre vertici proiettanti non allineati. % lang-it
+Jest to potrzebne do uzasadnienia, że: % lang-pl
+Ciò è necessario per giustificare che: % lang-it
 
 \begin{proposition}
-    Każdy wielokąt posiada triangulację: rozcięcie na trójkąty, których wierzchołki są wierzchołkami wyjściowego wielokąta.
+    Każdy wielokąt posiada triangulację: rozcięcie na trójkąty, których wierzchołki są wierzchołkami wyjściowego wielokąta. % lang-pl
+    Ogni poligono possiede una triangolazione: una dissezione in triangoli i cui vertici sono vertici del poligono di partenza. % lang-it
 \end{proposition}
 
-W przypadku wielokątów wypukłych możemy żądać nawet, by wszystkie trójkąty miały wspólny wierzchołek.
+W przypadku wielokątów wypukłych możemy żądać nawet, by wszystkie trójkąty miały wspólny wierzchołek. % lang-pl
+Nel caso di poligoni convessi possiamo persino richiedere che tutti i triangoli abbiano un vertice comune. % lang-it
 
 \begin{proposition}
-    Każdy trójkąt jest równoważny przez rozcinanie z równopolowym prostokątem o boku takim samym jak najdłuższy bok trójkąta.
+    Każdy trójkąt jest równoważny przez rozcinanie z równopolowym prostokątem o boku takim samym jak najdłuższy bok trójkąta. % lang-pl
+    Ogni triangolo è equiscomponibile con un rettangolo di area uguale avente un lato uguale al lato più lungo del triangolo. % lang-it
 \end{proposition}
 
 \begin{corollary}
-    Każdy prostokąt jest równoważny przez rozcinanie z kwadratem o takim samym polu.
+    Każdy prostokąt jest równoważny przez rozcinanie z kwadratem o takim samym polu. % lang-pl
+    Ogni rettangolo è equiscomponibile con un quadrato della stessa area. % lang-it
 \end{corollary}
 
 \begin{corollary}
-    Każdy wielokąt jest równoważny przez rozcinanie z kwadratem o takim samym polu.
+    Każdy wielokąt jest równoważny przez rozcinanie z kwadratem o takim samym polu. % lang-pl
+    Ogni poligono è equiscomponibile con un quadrato della stessa area. % lang-it
 \end{corollary}
 
-Doszliśmy wreszcie do wyniku Williama Wallace'a (z 1807 roku), znalezionego niezależnie przez Farkasa Bolyaia (1833) i Paula Gerwiena (1835):
+Doszliśmy wreszcie do wyniku Williama Wallace'a (z 1807 roku), znalezionego niezależnie przez Farkasa Bolyaia (1833) i Paula Gerwiena (1835): % lang-pl
+Siamo infine giunti al risultato di William Wallace (del 1807), trovato indipendentemente da Farkas Bolyai (1833) e Paul Gerwien (1835): % lang-it
 % P. Gerwien, Zerschneidung jeder beliebigen Anzahl von gleichen geradlinigen Figuren in dieselben Stu¨ cke, Journal fu¨ r die reine und angewandte Mathematik 10(1833), 228–234.
 
 % W. Bolyai de Bolya, Tentamen. Iuventutem studiosam in ele- menta matheseos purae, elementaris ac sublı`mioris, methodo intuitiva, evidentiaque huic propria, introducendi. Cum appendice triplici, Maros Va´ sa´ rhelyini; tomus primus 1932, tomus secudus 1933.
 
-\begin{theorem}[Wallace'a-Bolyaia-Gerwiena]
+\begin{theorem}[Wallace'a-Bolyaia-Gerwiena] % lang-pl
+\begin{theorem}[di Wallace-Bolyai-Gerwien] % lang-it
 \label{twierdzenie_wallace_bolyai_gerwien}%
-    Następujące warunki są równoważne:
+    Następujące warunki są równoważne: % lang-pl
+    Le seguenti condizioni sono equivalenti: % lang-it
     \begin{itemize}
-    \item dwie figury są równopolowe,
-    \item dwie figury są równoważne przez rozcinanie.
+    \item dwie figury są równopolowe, % lang-pl
+    \item due figure sono equivalenti, % lang-it
+    \item dwie figury są równoważne przez rozcinanie. % lang-pl
+    \item due figure sono equiscomponibili. % lang-it
     \end{itemize}
-    Punkty rozcięcia można wyznaczyć przy pomocy samego cyrkla i linijki.
+    Punkty rozcięcia można wyznaczyć przy pomocy samego cyrkla i linijki. % lang-pl
+    I punti di taglio si possono determinare usando solo compasso e riga. % lang-it
 \end{theorem}
 % https://en.wikipedia.org/wiki/Wallace-Bolyai-Gerwien_theorem
 
-Laczkovich wzmocni później ten wynik: każdy wielokąt można rozciąć na kawałki i złożyć z nich równopolowy kwadrat tak, by kawałki były przesuwane, ale nie obracane.
+Laczkovich wzmocni później ten wynik: każdy wielokąt można rozciąć na kawałki i złożyć z nich równopolowy kwadrat tak, by kawałki były przesuwane, ale nie obracane. % lang-pl
+Laczkovich rafforzerà in seguito questo risultato: ogni poligono può essere tagliato in pezzi e ricomposto in un quadrato equivalente in modo tale che i pezzi vengano traslati, ma non ruotati. % lang-it
 % M. Laczkovich, Equidecomposability and discrepancy: a solution to Tarski’s circle squaring problem, Journal fu¨ r die reine und angewandte Mathematik 404(1990), 77–117.
 % M. Laczkovich, Paradoxical decompositions: a survey of recent results, Proc. First European Congress of Mathematics, Vol. II (Paris, 1992), Progress in Mathematics 120, Birkha¨ user, Basel 1994
 
-\subsection{Miara Lebesgue'a}
+\subsection{Miara Lebesgue'a} % lang-pl
+\subsection{La misura di Lebesgue} % lang-it
 
-Skończymy na odległych czasach.
-Tysiące lat po Euklidesie pojęcie rozmiaru (nie tylko długości, ale przede wszystkim pola figur płaskich oraz objętości brył) sformalizuje się przez miarę Jordana, albo jej uogólnienie --- miarę Lebesgue'a.
-O mierze wspomina Hartshorne \cite[s. 205]{hartshorne2000}; jest to funkcja, która przyporządkowuje każdej figurze $P$ pewną nieujemną liczbę $[P]$ (zwaną polem) taką, że:
+Skończymy na odległych czasach. % lang-pl
+Concluderemo con tempi lontani. % lang-it
+Tysiące lat po Euklidesie pojęcie rozmiaru (nie tylko długości, ale przede wszystkim pola figur płaskich oraz objętości brył) sformalizuje się przez miarę Jordana, albo jej uogólnienie --- miarę Lebesgue'a. % lang-pl
+Migliaia di anni dopo Euclide, il concetto di grandezza (non solo la lunghezza, ma soprattutto l'area delle figure piane e il volume dei solidi) si formalizzerà attraverso la misura di Jordan, oppure la sua generalizzazione: la misura di Lebesgue. % lang-it
+O mierze wspomina Hartshorne \cite[s. 205]{hartshorne2000}; jest to funkcja, która przyporządkowuje każdej figurze $P$ pewną nieujemną liczbę $[P]$ (zwaną polem) taką, że: % lang-pl
+Della misura parla Hartshorne \cite[p. 205]{hartshorne2000}; si tratta di una funzione che associa a ogni figura $P$ un numero non negativo $[P]$ (detto area) tale che: % lang-it
 \begin{itemize}
-    \item pole każdego trójkąta jest dodatnie: $[\triangle] > 0$;
-    \item przystające trójkąty mają równe pola;
-    \item jeśli dwie figury $P, Q$ nie nachodzą na siebie, to $[P \cup Q] = [P] + [Q]$.
+    \item pole każdego trójkąta jest dodatnie: $[\triangle] > 0$; % lang-pl
+    \item l'area di ogni triangolo è positiva: $[\triangle] > 0$; % lang-it
+    \item przystające trójkąty mają równe pola; % lang-pl
+    \item triangoli congruenti hanno aree uguali; % lang-it
+    \item jeśli dwie figury $P, Q$ nie nachodzą na siebie, to $[P \cup Q] = [P] + [Q]$. % lang-pl
+    \item se due figure $P, Q$ non si sovrappongono, allora $[P \cup Q] = [P] + [Q]$. % lang-it
 \end{itemize}
 
-Z istnienia takiej funkcji wynika aksjomat (Z), wysłowiony przez nas niżej.
-Guzicki \cite[s. 38-68]{guzicki_2021} również wspomni o mierze Jordana.
-Zauważy jednak, że w polskich szkołach każdą figurę można rozciąć na wielokąty i wycinki kołowe, co prowadzi do prostszej aksjoamtyzacji (i naturalnie do dowodu twierdzenia \ref{twierdzenie_wallace_bolyai_gerwien}, Wallace'a-Bolyaia-Gerwiena).
+Z istnienia takiej funkcji wynika aksjomat (Z), wysłowiony przez nas niżej. % lang-pl
+Dall'esistenza di una tale funzione segue l'assioma (Z), da noi enunciato più sotto. % lang-it
+Guzicki \cite[s. 38-68]{guzicki_2021} również wspomni o mierze Jordana. % lang-pl
+Anche Guzicki \cite[p. 38-68]{guzicki_2021} menzionerà la misura di Jordan. % lang-it
+Zauważy jednak, że w polskich szkołach każdą figurę można rozciąć na wielokąty i wycinki kołowe, co prowadzi do prostszej aksjoamtyzacji (i naturalnie do dowodu twierdzenia \ref{twierdzenie_wallace_bolyai_gerwien}, Wallace'a-Bolyaia-Gerwiena). % lang-pl
+Osserverà però che, nelle scuole polacche, ogni figura può essere ritagliata in poligoni e settori circolari, il che porta a un'assiomatizzazione più semplice (e naturalmente alla dimostrazione del teorema \ref{twierdzenie_wallace_bolyai_gerwien}, di Wallace-Bolyai-Gerwien). % lang-it
 
-Pole jest wyznaczone jednoznacznie z dokładnością do stałej.
-Wartość stałej ustala się zazwyczaj przez przyjęcie, że trójkąt o podstawie $a$ oraz wysokości $h$ ma pole $\frac 1 2 ah$.
+Pole jest wyznaczone jednoznacznie z dokładnością do stałej. % lang-pl
+L'area è determinata in modo univoco a meno di una costante. % lang-it
+Wartość stałej ustala się zazwyczaj przez przyjęcie, że trójkąt o podstawie $a$ oraz wysokości $h$ ma pole $\frac 1 2 ah$. % lang-pl
+Il valore della costante si fissa di solito assumendo che un triangolo di base $a$ e altezza $h$ abbia area $\frac 1 2 ah$. % lang-it
 
-\subsection{Zasada Cavalieriego}
+\subsection{Zasada Cavalieriego} % lang-pl
+\subsection{Il principio di Cavalieri} % lang-it
 
-Sekcję zamkniemy ciekawostką związaną z zasadą Cavalieriego.
-Eves pokaże w 1991 roku, że każde dwa równopolowe trójkąty można umieścić na płaszczyźnie tak, by każda prosta równoległa do danej przecinała obydwa na odcinku o tej samej długości, wspomni o tym Jarosław Górnicki w $\Delta_{11}^{11}$.
+Sekcję zamkniemy ciekawostką związaną z zasadą Cavalieriego. % lang-pl
+Chiuderemo la sezione con una curiosità legata al principio di Cavalieri. % lang-it
+Eves pokaże w 1991 roku, że każde dwa równopolowe trójkąty można umieścić na płaszczyźnie tak, by każda prosta równoległa do danej przecinała obydwa na odcinku o tej samej długości, wspomni o tym Jarosław Górnicki w $\Delta_{11}^{11}$. % lang-pl
+Eves mostrerà nel 1991 che due triangoli equivalenti qualsiasi si possono sempre collocare nel piano in modo che ogni retta parallela a una retta data intersechi entrambi in un segmento della stessa lunghezza; ne parlerà Jarosław Górnicki in $\Delta_{11}^{11}$. % lang-it
 % {https://www.deltami.edu.pl/2011/11/osobliwosc-trojkatow/}
 
 %
