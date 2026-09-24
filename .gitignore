@@ -11,3 +11,4 @@
 *.toc
 src-it
 src-pl
+.claude/worktrees/
