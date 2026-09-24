@@ -5,201 +5,38 @@
 \chapter{Geometrie nieeuklidesowe} % lang-pl
 \chapter{Geometrie non euclidee} % lang-it
 
-Tekst sekcji geometrie nieeuklidesowe. % lang-pl
-Testo della sezione sulle geometrie non euclidee. % lang-it
+Przez ponad dwa tysiące lat słowo „geometria'' będzie znaczyć to samo, co geometria Euklidesa, a jej opis przestrzeni będzie uchodził za jedyny możliwy. % lang-pl
+Wyrocznia widzi jednak, że jedno pytanie o jeden postulat rozsadzi ten obraz: czy piąty postulat Euklidesa wynika z pozostałych? % lang-pl
+Odpowiedź brzmi \emph{nie}, a dowodem jest istnienie innych geometrii -- równie niesprzecznych jak euklidesowa, choć sprzecznych z nią w wielu twierdzeniach. % lang-pl
+Per più di duemila anni la parola «geometria» significherà la stessa cosa che geometria di Euclide, e la sua descrizione dello spazio passerà per l'unica possibile. % lang-it
+L'oracolo vede però che una sola domanda su un solo postulato farà crollare questa immagine: il quinto postulato di Euclide discende dagli altri? % lang-it
+La risposta sarà \emph{no}, e la prova sarà l'esistenza di altre geometrie -- coerenti quanto quella euclidea, benché in contrasto con essa in molti teoremi. % lang-it
 
-\section{Geometria Łobaczewskiego} % lang-pl
-\section{Geometria di Lobachevskij} % lang-it
+Ten rozdział opowiada historię tego pytania, więcej o ludziach niż o twierdzeniach. % lang-pl
+Dowodów prawie nie podajemy; przy każdym twierdzeniu wskazujemy natomiast książkę i stronę, na której można je znaleźć. % lang-pl
+Głównym źródłem matematyki będzie rozdział 7 książki Evesa \cite{eves1_1972} (s. 282--318), a dla modeli -- jej rozdział 8 (s. 347 i dalej). % lang-pl
+Zakładamy znajomość geometrii neutralnej z rozdziału o aksjomatyce: wszystko, co udowodnimy bez piątego postulatu, obowiązuje zarówno w geometrii euklidesowej, jak i hiperbolicznej. % lang-pl
+Questo capitolo racconta la storia di quella domanda, più sulle persone che sui teoremi. % lang-it
+Non riportiamo quasi mai le dimostrazioni; per ogni teorema indichiamo invece il libro e la pagina in cui si può trovare. % lang-it
+La fonte principale della matematica sarà il capitolo 7 del libro di Eves \cite{eves1_1972} (p. 282--318) e, per i modelli, il suo capitolo 8 (p. 347 e seguenti). % lang-it
+Presupponiamo la conoscenza della geometria neutrale del capitolo sull'assiomatica: tutto ciò che si dimostra senza il quinto postulato vale sia nella geometria euclidea sia in quella iperbolica. % lang-it
 
-Eves: sekcja 7.2, 7.3. % lang-pl
-Limit triangles. % lang-pl
-Istnieje naturalna miara długości odcinków. % lang-pl
-Czworokąt Saccheriego. % lang-pl
-Suma kątów trójkąta jest $< \pi$. % lang-pl
-Pole trójkąta, defekty. % lang-pl
-Punkty idealne, ultraidealne, linie hiperrównoległe. % lang-pl
-Eves: sezioni 7.2, 7.3. % lang-it
-Triangoli limite. % lang-it
-Esiste una misura naturale della lunghezza dei segmenti. % lang-it
-Quadrilatero di Saccheri. % lang-it
-La somma degli angoli di un triangolo è $< \pi$. % lang-it
-Area del triangolo, difetti angolari. % lang-it
-Punti ideali, ultraideali e rette iperparallele. % lang-it
+Opowieść ma pięć aktów, interludium i epilog. % lang-pl
+La storia ha cinque atti, un intermezzo e un epilogo. % lang-it
+\begin{itemize}
+\item \emph{Akt I: podejrzany postulat.} W sekcji \ref{sekcja_piaty_postulat} zobaczymy, jak brzmi piąty postulat i kto od starożytności do XVII wieku próbuje się go pozbyć, a w sekcji \ref{sekcja_dobre_stare} zbierzemy zdania noszące nazwiska autorów, które można wstawić w jego miejsce. % lang-pl
+\item \emph{Akt II: dowody nie wprost.} Saccheri (sekcja \ref{sekcja_saccheri}), Lambert (\ref{sekcja_lambert}) i Legendre (\ref{sekcja_legendre}) próbują udowodnić postulat przez sprowadzenie do sprzeczności; zamiast sprzeczności znajdują trzy hipotezy -- kąta ostrego, prostego i rozwartego -- i coraz dłuższe łańcuchy dziwnych twierdzeń. % lang-pl
+\item \emph{Akt III: odkrywcy.} Schweikart i Taurinus (\ref{sekcja_schweikart_taurinus}), Gauss oraz Farkas i János Bolyai (\ref{sekcja_gauss_bolyai}) i Łobaczewski (\ref{sekcja_lobaczewski}) uznają hipotezę kąta ostrego za geometrię, nie za sprzeczność. % lang-pl
+\item \emph{Interludium: co zobaczą odkrywcy.} W sekcjach \ref{sekcja_hiperboliczna}--\ref{sekcja_punkty_idealne} rozwiniemy fragment tej geometrii: proste równoległe i hiperrównoległe, trójkąty graniczne i absolutną jednostkę długości, sumę kątów i pole trójkąta, punkty idealne. % lang-pl
+\item \emph{Akt IV: druga geometria.} Riemann (sekcja \ref{sekcja_riemann}) odróżni nieograniczoność od nieskończoności, a jego wykład otworzy drogę do hipotezy kąta rozwartego, którą realizuje geometria na sferze (sekcja \ref{sekcja_sferyczna}). % lang-pl
+\item \emph{Akt V: modele.} Beltrami, Cayley i Klein (sekcja \ref{sekcja_beltrami_cayley_klein}), Poincaré (\ref{sekcja_poincare}) i Hjelmslev (\ref{sekcja_hjelmslev}) zamienią płaszczyznę Łobaczewskiego we wnętrze koła i dowiodą, że jest ona tak samo niesprzeczna jak euklidesowa, a piąty postulat jest od pozostałych niezależny. % lang-pl
+\item \emph{Epilog.} W sekcji \ref{sekcja_fizyka} zapytamy, która z geometrii opisuje przestrzeń fizyczną, i usłyszymy odpowiedź Poincarego. % lang-pl
+\item \emph{Atto I: un postulato sospetto.} Nella sezione \ref{sekcja_piaty_postulat} vedremo come suona il quinto postulato e chi, dall'antichità al Seicento, cerca di sbarazzarsene; nella sezione \ref{sekcja_dobre_stare} raccoglieremo gli enunciati con il nome dei loro autori che si possono mettere al suo posto. % lang-it
+\item \emph{Atto II: dimostrazioni per assurdo.} Saccheri (sezione \ref{sekcja_saccheri}), Lambert (\ref{sekcja_lambert}) e Legendre (\ref{sekcja_legendre}) tentano di dimostrare il postulato riducendosi all'assurdo; al posto della contraddizione trovano tre ipotesi -- dell'angolo acuto, retto e ottuso -- e catene sempre più lunghe di strani teoremi. % lang-it
+\item \emph{Atto III: gli scopritori.} Schweikart e Taurinus (\ref{sekcja_schweikart_taurinus}), Gauss e Farkas e János Bolyai (\ref{sekcja_gauss_bolyai}) e Lobachevskij (\ref{sekcja_lobaczewski}) riconoscono nell'ipotesi dell'angolo acuto una geometria, non una contraddizione. % lang-it
+\item \emph{Intermezzo: che cosa vedranno gli scopritori.} Nelle sezioni \ref{sekcja_hiperboliczna}--\ref{sekcja_punkty_idealne} svilupperemo una parte di questa geometria: rette parallele e iperparallele, triangoli limite e unità assoluta di lunghezza, somma degli angoli e area del triangolo, punti ideali. % lang-it
+\item \emph{Atto IV: la seconda geometria.} Riemann (sezione \ref{sekcja_riemann}) distinguerà l'illimitatezza dall'infinità, e la sua conferenza aprirà la strada all'ipotesi dell'angolo ottuso, realizzata dalla geometria sulla sfera (sezione \ref{sekcja_sferyczna}). % lang-it
+\item \emph{Atto V: i modelli.} Beltrami, Cayley e Klein (sezione \ref{sekcja_beltrami_cayley_klein}), Poincaré (\ref{sekcja_poincare}) e Hjelmslev (\ref{sekcja_hjelmslev}) trasformeranno il piano di Lobachevskij nell'interno di un cerchio e proveranno che è coerente quanto quello euclideo e che il quinto postulato è indipendente dagli altri. % lang-it
+\item \emph{Epilogo.} Nella sezione \ref{sekcja_fizyka} ci chiederemo quale delle geometrie descriva lo spazio fisico e ascolteremo la risposta di Poincaré. % lang-it
+\end{itemize}
 
-\section{Dobre, stare} % lang-pl
-\section{I classici} % lang-it
-
-\begin{proposition}
-[aksjomat Arystotelesa] % lang-pl
-[assioma di Aristotele] % lang-it
-	Aksjomat Arystotelesa. % lang-pl
-	Assioma di Aristotele. % lang-it
-\index{aksjomat!Arystotelesa}%
-\end{proposition}
-
-\begin{proposition}
-[lemat Proklusa] % lang-pl
-[lemma di Proclo] % lang-it
-	Prosta nie może przecinać tylko jednej z dwóch prostych równoległych. % lang-pl
-	Una retta non può intersecare soltanto una di due rette parallele. % lang-it
-\index{lemat!Proklusa}%
-\end{proposition}
-
-\begin{proposition}
-[aksjomat Claviusa] % lang-pl
-[assioma di Clavio] % lang-it
-	Aksjomat Claviusa. % lang-pl
-	Assioma di Clavio. % lang-it
-\index{aksjomat!Claviusa}%
-\end{proposition}
-
-\begin{proposition}
-[aksjomat Clairauta] % lang-pl
-[assioma di Clairaut] % lang-it
-	Aksjomat Clairauta. % lang-pl
-	Assioma di Clairaut. % lang-it
-\index{aksjomat!Clairauta}%
-\end{proposition}
-
-\begin{proposition}
-[aksjomat Simsona] % lang-pl
-[assioma di Simson] % lang-it
-	Aksjomat Simsona. % lang-pl
-	Assioma di Simson. % lang-it
-\index{aksjomat!Simsona}%
-\end{proposition}
-
-\begin{proposition}
-[aksjomat Playfaira] % lang-pl
-[assioma di Playfair] % lang-it
-	Aksjomat Playfaira. % lang-pl
-	Assioma di Playfair. % lang-it
-\index{aksjomat!Playfaira}%
-\end{proposition}
-
-Treść aksjomatu Playfaira poda szkocki matematyk John Playfair w podręczniku \emph{Elements of Geometry} z 1795 roku. % lang-pl
-L'enunciato dell'assioma di Playfair fu formulato dal matematico scozzese John Playfair nel manuale \emph{Elements of Geometry} del 1795. % lang-it
-% % https://en.wikipedia.org/wiki/Playfair%27s_axiom
-\index[persons]{Playfair, John}%
-
-\begin{proposition}
-[aksjomat Wallisa] % lang-pl
-[assioma di Wallis] % lang-it
-	Aksjomat Wallisa. % lang-pl
-	Assioma di Wallis. % lang-it
-\index{aksjomat!Wallisa}%
-\end{proposition}
-
-\begin{proposition}
-[aksjomat Bolyi] % lang-pl
-[assioma di Bolyai] % lang-it
-	Aksjomat Bolyi. % lang-pl
-	Assioma di Bolyai. % lang-it
-\index{aksjomat!Bolyi}%
-\end{proposition}
-
-\begin{definition}
-[czworokąt Saccheriego] % lang-pl
-[quadrilatero di Saccheri] % lang-it
-	Czworokąt Saccheriego. % lang-pl
-	Quadrilatero di Saccheri. % lang-it
-% TODO: https://en.wikipedia.org/wiki/Lambert_quadrilateral
-\index{czworokąt!Saccheriego}
-\end{definition}
-
-% TODO: https://www.deltami.edu.pl/2016/09/inne-swiaty-inne-geometrie/
-
-Giovanni Girolamo Saccheri będzie uczniem Tommasa Cevy, brata Giovanniego, autora twierdzenia Cevy (w tej książce z numerem \ref{twierdzenie_cevy}). % lang-pl
-Giovanni Girolamo Saccheri sarà allievo di Tommaso Ceva, fratello di Giovanni, autore del teorema di Ceva (in questo libro numerato come \ref{twierdzenie_cevy}). % lang-it
-
-\begin{proposition}
-[aksjomat Legendre'a] % lang-pl
-[assioma di Legendre] % lang-it
-	Aksjomat Legendre'a. % lang-pl
-	Assioma di Legendre. % lang-it
-\index{aksjomat!Legendre'a}%
-\end{proposition}
-
-\begin{definition}
-[model Poincarego] % lang-pl
-[modello di Poincaré] % lang-it
-	Model Poincarego. % lang-pl
-	Modello di Poincaré. % lang-it
-\index{model Poincarego}%
-\end{definition}
-
-\begin{definition}
-[geometria hiperboliczna] % lang-pl
-[geometria iperbolica] % lang-it
-	Geometria hiperboliczna. % lang-pl
-	Geometria iperbolica. % lang-it
-\index{geometria!hiperboliczna}
-\end{definition}
-
-O geometrii hiperbolicznej wspomina się w $\Delta_{24}^7$. % lang-pl
-La geometria iperbolica è menzionata in $\Delta_{24}^7$. % lang-it
-
-\begin{proposition}
-	Jeśli geometria euklidesowa (na płaszczyźnie) jest niesprzeczna, to geometria Łobaczewskiego (na płaszczyźnie) też jest niesprzeczna. % lang-pl
-	Se la geometria euclidea del piano è coerente, allora anche la geometria di Lobachevskij del piano è coerente. % lang-it
-\end{proposition}
-
-Eves \cite[s. 347-353]{eves1_1972}. % lang-pl
-Eves \cite[p. 347-353]{eves1_1972}. % lang-it
-
-W 1733 roku Giovanni Girolamo Saccheri spróbuje zbadać, co by było gdyby piąty postulat Euklidesa okazał się fałszywy. % lang-pl
-Jego prace zapoczątkują systematyczne rozważania nad alternatywami dla geometrii euklidesowej. % lang-pl
-W 1829 roku János Bolyai, Carl Friedrich Gauss oraz (niezależnie od nich) Nikołaj Łobaczewski stworzą geometrię hiperboliczną, czyli pierwszą w pełni rozwiniętą geometrię nieeuklidesową, w której piąty postulat Euklidesa nie obowiązuje. % lang-pl
-Nel 1733 Giovanni Girolamo Saccheri cercherà di capire che cosa accadrebbe se il quinto postulato di Euclide fosse falso. % lang-it
-I suoi lavori daranno inizio allo studio sistematico delle alternative alla geometria euclidea. % lang-it
-Nel 1829 János Bolyai, Carl Friedrich Gauss e, indipendentemente da loro, Nikolaj Lobachevskij costruiranno la geometria iperbolica, la prima geometria non euclidea pienamente sviluppata, nella quale il quinto postulato di Euclide non vale. % lang-it
-
-Kolejnym osiągnięciem będzie model Beltramiego-Kleina dla geometrii hiperbolicznej, w którym pracujemy z punktami wewnątrz otwartego koła. % lang-pl
-Proste w tym modelu to cięciwy łączące punkty z brzegu koła. % lang-pl
-Wspomni o nim Eugenio Beltrami w 1868 roku, najpierw dla $n = 2$, a potem dla dowolnej liczby wymiarów. % lang-pl
-Un ulteriore progresso sarà il modello di Beltrami-Klein della geometria iperbolica, nel quale si lavora con i punti all'interno di un disco aperto. % lang-it
-Le rette di questo modello sono le corde che uniscono punti del bordo del disco. % lang-it
-Eugenio Beltrami lo presenterà nel 1868, dapprima per $n=2$ e successivamente per un numero arbitrario di dimensioni. % lang-it
-% memoirs
-Wcześniej, bo w 1859 roku, Arthur Cayley użyje dwustosunkowej definicji kąta (od Laguerre'a) by pokazać, że geometria euklidesowa może być zdefiniowana przy pomocy geometrii rzutowej. % lang-pl
-Cayley zapozna się z pracami Beltramiego i Cayleya; w 1870 roku da wykład na seminarium u Weierstrassa, który zakończy pytaniem: czy między pomysłami Cayleya oraz Łobaczewskiegi istnieje powiązanie? % lang-pl
-In precedenza, nel 1859, Arthur Cayley utilizzerà la definizione di angolo tramite rapporto anarmonico (dovuta a Laguerre) per mostrare che la geometria euclidea può essere definita mediante la geometria proiettiva. % lang-it
-Felix Klein studierà i lavori di Beltrami e Cayley; nel 1870 terrà un seminario presso Weierstrass, concludendolo con la domanda: esiste una relazione tra le idee di Cayley e quelle di Lobachevskij? % lang-it
-
-% na podstawie https://en.wikipedia.org/wiki/Beltrami–Klein_model
-% gdzie pada
-% and these essays proved the equiconsistency of hyperbolic geometry with ordinary Euclidean geometry
-
-% model Kleina - Delta 2012-06
-
-% Sferyczna osobno?
-% https://en.wikipedia.org/wiki/Lexell's_theorem
-\begin{proposition}
-[twierdzenie Lexella] % lang-pl
-[teorema di Lexell] % lang-it
-	Wierzchołki trójkątów sferycznych o ustalonej podstawie $AB$ i polu powierzchni leżą na okręgu małym (powstałym przez przecięcie sfery płaszczyzną) przechodzącym przez punkty antypodalne do wierzchołków $A$, $B$ z podstawy. % lang-pl
-	I vertici dei triangoli sferici con base fissata $AB$ e area fissata giacciono su un cerchio minore (ottenuto intersecando la sfera con un piano) passante per i punti antipodali dei vertici $A$ e $B$ della base. % lang-it
-\end{proposition}
-% https://en.wikipedia.org/wiki/Spherical_trigonometry => Girard
-
-Anders Johan Lexell napisze około 1777 roku pracę na temat tego twierdzenia, razem z dwoma dowodami: trygonometrycznym i geometrycznym. % lang-pl
-Inni podadzą inne dowody: % lang-pl
-Leonhard Euler w~1778, % lang-pl
-Adrien-Marie Legendre w~1800, % lang-pl
-Jakob Steiner w~1827, % lang-pl
-Carl Friedrich Gauss w~1841, % lang-pl
-Paul Serret w~1855, % lang-pl
-Joseph-Émile Barbier w~1864. % lang-pl
-Anders Johan Lexell scriverà intorno al 1777 un lavoro dedicato a questo teorema, contenente due dimostrazioni: una trigonometrica e una geometrica. % lang-it
-Altri ne forniranno ulteriori dimostrazioni: % lang-it
-Leonhard Euler nel 1778, % lang-it
-Adrien-Marie Legendre nel 1800, % lang-it
-Jakob Steiner nel 1827, % lang-it
-Carl Friedrich Gauss nel 1841, % lang-it
-Paul Serret nel 1855, % lang-it
-Joseph-Émile Barbier nel 1864. % lang-it
-
-% https://www.deltami.edu.pl/2012/06/w-rozumowaniach-byl-blad/
-% https://www.deltami.edu.pl/2018/08/geometria-bolyaia-lobaczewskiego-co-to-jest-i-jak-ja-poznawac/
-
-%
