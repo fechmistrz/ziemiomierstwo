@@ -3,7 +3,6 @@
 %
 
 \section{Aksjomaty Hilberta} % lang-pl
-
 \section{Assiomi di Hilbert} % lang-it
 
 \index{aksjomat!Hilberta}%
@@ -11,14 +10,11 @@
 W aksjomatyce Hilberta (płaskiej geometrii euklidesowej) pojęciami pierwotnymi są punkt, prosta, płaszczyzna, relacja incydencji (leżeć na, zawierać się w), relacja uporządkowania (leżenia między) oraz relacja przystawania. % lang-pl
 Nell'assiomatica di Hilbert (geometria euclidea piana) i concetti primitivi sono il punto, la retta, il piano, la relazione di incidenza (giacere su, contenere), la relazione di ordinamento (essere tra) e la relazione di congruenza. % lang-it
 
-
 Wszystkie aksjomaty w jednym miejscu wymienia Eves \cite[s. 380-382]{eves1_1972}. % lang-pl
 Eves \cite[pp.~380--382]{eves1_1972} raccoglie tutti gli assiomi in un unico luogo. % lang-it
 
-
 Greenberg \cite{greenberg_2010} opisze ich historię. % lang-pl
 Greenberg \cite{greenberg_2010} ne descrive la storia. % lang-it
-
 
 Punkty i proste będziemy oznaczać wielkimi i małymi literami alfabetu łacińskiego. % lang-pl
 Indicheremo punti e rette con lettere maiuscole e minuscole dell'alfabeto latino. % lang-it
@@ -31,30 +27,24 @@ Indicheremo punti e rette con lettere maiuscole e minuscole dell'alfabeto latino
 \subsection{Płaszczyzna Hilberta} % lang-pl
 \subsection{Piano di Hilbert} % lang-it
 
-
 Przedstawione do tej pory aksjomaty są niezbędnym minimum do uprawiania geometrii. % lang-pl
 Gli assiomi presentati finora costituiscono il minimo indispensabile per fare geometria. % lang-it
-\begin{definition} % lang-it
-    Un insieme di punti e rette, insieme alle relazioni di ordinamento, congruenza dei segmenti e congruenza degli angoli, che soddisfa gli assiomi I1--I3, B1--B4, C1--C6, è detto piano di Hilbert. % lang-it
-    \index{piano!di Hilbert} % lang-it
-\end{definition} % lang-it
 
-
-\begin{definition} % lang-pl
+\begin{definition}
     Zbiór punktów i prostych, razem z relacjami leżenia pomiędzy, przystawania odcinków i kątów, które spełniają aksjomaty I1 do I3, B1 do B4, C1 do C6, nazywamy płaszczyzną Hilberta. % lang-pl
     \index{płaszczyzna!Hilberta} % lang-pl
-\end{definition} % lang-pl
+    Un insieme di punti e rette, insieme alle relazioni di ordinamento, congruenza dei segmenti e congruenza degli angoli, che soddisfa gli assiomi I1--I3, B1--B4, C1--C6, è detto piano di Hilbert. % lang-it
+    \index{piano!di Hilbert} % lang-it
+\end{definition}
+
 W szczególności, nie zakładamy aksjomatu równoległości (P). % lang-pl
 In particolare, non assumiamo l'assioma delle parallele (P). % lang-it
-
 
 \index{aksjomat!Playfaira} % lang-pl
 \index{assioma!di Playfair} % lang-it
 
-
 Wszystkie twierdzenia Euklidesa od I.1 do I.28 (bez I.1, I.22) można udowodnić na dowolnej płaszczyźnie Hilberta. % lang-pl
 Tutti i teoremi di Euclide da I.1 a I.28 (eccetto I.1 e I.22) possono essere dimostrati in qualunque piano di Hilbert. % lang-it
-
 
 Do dwóch wyjątków potrzebujemy dodatkowego aksjomatu \ref{axiom_e}, by okręgi, od których oczekujemy, że się przetną, naprawdę się przecięły. % lang-pl
 Per le due eccezioni è necessario l'assioma aggiuntivo \ref{axiom_e}, affinché le circonferenze che ci aspettiamo si intersechino si intersechino effettivamente. % lang-it
@@ -62,18 +52,16 @@ Per le due eccezioni è necessario l'assioma aggiuntivo \ref{axiom_e}, affinché
 \index{aksjomat!o części wspólnej dwóch okręgów}%
 
 Wspomni o tym Coxeter \cite[s. 21]{coxeter_1967}. % lang-pl
-
 Coxeter \cite[p.~21]{coxeter_1967} lo menziona esplicitamente. % lang-it
 
-\begin{axiom}[o części wspólnej dwóch okręgów, E] % lang-pl
-\begin{axiom}[sull'intersezione di due circonferenze, E] % lang-it
+\begin{axiom}
+[o części wspólnej dwóch okręgów, E] % lang-pl
+[sull'intersezione di due circonferenze, E] % lang-it
     \label{axiom_e}
     Niech $\Gamma_1$, $\Gamma_2$ będą dwoma okręgami takimi, że każdy zawiera pewien punkt leżący wewnątrz drugiego. % lang-pl
-    
     Siano $\Gamma_1$ e $\Gamma_2$ due circonferenze tali che ciascuna contenga un punto interno all'altra. % lang-it
 
     Wtedy istnieje punkt leżący na obydwu okręgach równocześnie. % lang-pl
-    
     Allora esiste un punto appartenente a entrambe le circonferenze. % lang-it
 
     \index{aksjomat!o części wspólnej dwóch okręgów}%
@@ -81,29 +69,28 @@ Coxeter \cite[p.~21]{coxeter_1967} lo menziona esplicitamente. % lang-it
 
 Płaszczyznę Pitagorasa, która spełnia aksjomat (E), nazywamy płaszczyzną Euklidesa. % lang-pl
 Un piano pitagorico che soddisfa l'assioma (E) è detto piano euclideo. % lang-it
-\index{płaszczyzna!Pitagorasa} % lang-it
+
+\index{płaszczyzna!Pitagorasa}
 \index{piano!pitagorico} % lang-it
 
 
-\index{płaszczyzna!Pitagorasa} % lang-pl
-Hartshorne \cite[p.~173]{hartshorne2000} osserva che, disponendo di un piano di Hilbert, di un segmento unitario e dell'assioma (P), è possibile costruire a partire da segmenti di lunghezza $a$ e $b$ un segmento di lunghezza $ab$ (con le consuete proprietà: $a \cdot 1 = a$, $ab = ba$, $a(bc) = (ab)c$, esiste un unico $a'$ tale che $aa' = 1$, $a(b+c) = ab + ac$ per tutti gli $a$, $b$) e che per farlo non sono necessari né (E) né l'assioma di Archimede. % lang-it
-\begin{proposition} % lang-it
-    Per ogni piano di Hilbert che soddisfa (P) e possiede un segmento unitario esiste, a meno di isomorfismo, un unico campo ordinato i cui elementi positivi corrispondono alle lunghezze dei segmenti. % lang-it
-\end{proposition} % lang-it
-\begin{proposition}[sull'intersezione di una retta e una circonferenza, LCI] % lang-it
-    In un piano di Hilbert che soddisfa l'assioma E, se una retta $l$ contiene un punto interno a una circonferenza $\Gamma$, allora interseca tale circonferenza. % lang-it
-    \index{assioma!sull'intersezione di una retta e una circonferenza} % lang-it
-\end{proposition} % lang-it
-
-
 Hartshorne \cite[s. 173]{hartshorne2000} pisze, że mając płaszczyznę Hilberta, odcinek jednostkowy i aksjomat (P) możemy z odcinków długości $a, b$ zbudować odcinek długości $ab$ (o standardowych własnościach: $a \cdot 1 = a$, $ab = ba$, $a(bc) = (ab)c$, istnieje dokładnie jeden $a'$, że $aa' = 1$, $a(b+c) = ab + ac$ dla wszystkich $a$, $b$) i że nie potrzebujemy do tego ani (E), ani aksjomatu Archimedesa. % lang-pl
-\begin{proposition} % lang-pl
+Hartshorne \cite[p.~173]{hartshorne2000} osserva che, disponendo di un piano di Hilbert, di un segmento unitario e dell'assioma (P), è possibile costruire a partire da segmenti di lunghezza $a$ e $b$ un segmento di lunghezza $ab$ (con le consuete proprietà: $a \cdot 1 = a$, $ab = ba$, $a(bc) = (ab)c$, esiste un unico $a'$ tale che $aa' = 1$, $a(b+c) = ab + ac$ per tutti gli $a$, $b$) e che per farlo non sono necessari né (E) né l'assioma di Archimede. % lang-it
+
+\begin{proposition}
     Dla każdej płaszczyzny Hilberta spełniającej (P) z odcinkiem jednostkowym istnieje jedyne z dokładnością do izomorfizmu ciało uporządkowane, którego dodatnie elementy odpowiadają długościom odcinków. % lang-pl
-\end{proposition} % lang-pl
-\begin{proposition}[o części wspólnej prostej i okręgu, LCI] % lang-pl
+    Per ogni piano di Hilbert che soddisfa (P) e possiede un segmento unitario esiste, a meno di isomorfismo, un unico campo ordinato i cui elementi positivi corrispondono alle lunghezze dei segmenti. % lang-it
+\end{proposition}
+
+\begin{proposition}
+[o części wspólnej prostej i okręgu, LCI] % lang-pl
+[sull'intersezione di una retta e una circonferenza, LCI] % lang-it
     Na płaszczyźnie Hilberta spełniającej aksjomat E, jeśli prosta $l$ zawiera punkt leżący wewnątrz okręgu $\Gamma$, to przecina ten okrąg. % lang-pl
     \index{aksjomat!o części wspólnej prostej i okręgu} % lang-pl
-\end{proposition} % lang-pl
+    In un piano di Hilbert che soddisfa l'assioma E, se una retta $l$ contiene un punto interno a una circonferenza $\Gamma$, allora interseca tale circonferenza. % lang-it
+    \index{assioma!sull'intersezione di una retta e una circonferenza} % lang-it
+\end{proposition}
+
 Dopiero teraz jesteśmy w stanie uratować twierdzenia (I.1), (I.22), (III.I), (III.17) z Elementów Euklidesa, do tego wszystkie dalsze wyniki aż do III.19 (ponieważ III.20 i dalej wymagany jest aksjomat Playfaira). % lang-pl
 Solo a questo punto possiamo recuperare i teoremi (I.1), (I.22), (III.1), (III.17) degli \emph{Elementi} di Euclide, oltre a tutti i risultati successivi fino a III.19 (poiché da III.20 in poi è necessario l'assioma di Playfair). % lang-it
 
@@ -112,7 +99,6 @@ Solo a questo punto possiamo recuperare i teoremi (I.1), (I.22), (III.1), (III.1
 
 (Reszta tekstu tej sekcji na podstawie artykułu Greenberga \cite[s. 201]{greenberg_2010}). % lang-pl
 (Il resto di questa sezione si basa sull'articolo di Greenberg \cite[p.~201]{greenberg_2010}). % lang-it
-
 
 Greenberg sugeruje nazywać płaszczyznę Hilberta, która spełnia aksjomat P, płaszczyzną Pitagorasa. % lang-pl
 Greenberg suggerisce di chiamare piano pitagorico un piano di Hilbert che soddisfi l'assioma P. % lang-it
@@ -123,31 +109,26 @@ Greenberg suggerisce di chiamare piano pitagorico un piano di Hilbert che soddis
 \index{piano!di Hilbert} % lang-it
 
 
-Su un tale piano, (LCI) ed (E) sono equivalenti; si veda \cite[p.~191]{hartshorne2000}. % lang-it
 
 Na takiej płaszczyźnie (LCI) oraz (E) są sobie równoważne, patrz \cite[s. 191]{hartshorne2000}. % lang-pl
-\begin{proposition} % lang-it
-    Ogni piano pitagorico è isomorfo a $F^2$ per un opportuno campo ordinato $F$ tale che da $x,y \in F$ segua $\sqrt{x^2+y^2}\in F$. % lang-it
-\end{proposition} % lang-it
+Su un tale piano, (LCI) ed (E) sono equivalenti; si veda \cite[p.~191]{hartshorne2000}. % lang-it
 
-
-\begin{proposition} % lang-pl
+\begin{proposition}
     Każda płaszczyzna Pitagorasa jest izomorficzna z kwadratem $F^2$ pewnego uporządkowanego ciała $F$ takiego, że z $x, y \in F$ wynika $\sqrt{x^2 + y^2} \in F$. % lang-pl
-\end{proposition} % lang-pl
+    Ogni piano pitagorico è isomorfo a $F^2$ per un opportuno campo ordinato $F$ tale che da $x,y \in F$ segua $\sqrt{x^2+y^2}\in F$. % lang-it
+\end{proposition}
+
 Jest to jedno z niewielu miejsc w książce, gdzie z niechęcią wspominamy o wprowadzaniu układu współrzędnych na płaszczyźnie. % lang-pl
 Questo è uno dei pochi punti del libro in cui menzioniamo, seppure controvoglia, l'introduzione di un sistema di coordinate nel piano. % lang-it
-
 
 Bardziej wylewny będzie Hartshorne \cite[s. 186--194]{hartshorne2000}. % lang-pl
 Hartshorne \cite[pp.~186--194]{hartshorne2000} tratta l'argomento in modo molto più dettagliato. % lang-it
 
 \begin{proposition}
     Niech $F^2$ będzie płaszczyzną Pitagorasa. % lang-pl
-    
     Sia $F^2$ un piano pitagorico. % lang-it
 
     Następujące warunki są równoważne: % lang-pl
-    
     Le seguenti condizioni sono equivalenti: % lang-it
     \begin{itemize}
         \item z każdych trzech odcinków spełniających nierówność trójkąta można zbudować trójkąt; % lang-pl
@@ -160,17 +141,14 @@ Hartshorne \cite[pp.~186--194]{hartshorne2000} tratta l'argomento in modo molto 
 Aksjomat E pociąga za sobą prawdziwość aksjomatu LCI. % lang-pl
 L'assioma E implica l'assioma LCI. % lang-it
 
-
 Patrz też do Hartshorne'a \cite[s. 144]{hartshorne2000}. % lang-pl
 Si veda anche Hartshorne \cite[p.~144]{hartshorne2000}. % lang-it
 
 \begin{proposition}
     Niech $F^2$ będzie płaszczyzną Pitagorasa. % lang-pl
-    
     Sia $F^2$ un piano pitagorico. % lang-it
 
     Następujące warunki są równoważne: % lang-pl
-    
     Le seguenti condizioni sono equivalenti: % lang-it
     \begin{itemize}
         \item ciało $F$ jest euklidesowskie (każdy dodatni element $x \in F$ ma pierwiastek kwadratowy $\sqrt{x}$); % lang-pl
@@ -182,11 +160,11 @@ Si veda anche Hartshorne \cite[p.~144]{hartshorne2000}. % lang-it
 
 Twierdzenie (I.32) głosi, że suma kątów wewnętrznych trójkąta wynosi $\pi$ (patrz Pompe \cite[s. 5]{pompe_2022}, Bogdańska, Neugebauer \cite[s. 7]{neugebauer_2018}). % lang-pl
 Il teorema (I.32) afferma che la somma degli angoli interni di un triangolo è uguale a $\pi$ (si vedano Pompe \cite[p.~5]{pompe_2022} e Bogdańska, Neugebauer \cite[p.~7]{neugebauer_2018}). % lang-it
-\index{suma kątów}% % lang-it
+
+\index{suma kątów}%
 \index{somma degli angoli} % lang-it
 
 
-\index{suma kątów}% % lang-pl
 Jeden z możliwych dowodów -- ten, który będzie znany pitagorejczykom -- wykorzystuje twierdzenie odwrotne do tego, że dwie proste równległe przecięte trzecią wyznaczają pary kątów o równych miarach; wiemy to z pracy Proklosa. % lang-pl
 Una delle possibili dimostrazioni --- quella nota ai pitagorici --- utilizza il teorema inverso del fatto che due rette parallele tagliate da una terza determinano coppie di angoli di uguale ampiezza; lo sappiamo grazie a Proclo. % lang-it
 
@@ -195,7 +173,6 @@ Una delle possibili dimostrazioni --- quella nota ai pitagorici --- utilizza il 
 
 Tu czyha pułapka: dla płaszczyzn Hilberta sprowadza się to do postulatu równoległości. % lang-pl
 Qui si nasconde un'insidia: per i piani di Hilbert ciò equivale al postulato delle parallele. % lang-it
-
 
 Ale z samego faktu, że suma kątów wewnętrznych trójkąta wynosi $\pi$ nie wynika V postulat! % lang-pl
 Tuttavia, dal solo fatto che la somma degli angoli interni di un triangolo sia $\pi$ non segue il quinto postulato! % lang-it
@@ -207,28 +184,23 @@ Tuttavia, dal solo fatto che la somma degli angoli interni di un triangolo sia $
 \index{aksjomat!Playfaira}%
 
 Stosowny kontrprzykład z 1900 roku zawdzięczymy Maxowi Dehnowi, studentowi Hilberta. % lang-pl
-
 Il controesempio appropriato, risalente al 1900, è dovuto a Max Dehn, allievo di Hilbert. % lang-it
 
 \index[persons]{Dehn, Max}%
 
 Brakującym założeniem jest to, że każdy odcinek jest krótszy od pewnej wielokrotności dowolnego innego odcinka -- czyli aksjomat Archimedesa. % lang-pl
-
 L'ipotesi mancante è che ogni segmento sia più corto di un opportuno multiplo di qualunque altro segmento: si tratta dell'assioma di Archimede. % lang-it
 
 \index{aksjomat!Archimedesa}%
 
 Greenberg podsumowuje te rozważania tak: % lang-pl
-
 Greenberg riassume queste considerazioni nel modo seguente: % lang-it
 
 \begin{proposition}
     Dana jest płaszczyzna Hilberta $\Pi$. % lang-pl
-    
     Sia dato un piano di Hilbert $\Pi$. % lang-it
 
     Następujące warunki są równoważne: % lang-pl
-    
     Le seguenti condizioni sono equivalenti: % lang-it
     \begin{itemize}
         \item $\Pi$ jest płaszczyzną Pitagorasa; % lang-pl
