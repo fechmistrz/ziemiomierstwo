@@ -6,8 +6,11 @@
 *.out
 *.pdf
 *.ilg
+*.jpg
+*.jpeg
 *.ind
 *.synctex.gz
 *.toc
 src-it
 src-pl
+.claude/worktrees/
