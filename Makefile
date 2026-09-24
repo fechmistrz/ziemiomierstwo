@@ -33,19 +33,21 @@ src/img.jpeg:
 	curl --location --output src/img.jpeg https://picsum.photos/600/200
 	if ! file src/img.jpeg | grep -q 'JPEG image data'; then echo "Failed to download image."; rm src/img.jpeg || true; exit 1; fi
 
-ziemiomierstwo.pdf: src/ziemiomierstwo.tex src/chapters/*.tex src/chapters/*/*.tex src/img.jpeg
-	cd src && lualatex ziemiomierstwo.tex && bibtex ziemiomierstwo && lualatex ziemiomierstwo.tex && lualatex ziemiomierstwo.tex
-	cp src/ziemiomierstwo.pdf .
+ziemiomierstwo.pdf: src/ziemiomierstwo.tex src/chapters/*.tex src/chapters/*/*.tex src/img.jpeg src-pl
+	cd src-pl && lualatex ziemiomierstwo.tex && bibtex ziemiomierstwo && lualatex ziemiomierstwo.tex && lualatex ziemiomierstwo.tex
+	cp src-pl/ziemiomierstwo.pdf .
+	rm -rf src-pl
 
-ziemiomierstwo-wloskie.pdf: src/ziemiomierstwo.tex src/chapters/*.tex src/chapters/*/*.tex src/img.jpeg
-	sed -e 's/poltrue/itatrue/g' -e 's/greaseproof/greaseproofita/g' src/ziemiomierstwo.tex > src/ziemiomierstwo-wloskie.tex
-	cd src && lualatex ziemiomierstwo-wloskie.tex && bibtex ziemiomierstwo-wloskie && lualatex ziemiomierstwo-wloskie.tex && lualatex ziemiomierstwo-wloskie.tex
-	cp src/ziemiomierstwo-wloskie.pdf .
-	rm src/ziemiomierstwo-wloskie.tex
+ziemiomierstwo-wloskie.pdf: src/ziemiomierstwo.tex src/chapters/*.tex src/chapters/*/*.tex src/img.jpeg src-it
+	sed -e 's/greaseproof/greaseproofita/g' src-it/ziemiomierstwo.tex > src-it/ziemiomierstwo-wloskie.tex
+	cd src-it && lualatex ziemiomierstwo-wloskie.tex && bibtex ziemiomierstwo-wloskie && lualatex ziemiomierstwo-wloskie.tex && lualatex ziemiomierstwo-wloskie.tex
+	cp src-it/ziemiomierstwo-wloskie.pdf .
+	rm -rf src-it
 
-fast: src/ziemiomierstwo.tex src/chapters/*.tex src/chapters/*/*.tex
-	cd src && lualatex -interaction=nonstopmode  ziemiomierstwo.tex && bibtex ziemiomierstwo && lualatex -interaction=nonstopmode  ziemiomierstwo.tex && lualatex -interaction=nonstopmode  ziemiomierstwo.tex
-	cp src/ziemiomierstwo.pdf .
+fast: src/ziemiomierstwo.tex src/chapters/*.tex src/chapters/*/*.tex src-pl
+	cd src-pl && lualatex -interaction=nonstopmode  ziemiomierstwo.tex && bibtex ziemiomierstwo && lualatex -interaction=nonstopmode  ziemiomierstwo.tex && lualatex -interaction=nonstopmode  ziemiomierstwo.tex
+	cp src-pl/ziemiomierstwo.pdf .
+	rm -rf src-pl
 
 src-pl:
 	rm -rf src-pl
