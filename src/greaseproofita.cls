@@ -30,8 +30,8 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage[final]{microtype}
 
-\usepackage[T1]{fontenc}
-\usepackage{newpxtext}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{newpxtext}
 
 \RequirePackage[italian]{babel}
 \RequirePackage[utf8]{inputenc}
