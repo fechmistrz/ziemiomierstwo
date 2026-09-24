@@ -1,4 +1,4 @@
-% Źródła: Eves s. 347--353 (§8.5), 353 nn. (§8.6); Greenberg 2010, s. 209, 213--214; Wikipedia: Poincaré disk model, Henri Poincaré, Felix Klein.
+% Źródła: Hartshorne s. 334, 355--366 (§37, §39); Eves s. 347--353 (§8.5), 353 nn. (§8.6); Greenberg 2010, s. 209, 213--214; Wikipedia: Poincaré disk model, Henri Poincaré, Felix Klein.
 % https://en.wikipedia.org/wiki/Poincar%C3%A9_disk_model
 % Uwaga: Wikipedia przypisuje metrykę dysku już Beltramiemu (1868); nazwa pochodzi od Poincarego (ok. 1882).
 
@@ -73,6 +73,33 @@ Model służy też do obliczeń: to, co trudno wyprowadzić w geometrii Łobacze
 Il modello serve anche per i calcoli: ciò che è difficile ricavare nella geometria di Lobachevskij si ricava spesso facilmente dal suo corrispondente nella geometria euclidea, e persino tutta la trigonometria iperbolica discende dal modello \cite[p. 353 e segg.]{eves1_1972}; Eves la pubblicherà con V.~E. Hoggatt nell'\emph{American Mathematical Monthly} nel 1951. % lang-it
 \index[persons]{Hoggatt, Verner Emil}%
 \index[persons]{Eves, Howard}%
+
+
+Hartshorne \cite[s. 355--356]{hartshorne_2000} buduje ten sam model nad dowolnym ciałem euklidesowym $F$ i nazywa jego elementy P-punktami i P-prostymi; wszystkie aksjomaty płaszczyzny Hilberta sprawdza po kolei (prop. 39.1--39.9, s. 356--362). % lang-pl
+Kluczem jest inwersja względem okręgu: jest to przekształcenie płaszczyzny, którego Grecy nie mieli w zwyczaju rozważać, bo przekształcenia nie zachowujące odległości ani proporcji były im obce \cite[s. 334]{hartshorne_2000}; inwersja w P-prostej daje w modelu ruch sztywny, czyli odbicie. % lang-pl
+Definicja przystawania odcinków przez dwustosunek jest tu wprowadzona bez logarytmu: odcinki $AB$ i $A'B'$ są przystające, gdy $(AB, PQ) = (A'B', P'Q')$; funkcja $\mu(AB) = (AB, PQ)^{-1}$ jest multiplikatywną funkcją odległości \cite[s. 358, 363]{hartshorne_2000} (lemat 39.10). % lang-pl
+Model spełnia aksjomat Archimedesa dokładnie wtedy, gdy spełnia go ciało $F$ (prop. 39.11), a dla każdego punktu i półprostej istnieje w nim półprosta równoległa graniczna (prop. 39.12) -- czyli spełnia aksjomat hiperboliczny Hilberta \cite[s. 363--364]{hartshorne_2000}. % lang-pl
+Hartshorne \cite[s. 355--356]{hartshorne_2000} costruisce lo stesso modello su un corpo euclideo qualsiasi $F$ e ne chiama gli elementi P-punti e P-rette; verifica uno per uno tutti gli assiomi del piano di Hilbert (prop. 39.1--39.9, p. 356--362). % lang-it
+La chiave è l'inversione rispetto a una circonferenza: una trasformazione del piano che i Greci non erano soliti considerare, perché le trasformazioni che non conservano né le distanze né le proporzioni erano loro estranee \cite[p. 334]{hartshorne_2000}; l'inversione in una P-retta dà nel modello un movimento rigido, cioè la riflessione. % lang-it
+La definizione di congruenza dei segmenti tramite il birapporto è qui introdotta senza logaritmo: i segmenti $AB$ e $A'B'$ sono congruenti quando $(AB, PQ) = (A'B', P'Q')$; la funzione $\mu(AB) = (AB, PQ)^{-1}$ è una funzione distanza moltiplicativa \cite[p. 358, 363]{hartshorne_2000} (lemma 39.10). % lang-it
+Il modello soddisfa l'assioma di Archimede esattamente quando lo soddisfa il corpo $F$ (prop. 39.11), e per ogni punto e semiretta esiste in esso una semiretta parallela limite (prop. 39.12) -- soddisfa dunque l'assioma iperbolico di Hilbert \cite[p. 363--364]{hartshorne_2000}. % lang-it
+
+\begin{theorem}
+[wzór Bolyaia] % lang-pl
+[formula di Bolyai] % lang-it
+\index{wzór!Bolyaia (na kąt równoległości)} % lang-pl
+\index{formula!di Bolyai (angolo di parallelismo)} % lang-it
+	W modelu Poincarego, jeśli $PQ$ jest prostopadłą z $P$ na prostą $l$, a $m$ jest prostą równoległą graniczną do $l$ przez $P$, tworzącą z $PQ$ kąt $\alpha$, to $\tan\tfrac{\alpha}{2} = \mu(PQ)^{-1}$. % lang-pl
+	Nel modello di Poincaré, se $PQ$ è la perpendicolare da $P$ alla retta $l$ e $m$ è la retta parallela limite a $l$ per $P$, che forma con $PQ$ l'angolo $\alpha$, allora $\tan\tfrac{\alpha}{2} = \mu(PQ)^{-1}$. % lang-it
+\end{theorem}
+
+Dowód (krótki rachunek na współrzędnych): Hartshorne \cite[s. 364--365]{hartshorne_2000} (prop. 39.13). % lang-pl
+Wynika z tego, że dla każdego kąta ostrego istnieje odcinek o takim kącie równoległości -- w modelu istnieje więc absolutna jednostka długości, w przeciwieństwie do geometrii euklidesowej, gdzie wybór jednostki jest dowolny \cite[s. 365--366]{hartshorne_2000} (zobacz sekcję \ref{sekcja_trojkaty_graniczne}). % lang-pl
+Dimostrazione (un breve calcolo in coordinate): Hartshorne \cite[p. 364--365]{hartshorne_2000} (prop. 39.13). % lang-it
+Ne segue che per ogni angolo acuto esiste un segmento con tale angolo di parallelismo -- nel modello esiste dunque un'unità assoluta di lunghezza, a differenza della geometria euclidea, dove la scelta dell'unità è arbitraria \cite[p. 365--366]{hartshorne_2000} (si veda la sezione \ref{sekcja_trojkaty_graniczne}). % lang-it
+
+Zadania: suma kątów w każdym trójkącie modelu jest mniejsza od $\pi$, więc model jest półhiperboliczny (zad. 39.2); istnieje w nim trójkąt o dowolnych kątach o sumie mniejszej niż $\pi$ (zad. 39.6) -- Hartshorne \cite[s. 366]{hartshorne_2000}. % lang-pl
+Esercizi: la somma degli angoli di ogni triangolo del modello è minore di $\pi$, dunque il modello è semiiperbolico (es. 39.2); esiste in esso un triangolo con angoli qualsiasi la cui somma sia minore di $\pi$ (es. 39.6) -- Hartshorne \cite[p. 366]{hartshorne_2000}. % lang-it
 
 \todofoot{Zakres §8.6 Evesa (deduktywne twierdzenia z modelu Poincarego) przeczytałem tylko do s. 354; strony w tym akapicie wymagają uzupełnienia po pełnej lekturze.} % lang-pl
 \todofoot{Ho letto il §8.6 di Eves (deduzioni dal modello di Poincaré) solo fino a p. 354; le pagine di questo paragrafo vanno completate dopo una lettura integrale.} % lang-it
