@@ -4,59 +4,40 @@ else
     SED_INPLACE = sed -i
 endif
 
-.PHONY: experimental-all experimental-pl experimental-it experimental-clean
-experimental-all: experimental-pl experimental-it
+# Build the Polish and Italian PDFs at the same time.
+MAKEFLAGS += -j2
 
-experimental-pl: src-pl
-	cd src-pl && \
-	lualatex ziemiomierstwo.tex && \
-	bibtex ziemiomierstwo && \
-	lualatex ziemiomierstwo.tex && \
-	lualatex ziemiomierstwo.tex
-	cp src-pl/ziemiomierstwo.pdf ziemiomierstwo-pl.pdf
-	rm -rf src-pl
+SOURCES = src/ziemiomierstwo.tex src/ziemiomierstwo.bib src/*.cls src/chapters/*.tex src/chapters/*/*.tex
 
-experimental-it: src-it
-	cd src-it && \
-	lualatex ziemiomierstwo.tex && \
-	bibtex ziemiomierstwo && \
-	lualatex ziemiomierstwo.tex && \
-	lualatex ziemiomierstwo.tex
-	cp src-it/ziemiomierstwo.pdf ziemiomierstwo-it.pdf
-	rm -rf src-it
-	
-all: ziemiomierstwo.pdf
+.PHONY: all pl it clean
 
-all-italia: ziemiomierstwo-wloskie.pdf
+all: pl it
+
+pl: ziemiomierstwo.pdf
+
+it: ziemiomierstwo-wloskie.pdf
 
 src/img.jpeg:
 	curl --location --output src/img.jpeg https://picsum.photos/600/200
 	if ! file src/img.jpeg | grep -q 'JPEG image data'; then echo "Failed to download image."; rm src/img.jpeg || true; exit 1; fi
 
-ziemiomierstwo.pdf: src/ziemiomierstwo.tex src/chapters/*.tex src/chapters/*/*.tex src/img.jpeg
-	cd src && lualatex ziemiomierstwo.tex && bibtex ziemiomierstwo && lualatex ziemiomierstwo.tex && lualatex ziemiomierstwo.tex
-	cp src/ziemiomierstwo.pdf .
-
-ziemiomierstwo-wloskie.pdf: src/ziemiomierstwo.tex src/chapters/*.tex src/chapters/*/*.tex src/img.jpeg
-	sed -e 's/poltrue/itatrue/g' -e 's/greaseproof/greaseproofita/g' src/ziemiomierstwo.tex > src/ziemiomierstwo-wloskie.tex
-	cd src && lualatex ziemiomierstwo-wloskie.tex && bibtex ziemiomierstwo-wloskie && lualatex ziemiomierstwo-wloskie.tex && lualatex ziemiomierstwo-wloskie.tex
-	cp src/ziemiomierstwo-wloskie.pdf .
-	rm src/ziemiomierstwo-wloskie.tex
-
-fast: src/ziemiomierstwo.tex src/chapters/*.tex src/chapters/*/*.tex
-	cd src && lualatex -interaction=nonstopmode  ziemiomierstwo.tex && bibtex ziemiomierstwo && lualatex -interaction=nonstopmode  ziemiomierstwo.tex && lualatex -interaction=nonstopmode  ziemiomierstwo.tex
-	cp src/ziemiomierstwo.pdf .
-
-src-pl:
+ziemiomierstwo.pdf: $(SOURCES) src/img.jpeg
 	rm -rf src-pl
 	cp -R src src-pl
 	find src-pl -type f \( -name '*.tex' -o -name '*.bib' \) -print0 | xargs -0 $(SED_INPLACE) '/% lang-it$$/d'
+	cd src-pl && lualatex -interaction=nonstopmode ziemiomierstwo.tex && bibtex ziemiomierstwo && lualatex -interaction=nonstopmode ziemiomierstwo.tex && lualatex -interaction=nonstopmode ziemiomierstwo.tex
+	cp src-pl/ziemiomierstwo.pdf .
+	rm -rf src-pl
 
-src-it:
+ziemiomierstwo-wloskie.pdf: $(SOURCES) src/img.jpeg
 	rm -rf src-it
 	cp -R src src-it
 	find src-it -type f \( -name '*.tex' -o -name '*.bib' \) -print0 | xargs -0 $(SED_INPLACE) '/% lang-pl$$/d'
+	$(SED_INPLACE) 's/greaseproof/greaseproofita/g' src-it/ziemiomierstwo.tex
+	cd src-it && lualatex -interaction=nonstopmode ziemiomierstwo.tex && bibtex ziemiomierstwo && lualatex -interaction=nonstopmode ziemiomierstwo.tex && lualatex -interaction=nonstopmode ziemiomierstwo.tex
+	cp src-it/ziemiomierstwo.pdf ziemiomierstwo-wloskie.pdf
+	rm -rf src-it
 
-experimental-clean:
+clean:
 	rm -rf src-pl src-it
-	rm -f ziemiomierstwo-pl.pdf ziemiomierstwo-it.pdf
+	rm -f ziemiomierstwo.pdf ziemiomierstwo-wloskie.pdf
