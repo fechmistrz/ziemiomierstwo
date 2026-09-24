@@ -2,48 +2,57 @@
 
 %
 
-\pol{\section{Problem Hansena}}
-\ita{\section{Problema di Hansen}}
-\pol{\index{problem!Hansena}}%
-\ita{\index{problema!di Hansen}}%
-\pol{W trygonometrii problem Hansena to zagadnienie z zakresu pomiarów w terenie, nazwane na cześć astronoma Petra Andreasa Hansena, który będzie pracował przy mapach państwa duńskiego.}
-\ita{In trigonometria, il problema di Hansen è un problema di topografia, intitolato all'astronomo Peter Andreas Hansen, che lavorò alla realizzazione delle carte del Regno di Danimarca.}
+\section{Problem Hansena} % lang-pl
 
-\begin{problem}
-    \pol{Dane są dwa znane punkty $A$ i $B$ oraz dwa nieznane punkty $P_1$ i $P_2$.}
-    \ita{Sono dati due punti noti $A$ e $B$ e due punti ignoti $P_1$ e $P_2$.}
-    \pol{Z punktów $P_1$ i $P_2$ obserwator mierzy kąty utworzone przez linie łączące go z każdym z pozostałych trzech punktów skierowane do każdego z pozostałych trzech punktów.}
-    \ita{Dai punti $P_1$ e $P_2$ un osservatore misura gli angoli formati dalle rette che lo collegano a ciascuno degli altri tre punti.}
-    \pol{Wyznaczyć położenie punktów $P_1$ i $P_2$.}
-    \ita{Determinare la posizione dei punti $P_1$ e $P_2$.}
-\end{problem}
+\index{problem!Hansena}% % lang-pl
+W trygonometrii problem Hansena to zagadnienie z zakresu pomiarów w terenie, nazwane na cześć astronoma Petra Andreasa Hansena, który będzie pracował przy mapach państwa duńskiego. % lang-pl
+\section{Problema di Hansen} % lang-it
+\index{problema!di Hansen}% % lang-it
+In trigonometria, il problema di Hansen è un problema di topografia, intitolato all'astronomo Peter Andreas Hansen, che lavorò alla realizzazione delle carte del Regno di Danimarca. % lang-it
+\begin{problem} % lang-it
+    Sono dati due punti noti $A$ e $B$ e due punti ignoti $P_1$ e $P_2$. % lang-it
+    Dai punti $P_1$ e $P_2$ un osservatore misura gli angoli formati dalle rette che lo collegano a ciascuno degli altri tre punti. % lang-it
+    Determinare la posizione dei punti $P_1$ e $P_2$. % lang-it
+\end{problem} % lang-it
 
-\pol{Znamy cztery kąty $\alpha_1 = \angle AP_1B$, $\beta_1 = \angle BP_1 P_2$, $\alpha_2 = \angle  AP_2B$, $\beta_2 = \angle AP_2P_1$.}
-\ita{Sono noti i quattro angoli $\alpha_1 = \angle AP_1B$, $\beta_1 = \angle BP_1 P_2$, $\alpha_2 = \angle AP_2B$, $\beta_2 = \angle AP_2P_1$.}
-\pol{Wtedy jedno z~rozwiązań zaczyna się od wyznaczenia kątów}
-\ita{Una delle soluzioni inizia determinando gli angoli}
+
+\begin{problem} % lang-pl
+    Dane są dwa znane punkty $A$ i $B$ oraz dwa nieznane punkty $P_1$ i $P_2$. % lang-pl
+    Z punktów $P_1$ i $P_2$ obserwator mierzy kąty utworzone przez linie łączące go z każdym z pozostałych trzech punktów skierowane do każdego z pozostałych trzech punktów. % lang-pl
+    Wyznaczyć położenie punktów $P_1$ i $P_2$. % lang-pl
+\end{problem} % lang-pl
+Sono noti i quattro angoli $\alpha_1 = \angle AP_1B$, $\beta_1 = \angle BP_1 P_2$, $\alpha_2 = \angle AP_2B$, $\beta_2 = \angle AP_2P_1$. % lang-it
+
+Znamy cztery kąty $\alpha_1 = \angle AP_1B$, $\beta_1 = \angle BP_1 P_2$, $\alpha_2 = \angle  AP_2B$, $\beta_2 = \angle AP_2P_1$. % lang-pl
+Wtedy jedno z~rozwiązań zaczyna się od wyznaczenia kątów % lang-pl
+Una delle soluzioni inizia determinando gli angoli % lang-it
 \begin{equation}
     \gamma = \pi - \alpha_1 - \beta_1 - \beta_2, \quad
     \delta = \pi - \alpha_2 - \beta_1 - \beta_2
 \end{equation}
-\pol{oraz ilorazu}
-\ita{e il rapporto}
+oraz ilorazu % lang-pl
+
+e il rapporto % lang-it
 \begin{equation}
     k = \frac{\sin \gamma \sin \alpha_2 \sin \beta_1}{\sin \delta \sin \alpha_1 \sin \beta_2}.
 \end{equation}
-\pol{Niech}
-\ita{Sia}
+Niech % lang-pl
+
+Sia % lang-it
 \begin{equation}
     \theta = 2 \arctan \left(\frac{k-1}{k+1} \tan \frac{\beta_1 + \beta_2}{2} \right).
 \end{equation}
-\pol{Wprowadzamy pomocnicze kąty $\varphi = \frac 1 2 (\beta_1 + \beta_2 + \theta)$ oraz $\psi = \frac 1 2 (\beta_1 + \beta_2 - \theta)$.}
-\ita{Introduciamo gli angoli ausiliari $\varphi = \frac 1 2 (\beta_1 + \beta_2 + \theta)$ e $\psi = \frac 1 2 (\beta_1 + \beta_2 - \theta)$.}
-\pol{Szukany odcinek ma długość}
-\ita{Il segmento cercato ha lunghezza}
+Wprowadzamy pomocnicze kąty $\varphi = \frac 1 2 (\beta_1 + \beta_2 + \theta)$ oraz $\psi = \frac 1 2 (\beta_1 + \beta_2 - \theta)$. % lang-pl
+
+Szukany odcinek ma długość % lang-pl
+Introduciamo gli angoli ausiliari $\varphi = \frac 1 2 (\beta_1 + \beta_2 + \theta)$ e $\psi = \frac 1 2 (\beta_1 + \beta_2 - \theta)$. % lang-it
+
+Il segmento cercato ha lunghezza % lang-it
 \begin{equation}
     |P_1 P_2| = |AB| \cdot \frac{\sin \psi \sin \gamma}{\sin \alpha_1 \sin \beta_2} = |AB| \cdot \frac{\sin \varphi \sin \delta}{\sin \alpha_2 \sin \beta_1},
 \end{equation}
-\pol{przy czym by uniknąć błędów numerycznych bierzemy ten ułamek, którego mianownik ma większą wartość bezwzględną.}
-\ita{per evitare errori numerici si utilizza la frazione il cui denominatore ha valore assoluto maggiore.}
+przy czym by uniknąć błędów numerycznych bierzemy ten ułamek, którego mianownik ma większą wartość bezwzględną. % lang-pl
+
+per evitare errori numerici si utilizza la frazione il cui denominatore ha valore assoluto maggiore. % lang-it
 
 %
