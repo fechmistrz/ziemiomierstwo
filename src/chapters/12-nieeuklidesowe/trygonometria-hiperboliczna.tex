@@ -1,0 +1,60 @@
+% Źródła: Hartshorne s. 403--414 (§42; zad. 42.1--42.25); Eves nie omawia trygonometrii.
+
+\section{Trygonometria hiperboliczna} % lang-pl
+\section{Trigonometria iperbolica} % lang-it
+\label{sekcja_trygonometria}
+
+Lambert wprowadzi do matematyki funkcje hiperboliczne i obliczy pole trójkąta hiperbolicznego (sekcja \ref{sekcja_lambert}), a Taurinus opublikuje w latach 1825--1826 wyniki trygonometrii hiperbolicznej (sekcja \ref{sekcja_schweikart_taurinus}). % lang-pl
+W tej sekcji zobaczymy, jak Hartshorne wyprowadza ją bez liczb rzeczywistych i bez funkcji sinh, cosh, tanh, jak wyglądają jej wzory i dwa zastosowania: pole koła oraz trójkąty stowarzyszone Engela. % lang-pl
+Lambert introdurrà in matematica le funzioni iperboliche e calcolerà l'area di un triangolo iperbolico (sezione \ref{sekcja_lambert}), e Taurinus pubblicherà nel 1825--1826 risultati di trigonometria iperbolica (sezione \ref{sekcja_schweikart_taurinus}). % lang-it
+In questa sezione vedremo come Hartshorne la ricava senza numeri reali e senza le funzioni sinh, cosh, tanh, come sono fatte le sue formule e due applicazioni: l'area del cerchio e i triangoli associati di Engel. % lang-it
+
+Hartshorne \cite[s. 403--404]{hartshorne_2000} tłumaczy, że zwykła trygonometria to związki między bokami i kątami trójkąta prostokątnego wraz z regułami rachunku, które pozwalają wyliczyć pozostałe elementy z dowolnych dwóch. % lang-pl
+W geometrii hiperbolicznej jest to nawet trochę mocniejsze, bo nie ma trójkątów podobnych, więc dwa kąty $\alpha, \beta$ wyznaczają trójkąt jednoznacznie; komplikuje sprawę tylko to, że $\alpha + \beta < \mathrm{RA}$, więc $\beta$ nie jest wyznaczone przez $\alpha$. % lang-pl
+Zamiast logarytmów używa się multiplikatywnej funkcji odległości $\mu$ z sekcji \ref{sekcja_ciala_koncow}, a ważną stałą $k$, która w niektórych książkach zależy od wyboru podstawy logarytmu, w ogóle się nie pojawia: dwie płaszczyzny hiperboliczne nad tym samym ciałem są izomorficzne \cite[s. 296, 404]{hartshorne_2000}. % lang-pl
+Hartshorne \cite[p. 403--404]{hartshorne_2000} spiega che la trigonometria ordinaria è l'insieme dei legami tra i lati e gli angoli di un triangolo rettangolo, con le regole di calcolo che permettono di ricavare gli altri elementi da due qualsiasi. % lang-it
+Nella geometria iperbolica è persino un po' più forte, perché non esistono triangoli simili, quindi due angoli $\alpha, \beta$ determinano il triangolo in modo univoco; complica le cose solo il fatto che $\alpha + \beta < \mathrm{RA}$, dunque $\beta$ non è determinato da $\alpha$. % lang-it
+Al posto dei logaritmi si usa la funzione distanza moltiplicativa $\mu$ della sezione \ref{sekcja_ciala_koncow}, e la costante $k$ che in alcuni libri dipende dalla scelta della base dei logaritmi non compare affatto: due piani iperbolici sullo stesso corpo sono isomorfi \cite[p. 296, 404]{hartshorne_2000}. % lang-it
+
+\begin{definition}
+[sinus i cosinus kąta] % lang-pl
+[seno e coseno di un angolo] % lang-it
+	Dla kąta $\alpha$ i $t = \tan\tfrac{\alpha}{2}$ (w sensie sekcji \ref{sekcja_ciala_koncow}) kładziemy $\sin\alpha = \dfrac{2t}{1+t^2}$ i $\cos\alpha = \dfrac{1-t^2}{1+t^2}$. % lang-pl
+	Per un angolo $\alpha$ e $t = \tan\tfrac{\alpha}{2}$ (nel senso della sezione \ref{sekcja_ciala_koncow}) poniamo $\sin\alpha = \dfrac{2t}{1+t^2}$ e $\cos\alpha = \dfrac{1-t^2}{1+t^2}$. % lang-it
+\end{definition}
+
+Funkcje te spełniają zwykłe tożsamości: $\tan\alpha = \sin\alpha/\cos\alpha$ i $\sin^2\alpha + \cos^2\alpha = 1$ \cite[s. 405--406]{hartshorne_2000} (prop. 42.1). % lang-pl
+Le funzioni così definite soddisfano le solite identità: $\tan\alpha = \sin\alpha/\cos\alpha$ e $\sin^2\alpha + \cos^2\alpha = 1$ \cite[p. 405--406]{hartshorne_2000} (prop. 42.1). % lang-it
+
+\begin{theorem}
+	W trójkącie prostokątnym o kątach $\alpha, \beta$ przy wierzchołkach $A, B$, i o kątach równoległości $\bar a, \bar b, \bar c$ boków naprzeciw $A, B, C$ zachodzi: % lang-pl
+	$\tan\alpha = \cos\bar a\,\tan\bar b$, $\quad \cos\bar b = \cos\alpha\,\cos\bar c$, $\quad \sin\alpha = \cos\beta\,\sin\bar b$; % lang-pl
+	$\tan\bar c = \sin\alpha\,\tan\bar a$, $\quad \sin\bar c = \tan\alpha\,\tan\beta$, $\quad \sin\bar c = \sin\bar a\,\sin\bar b$. % lang-pl
+	In un triangolo rettangolo con angoli $\alpha, \beta$ nei vertici $A, B$ e con angoli di parallelismo $\bar a, \bar b, \bar c$ dei lati opposti ad $A, B, C$ vale: % lang-it
+	$\tan\alpha = \cos\bar a\,\tan\bar b$, $\quad \cos\bar b = \cos\alpha\,\cos\bar c$, $\quad \sin\alpha = \cos\beta\,\sin\bar b$; % lang-it
+	$\tan\bar c = \sin\alpha\,\tan\bar a$, $\quad \sin\bar c = \tan\alpha\,\tan\beta$, $\quad \sin\bar c = \sin\bar a\,\sin\bar b$. % lang-it
+\end{theorem}
+
+Dowody: Hartshorne \cite[s. 406--407]{hartshorne_2000} (prop. 42.2, 42.3); wyprowadzenie zaczyna od trójkąta w szczególnym położeniu w układzie końców i wzoru Bolyaia $\tan\tfrac{\bar a}{2} = a^{-1}$ \cite[s. 404--405]{hartshorne_2000}. % lang-pl
+Jak zauważa Hartshorne, te wzory i cztery dalsze uzyskane przez zamianę ról wierzchołków dają po jednym równaniu dla każdego podzbioru trzech spośród pięciu wielkości $a, b, c, \alpha, \beta$, więc znając dowolne dwie, można obliczyć pozostałe \cite[s. 407]{hartshorne_2000}. % lang-pl
+Dimostrazioni: Hartshorne \cite[p. 406--407]{hartshorne_2000} (prop. 42.2, 42.3); la deduzione parte da un triangolo in posizione particolare nel sistema degli estremi e dalla formula di Bolyai $\tan\tfrac{\bar a}{2} = a^{-1}$ \cite[p. 404--405]{hartshorne_2000}. % lang-it
+Come osserva Hartshorne, queste formule e le altre quattro ottenute scambiando i ruoli dei vertici danno un'equazione per ogni sottoinsieme di tre tra le cinque grandezze $a, b, c, \alpha, \beta$, sicché, note due qualsiasi, si possono calcolare le altre \cite[p. 407]{hartshorne_2000}. % lang-it
+
+W pierwszym z zastosowań Hartshorne oblicza zależność między bokiem a kątem trójkąta równobocznego (przykład 42.3.2) i pole koła. % lang-pl
+Jeśli ciało końców $F$ zawiera się w ciele liczb rzeczywistych, to pole koła o promieniu, którego multiplikatywna długość wynosi $r$, jest granicą pól wielokątów foremnych wpisanych i równa się $A = \pi(r-1)^2/r$ \cite[s. 407--409]{hartshorne_2000} (prop. 42.4); dla zwykłej długości promienia $x = \ln r$ wychodzi $A = 4\pi\sinh^2(x/2)$, więc pole rośnie szybciej niż $\pi x^2$ (zad. 42.16) \cite[s. 413]{hartshorne_2000}. % lang-pl
+Come prima applicazione Hartshorne calcola il legame tra il lato e l'angolo di un triangolo equilatero (esempio 42.3.2) e l'area del cerchio. % lang-it
+Se il corpo degli estremi $F$ è contenuto nel corpo dei numeri reali, l'area di un cerchio il cui raggio ha lunghezza moltiplicativa $r$ è il limite delle aree dei poligoni regolari inscritti e vale $A = \pi(r-1)^2/r$ \cite[p. 407--409]{hartshorne_2000} (prop. 42.4); per la lunghezza ordinaria del raggio $x = \ln r$ si ottiene $A = 4\pi\sinh^2(x/2)$, e dunque l'area cresce più in fretta di $\pi x^2$ (es. 42.16) \cite[p. 413]{hartshorne_2000}. % lang-it
+
+Hartshorne \cite[s. 409]{hartshorne_2000} używa tego wzoru do pytania o „kwadraturę koła'' w geometrii nieeuklidesowej: w geometrii euklidesowej nad ciałem liczb konstruowalnych odpowiedź brzmi zawsze „nie'', bo $\pi$ jest przestępna, ale w płaszczyźnie hiperbolicznej odpowiedź bywa raz „tak'', raz „nie'' -- zależnie od promienia. % lang-pl
+Jeśli $x = (r-1)^2/r$ jest dyadyczną liczbą wymierną, to $\pi x$ jest sumą miar kątów, którą da się dowolnie połowić, i koło jest równoważne figurze prostoliniowej; dla promienia $r = \tfrac{1}{14}(15+\sqrt{29})$ nad ciałem liczb konstruowalnych już nie, bo kąt $\pi/7$ nie istnieje w takiej płaszczyźnie \cite[s. 409]{hartshorne_2000}. % lang-pl
+Hartshorne \cite[p. 409]{hartshorne_2000} usa questa formula per la domanda sulla «quadratura del cerchio» nella geometria non euclidea: nella geometria euclidea sul corpo dei numeri costruibili la risposta è sempre «no», perché $\pi$ è trascendente, ma nel piano iperbolico la risposta è a volte «sì» e a volte «no» -- a seconda del raggio. % lang-it
+Se $x = (r-1)^2/r$ è un razionale diadico, allora $\pi x$ è una somma di misure di angoli che si può dimezzare a piacere, e il cerchio è equivalente a una figura rettilinea; per il raggio $r = \tfrac{1}{14}(15+\sqrt{29})$ sul corpo dei numeri costruibili invece no, perché l'angolo $\pi/7$ non esiste in tale piano \cite[p. 409]{hartshorne_2000}. % lang-it
+
+Drugie zastosowanie to \emph{trójkąty stowarzyszone Engela}: każdemu trójkątowi prostokątnemu o elementach $(a, b, c, \alpha, \beta)$ odpowiada trójkąt prostokątny o elementach $(b, \beta', \bar\alpha', \bar a', \bar c)$ (gdzie prim oznacza kąt dopełniający do $\mathrm{RA}$) \cite[s. 409--410]{hartshorne_2000} (prop. 42.5). % lang-pl
+Powtórzenie tej operacji pięć razy daje z powrotem trójkąt wyjściowy, więc jeden trójkąt rodzi cykl pięciu trójkątów stowarzyszonych \cite[s. 411]{hartshorne_2000}; konstrukcję geometryczną daje konstrukcja Bolyaia z sekcji \ref{sekcja_ciala_koncow} (zad. 42.23) \cite[s. 411, 414]{hartshorne_2000}. % lang-pl
+La seconda applicazione è costituita dai \emph{triangoli associati di Engel}: a ogni triangolo rettangolo con elementi $(a, b, c, \alpha, \beta)$ corrisponde un triangolo rettangolo con elementi $(b, \beta', \bar\alpha', \bar a', \bar c)$ (dove l'apice indica l'angolo complementare rispetto a $\mathrm{RA}$) \cite[p. 409--410]{hartshorne_2000} (prop. 42.5). % lang-it
+Ripetendo cinque volte l'operazione si ritorna al triangolo di partenza, sicché un triangolo dà origine a un ciclo di cinque triangoli associati \cite[p. 411]{hartshorne_2000}; la costruzione geometrica è data dalla costruzione di Bolyai della sezione \ref{sekcja_ciala_koncow} (es. 42.23) \cite[p. 411, 414]{hartshorne_2000}. % lang-it
+\index[persons]{Engel, Friedrich}%
+
+Zadania: prawo sinusów (zad. 42.6) i wzór Łobaczewskiego, analogiczny do prawa cosinusów (zad. 42.7c) \cite[s. 411--412]{hartshorne_2000}; tłumaczenie na funkcje sinh, cosh, tanh (zad. 42.15) \cite[s. 413]{hartshorne_2000}; „trójki pitagorejskie'' w geometrii nieeuklidesowej (zad. 42.25) \cite[s. 415]{hartshorne_2000}. % lang-pl
+Esercizi: la legge dei seni (es. 42.6) e la formula di Lobachevskij, analoga alla legge dei coseni (es. 42.7c) \cite[p. 411--412]{hartshorne_2000}; la traduzione nelle funzioni sinh, cosh, tanh (es. 42.15) \cite[p. 413]{hartshorne_2000}; le «terne pitagoriche» nella geometria non euclidea (es. 42.25) \cite[p. 415]{hartshorne_2000}. % lang-it
