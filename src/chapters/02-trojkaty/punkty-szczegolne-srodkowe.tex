@@ -4,22 +4,21 @@
 
 \subsection{Środek ciężkości i trzy środkowe} % lang-pl
 \subsection{Baricentro e tre mediane} % lang-it
-\begin{definition}[mediana] % lang-it
-\index{mediana}% % lang-it
-    Dato un triangolo. % lang-it
-    Il segmento che unisce uno qualsiasi dei suoi vertici con il punto medio del lato opposto si chiama mediana. % lang-it
-\end{definition} % lang-it
 
-
-\begin{definition}[środkowa] % lang-pl
+\begin{definition}
+[środkowa] % lang-pl
+[mediana] % lang-it
 \index{środkowa}% % lang-pl
     Dany jest pewien trójkąt. % lang-pl
     Odcinek łaczący którykolwiek z jego wierzchołków ze środkiem przeciwległego boku nazywamy środkową. % lang-pl
-\end{definition} % lang-pl
-Da non confondere con il segmento medio! % lang-it
+\index{mediana}% % lang-it
+    Dato un triangolo. % lang-it
+    Il segmento che unisce uno qualsiasi dei suoi vertici con il punto medio del lato opposto si chiama mediana. % lang-it
+\end{definition}
 
 Nie mylić z linią środkową! % lang-pl
 Środkowe dzielą trójkąt na sześć mniejszych o równych polach. % lang-pl
+Da non confondere con il segmento medio! % lang-it
 Le mediane dividono il triangolo in sei triangoli più piccoli di uguale area. % lang-it
 % TODO: rysunek równych sześciu pól.
 
@@ -27,10 +26,8 @@ Le mediane dividono il triangolo in sei triangoli più piccoli di uguale area. %
 
 \begin{proposition}
     Niech $m_a, m_b, m_c$ oznacza długości trzech środkowych trójkąta, zaś $p$ połowę jego obwodu. % lang-pl
-    
     Wtedy % lang-pl
     Siano $m_a, m_b, m_c$ le lunghezze delle tre mediane di un triangolo e $p$ il semiperimetro. % lang-it
-    
     Allora % lang-it
     \begin{equation}
         \frac 32 p \le m_a + m_b + m_c \le 2p.
@@ -39,21 +36,17 @@ Le mediane dividono il triangolo in sei triangoli più piccoli di uguale area. %
 \end{proposition}
 
 Napisze o tym Coxeter \cite[s. 26]{coxeter_1967}. % lang-pl
-
 Guzicki \cite[s. 357]{guzicki_2021} wytłumaczy dodatkowo, czemu żadnej ze stałych: $\frac 34$, $1$ nie można poprawić. % lang-pl
 Ne scriverà Coxeter \cite[p. 26]{coxeter_1967}. % lang-it
 Guzicki \cite[p. 357]{guzicki_2021} spiegherà inoltre perché nessuna delle costanti $\frac 34$, $1$ può essere migliorata. % lang-it
-
 
 Mamy też podobną nierówność: % lang-pl
 Abbiamo anche una disuguaglianza simile: % lang-it
 
 \begin{proposition}
     Niech $a, b, c$ oznacza długości boków trójkąta. % lang-pl
-    
     Wtedy % lang-pl
     Siano $a$, $b$, $c$ le lunghezze dei lati di un triangolo. % lang-it
-    
     Allora % lang-it
     \begin{equation}
         \frac 32 \le \frac{a}{b+c} + \frac{b}{a+c} + \frac{c}{a+b} < 2.
@@ -61,7 +54,6 @@ Abbiamo anche una disuguaglianza simile: % lang-it
 \end{proposition}
 
 Lewa połowa jest prawdziwa dla wszystkich dodatnich liczb $a, b, c$ i nosi nazwę nierówności (Alfreda Mortimera) Nesbitta, który znajdzie ją około 1902 roku. % lang-pl
-
 La disuguaglianza a sinistra vale per tutti i numeri positivi $a, b, c$ ed è nota come disuguaglianza di (Alfred Mortimer) Nesbitt, che la troverà intorno al 1902. % lang-it
 
 \begin{proposition}
@@ -69,7 +61,6 @@ La disuguaglianza a sinistra vale per tutti i numeri positivi $a, b, c$ ed è no
 \index{środek ciężkości}% % lang-pl
     Trzy środkowe trójkąta przecinają się w jednym punkcie zwanym środkiem ciężkości i dzielą się w~stosunku $2$ do $1$, licząc od wierzchołków. % lang-pl
 \index{baricentro}% % lang-it
-    
     Le tre mediane di un triangolo si incontrano in un unico punto, chiamato baricentro, e vengono divise da esso nel rapporto $2$ a $1$, contando dai vertici. % lang-it
 \end{proposition}
 % % Coxeter, Introduction to Geometry, s. 10 <- przeczytaj to, nie tylko cytuj! + ćwiczenia: 3/4 <= 1
@@ -77,44 +68,35 @@ La disuguaglianza a sinistra vale per tutti i numeri positivi $a, b, c$ ed è no
 % Zetel, s. 25 z tw. Cevy
 
 Środkowe to po angielsku \emph{medians}, przecinają się w \emph{centroid}. % lang-pl
-
 Polska nazwa weźmie się z tego, że środek ciężkości fizycznego modelu trójkąta wykonanego z jednolitego materiału znajduje się właśnie tam. % lang-pl
-Po angielsku środkowe nazywają się \emph{medians}, a ich punkt przecięcia \emph{centroid}. % lang-it
-
 Angielska nazwa powstanie w 1814 roku z powodu niechęci do tego, co nie jest czysto geometryczne; niechęci, której nie będzie widać w innych europejskich językach. % lang-pl
+Po angielsku środkowe nazywają się \emph{medians}, a ich punkt przecięcia \emph{centroid}. % lang-it
 Il nome polacco deriva dal fatto che il centro di gravità di un modello fisico di triangolo realizzato con materiale omogeneo si trova proprio in quel punto. % lang-it
 Il termine inglese nascerà nel 1814 a causa di una certa avversione verso ciò che non è puramente geometrico; un'avversione che non si osserverà nelle altre lingue europee. % lang-it
-
 
 (Środek ciężkości brzegu trójkąta nazywa się punktem Spiekera, patrz fakt \ref{punkt_spiekera}). % lang-pl
 (Il centro di gravità del bordo di un triangolo si chiama punto di Spieker, vedi il fatto \ref{punkt_spiekera}). % lang-it
 \index{punkt!Spiekera}%
 
 Hartshorne \cite[s. 52-54]{hartshorne2000} wnioskuje \ref{srodkowe_przecinaja_sie} z faktu \ref{hartshorne_52} (później zaś \cite[s. 119-120]{hartshorne2000} powtórzy dowód z~maszynerią geometrii analitycznej). % lang-pl
-
 Hartshorne \cite[p. 52-54]{hartshorne2000} deduce \ref{srodkowe_przecinaja_sie} dal fatto \ref{hartshorne_52} (più tardi \cite[p. 119-120]{hartshorne2000} ripeterà la dimostrazione usando gli strumenti della geometria analitica). % lang-it
 \index[persons]{Archimedes}% % lang-pl
 \index[persons]{Archimede}% % lang-it
 Podobnie zrobią Pompe \cite[s. 41]{pompe_2022}, Guzicki \cite[s. 220]{guzicki_2021} albo Bogdańska, Neugebauer \cite[s. 53]{guzicki_2021}. % lang-pl
-
 Zetel \cite[s. 14, 25]{zetel_2020} pokaże, że twierdzenie Cevy daje natychmiast dowód istnienia środka ciężkości. % lang-pl
-Faranno lo stesso Pompe \cite[p. 41]{pompe_2022}, Guzicki \cite[p. 220]{guzicki_2021} e Bogdańska, Neugebauer \cite[p. 53]{guzicki_2021}. % lang-it
-
 \index{twierdzenie!Cevy}% % lang-pl
+Faranno lo stesso Pompe \cite[p. 41]{pompe_2022}, Guzicki \cite[p. 220]{guzicki_2021} e Bogdańska, Neugebauer \cite[p. 53]{guzicki_2021}. % lang-it
 Zetel \cite[p. 14, 25]{zetel_2020} mostrerà che il teorema di Ceva fornisce immediatamente una dimostrazione dell'esistenza del baricentro. % lang-it
 \index{teorema!di Ceva}% % lang-it
 % TODO: Ich długość można obliczyć z https://en.wikipedia.org/wiki/Apollonius%27s_theorem => to jest z https://en.wikipedia.org/wiki/Median_(geometry)#Formulas_involving_the_medians'_lengths
 Coxeter \cite[s. 26]{coxeter_1967} pokaże, jak otrzymać ten sam wynik z (VI.2) oraz (VI.4). % lang-pl
 Coxeter \cite[p. 26]{coxeter_1967} mostrerà come ottenere lo stesso risultato da (VI.2) e (VI.4). % lang-it
 
-
 Historia faktów \ref{wysokosci_przecinaja_sie} oraz \ref{srodkowe_przecinaja_sie} ma wiele elementów wspólnych, więc omówimy je razem. % lang-pl
-La storia dei fatti \ref{wysokosci_przecinaja_sie} e \ref{srodkowe_przecinaja_sie} presenta molti elementi in comune, perciò li discuteremo insieme. % lang-it
-
 Żaden z nich nie pojawi się w Elementach Euklidesach i właściwie nie wiadomo, kto odkryje je pierwszy. % lang-pl
-Nessuno dei due compare negli Elementi di Euclide e non si sa realmente chi li abbia scoperti per primo. % lang-it
-
 Uczeni arabscy stwierdzą, że był to Archimedes, choć nie ma ku temu niezbitych dowodów. % lang-pl
+La storia dei fatti \ref{wysokosci_przecinaja_sie} e \ref{srodkowe_przecinaja_sie} presenta molti elementi in comune, perciò li discuteremo insieme. % lang-it
+Nessuno dei due compare negli Elementi di Euclide e non si sa realmente chi li abbia scoperti per primo. % lang-it
 Gli studiosi arabi affermeranno che fu Archimede, anche se non esistono prove definitive. % lang-it
 \index[persons]{Archimede}% % lang-it
 
@@ -127,25 +109,20 @@ Pappo conoscerà l'esistenza dell'ortocentro, ma la più antica dimostrazione no
 
 Fakt \ref{srodkowe_przecinaja_sie} ma trójwymiarową kontynuację: % lang-pl
 Il fatto \ref{srodkowe_przecinaja_sie} possiede un'analoga versione tridimensionale: % lang-it
-\begin{proposition} % lang-it
-    I quattro segmenti che uniscono i vertici di un tetraedro con i baricentri delle facce opposte si incontrano in un unico punto, che li divide nel rapporto $3$ a $1$. % lang-it
-\end{proposition} % lang-it
 
-
-\begin{proposition} % lang-pl
+\begin{proposition}
     Cztery odcinki łączące wierzchołki czworościanu ze środkami przeciwległych ścian przecinają się w~jednym punkcie, który dzieli je w stosunku $3$ do $1$. % lang-pl
-\end{proposition} % lang-pl
-Alcuni usano l'espressione ``teorema di Commandino'', poiché Federico Commandino scriverà nel 1565 l'opera \emph{De centro gravitatis solidorum} (Sui centri di gravità dei solidi), pur non essendo necessariamente il primo ad averlo scoperto. % lang-it
-\index{teorema!di Commandino}% % lang-it
-\index[persons]{Commandino, Federico}% % lang-it
+    I quattro segmenti che uniscono i vertici di un tetraedro con i baricentri delle facce opposte si incontrano in un unico punto, che li divide nel rapporto $3$ a $1$. % lang-it
+\end{proposition}
 
 Niektórzy stosują określenie ,,twierdzenie Commandino'', ponieważ Federico Commandino napisze w 1565 roku pracę \emph{De centro gravitatis solidorum} (O środkach ciężkości brył), chociaż może nie być pierwszym, który je odkrył. % lang-pl
-Si sospetta che Francesco Maurolico lo conoscesse già in precedenza. % lang-it
-
 \index{twierdzenie!Commandino}% % lang-pl
-\index[persons]{Commandino, Federico}% % lang-pl
+Alcuni usano l'espressione ``teorema di Commandino'', poiché Federico Commandino scriverà nel 1565 l'opera \emph{De centro gravitatis solidorum} (Sui centri di gravità dei solidi), pur non essendo necessariamente il primo ad averlo scoperto. % lang-it
+\index{teorema!di Commandino}% % lang-it
+\index[persons]{Commandino, Federico}%
 Podejrzewa się, że Francesco Maurolico pozna je wcześniej. % lang-pl
 (Friederich Eduard Reusch znajdzie uogólnienie, które w zdegenerowanym przypadku prowadzi znowu do twierdzenia \ref{theorem_varignon} Varignona). % lang-pl
+Si sospetta che Francesco Maurolico lo conoscesse già in precedenza. % lang-it
 (Friederich Eduard Reusch troverà una generalizzazione che, in un caso degenere, conduce nuovamente al teorema di Varignon \ref{theorem_varignon}). % lang-it
 \index[persons]{Reusch, Friederich Eduard}%
 
