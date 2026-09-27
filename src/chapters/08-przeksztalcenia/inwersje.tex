@@ -138,9 +138,39 @@ Coxeter \cite[p. 108]{coxeter_1967} scrive di tre tipi di trasformazioni: ellitt
 Nazwa ma greckie korzenie: loksodroma to linia przecinająca wszystkie południki pod tym samym kątem (λοξός ukośny, δρόμος linia). % lang-pl
 Il nome ha origini greche: la lossodroma è una linea che interseca tutti i meridiani con lo stesso angolo (λοξός obliquo, δρόμος linea). % lang-it
 
-łańcuchy Steinera % lang-pl
-catene di Steiner % lang-it
-% https://en.wikipedia.org/wiki/Steiner_chain The method of circle inversion is helpful in treating Steiner chains. => Audin Audin \cite[s. 109]{audin_2003} używa porism % Coxeter-pl s. 104 Eves 135
+\begin{definition}
+\label{def:lancuch_steinera}%
+    Dane są dwa rozłączne okręgi $\alpha$ i $\beta$. % lang-pl
+    Łańcuchem Steinera nazywamy ciąg okręgów $C_1, C_2, \ldots, C_n$ stycznych do $\alpha$ i do $\beta$, w którym każdy okrąg jest styczny do poprzedniego i do następnego. % lang-pl
+    Łańcuch jest zamknięty, jeśli także $C_n$ jest styczny do $C_1$, a otwarty w przeciwnym razie. % lang-pl
+    Siano date due circonferenze disgiunte $\alpha$ e $\beta$. % lang-it
+    Si chiama catena di Steiner una successione di circonferenze $C_1, C_2, \ldots, C_n$ tangenti ad $\alpha$ e a $\beta$, in cui ogni circonferenza è tangente alla precedente e alla successiva. % lang-it
+    La catena è chiusa se anche $C_n$ è tangente a $C_1$, aperta altrimenti. % lang-it
+\end{definition}
+\index{łańcuchy Steinera}% % lang-pl
+\index{catene di Steiner}% % lang-it
+
+Mniejszy z okręgów $\alpha$, $\beta$ może leżeć wewnątrz większego albo poza nim. % lang-pl
+Jakob Steiner zdefiniuje takie łańcuchy w XIX wieku i odkryje wiele ich własności; piszą o nich także Coxeter \cite[s. 104]{coxeter_1967} i Eves \cite[s. 134-135]{eves1_1972}. % lang-pl
+Il minore tra le circonferenze $\alpha$ e $\beta$ può trovarsi all'interno della maggiore oppure al suo esterno. % lang-it
+Jakob Steiner definirà queste catene nel XIX secolo e ne scoprirà molte proprietà; ne scrivono anche Coxeter \cite[p. 104]{coxeter_1967} ed Eves \cite[p. 134-135]{eves1_1972}. % lang-it
+\index[persons]{Steiner, Jakob}%
+\index[persons]{Coxeter, Harold}%
+\index[persons]{Eves, Howard}%
+
+\begin{theorem}[poryzmat Steinera] % lang-pl
+\begin{theorem}[porisma di Steiner] % lang-it
+    Jeśli dla okręgów $\alpha$ i $\beta$ istnieje choć jeden zamknięty łańcuch Steinera złożony z $n$ okręgów, to istnieje ich nieskończenie wiele. % lang-pl
+    Co więcej, każdy okrąg styczny do $\alpha$ i $\beta$ w ten sam sposób (wewnętrznie lub zewnętrznie) co okręgi wyjściowego łańcucha należy do jednego z takich łańcuchów. % lang-pl
+    Se per le circonferenze $\alpha$ e $\beta$ esiste almeno una catena di Steiner chiusa formata da $n$ circonferenze, allora ne esistono infinite. % lang-it
+    Inoltre, ogni circonferenza tangente ad $\alpha$ e a $\beta$ nello stesso modo (internamente o esternamente) delle circonferenze della catena iniziale appartiene a una di tali catene. % lang-it
+\end{theorem}
+\index{poryzmat!Steinera}% % lang-pl
+\index{porisma!di Steiner}% % lang-it
+
+Twierdzenie to nazywa poryzmatem między innymi Audin \cite[s. 109]{audin_2003}. % lang-pl
+Questo teorema è chiamato porisma, tra gli altri, da Audin \cite[p. 109]{audin_2003}. % lang-it
+\index[persons]{Audin, Michèle}%
 
 Węgierski filozof nauki Lakatos napisze, że \emph{,,Grecy nie przywiązywali wagi do stwierdzeń, które udawało się im uzyskiwać po drodze, jeśli przedtem nie były przewidziane. % lang-pl
 Nazywali je poryzmatami (wnioskami, rezultatami ubocznymi pojawiającymi się przez przypadek i bez zasługi), stanowiącymi (...) rodzaj spadłego owocu lub daru losu''}. % lang-pl
@@ -151,11 +181,56 @@ Li chiamavano porismi (conclusioni, risultati collaterali che compaiono accident
 \index{porisma}% % lang-it
 % któraś Delta z 1984
 
-% TODO: https://en.wikipedia.org/wiki/Steiner_chain
+Łańcuchy Steinera najłatwiej badać za pomocą inwersji. % lang-pl
+Ponieważ inwersja zachowuje okręgi (włączając proste), styczność i kąty, przeprowadza łańcuch Steinera na łańcuch Steinera złożony z tylu samo okręgów. % lang-pl
+Odpowiednio dobrana inwersja przenosi rozłączne okręgi $\alpha$ i $\beta$ na okręgi współśrodkowe. % lang-pl
+Wtedy wszystkie okręgi łańcucha mają ten sam promień i można je ,,toczyć'' w pierścieniu między $\alpha$ i $\beta$ niczym kulki w łożysku; obroty wokół wspólnego środka dają nieskończenie wiele łańcuchów, co po powrocie inwersją dowodzi poryzmatu Steinera. % lang-pl
+Le catene di Steiner si studiano più facilmente per mezzo dell'inversione. % lang-it
+Poiché l'inversione preserva le circonferenze (includendo le rette), la tangenza e gli angoli, essa trasforma una catena di Steiner in una catena di Steiner formata dallo stesso numero di circonferenze. % lang-it
+Un'inversione scelta opportunamente trasforma le circonferenze disgiunte $\alpha$ e $\beta$ in circonferenze concentriche. % lang-it
+Allora tutte le circonferenze della catena hanno lo stesso raggio e possono ``rotolare'' nella corona circolare tra $\alpha$ e $\beta$ come le sfere di un cuscinetto; le rotazioni attorno al centro comune forniscono infinite catene, il che, tornando indietro con l'inversione, dimostra il porisma di Steiner. % lang-it
+
+Niech okręgi $\alpha$ i $\beta$ będą współśrodkowe, o promieniach $R > r$, a okręgi łańcucha mają promień $\rho$. % lang-pl
+Środki sąsiednich okręgów łańcucha widać ze wspólnego środka pod kątem $2\theta = 360^\circ/n$, więc $\sin \theta = \rho/(r + \rho)$; ponadto $R = r + 2\rho$. % lang-pl
+Stąd zamknięty łańcuch Steinera złożony z $n$ okręgów istnieje wtedy i tylko wtedy, gdy % lang-pl
+Siano $\alpha$ e $\beta$ concentriche, di raggi $R > r$, e siano $\rho$ i raggi delle circonferenze della catena. % lang-it
+I centri di due circonferenze adiacenti della catena sono visti dal centro comune sotto l'angolo $2\theta = 360^\circ/n$, quindi $\sin \theta = \rho/(r + \rho)$; inoltre $R = r + 2\rho$. % lang-it
+Ne segue che una catena di Steiner chiusa formata da $n$ circonferenze esiste se e solo se % lang-it
+\[
+    \frac{R}{r} = \frac{1 + \sin \theta}{1 - \sin \theta}, \quad \theta = \frac{180^\circ}{n}.
+\]
+
+W tym położeniu punkty styczności sąsiednich okręgów łańcucha leżą na okręgu o promieniu $r + \rho$, współśrodkowym z $\alpha$ i $\beta$. % lang-pl
+Inwersja przenosi okręgi na okręgi, więc również w dowolnym łańcuchu Steinera punkty styczności sąsiednich okręgów leżą na jednym okręgu. % lang-pl
+In questa posizione i punti di tangenza tra circonferenze adiacenti della catena giacciono su una circonferenza di raggio $r + \rho$, concentrica ad $\alpha$ e $\beta$. % lang-it
+L'inversione trasforma circonferenze in circonferenze, quindi anche in una catena di Steiner qualsiasi i punti di tangenza tra circonferenze adiacenti giacciono su un'unica circonferenza. % lang-it
+
+Środki okręgów łańcucha leżą na elipsie, jeśli mniejszy z okręgów $\alpha$, $\beta$ leży wewnątrz większego, a na hiperboli, jeśli leży poza nim. % lang-pl
+W pierwszym przypadku niech $\beta$ leży wewnątrz $\alpha$, niech $A$, $B$ będą ich środkami, a $r_\alpha$, $r_\beta$ promieniami. % lang-pl
+Jeśli $P_k$ i $r_k$ są środkiem i promieniem okręgu $C_k$, to % lang-pl
+I centri delle circonferenze della catena giacciono su un'ellisse se la minore tra $\alpha$ e $\beta$ si trova all'interno della maggiore, e su un'iperbole se si trova al suo esterno. % lang-it
+Nel primo caso sia $\beta$ interna ad $\alpha$, siano $A$, $B$ i loro centri e $r_\alpha$, $r_\beta$ i loro raggi. % lang-it
+Se $P_k$ e $r_k$ sono il centro e il raggio della circonferenza $C_k$, allora % lang-it
+\[
+    |P_k A| + |P_k B| = (r_\alpha - r_k) + (r_\beta + r_k) = r_\alpha + r_\beta,
+\]
+czyli wszystkie środki $P_k$ leżą na elipsie o ogniskach $A$ i $B$. % lang-pl
+cioè tutti i centri $P_k$ giacciono su un'ellisse di fuochi $A$ e $B$. % lang-it
+
+Gdy okręgi $\alpha$ i $\beta$ są styczne, łańcuch Steinera staje się nieskończony: jest to łańcuch Pappusa, związany z arbelosem. % lang-pl
+Przestrzennym odpowiednikiem łańcucha Steinera złożonego z sześciu okręgów jest heksleta Soddy'ego: sześć kul stycznych do trzech danych kul. % lang-pl
+Quando le circonferenze $\alpha$ e $\beta$ sono tangenti, la catena di Steiner diventa infinita: si tratta della catena di Pappo, legata all'arbelo. % lang-it
+L'analogo spaziale di una catena di Steiner formata da sei circonferenze è l'hexlet di Soddy: sei sfere tangenti a tre sfere date. % lang-it
+% https://en.wikipedia.org/wiki/Steiner_chain
 % TODO: https://en.wikipedia.org/wiki/Soddy's_hexlet w 3D
 % https://en.wikipedia.org/wiki/Porism
-\index{łańcuchy Steinera} % lang-pl
-\index{catene di Steiner} % lang-it
+\index{łańcuch Pappusa}% % lang-pl
+\index{heksleta Soddy'ego}% % lang-pl
+\index{catena di Pappo}% % lang-it
+\index{hexlet di Soddy}% % lang-it
+\index[persons]{Pappus}% % lang-pl
+\index[persons]{Pappo}% % lang-it
+\index[persons]{Soddy, Frederick}%
 
 formuła Kartezjusza % lang-pl
 formula di Cartesio % lang-it
