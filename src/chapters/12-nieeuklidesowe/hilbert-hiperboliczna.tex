@@ -1,0 +1,110 @@
+% Źródła: Hartshorne s. 373--384 (§40); Greenberg 2010, s. 209, 211.
+
+\section{Geometria hiperboliczna Hilberta} % lang-pl
+\section{La geometria iperbolica di Hilbert} % lang-it
+\label{sekcja_hilbert_hiperboliczna}
+
+Skoro odkrywcy przyjmowali istnienie równoległych granicznych po cichu, Hilbert zapisze je wprost i zbuduje na nich całą geometrię, bez ciągłości. % lang-pl
+W tej sekcji zobaczymy jego aksjomat i to, co z niego wynika -- klasyczną geometrię Bolyaia i Łobaczewskiego, wyłożoną jeszcze raz, ale w płaszczyźnie Hilberta. % lang-pl
+Poiché gli scopritori assumevano in silenzio l'esistenza delle parallele limite, Hilbert la scriverà esplicitamente e costruirà su di essa l'intera geometria, senza continuità. % lang-it
+In questa sezione vedremo il suo assioma e ciò che ne discende -- la geometria classica di Bolyai e Lobachevskij, esposta ancora una volta, ma nel piano di Hilbert. % lang-it
+
+\begin{axiom}
+[hiperboliczny Hilberta] % lang-pl
+[iperbolico di Hilbert] % lang-it
+\index{aksjomat!hiperboliczny Hilberta} % lang-pl
+\index{assioma!iperbolico di Hilbert} % lang-it
+	Dla każdej prostej $l$ i każdego punktu $A$ spoza niej istnieją dwie półproste $Aa$ i $Aa'$, niezawarte w jednej prostej i nieprzecinające $l$, takie że każda półprosta $An$ wewnątrz kąta $aAa'$ przecina $l$. % lang-pl
+	Per ogni retta $l$ e ogni punto $A$ non appartenente ad essa esistono due semirette $Aa$ e $Aa'$, non contenute in una stessa retta e che non intersecano $l$, tali che ogni semiretta $An$ interna all'angolo $aAa'$ interseca $l$. % lang-it
+\end{axiom}
+
+Hartshorne \cite[s. 374]{hartshorne_2000} oznacza ten aksjomat literą (L); płaszczyznę Hilberta, która go spełnia, nazywa \emph{hiperboliczną}, a nie tylko półhiperboliczną (zobacz sekcję \ref{sekcja_trzy_typy}). % lang-pl
+Aksjomat ten nie wymaga ani aksjomatu Archimedesa, ani aksjomatu o przecinaniu się okręgów: pozwoli rozwinąć geometrię Bolyaia i Łobaczewskiego niezależnie od ciągłości, zbudować z geometrii ciało uporządkowane (zobacz sekcję \ref{sekcja_ciala_koncow}) i udowodnić, że każda taka płaszczyzna jest izomorficzna z modelem Poincarego nad tym ciałem \cite[s. 373--374]{hartshorne_2000}. % lang-pl
+Hartshorne \cite[p. 374]{hartshorne_2000} indica questo assioma con la lettera (L); un piano di Hilbert che lo soddisfa lo chiama \emph{iperbolico}, e non soltanto semiiperbolico (si veda la sezione \ref{sekcja_trzy_typy}). % lang-it
+Questo assioma non richiede né l'assioma di Archimede né quello sull'intersezione delle circonferenze: permetterà di sviluppare la geometria di Bolyai e Lobachevskij indipendentemente dalla continuità, di costruire dalla geometria un corpo ordinato (si veda la sezione \ref{sekcja_ciala_koncow}) e di dimostrare che ogni tale piano è isomorfo al modello di Poincaré su quel corpo \cite[p. 373--374]{hartshorne_2000}. % lang-it
+
+\begin{definition}
+[kąt równoległości] % lang-pl
+[angolo di parallelismo] % lang-it
+	Niech $AB$ będzie odcinkiem, $b$ prostą prostopadłą do $AB$ w punkcie $B$, a $Aa$ półprostą równoległą graniczną do półprostej $Bb$ na tej prostej. % lang-pl
+	Kąt $\alpha(AB) = \angle BAa$ nazywamy kątem równoległości odcinka $AB$ (Łobaczewski pisze $\Pi(AB)$); jest on zawsze ostry. % lang-pl
+	Sia $AB$ un segmento, $b$ la retta perpendicolare ad $AB$ in $B$ e $Aa$ la semiretta parallela limite alla semiretta $Bb$ su quella retta. % lang-it
+	L'angolo $\alpha(AB) = \angle BAa$ si chiama angolo di parallelismo del segmento $AB$ (Lobachevskij scrive $\Pi(AB)$); è sempre acuto. % lang-it
+\end{definition}
+
+Hartshorne \cite[s. 374--375]{hartshorne_2000}. % lang-pl
+Hartshorne \cite[p. 374--375]{hartshorne_2000}. % lang-it
+
+\begin{proposition}
+	Kąt równoległości zmienia się odwrotnie do długości odcinka: $AB < A'B' \Leftrightarrow \alpha(AB) > \alpha(A'B')$, oraz $AB \cong A'B' \Leftrightarrow \alpha(AB) = \alpha(A'B')$. % lang-pl
+	L'angolo di parallelismo varia in modo inverso rispetto al segmento: $AB < A'B' \Leftrightarrow \alpha(AB) > \alpha(A'B')$, e $AB \cong A'B' \Leftrightarrow \alpha(AB) = \alpha(A'B')$. % lang-it
+\end{proposition}
+
+Dowód: Hartshorne \cite[s. 375]{hartshorne_2000} (prop. 40.1). % lang-pl
+Dimostrazione: Hartshorne \cite[p. 375]{hartshorne_2000} (prop. 40.1). % lang-it
+
+\begin{theorem}
+[o kącie zewnętrznym trójkąta granicznego] % lang-pl
+[dell'angolo esterno di un triangolo limite] % lang-it
+	Jeśli z końców odcinka $AB$ wychodzą półproste równoległe graniczne, to kąt zewnętrzny przy $B$ jest większy od kąta wewnętrznego przy $A$. % lang-pl
+	Se dagli estremi del segmento $AB$ escono semirette parallele limite, l'angolo esterno in $B$ è maggiore dell'angolo interno in $A$. % lang-it
+\end{theorem}
+
+Hartshorne \cite[s. 376]{hartshorne_2000} (tw. 40.2). % lang-pl
+Wynika z niego, że suma kątów każdego trójkąta w płaszczyźnie hiperbolicznej jest mniejsza od dwóch kątów prostych -- tym razem bez aksjomatu Archimedesa, którego potrzebowało twierdzenie Saccheriego--Legendre'a; wystarcza „potężny'' aksjomat (L) \cite[s. 376--377]{hartshorne_2000} (wniosek 40.3). % lang-pl
+Hartshorne \cite[p. 376]{hartshorne_2000} (teor. 40.2). % lang-it
+Ne segue che la somma degli angoli di ogni triangolo del piano iperbolico è minore di due angoli retti -- questa volta senza l'assioma di Archimede, di cui aveva bisogno il teorema di Saccheri--Legendre; basta il «potente» assioma (L) \cite[p. 376--377]{hartshorne_2000} (corollario 40.3). % lang-it
+
+\begin{theorem}
+[trójkąty graniczne o równych kątach] % lang-pl
+[triangoli limite con angoli uguali] % lang-it
+	Jeśli w dwóch trójkątach granicznych $ABlm$ i $A'B'l'm'$ kąty przy $A$, $B$ są równe kątom przy $A'$, $B'$, to boki skończone $AB$ i $A'B'$ też są równe. % lang-pl
+	Se in due triangoli limite $ABlm$ e $A'B'l'm'$ gli angoli in $A$, $B$ sono uguali agli angoli in $A'$, $B'$, allora sono uguali anche i lati finiti $AB$ e $A'B'$. % lang-it
+\end{theorem}
+
+Hartshorne \cite[s. 377]{hartshorne_2000} (prop. 40.4, oznaczenie (AAL)); por.~sekcję \ref{sekcja_trojkaty_graniczne}, gdzie ten sam fakt jest u Evesa. % lang-pl
+Hartshorne \cite[p. 377]{hartshorne_2000} (prop. 40.4, indicata con (AAL)); si confronti la sezione \ref{sekcja_trojkaty_graniczne}, dove lo stesso fatto è in Eves. % lang-it
+
+\begin{theorem}
+[Hilberta] % lang-pl
+[di Hilbert] % lang-it
+	W płaszczyźnie hiperbolicznej dwie proste równoległe, ale nie graniczne, mają dokładnie jedną wspólną prostopadłą. % lang-pl
+	Nel piano iperbolico due rette parallele, ma non parallele limite, hanno esattamente una perpendicolare comune. % lang-it
+\end{theorem}
+
+Hartshorne \cite[s. 377--378]{hartshorne_2000} (tw. 40.5); porównaj sekcję \ref{sekcja_punkty_idealne}. % lang-pl
+Hartshorne \cite[p. 377--378]{hartshorne_2000} (teor. 40.5); si confronti la sezione \ref{sekcja_punkty_idealne}. % lang-it
+
+\begin{proposition}
+	Dla każdego kąta w płaszczyźnie hiperbolicznej istnieje dokładnie jedna prosta (\emph{prosta obejmująca} ten kąt) równoległa graniczna do obu jego ramion. % lang-pl
+	Per ogni angolo del piano iperbolico esiste esattamente una retta (la \emph{retta di inviluppo} dell'angolo) parallela limite a entrambi i suoi lati. % lang-it
+\end{proposition}
+
+Dowód (z trzema przypadkami): Hartshorne \cite[s. 378--380]{hartshorne_2000} (prop. 40.6). % lang-pl
+Dimostrazione (in tre casi): Hartshorne \cite[p. 378--380]{hartshorne_2000} (prop. 40.6). % lang-it
+
+Dla każdego kąta ostrego $\alpha$ istnieje odcinek o kącie równoległości $\alpha$ (wniosek 40.7). % lang-pl
+Odpowiedniość między klasami przystawania odcinków i kątów ostrych jest więc wzajemnie jednoznaczna, a odcinek odpowiadający połowie kąta prostego jest \emph{absolutnym wzorcem} długości \cite[s. 380]{hartshorne_2000}. % lang-pl
+Greenberg \cite[s. 211]{greenberg_2010} nazywa go \emph{odcinkiem Schweikarta}: to odcinek, którego kąt równoległości wynosi $\pi/4$ (zobacz sekcję \ref{sekcja_schweikart_taurinus}). % lang-pl
+Odpowiedniość ta nie przeprowadza jednak sum odcinków na sumy kątów (zad. 42.7) \cite[s. 380]{hartshorne_2000}. % lang-pl
+Per ogni angolo acuto $\alpha$ esiste un segmento con angolo di parallelismo $\alpha$ (corollario 40.7). % lang-it
+La corrispondenza tra le classi di congruenza dei segmenti e degli angoli acuti è dunque biunivoca, e il segmento corrispondente a metà angolo retto è un \emph{campione assoluto} di lunghezza \cite[p. 380]{hartshorne_2000}. % lang-it
+Greenberg \cite[p. 211]{greenberg_2010} lo chiama \emph{segmento di Schweikart}: è il segmento il cui angolo di parallelismo è $\pi/4$ (si veda la sezione \ref{sekcja_schweikart_taurinus}). % lang-it
+Questa corrispondenza non manda però le somme di segmenti nelle somme di angoli (es. 42.7) \cite[p. 380]{hartshorne_2000}. % lang-it
+\index{odcinek Schweikarta} % lang-pl
+\index{segmento di Schweikart} % lang-it
+
+Aksjomat Arystotelesa (z sekcji \ref{sekcja_dobre_stare}) zachodzi w każdej płaszczyźnie hiperbolicznej \cite[s. 380--382]{hartshorne_2000} (prop. 40.8). % lang-pl
+L'assioma di Aristotele (sezione \ref{sekcja_dobre_stare}) vale in ogni piano iperbolico \cite[p. 380--382]{hartshorne_2000} (prop. 40.8). % lang-it
+
+Jako ilustrację Hartshorne podaje hiperboliczny odpowiednik twierdzenia o dwusiecznych trójkąta: dwusieczne wewnętrzne przecinają się w jednym punkcie w każdej geometrii neutralnej, a dla dwusiecznych zewnętrznych zachodzi trzy-przypadkowy fakt (przecinają się, mają wspólną prostopadłą albo są równoległe graniczne) \cite[s. 382--384]{hartshorne_2000} (prop. 40.9). % lang-pl
+Aby wypowiedzieć go jednolicie, wprowadza punkt idealny jako klasę równoważności prostych mających wspólną prostopadłą -- „uogólniony punkt'' to punkt zwykły, koniec albo punkt idealny \cite[s. 384]{hartshorne_2000}. % lang-pl
+Come illustrazione Hartshorne dà l'analogo iperbolico del teorema sulle bisettrici di un triangolo: le bisettrici interne si incontrano in un punto in ogni geometria neutrale, e per le bisettrici esterne vale un fatto in tre casi (si incontrano, hanno una perpendicolare comune o sono parallele limite) \cite[p. 382--384]{hartshorne_2000} (prop. 40.9). % lang-it
+Per enunciarlo in modo unitario introduce il punto ideale come classe di equivalenza di rette aventi una perpendicolare comune -- un «punto generalizzato» è un punto ordinario, un estremo o un punto ideale \cite[p. 384]{hartshorne_2000}. % lang-it
+Jest to dokładnie to, co Eves nazywa punktami idealnymi i ultraidealnymi (zobacz sekcję \ref{sekcja_punkty_idealne}); nazwy się różnią: to, co Hartshorne nazywa „końcem'', Eves nazywa punktem idealnym, a to, co Hartshorne nazywa punktem idealnym, Eves nazywa ultraidealnym. % lang-pl
+Corrisponde esattamente a ciò che Eves chiama punti ideali e ultraideali (si veda la sezione \ref{sekcja_punkty_idealne}); i nomi differiscono: ciò che Hartshorne chiama «estremo» Eves lo chiama punto ideale, e ciò che Hartshorne chiama punto ideale Eves lo chiama ultraideale. % lang-it
+\index{punkt!uogólniony} % lang-pl
+\index{punto!generalizzato} % lang-it
+
+Zadania: Hartshorne \cite[s. 384 nn.]{hartshorne_2000} (zad. 40.1 nn.). % lang-pl
+Esercizi: Hartshorne \cite[p. 384 e segg.]{hartshorne_2000} (es. 40.1 e segg.). % lang-it

@@ -1,0 +1,70 @@
+% Źródła: Hartshorne s. 415--434 (§43); przeczytano dokładnie s. 415--422 i fragmenty s. 424--428.
+
+\section{Charakteryzacja płaszczyzn hiperbolicznych} % lang-pl
+\section{Caratterizzazione dei piani iperbolici} % lang-it
+\label{sekcja_charakteryzacja}
+
+Kończymy historię pytaniem, ile jest płaszczyzn hiperbolicznych, i odpowiedzią, która jest zarazem podsumowaniem tego rozdziału. % lang-pl
+W tej sekcji zobaczymy, że płaszczyzna hiperboliczna jest wyznaczona przez swoje ciało końców i że każda taka płaszczyzna jest izomorficzna z modelem Poincarego nad tym ciałem; wspomnimy też o twierdzeniu Pejasa o ogólnych płaszczyznach Hilberta. % lang-pl
+Concludiamo la storia con la domanda su quanti siano i piani iperbolici e con una risposta che è al tempo stesso un riepilogo di questo capitolo. % lang-it
+In questa sezione vedremo che un piano iperbolico è determinato dal suo corpo degli estremi e che ogni tale piano è isomorfo al modello di Poincaré su quel corpo; accenneremo anche al teorema di Pejas sui piani di Hilbert generali. % lang-it
+
+Hartshorne \cite[s. 415]{hartshorne_2000} przypomina, że w geometrii euklidesowej szliśmy dwiema drogami -- abstrakcyjną, z aksjomatów, i analityczną, przez płaszczyznę kartezjańską nad ciałem -- i połączyliśmy je przez ciało arytmetyki odcinków; płaszczyzna Hilberta z aksjomatem równoległych jest \emph{scharakteryzowana} przez płaszczyznę kartezjańską nad pewnym ciałem. % lang-pl
+To samo robimy teraz w geometrii nieeuklidesowej: kolejne kroki to własności abstrakcyjnych płaszczyzn hiperbolicznych (sekcja \ref{sekcja_hilbert_hiperboliczna}), model Poincarego nad ciałem (sekcja \ref{sekcja_poincare}), ciało końców i trygonometria (sekcje \ref{sekcja_ciala_koncow} i \ref{sekcja_trygonometria}) \cite[s. 416]{hartshorne_2000}. % lang-pl
+Hartshorne \cite[p. 415]{hartshorne_2000} ricorda che nella geometria euclidea abbiamo percorso due strade -- quella astratta, dagli assiomi, e quella analitica, tramite il piano cartesiano su un corpo -- e le abbiamo unite tramite il corpo dell'aritmetica dei segmenti; un piano di Hilbert con l'assioma delle parallele è \emph{caratterizzato} dal piano cartesiano su un certo corpo. % lang-it
+Lo stesso facciamo ora nella geometria non euclidea: i passi successivi sono le proprietà dei piani iperbolici astratti (sezione \ref{sekcja_hilbert_hiperboliczna}), il modello di Poincaré su un corpo (sezione \ref{sekcja_poincare}), il corpo degli estremi e la trigonometria (sezioni \ref{sekcja_ciala_koncow} e \ref{sekcja_trygonometria}) \cite[p. 416]{hartshorne_2000}. % lang-it
+
+\begin{proposition}
+	Dla płaszczyzny hiperbolicznej $\Pi$ ciało końców jest wyznaczone jednoznacznie z dokładnością do izomorfizmu. % lang-pl
+	Dwie płaszczyzny hiperboliczne są izomorficzne jako płaszczyzny Hilberta wtedy i tylko wtedy, gdy ich ciała końców są izomorficzne jako ciała uporządkowane. % lang-pl
+	Per un piano iperbolico $\Pi$ il corpo degli estremi è univocamente determinato a meno di isomorfismo. % lang-it
+	Due piani iperbolici sono isomorfi come piani di Hilbert se e solo se i loro corpi degli estremi sono isomorfi come corpi ordinati. % lang-it
+\end{proposition}
+
+Dowód: Hartshorne \cite[s. 416--418]{hartshorne_2000} (prop. 43.1). % lang-pl
+Dimostrazione: Hartshorne \cite[p. 416--418]{hartshorne_2000} (prop. 43.1). % lang-it
+
+\begin{theorem}
+	Niech $F$ będzie ciałem uporządkowanym euklidesowym, a $\Pi$ modelem Poincarego nad $F$. % lang-pl
+	Wtedy ciało końców $F_1$ płaszczyzny $\Pi$ jest izomorficzne z $F$ jako ciało uporządkowane. % lang-pl
+	Sia $F$ un corpo ordinato euclideo e $\Pi$ il modello di Poincaré su $F$. % lang-it
+	Allora il corpo degli estremi $F_1$ del piano $\Pi$ è isomorfo a $F$ come corpo ordinato. % lang-it
+\end{theorem}
+
+Dowód: końce modelu to punkty okręgu podstawowego; odwzorowanie $\varphi(\alpha) = \tan\tfrac{\theta}{2}$ jest bijekcją, a rachunek na współrzędnych pokazuje, że odbicie w prostej $(\alpha, \infty)$ działa jako $x' = 2\varphi(\alpha) - x$, co daje $\varphi(\alpha+\beta) = \varphi(\alpha) + \varphi(\beta)$, a odbicie w $(\alpha, -\alpha)$ jako $x' = \varphi(\alpha)^2 x^{-1}$, co daje $\varphi(\alpha\beta) = \varphi(\alpha)\varphi(\beta)$ \cite[s. 418--422]{hartshorne_2000} (tw. 43.2). % lang-pl
+Dimostrazione: gli estremi del modello sono i punti della circonferenza fondamentale; la corrispondenza $\varphi(\alpha) = \tan\tfrac{\theta}{2}$ è biunivoca, e un calcolo in coordinate mostra che la riflessione nella retta $(\alpha, \infty)$ agisce come $x' = 2\varphi(\alpha) - x$, il che dà $\varphi(\alpha+\beta) = \varphi(\alpha) + \varphi(\beta)$, e la riflessione in $(\alpha, -\alpha)$ come $x' = \varphi(\alpha)^2 x^{-1}$, il che dà $\varphi(\alpha\beta) = \varphi(\alpha)\varphi(\beta)$ \cite[p. 418--422]{hartshorne_2000} (teor. 43.2). % lang-it
+
+\begin{corollary}
+	Każda płaszczyzna hiperboliczna z ciałem końców $F$ jest izomorficzna z modelem Poincarego nad $F$. % lang-pl
+	W płaszczyźnie hiperbolicznej zachodzi własność przecinania się dwóch okręgów (E). % lang-pl
+	Ogni piano iperbolico con corpo degli estremi $F$ è isomorfo al modello di Poincaré su $F$. % lang-it
+	Nel piano iperbolico vale la proprietà di intersezione di due circonferenze (E). % lang-it
+\end{corollary}
+
+Hartshorne \cite[s. 422]{hartshorne_2000} (wnioski 43.3 i 43.4). % lang-pl
+Hartshorne \cite[p. 422]{hartshorne_2000} (corollari 43.3 e 43.4). % lang-it
+
+Tym samym wracamy do Greenberga (zobacz sekcję \ref{sekcja_poincare}): wszystkie płaszczyzny hiperboliczne są, z dokładnością do izomorfizmu, modelami Kleina i Poincarego nad ciałami euklidesowymi; oba modele są ze sobą izomorficzne \cite[s. 209]{greenberg_2010}. % lang-pl
+Tornando così a Greenberg (si veda la sezione \ref{sekcja_poincare}): tutti i piani iperbolici sono, a meno di isomorfismo, i modelli di Klein e di Poincaré su corpi euclidei; i due modelli sono isomorfi tra loro \cite[p. 209]{greenberg_2010}. % lang-it
+
+W dalszej części §43 Hartshorne omawia ogólne płaszczyzny Hilberta, bez założenia (L). % lang-pl
+Twierdzenie Pejasa klasyfikuje je wszystkie, osadzając każdą płaszczyznę Hilberta jako \emph{pełną podpłaszczyznę} pewnej płaszczyzny „standardowej'' nad ciałem; pełne podpłaszczyzny odpowiadają wypukłym podgrupom grupy dodawania odcinków (prop. 43.5, s. 424) \cite[s. 424--426]{hartshorne_2000}. % lang-pl
+Wynik ten ma zaskakujący wniosek: \emph{płaszczyzna Hilberta spełniająca aksjomaty Archimedesa (A) i (E) i zaprzeczenie aksjomatu równoległych spełnia aksjomat (L)} -- czyli jest płaszczyzną hiperboliczną, a konstrukcja Bolyaia z sekcji \ref{sekcja_ciala_koncow} działa; Hartshorne zauważa, że bezpośredniego dowodu, bez klasyfikacji, nie ma \cite[s. 426]{hartshorne_2000} (wniosek 43.8; por.~Greenberg \cite[s. 210]{greenberg_2010}). % lang-pl
+Nella parte successiva del §43 Hartshorne tratta i piani di Hilbert generali, senza l'ipotesi (L). % lang-it
+Il teorema di Pejas li classifica tutti, immergendo ogni piano di Hilbert come \emph{sottopiano pieno} di un certo piano «standard» su un corpo; i sottopiani pieni corrispondono ai sottogruppi convessi del gruppo additivo dei segmenti (prop. 43.5, p. 424) \cite[p. 424--426]{hartshorne_2000}. % lang-it
+Questo risultato ha una conseguenza sorprendente: \emph{un piano di Hilbert che soddisfa gli assiomi di Archimede (A) ed (E) e la negazione dell'assioma delle parallele soddisfa l'assioma (L)} -- è cioè un piano iperbolico, e la costruzione di Bolyai della sezione \ref{sekcja_ciala_koncow} funziona; Hartshorne osserva che non esiste una dimostrazione diretta, senza classificazione \cite[p. 426]{hartshorne_2000} (corollario 43.8; si veda Greenberg \cite[p. 210]{greenberg_2010}). % lang-it
+\index[persons]{Pejas, W.}%
+
+Hartshorne \cite[s. 426]{hartshorne_2000} opisuje pierwsze dwa etapy dowodu Pejasa: % lang-pl
+Hartshorne \cite[p. 426]{hartshorne_2000} descrive le prime due fasi della dimostrazione di Pejas: % lang-it
+\begin{enumerate}
+\item dołączenie punktów i prostych „idealnych'', tak że płaszczyzna zanurza się w rzutową; pomysł ten sięga von Staudta (1847) dla płaszczyzny euklidesowej i Kleina dla hiperbolicznej, Pasch użył przestrzeni trójwymiarowej, a pierwszym, któremu udało się to samą geometrią płaską w postaci aksjomatów Hilberta, był w 1907 roku Hjelmslev (zobacz sekcję \ref{sekcja_hjelmslev}); % lang-pl
+\item wprowadzenie współrzędnych do płaszczyzny rzutowej -- von Staudt rozpoczął to w swojej teorii „Würfe'', a pod koniec XIX wieku wzrosło zainteresowanie budową podstaw geometrii bez ciągłości, w czym znaczenie ma twierdzenie Pascala; % lang-pl
+\item l'aggiunta di punti e rette «ideali», in modo che il piano si immerga in un piano proiettivo; l'idea risale a von Staudt (1847) per il piano euclideo e a Klein per quello iperbolico, Pasch usò lo spazio tridimensionale, e il primo a riuscirvi con la sola geometria piana, nella forma degli assiomi di Hilbert, fu nel 1907 Hjelmslev (si veda la sezione \ref{sekcja_hjelmslev}); % lang-it
+\item l'introduzione di coordinate nel piano proiettivo -- von Staudt lo iniziò con la sua teoria dei «Würfe», e verso la fine dell'Ottocento crebbe l'interesse per la costruzione dei fondamenti della geometria senza continuità, in cui ha un ruolo il teorema di Pascal; % lang-it
+\end{enumerate}
+\index[persons]{Staudt, Karl Georg Christian von}%
+\index[persons]{Pasch, Moritz}%
+
+\todofoot{Nie przeczytałem s. 422--423 (prop. 43.5--43.7 poza streszczeniem), 427 (część o etapach dowodu), 429--434 (rachunek odbić Hjelmsleva i dowód twierdzenia o wysokościach w geometrii neutralnej); numery propozycji i stron w tej sekcji dla tych fragmentów wymagają sprawdzenia.} % lang-pl
+\todofoot{Non ho letto le p. 422--423 (prop. 43.5--43.7 oltre al riassunto), 427 (parte sulle fasi della dimostrazione), 429--434 (calcolo delle riflessioni di Hjelmslev e dimostrazione del teorema sulle altezze in geometria neutrale); i numeri di proposizione e di pagina in questa sezione per quei passi vanno verificati.} % lang-it

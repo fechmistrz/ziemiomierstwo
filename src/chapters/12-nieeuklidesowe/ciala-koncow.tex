@@ -1,0 +1,80 @@
+% Źródła: Hartshorne s. 388--402 (§41); Greenberg 2010, s. 209.
+
+\section{Arytmetyka końców Hilberta} % lang-pl
+\section{L'aritmetica degli estremi di Hilbert} % lang-it
+\label{sekcja_ciala_koncow}
+
+Z samej geometrii płaszczyzny hiperbolicznej, bez żadnych liczb, Hilbert wydobędzie ciało uporządkowane -- i to jest jeden z najpiękniejszych pomysłów całej teorii. % lang-pl
+W tej sekcji zobaczymy, jak z końców prostych zrobić ciało, jak odczytać w nim ruchy sztywne i kąty oraz jak dzięki niemu udowodnić dwa twierdzenia: o konstrukcji Bolyaia i o wysokościach trójkąta. % lang-pl
+Dalla sola geometria del piano iperbolico, senza alcun numero, Hilbert estrarrà un corpo ordinato -- ed è una delle idee più belle di tutta la teoria. % lang-it
+In questa sezione vedremo come trasformare gli estremi delle rette in un corpo, come leggervi i movimenti rigidi e gli angoli, e come con esso dimostrare due teoremi: sulla costruzione di Bolyai e sulle altezze di un triangolo. % lang-it
+
+Hartshorne \cite[s. 388]{hartshorne_2000} opisuje tę konstrukcję jako pokaz siły abstrakcyjnej algebry -- tak jak w geometrii euklidesowej ciało arytmetyki odcinków pomagało zrozumieć płaszczyznę, tak tu ciało końców tłumaczy geometrię hiperboliczną; po przejściu do niego geometria „przeszła przemianę w coś bogatego i dziwnego''. % lang-pl
+Hartshorne \cite[p. 388]{hartshorne_2000} descrive questa costruzione come una dimostrazione della potenza dell'algebra astratta -- come nella geometria euclidea il corpo dell'aritmetica dei segmenti aiutava a comprendere il piano, così qui il corpo degli estremi spiega la geometria iperbolica; passando ad esso essa «ha subito una metamorfosi in qualcosa di ricco e strano». % lang-it
+
+Konstrukcja zaczyna się od trzech prostych w dowolnym trójkącie: symetralne boków trójkąta w płaszczyźnie hiperbolicznej albo przecinają się w punkcie, albo mają wspólną prostopadłą, albo są równoległe graniczne o wspólnym końcu \cite[s. 388--389]{hartshorne_2000} (prop. 41.1; zobacz też sekcję \ref{sekcja_punkty_idealne}). % lang-pl
+Z tego wyprowadza się twierdzenie o trzech odbiciach: jeśli proste $a, b, c$ mają wspólny koniec $\omega$, to istnieje czwarta prosta $d$ o tym samym końcu, że $\sigma_c\sigma_b\sigma_a = \sigma_d$ \cite[s. 389]{hartshorne_2000} (prop. 41.2). % lang-pl
+La costruzione parte dalle tre rette in un triangolo qualsiasi: gli assi dei lati di un triangolo nel piano iperbolico o si incontrano in un punto, o hanno una perpendicolare comune, o sono parallele limite con un estremo comune \cite[p. 388--389]{hartshorne_2000} (prop. 41.1; si veda anche la sezione \ref{sekcja_punkty_idealne}). % lang-it
+Da ciò si ricava il teorema delle tre riflessioni: se le rette $a, b, c$ hanno un estremo comune $\omega$, esiste una quarta retta $d$ con lo stesso estremo tale che $\sigma_c\sigma_b\sigma_a = \sigma_d$ \cite[p. 389]{hartshorne_2000} (prop. 41.2). % lang-it
+
+Ustalmy prostą i oznaczmy jej końce przez $0$ i $\infty$; niech $F$ będzie zbiorem wszystkich końców różnych od $\infty$. % lang-pl
+Dla dwóch końców $\alpha, \beta$ ich \emph{sumą} $\alpha + \beta$ jest koniec symetralnej odcinka $AB$ (różny od $\infty$), gdzie $A$ i $B$ powstają z punktu $C$ prostej $(0,\infty)$ przez odbicia w prostych $(\alpha,\infty)$ i $(\beta,\infty)$ \cite[s. 390]{hartshorne_2000}. % lang-pl
+\emph{Iloczyn} definiuje się podobnie, po ustaleniu prostopadłej do $(0,\infty)$ i jej końców $1$ i $-1$, przez dodawanie odcinków ze znakiem \cite[s. 391]{hartshorne_2000}. % lang-pl
+Fissiamo una retta e indichiamo i suoi estremi con $0$ e $\infty$; sia $F$ l'insieme di tutti gli estremi diversi da $\infty$. % lang-it
+Per due estremi $\alpha, \beta$ la loro \emph{somma} $\alpha + \beta$ è l'estremo dell'asse del segmento $AB$ (diverso da $\infty$), dove $A$ e $B$ si ottengono da un punto $C$ della retta $(0,\infty)$ tramite riflessioni nelle rette $(\alpha,\infty)$ e $(\beta,\infty)$ \cite[p. 390]{hartshorne_2000}. % lang-it
+Il \emph{prodotto} si definisce in modo analogo, dopo aver fissato una perpendicolare a $(0,\infty)$ e i suoi estremi $1$ e $-1$, tramite l'addizione di segmenti con segno \cite[p. 391]{hartshorne_2000}. % lang-it
+
+\begin{theorem}
+	Zbiór $F$ końców z tak określonymi działaniami $+, \cdot$ i z pojęciem elementów dodatnich (końców leżących po tej samej stronie prostej $(0,\infty)$ co $1$) jest ciałem uporządkowanym euklidesowym. % lang-pl
+	L'insieme $F$ degli estremi con le operazioni $+, \cdot$ così definite e con la nozione di elementi positivi (estremi che stanno dalla stessa parte della retta $(0,\infty)$ di $1$) è un corpo ordinato euclideo. % lang-it
+\end{theorem}
+
+Dowód (rozłożony na kolejne własności; rozdzielność korzysta z przesunięcia wzdłuż prostej): Hartshorne \cite[s. 390--392]{hartshorne_2000} (prop. 41.3, tw. 41.4). % lang-pl
+Dimostrazione (scomposta nelle singole proprietà; la distributività usa la traslazione lungo la retta): Hartshorne \cite[p. 390--392]{hartshorne_2000} (prop. 41.3, teor. 41.4). % lang-it
+\index{ciało!końców} % lang-pl
+\index{corpo!degli estremi} % lang-it
+
+W tym ciele ruchy sztywne mają prostą postać: odbicie w $(0,\infty)$ to $x' = -x$, odbicie w $(1,-1)$ to $x' = 1/x$, przesunięcie wzdłuż $(0,\infty)$ to $x' = ax$, obrót wokół $\infty$ to $x' = x + a$, a obrót wokół początku układu to $x' = (x+a)/(-ax+1)$ \cite[s. 392--393]{hartshorne_2000} (prop. 41.5). % lang-pl
+Prosta to nieuporządkowana para różnych końców $(u_1, u_2)$, a punkt -- zbiór wszystkich prostych przez niego przechodzących, opisany równaniem $u_1u_2 - b(u_1+u_2) + a^2 = 0$ z $a > 0$, $|b| < a$ \cite[s. 394]{hartshorne_2000} (prop. 41.6): jest to odwrócenie zwykłej geometrii analitycznej, w której punkt ma współrzędne, a prosta równanie. % lang-pl
+Nel corpo i movimenti rigidi hanno una forma semplice: la riflessione in $(0,\infty)$ è $x' = -x$, quella in $(1,-1)$ è $x' = 1/x$, la traslazione lungo $(0,\infty)$ è $x' = ax$, la rotazione intorno a $\infty$ è $x' = x + a$, e la rotazione intorno all'origine è $x' = (x+a)/(-ax+1)$ \cite[p. 392--393]{hartshorne_2000} (prop. 41.5). % lang-it
+Una retta è una coppia non ordinata di estremi distinti $(u_1, u_2)$, e un punto è l'insieme di tutte le rette che lo contengono, descritto dall'equazione $u_1u_2 - b(u_1+u_2) + a^2 = 0$ con $a > 0$, $|b| < a$ \cite[p. 394]{hartshorne_2000} (prop. 41.6): è il rovesciamento della geometria analitica usuale, in cui un punto ha coordinate e una retta un'equazione. % lang-it
+
+Odcinek $AB$ ma \emph{multiplikatywną długość} $\mu(AB) = a$ (kładziemy go na promień $0\infty$, a prosta prostopadła w jego końcu to $(a, -a)$), która ma cztery naturalne własności: jest $> 1$, przystające odcinki mają równe $\mu$, $\mu$ rośnie z długością, a przy dodawaniu odcinków się mnoży \cite[s. 394--395]{hartshorne_2000} (prop. 41.7). % lang-pl
+Podobnie dla kąta $\theta$ definiuje się $\tan\tfrac{\theta}{2} = a$ i wzory na sumę \cite[s. 395--396]{hartshorne_2000} (prop. 41.8); pozwala to zapisać wzór Bolyaia $\tan\tfrac{\alpha}{2} = \mu(AB)^{-1}$ \cite[s. 396]{hartshorne_2000} (prop. 41.9) i kąt między prostymi $(u_1,u_2)$, $(v_1,v_2)$ przez dwustosunek końców: $\tan\tfrac{\theta}{2} = \sqrt{-(v_1,v_2;u_1,u_2)}$ \cite[s. 399]{hartshorne_2000} (prop. 41.12). % lang-pl
+Dwustosunek pojawił się już u Cayleya i Kleina (zobacz sekcję \ref{sekcja_beltrami_cayley_klein}); tu wynika z geometrii, a nie ją definiuje. % lang-pl
+Un segmento $AB$ ha \emph{lunghezza moltiplicativa} $\mu(AB) = a$ (lo si riporta sulla semiretta $0\infty$, e la retta perpendicolare al suo estremo è $(a, -a)$), che ha quattro proprietà naturali: è $> 1$, segmenti congruenti hanno lo stesso $\mu$, $\mu$ cresce con la lunghezza e nell'addizione di segmenti si moltiplica \cite[p. 394--395]{hartshorne_2000} (prop. 41.7). % lang-it
+Analogamente per un angolo $\theta$ si definisce $\tan\tfrac{\theta}{2} = a$ e le formule di somma \cite[p. 395--396]{hartshorne_2000} (prop. 41.8); ciò permette di scrivere la formula di Bolyai $\tan\tfrac{\alpha}{2} = \mu(AB)^{-1}$ \cite[p. 396]{hartshorne_2000} (prop. 41.9) e l'angolo tra le rette $(u_1,u_2)$, $(v_1,v_2)$ tramite il birapporto degli estremi: $\tan\tfrac{\theta}{2} = \sqrt{-(v_1,v_2;u_1,u_2)}$ \cite[p. 399]{hartshorne_2000} (prop. 41.12). % lang-it
+Il birapporto era già comparso in Cayley e Klein (si veda la sezione \ref{sekcja_beltrami_cayley_klein}); qui discende dalla geometria, invece di definirla. % lang-it
+
+\begin{theorem}
+[konstrukcja równoległej granicznej Bolyaia] % lang-pl
+[costruzione di Bolyai della parallela limite] % lang-it
+\index{konstrukcja!Bolyaia (równoległej granicznej)} % lang-pl
+\index{costruzione!di Bolyai (parallela limite)} % lang-it
+	Niech $PQ$ będzie prostopadłą z $P$ na prostą $l$, $m$ prostą przez $P$ prostopadłą do $PQ$, $R$ dowolnym punktem na $l$, a $RS$ prostopadłą z $R$ na $m$. % lang-pl
+	Wtedy okrąg o środku $P$ i promieniu $QR$ przecina odcinek $RS$ w punkcie $T$, a półprosta $PT$ jest półprostą równoległą graniczną do $l$ przez $P$. % lang-pl
+	Sia $PQ$ la perpendicolare da $P$ alla retta $l$, $m$ la retta per $P$ perpendicolare a $PQ$, $R$ un punto qualsiasi di $l$ e $RS$ la perpendicolare da $R$ a $m$. % lang-it
+	Allora la circonferenza di centro $P$ e raggio $QR$ interseca il segmento $RS$ in un punto $T$, e la semiretta $PT$ è la semiretta parallela limite a $l$ per $P$. % lang-it
+\end{theorem}
+
+Dowód (rachunek w ciele końców): Hartshorne \cite[s. 396--398]{hartshorne_2000} (prop. 41.10, lemat 41.11). % lang-pl
+Hartshorne podkreśla, że konstrukcja wymaga cyrkla i linijki, a jej działanie dowodzi się, zakładając wcześniej (z aksjomatu (L)), że równoległa graniczna istnieje; bez tego założenia wynik może zawieść -- na przykład w płaszczyznach nieArchimedesowych \cite[s. 398]{hartshorne_2000}. % lang-pl
+Cytuje też Greenberga, według którego znalezienie bezpośredniego geometrycznego dowodu tej konstrukcji byłoby warte natychmiastowego doktoratu \cite[s. 398]{hartshorne_2000}. % lang-pl
+Dimostrazione (un calcolo nel corpo degli estremi): Hartshorne \cite[p. 396--398]{hartshorne_2000} (prop. 41.10, lemma 41.11). % lang-it
+Hartshorne sottolinea che la costruzione richiede compasso e riga e che il suo funzionamento si dimostra assumendo prima (dall'assioma (L)) che la parallela limite esista; senza questa ipotesi il risultato può fallire -- per esempio nei piani non archimedei \cite[p. 398]{hartshorne_2000}. % lang-it
+Cita anche Greenberg, secondo cui trovare una dimostrazione geometrica diretta di questa costruzione varrebbe un dottorato immediato \cite[p. 398]{hartshorne_2000}. % lang-it
+Greenberg \cite[s. 210]{greenberg_2010} zauważa, że konstrukcja Bolyaia działa w każdej płaszczyźnie Hilberta spełniającej hipotezę kąta ostrego i aksjomat prosta--okrąg, ale półprosta nie musi być wtedy równoległa graniczna, jeśli nie ma dodatkowego założenia. % lang-pl
+Greenberg \cite[p. 210]{greenberg_2010} osserva che la costruzione di Bolyai funziona in ogni piano di Hilbert che soddisfa l'ipotesi dell'angolo acuto e l'assioma retta--circonferenza, ma la semiretta non deve essere parallela limite senza un'ulteriore ipotesi. % lang-it
+
+\begin{theorem}
+[o wysokościach trójkąta] % lang-pl
+[sulle altezze di un triangolo] % lang-it
+	Jeśli dwie wysokości trójkąta w płaszczyźnie hiperbolicznej się przecinają, to trzecia też przechodzi przez ten punkt; jeśli dwie są równoległe graniczne, to wszystkie trzy mają wspólny koniec; jeśli dwie mają wspólną prostopadłą, to wszystkie trzy mają tę samą wspólną prostopadłą. % lang-pl
+	Se due altezze di un triangolo nel piano iperbolico si incontrano, passa per quel punto anche la terza; se due sono parallele limite, tutte e tre hanno un estremo comune; se due hanno una perpendicolare comune, tutte e tre hanno la stessa perpendicolare comune. % lang-it
+\end{theorem}
+
+Dowód: Hartshorne \cite[s. 399--400]{hartshorne_2000} (prop. 41.13); zad. 40.13--40.14 podają dowód czysto geometryczny \cite[s. 387]{hartshorne_2000}. % lang-pl
+Dimostrazione: Hartshorne \cite[p. 399--400]{hartshorne_2000} (prop. 41.13); gli es. 40.13--40.14 danno una dimostrazione puramente geometrica \cite[p. 387]{hartshorne_2000}. % lang-it
+
+Zadania (grupa ruchów sztywnych jako grupa przekształceń ułamkowo-liniowych, znajdowanie końców dwusiecznej itd.): Hartshorne \cite[s. 400--402]{hartshorne_2000}. % lang-pl
+Esercizi (il gruppo dei movimenti rigidi come gruppo delle trasformazioni lineari fratte, ricerca degli estremi di una bisettrice ecc.): Hartshorne \cite[p. 400--402]{hartshorne_2000}. % lang-it
