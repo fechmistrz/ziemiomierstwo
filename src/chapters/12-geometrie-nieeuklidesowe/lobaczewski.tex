@@ -1,0 +1,70 @@
+\section{Mikołaj Łobaczewski i jego płaszczyzna} % lang-pl
+\label{sekcja_lobaczewski}
+
+Opowiemy w tym rozdziale o geometrii Łobaczewskiego, nazwanej później przez Kleina geometrią hiperboliczną\footnote{Felix Klein w 1871 roku zaproponuje podział na geometrię eliptyczną (sferyczną), paraboliczną (Euklidesa) i hiperboliczną (Łobaczewskiego)}.
+Mikołaj Iwanowicz Łobaczewski swoje idee przedstawi 23 lutego 1826 roku, a wydrukuje je w latach 1829--1830 w publikacjach uniwersytetu kazańskiego, oddzielony od świata naukowego, jak zauważy Eves, barierami odległości i języka \cite[s. 287]{eves1_1972}. % lang-pl
+Wersję niemiecką, \emph{Geometrische Untersuchungen}, opublikuje w 1840 roku. % lang-pl
+William Kingdon Clifford nazwie Łobaczewskiego ,,Kopernikiem geometrii''. % lang-pl
+
+% TODO: O geometrii hiperbolicznej wspomina się w $\Delta_{24}^7$. % lang-pl
+
+Eves \cite[s. 291-317]{eves1_1972} rozwija geometrię na płaszczyźnie Łobaczewskiego, gdzie zamiast piątego postulatu przyjmuje się:
+\begin{axiom}[postulat równoległości Łobaczewskiego]
+	Niech $P$ będzie punktem poza prostą $AB$, zaś $Q$ jego spodkiem na tę prostą.
+	Istnieją wtedy dwie półproste $PX$, $PY$, nieleżące na jednej prostej, nie przecinające prostej $AB$ takie, że dowolna półprosta zawarta w tym kącie $\angle XPY$, w którym leży $PQ$, przecina prostą $AB$.
+\end{axiom}
+
+Kąt $\angle XPQ$ nazywamy kątem równoległości w $P$ prostej $AB$.
+
+Proste przechodzące przez $P$, które nie przechodzą przez ten kąt $\angle XPY$, nazywa hiperrównoległymi.
+Istnieje nieskończenie wiele hiperrównoległych do prostej przez punkt poza nią.
+
+Jeśli prosta skierowana $PX$ jest równoległa do prostej skierowanej $AB$, zaś $R$ jest punktem na $PX$ leżącym po tej samej stronie $X$ co $P$, to proste skierowane $RX$ i $AB$ też są równoległe.
+Równoległość jest symetryczna: z równoległości $CD$ do $AB$ wynika równoległość $AB$ do $CD$.
+Jest też przechodnia: jeśli $AB$ i $CD$ są równoległe do $EF$, to są też równoległe do siebie.
+
+Wygodnie jest zdefiniować:
+
+\begin{definition}[trójkąt graniczny]
+	Figurę złożona z dwóch równoległych półprostych oraz odcinka łączącego ich końce nazywamy trójkątem granicznym.
+\end{definition}
+
+Kąt zewnętrzny trójkąta granicznego jest większy niż przeciwległy kąt wewnętrzny.
+Mamy dwie cechy przystawania: bok-kąt (jeśli skończone boki i odpowiednie kąty dwóch trójkątów granicznych są sobie równe, to pozostałe dwie pary kątów też są sobie równe) i kąt-kąt (jeśli dwie pary odpowiednich kątów dwóch trójkątów granicznych są sobie równe, to skończoe boki tych trójkątów też są sobie równe).
+
+Okazuje się, że kąt równoległości w $P$ prostej $AB$ zależy jedynie od odległości $PQ$ i maleje wraz ze wzrostem tej odległości.
+Oznaczmy odległość przez $h$, zaś kąt przez $\Pi(h)$.
+Przy odpowiednich jednostkach mamy
+\begin{equation}
+	\label{eqn:pi_h}
+	\Pi(h) = 2 \arctan \exp (-h).
+\end{equation}
+
+W geometrii euklidesowej istnieje naturalna jednostka kątów (na przykład: kąt prosty), ale nie odległości (nie można odtworzyć odcinka jednostkowego po zgubieniu go).
+Natomiast w geometrii Łobaczewskiego wzór \ref{eqn:pi_h} pozwala związać odległości z kątami, więc odległości też mają swoją naturalną jednostkę.
+Pisze o tym Eves \cite[s. 297]{eves1_1972}. % lang-pl
+
+Eves przechodzi następnie przez czworokąt Saccheriego (\cite[s. 298-301]{eves1_1972}), zależność między polem trójkąta, jego defektem, i równoważnością przez rozcinanie (\cite[s. 301-304]{eves1_1972}).
+Defekt trójkąta to różnica między $\pi$ oraz sumą miar jego kątów.
+Następnie poruszany jest temat punktów idealnych i~hiperidalnych, odpowiednik punktu w nieskończoności (\cite[s. 304-307]{eves1_1972}; jako zastosowanie tychże, pokazuje, że symetralne boków trójkąta są współpękowe).
+
+W sekcji ósmej Eves przytoczy twierdzenie Hjemsleva (czyli nasze twierdzenie \ref{thm:hjelmslev}) i wprowadzi specjalne przekształcenie płaszczyzny:
+
+\begin{definition}
+[przekształcenie Hjelmsleva]
+	Niech $O$ będzie ustalonym punktem, zaś $\theta$ ustalonym ostrym kątem skierowanym.
+	Przekształcenie $S$ przenosi punkt $P$ na punkt $P'$ taki, że $\angle POP' = \theta$ oraz $\angle OP'P = \pi/2$.
+	Złożenie obrotu wokół $O$ o kąt $-\theta$ z $S$ nazywamy przekształceniem Hjelmsleva i oznaczamy $T$.
+\end{definition}
+
+\begin{proposition}
+	Przekształcenie Hjelmsleva na płaszczyźnie euklidesowej jest jednokładnością $H(O, \cos \theta)$.
+\end{proposition}
+
+\begin{proposition}
+	Przekształcenie Hjelmsleva przenosi płaszczyznę Łobaczewskiego na wnętrze okręgu o środku $O$ i promieniu $h$, gdzie $\Pi(h) = \theta$.
+\end{proposition}
+
+Przekształcenie $T$ pozwala uzasadnić wiele właściwości płaszczyzny Łobaczewskiego, ale z braku miejsca, Eves odstąpi od tego.
+
+%
