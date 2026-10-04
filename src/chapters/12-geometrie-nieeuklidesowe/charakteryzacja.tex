@@ -1,0 +1,49 @@
+\section{Charakteryzacja płaszczyzn hiperbolicznych} % lang-pl
+\label{sekcja_charakteryzacja}
+
+Kończymy historię pytaniem, ile jest płaszczyzn hiperbolicznych, i odpowiedzią, która jest zarazem podsumowaniem tego rozdziału. % lang-pl
+W tej sekcji zobaczymy, że płaszczyzna hiperboliczna jest wyznaczona przez swoje ciało końców i że każda taka płaszczyzna jest izomorficzna z modelem Poincarego nad tym ciałem; wspomnimy też o twierdzeniu Pejasa o ogólnych płaszczyznach Hilberta. % lang-pl
+
+Hartshorne \cite[s. 415]{hartshorne_2000} przypomina, że w geometrii euklidesowej szliśmy dwiema drogami -- abstrakcyjną, z aksjomatów, i analityczną, przez płaszczyznę kartezjańską nad ciałem -- i połączyliśmy je przez ciało arytmetyki odcinków; płaszczyzna Hilberta z aksjomatem równoległych jest \emph{scharakteryzowana} przez płaszczyznę kartezjańską nad pewnym ciałem. % lang-pl
+To samo robimy teraz w geometrii nieeuklidesowej: kolejne kroki to własności abstrakcyjnych płaszczyzn hiperbolicznych (sekcja \ref{sekcja_hilbert_hiperboliczna}), model Poincarego nad ciałem (sekcja \ref{sekcja_poincare}), ciało końców i trygonometria (sekcje \ref{sekcja_ciala_koncow} i \ref{sekcja_trygonometria}) \cite[s. 416]{hartshorne_2000}. % lang-pl
+
+\begin{proposition}
+	Dla płaszczyzny hiperbolicznej $\Pi$ ciało końców jest wyznaczone jednoznacznie z dokładnością do izomorfizmu. % lang-pl
+	Dwie płaszczyzny hiperboliczne są izomorficzne jako płaszczyzny Hilberta wtedy i tylko wtedy, gdy ich ciała końców są izomorficzne jako ciała uporządkowane. % lang-pl
+\end{proposition}
+
+Dowód: Hartshorne \cite[s. 416--418]{hartshorne_2000} (prop. 43.1). % lang-pl
+
+\begin{theorem}
+	Niech $F$ będzie ciałem uporządkowanym euklidesowym, a $\Pi$ modelem Poincarego nad $F$. % lang-pl
+	Wtedy ciało końców $F_1$ płaszczyzny $\Pi$ jest izomorficzne z $F$ jako ciało uporządkowane. % lang-pl
+\end{theorem}
+
+Dowód: końce modelu to punkty okręgu podstawowego; odwzorowanie $\varphi(\alpha) = \tan\tfrac{\theta}{2}$ jest bijekcją, a rachunek na współrzędnych pokazuje, że odbicie w prostej $(\alpha, \infty)$ działa jako $x' = 2\varphi(\alpha) - x$, co daje $\varphi(\alpha+\beta) = \varphi(\alpha) + \varphi(\beta)$, a odbicie w $(\alpha, -\alpha)$ jako $x' = \varphi(\alpha)^2 x^{-1}$, co daje $\varphi(\alpha\beta) = \varphi(\alpha)\varphi(\beta)$ \cite[s. 418--422]{hartshorne_2000} (tw. 43.2). % lang-pl
+
+\begin{corollary}
+	Każda płaszczyzna hiperboliczna z ciałem końców $F$ jest izomorficzna z modelem Poincarego nad $F$. % lang-pl
+	W płaszczyźnie hiperbolicznej zachodzi własność przecinania się dwóch okręgów (E). % lang-pl
+\end{corollary}
+
+Hartshorne \cite[s. 422]{hartshorne_2000} (wnioski 43.3 i 43.4). % lang-pl
+
+Tym samym wracamy do Greenberga (zobacz sekcję \ref{sekcja_poincare}): wszystkie płaszczyzny hiperboliczne są, z dokładnością do izomorfizmu, modelami Kleina i Poincarego nad ciałami euklidesowymi; oba modele są ze sobą izomorficzne \cite[s. 209]{greenberg_2010}. % lang-pl
+
+W dalszej części §43 Hartshorne omawia ogólne płaszczyzny Hilberta, bez założenia (L). % lang-pl
+Twierdzenie Pejasa klasyfikuje je wszystkie, osadzając każdą płaszczyznę Hilberta jako \emph{pełną podpłaszczyznę} pewnej płaszczyzny „standardowej'' nad ciałem; pełne podpłaszczyzny odpowiadają wypukłym podgrupom grupy dodawania odcinków (prop. 43.5, s. 424) \cite[s. 424--426]{hartshorne_2000}. % lang-pl
+Wynik ten ma zaskakujący wniosek: \emph{płaszczyzna Hilberta spełniająca aksjomaty Archimedesa (A) i (E) i zaprzeczenie aksjomatu równoległych spełnia aksjomat (L)} -- czyli jest płaszczyzną hiperboliczną, a konstrukcja Bolyaia z sekcji \ref{sekcja_ciala_koncow} działa; Hartshorne zauważa, że bezpośredniego dowodu, bez klasyfikacji, nie ma \cite[s. 426]{hartshorne_2000} (wniosek 43.8; por.~Greenberg \cite[s. 210]{greenberg_2010}). % lang-pl
+\index[persons]{Pejas, W.}%
+
+Hartshorne \cite[s. 426]{hartshorne_2000} opisuje pierwsze dwa etapy dowodu Pejasa: % lang-pl
+\begin{enumerate} % lang-pl
+\item dołączenie punktów i prostych „idealnych'', tak że płaszczyzna zanurza się w rzutową; pomysł ten sięga von Staudta (1847) dla płaszczyzny euklidesowej i Kleina dla hiperbolicznej, Pasch użył przestrzeni trójwymiarowej, a pierwszym, któremu udało się to samą geometrią płaską w postaci aksjomatów Hilberta, był w 1907 roku Hjelmslev (zobacz sekcję \ref{sekcja_hjelmslev}); % lang-pl
+\item wprowadzenie współrzędnych do płaszczyzny rzutowej -- von Staudt rozpoczął to w swojej teorii „Würfe'', a pod koniec XIX wieku wzrosło zainteresowanie budową podstaw geometrii bez ciągłości, w czym znaczenie ma twierdzenie Pascala; % lang-pl
+\end{enumerate} % lang-pl
+\index[persons]{Staudt, Karl Georg Christian von}%
+\index[persons]{Pasch, Moritz}%
+
+\todofoot{Nie przeczytałem s. 422--423 (prop. 43.5--43.7 poza streszczeniem), 427 (część o etapach dowodu), 429--434 (rachunek odbić Hjelmsleva i dowód twierdzenia o wysokościach w geometrii neutralnej); numery propozycji i stron w tej sekcji dla tych fragmentów wymagają sprawdzenia.} % lang-pl
+% Źródła: Eves s. 287--288, 314--315; Wikipedia: Bernhard Riemann.
+% https://en.wikipedia.org/wiki/Bernhard_Riemann
+
