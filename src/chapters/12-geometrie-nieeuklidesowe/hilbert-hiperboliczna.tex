@@ -1,0 +1,73 @@
+\section{Geometria hiperboliczna Hilberta} % lang-pl
+\label{sekcja_hilbert_hiperboliczna}
+
+Skoro odkrywcy przyjmowali istnienie równoległych granicznych po cichu, Hilbert zapisze je wprost i zbuduje na nich całą geometrię, bez ciągłości. % lang-pl
+W tej sekcji zobaczymy jego aksjomat i to, co z niego wynika -- klasyczną geometrię Bolyaia i Łobaczewskiego, wyłożoną jeszcze raz, ale w płaszczyźnie Hilberta. % lang-pl
+
+\begin{axiom}
+[hiperboliczny Hilberta] % lang-pl
+\index{aksjomat!hiperboliczny Hilberta} % lang-pl
+	Dla każdej prostej $l$ i każdego punktu $A$ spoza niej istnieją dwie półproste $Aa$ i $Aa'$, niezawarte w jednej prostej i nieprzecinające $l$, takie że każda półprosta $An$ wewnątrz kąta $aAa'$ przecina $l$. % lang-pl
+\end{axiom}
+
+Hartshorne \cite[s. 374]{hartshorne_2000} oznacza ten aksjomat literą (L); płaszczyznę Hilberta, która go spełnia, nazywa \emph{hiperboliczną}, a nie tylko półhiperboliczną (zobacz sekcję \ref{sekcja_trzy_typy}). % lang-pl
+Aksjomat ten nie wymaga ani aksjomatu Archimedesa, ani aksjomatu o przecinaniu się okręgów: pozwoli rozwinąć geometrię Bolyaia i Łobaczewskiego niezależnie od ciągłości, zbudować z geometrii ciało uporządkowane (zobacz sekcję \ref{sekcja_ciala_koncow}) i udowodnić, że każda taka płaszczyzna jest izomorficzna z modelem Poincarego nad tym ciałem \cite[s. 373--374]{hartshorne_2000}. % lang-pl
+
+\begin{definition}
+[kąt równoległości] % lang-pl
+	Niech $AB$ będzie odcinkiem, $b$ prostą prostopadłą do $AB$ w punkcie $B$, a $Aa$ półprostą równoległą graniczną do półprostej $Bb$ na tej prostej. % lang-pl
+	Kąt $\alpha(AB) = \angle BAa$ nazywamy kątem równoległości odcinka $AB$ (Łobaczewski pisze $\Pi(AB)$); jest on zawsze ostry. % lang-pl
+\end{definition}
+
+Hartshorne \cite[s. 374--375]{hartshorne_2000}. % lang-pl
+
+\begin{proposition}
+	Kąt równoległości zmienia się odwrotnie do długości odcinka: $AB < A'B' \Leftrightarrow \alpha(AB) > \alpha(A'B')$, oraz $AB \cong A'B' \Leftrightarrow \alpha(AB) = \alpha(A'B')$. % lang-pl
+\end{proposition}
+
+Dowód: Hartshorne \cite[s. 375]{hartshorne_2000} (prop. 40.1). % lang-pl
+
+\begin{theorem}
+[o kącie zewnętrznym trójkąta granicznego] % lang-pl
+	Jeśli z końców odcinka $AB$ wychodzą półproste równoległe graniczne, to kąt zewnętrzny przy $B$ jest większy od kąta wewnętrznego przy $A$. % lang-pl
+\end{theorem}
+
+Hartshorne \cite[s. 376]{hartshorne_2000} (tw. 40.2). % lang-pl
+Wynika z niego, że suma kątów każdego trójkąta w płaszczyźnie hiperbolicznej jest mniejsza od dwóch kątów prostych -- tym razem bez aksjomatu Archimedesa, którego potrzebowało twierdzenie Saccheriego--Legendre'a; wystarcza „potężny'' aksjomat (L) \cite[s. 376--377]{hartshorne_2000} (wniosek 40.3). % lang-pl
+
+\begin{theorem}
+[trójkąty graniczne o równych kątach] % lang-pl
+	Jeśli w dwóch trójkątach granicznych $ABlm$ i $A'B'l'm'$ kąty przy $A$, $B$ są równe kątom przy $A'$, $B'$, to boki skończone $AB$ i $A'B'$ też są równe. % lang-pl
+\end{theorem}
+
+Hartshorne \cite[s. 377]{hartshorne_2000} (prop. 40.4, oznaczenie (AAL)); por.~sekcję \ref{sekcja_trojkaty_graniczne}, gdzie ten sam fakt jest u Evesa. % lang-pl
+
+\begin{theorem}
+[Hilberta] % lang-pl
+	W płaszczyźnie hiperbolicznej dwie proste równoległe, ale nie graniczne, mają dokładnie jedną wspólną prostopadłą. % lang-pl
+\end{theorem}
+
+Hartshorne \cite[s. 377--378]{hartshorne_2000} (tw. 40.5); porównaj sekcję \ref{sekcja_punkty_idealne}. % lang-pl
+
+\begin{proposition}
+	Dla każdego kąta w płaszczyźnie hiperbolicznej istnieje dokładnie jedna prosta (\emph{prosta obejmująca} ten kąt) równoległa graniczna do obu jego ramion. % lang-pl
+\end{proposition}
+
+Dowód (z trzema przypadkami): Hartshorne \cite[s. 378--380]{hartshorne_2000} (prop. 40.6). % lang-pl
+
+Dla każdego kąta ostrego $\alpha$ istnieje odcinek o kącie równoległości $\alpha$ (wniosek 40.7). % lang-pl
+Odpowiedniość między klasami przystawania odcinków i kątów ostrych jest więc wzajemnie jednoznaczna, a odcinek odpowiadający połowie kąta prostego jest \emph{absolutnym wzorcem} długości \cite[s. 380]{hartshorne_2000}. % lang-pl
+Greenberg \cite[s. 211]{greenberg_2010} nazywa go \emph{odcinkiem Schweikarta}: to odcinek, którego kąt równoległości wynosi $\pi/4$ (zobacz sekcję \ref{sekcja_schweikart_taurinus}). % lang-pl
+Odpowiedniość ta nie przeprowadza jednak sum odcinków na sumy kątów (zad. 42.7) \cite[s. 380]{hartshorne_2000}. % lang-pl
+\index{odcinek Schweikarta} % lang-pl
+
+Aksjomat Arystotelesa (z sekcji \ref{sekcja_dobre_stare}) zachodzi w każdej płaszczyźnie hiperbolicznej \cite[s. 380--382]{hartshorne_2000} (prop. 40.8). % lang-pl
+
+Jako ilustrację Hartshorne podaje hiperboliczny odpowiednik twierdzenia o dwusiecznych trójkąta: dwusieczne wewnętrzne przecinają się w jednym punkcie w każdej geometrii neutralnej, a dla dwusiecznych zewnętrznych zachodzi trzy-przypadkowy fakt (przecinają się, mają wspólną prostopadłą albo są równoległe graniczne) \cite[s. 382--384]{hartshorne_2000} (prop. 40.9). % lang-pl
+Aby wypowiedzieć go jednolicie, wprowadza punkt idealny jako klasę równoważności prostych mających wspólną prostopadłą -- „uogólniony punkt'' to punkt zwykły, koniec albo punkt idealny \cite[s. 384]{hartshorne_2000}. % lang-pl
+Jest to dokładnie to, co Eves nazywa punktami idealnymi i ultraidealnymi (zobacz sekcję \ref{sekcja_punkty_idealne}); nazwy się różnią: to, co Hartshorne nazywa „końcem'', Eves nazywa punktem idealnym, a to, co Hartshorne nazywa punktem idealnym, Eves nazywa ultraidealnym. % lang-pl
+\index{punkt!uogólniony} % lang-pl
+
+Zadania: Hartshorne \cite[s. 384 nn.]{hartshorne_2000} (zad. 40.1 nn.). % lang-pl
+% Źródła: Hartshorne s. 388--402 (§41); Greenberg 2010, s. 209.
+
