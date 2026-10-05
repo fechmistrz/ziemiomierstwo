@@ -1,0 +1,20 @@
+{
+    // Build through the Makefile: it drops the "% lang-it" lines and runs
+    // lualatex + bibtex. Plain latexmk would use pdflatex and print both languages.
+    "latex-workshop.latex.tools": [
+        {
+            "name": "make-pl",
+            "command": "make",
+            "args": ["-C", "%WORKSPACE_FOLDER%", "pl"],
+            "env": {}
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "Polish PDF (make pl)",
+            "tools": ["make-pl"]
+        }
+    ],
+    // make copies the PDF to the repository root
+    "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%"
+}

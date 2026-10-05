@@ -24,9 +24,13 @@ src/img.jpeg:
 ziemiomierstwo.pdf: $(SOURCES) src/img.jpeg
 	rm -rf src-pl
 	cp -R src src-pl
-	find src-pl -type f \( -name '*.tex' -o -name '*.bib' \) -print0 | xargs -0 $(SED_INPLACE) '/% lang-it$$/d'
-	cd src-pl && lualatex -interaction=nonstopmode ziemiomierstwo.tex && bibtex ziemiomierstwo && lualatex -interaction=nonstopmode ziemiomierstwo.tex && lualatex -interaction=nonstopmode ziemiomierstwo.tex
+	# In .tex files blank Italian lines to '%' instead of deleting them, so line numbers match src/ (SyncTeX).
+	find src-pl -type f -name '*.tex' -print0 | xargs -0 $(SED_INPLACE) 's/^.*% lang-it$$/%/'
+	find src-pl -type f -name '*.bib' -print0 | xargs -0 $(SED_INPLACE) '/% lang-it$$/d'
+	cd src-pl && lualatex -synctex=1 -interaction=nonstopmode ziemiomierstwo.tex && bibtex ziemiomierstwo && lualatex -synctex=1 -interaction=nonstopmode ziemiomierstwo.tex && lualatex -synctex=1 -interaction=nonstopmode ziemiomierstwo.tex
 	cp src-pl/ziemiomierstwo.pdf .
+	# Point SyncTeX at the real sources in src/ instead of the deleted src-pl/ copy.
+	gunzip -c src-pl/ziemiomierstwo.synctex.gz | sed 's|/src-pl/|/src/|' | gzip > ziemiomierstwo.synctex.gz
 	rm -rf src-pl
 
 ziemiomierstwo-wloskie.pdf: $(SOURCES) src/img.jpeg
