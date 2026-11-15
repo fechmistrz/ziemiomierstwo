@@ -224,6 +224,8 @@
 			\@tempswafalse
 			\ifx\gp@pendingtodo\@empty\else\@tempswatrue\fi
 			\ifgp@initial\@tempswatrue\fi
+			% tylko akapity głównego toku tekstu: nie paginy, nie przypisy, nie wnętrza ramek
+			\ifnum\directlua{tex.sprint(tex.nest.ptr)}=\@ne\else\@tempswafalse\fi
 			\if@tempswa
 				\if@inlabel % pierwszy akapit to punkt wyliczenia albo twierdzenie
 					\global\gp@initialfalse
