@@ -10,6 +10,7 @@ Potrzebny jest LuaLaTeX z pełnego TeX Live, w tym pakiety `tcolorbox`, `unicode
 
 Cały wygląd książki jest w `src/greaseproof-common.sty`.
 Klasy `greaseproof.cls` (wersja polska) i `greaseproofita.cls` (włoska) wybierają tylko język, fonty i napisy.
+Rysunki na stronach tytułowych części są w `src/greaseproof-emblems.sty`; ten plik generuje `python3 utils/emblems.py > src/greaseproof-emblems.sty`.
 
 Narzędzie do poprawiania składni dokumentu dwujęzykowego:
 ```

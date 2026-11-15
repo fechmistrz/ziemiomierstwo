@@ -19,6 +19,9 @@
 
 \RequirePackage[polish]{babel}
 \RequirePackage[nomathsymbols]{polski}
+% Jednoliterowe spójniki i przyimki nie zostają na końcu wiersza.
+\RequirePackage{luavlna}
+\singlechars{polish}{AaIiOoUuWwZz}
 % Polskie znaki nierówności (ze skośną kreską), jak dotąd robił to pakiet polski.
 \AtBeginDocument{%
 	\let\leq\leqslant \let\le\leqslant
@@ -28,6 +31,8 @@
 
 \newcommand{\gp@str@title}{Almanach geometryczny}
 \newcommand{\gp@str@titlelines}{Almanach\\geometryczny}
+\newcommand{\gp@str@titlea}{Almanach}
+\newcommand{\gp@str@titleb}{geometryczny}
 \newcommand{\gp@str@author}{$\mathcal{L}$emiałgiusz z Hornšperku}
 \newcommand{\gp@str@pdfauthor}{Lemiałgiusz z Hornšperku}
 

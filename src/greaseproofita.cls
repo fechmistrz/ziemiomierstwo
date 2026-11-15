@@ -42,6 +42,8 @@
 
 \newcommand{\gp@str@title}{Almanacco geometrico}
 \newcommand{\gp@str@titlelines}{Almanacco\\geometrico}
+\newcommand{\gp@str@titlea}{Almanacco}
+\newcommand{\gp@str@titleb}{geometrico}
 \newcommand{\gp@str@author}{$\mathcal{L}$emiaogius di Hornšperk}
 \newcommand{\gp@str@pdfauthor}{Lemiaogius di Hornšperk}
 
