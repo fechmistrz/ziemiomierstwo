@@ -1,0 +1,356 @@
+% Wspólna część klas greaseproof (wydanie polskie) i greaseproofita (włoskie).
+%
+% Klasy-nakładki ładują extbook, język, fonty oraz definiują napisy \gp@str@...,
+% a potem wczytują ten plik. Wszystko, co dotyczy wyglądu książki, jest tutaj.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{greaseproof-common}[2026/11/15 Almanach geometryczny: skład]
+
+% ---------------------------------------------------------------------------
+% Format strony
+% ---------------------------------------------------------------------------
+% Kolumna ma ok. 70 znaków w wierszu; margines zewnętrzny jest szerszy od
+% wewnętrznego, żeby rozkładówka miała trzy podobne pasy światła.
+\RequirePackage[
+	paperwidth=6.125in,
+	paperheight=9.25in,
+	inner=0.72in,
+	outer=0.88in,
+	top=0.95in,
+	bottom=0.95in,
+	headsep=0.22in,
+	headheight=14pt,
+	footskip=0.4in,
+	twoside,
+	% showframe,
+]{geometry}
+
+\RequirePackage{graphicx}
+\graphicspath{{images/}}
+\RequirePackage[svgnames, table]{xcolor}
+\RequirePackage{calc}
+\RequirePackage{changepage}
+\RequirePackage[toc]{appendix}
+\RequirePackage{etoolbox}
+\RequirePackage{float}
+\RequirePackage[final]{microtype}
+\RequirePackage{tikz}
+\usetikzlibrary{calc}
+\RequirePackage{tkz-euclide}
+\RequirePackage{subcaption}
+\RequirePackage{lipsum}
+\RequirePackage{comment}
+\RequirePackage{paralist}
+\RequirePackage{enumitem}
+\RequirePackage{fancyhdr}
+\RequirePackage{titlesec}
+\RequirePackage{titletoc}
+\RequirePackage[most]{tcolorbox}
+
+% ---------------------------------------------------------------------------
+% Kolory
+% ---------------------------------------------------------------------------
+% Dwa akcenty: atrament (wyniki, nagłówki, odsyłacze) i ochra (to, co się
+% przyjmuje: definicje i aksjomaty). Oba są na tyle ciemne, żeby nie zniknąć
+% w druku czarno-białym.
+\definecolor{gpink}{HTML}{1F4E79}
+\definecolor{gpochre}{HTML}{9A5B13}
+\definecolor{gpgrey}{HTML}{6B6B6B}
+\colorlet{gprule}{black!25}
+% Nazwy używane w starszych wersjach klasy.
+\colorlet{ocre}{gpink}
+\colorlet{darkblue}{gpink}
+
+% ---------------------------------------------------------------------------
+% Akapity i łamanie stron
+% ---------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45\baselineskip plus 0.1\baselineskip minus 0.05\baselineskip}
+\linespread{1.04}
+\raggedbottom
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\emergencystretch=1.5em
+
+% ---------------------------------------------------------------------------
+% Paginy
+% ---------------------------------------------------------------------------
+% Po lewej tytuł rozdziału, po prawej tytuł sekcji; numer strony zawsze na
+% zewnątrz. Tytuł książki i autor są na stronie tytułowej.
+\newcommand{\gp@headfont}{\sffamily\small\color{gpgrey}}
+\newcommand{\gp@folio}{{\sffamily\small\bfseries\color{black}\thepage}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\gp@folio\hspace{1.2em}\gp@headfont\nouppercase{\leftmark}}
+\fancyhead[RO]{\gp@headfont\nouppercase{\rightmark}\hspace{1.2em}\gp@folio}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\headrule}{{\color{gprule}\hrule width\headwidth height\headrulewidth}}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{%
+	\fancyhf{}%
+	\fancyfoot[C]{\gp@folio}%
+	\renewcommand{\headrulewidth}{0pt}%
+}
+\renewcommand{\chaptermark}[1]{\markboth{\ifnum\value{chapter}>0 \thechapter.\enspace\fi#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace#1}}
+% Pusta strona przed rozdziałem zaczynającym się na stronie nieparzystej
+% nie dostaje paginy.
+\renewcommand{\cleardoublepage}{\clearpage\if@twoside\ifodd\c@page\else
+	\hbox{}\thispagestyle{empty}\newpage\fi\fi}
+
+% ---------------------------------------------------------------------------
+% Tytuły
+% ---------------------------------------------------------------------------
+\titleformat{\part}[display]
+	{\normalfont\centering}
+	{\sffamily\large\color{gpink}\addfontfeatures{LetterSpace=12}\MakeUppercase{\partname}\ \thepart}
+	{1.2em}
+	{\fontsize{26}{31}\selectfont\bfseries}
+
+\titleformat{\chapter}[display]
+	{\normalfont\raggedright}
+	{\color{gpink}\fontsize{54}{54}\selectfont\thechapter}
+	{0.35em}
+	{\fontsize{22}{26}\selectfont\bfseries}
+	[\vspace{0.7em}{\color{gpink}\titlerule[0.8pt]}]
+\titleformat{name=\chapter,numberless}[display]
+	{\normalfont\raggedright}
+	{}
+	{0pt}
+	{\fontsize{22}{26}\selectfont\bfseries}
+	[\vspace{0.7em}{\color{gpink}\titlerule[0.8pt]}]
+\titlespacing*{\chapter}{0pt}{1.2in}{2.2em}
+\titlespacing*{name=\chapter,numberless}{0pt}{1.2in}{2.2em}
+
+\titleformat{\section}
+	{\normalfont\Large\bfseries\raggedright}
+	{\color{gpink}\thesection}{0.7em}{}
+\titlespacing*{\section}{0pt}{1.9em plus 0.5em minus 0.2em}{0.5em}
+
+\titleformat{\subsection}
+	{\normalfont\large\bfseries\raggedright}
+	{\color{gpink}\thesubsection}{0.7em}{}
+\titlespacing*{\subsection}{0pt}{1.4em plus 0.4em minus 0.2em}{0.3em}
+
+\titleformat{\subsubsection}
+	{\normalfont\normalsize\bfseries\itshape\raggedright}
+	{\thesubsubsection}{0.7em}{}
+\titlespacing*{\subsubsection}{0pt}{1.1em plus 0.3em minus 0.1em}{0.1em}
+
+% ---------------------------------------------------------------------------
+% Spis treści
+% ---------------------------------------------------------------------------
+\setcounter{tocdepth}{2}
+\titlecontents{part}[0em]
+	{\addvspace{1.8em}\sffamily\bfseries\color{gpink}}
+	{\partname\ \thecontentslabel\enspace\textperiodcentered\enspace}
+	{}
+	{}
+	[\vspace{-0.3em}]
+\titlecontents{chapter}[1.7em]
+	{\addvspace{0.8em}\bfseries}
+	{\contentslabel[\color{gpink}\thecontentslabel]{1.7em}}
+	{\hspace*{-1.7em}}
+	{\hfill\contentspage}
+	[\vspace{0.15em}]
+\titlecontents{section}[3.9em]
+	{\vspace{0.1em}}
+	{\contentslabel[\color{gpgrey}\thecontentslabel]{2.2em}}
+	{\hspace*{-2.2em}}
+	{\titlerule*[0.6em]{\color{gprule}.}\contentspage}
+\titlecontents{subsection}[6.5em]
+	{\small\color{black!75}}
+	{\contentslabel[\thecontentslabel]{2.6em}}
+	{\hspace*{-2.6em}}
+	{\titlerule*[0.6em]{\color{gprule}.}\contentspage}
+\contentsmargin{1.6em}
+
+% ---------------------------------------------------------------------------
+% Otoczenia: twierdzenia, definicje, zadania
+% ---------------------------------------------------------------------------
+% Treść jest prosta (nie kursywą), a rodzaj wypowiedzi widać po lewej kresce:
+%   atrament + tło  -- twierdzenia,
+%   atrament        -- fakty, lematy, wnioski, hipotezy,
+%   ochra           -- definicje i aksjomaty,
+%   szara           -- zadania, konstrukcje, ćwiczenia,
+%   bez kreski      -- przykłady i uwagi.
+\newcommand{\gp@thmhead}[1]{%
+	\newtheoremstyle{gp#1}{0pt}{0pt}{\normalfont}{}{}{}{0.6em}%
+		{{\sffamily\bfseries\color{#1}\thmname{##1}\thmnumber{ ##2}}%
+		 \thmnote{\normalfont\ {\itshape(##3)}}}}
+\gp@thmhead{gpink}
+\gp@thmhead{gpochre}
+\gp@thmhead{gpgrey}
+\newtheoremstyle{gpplain}{0.5em}{0.5em}{\normalfont}{}{}{}{0.6em}%
+	{{\sffamily\bfseries\thmname{#1}\thmnumber{ #2}}%
+	 \thmnote{\normalfont\ {\itshape(#3)}}}
+
+\newcounter{counter}
+\numberwithin{counter}{section}
+
+\theoremstyle{gpgpink}
+\newtheorem{theorem}[counter]{\gp@str@theorem}
+\newtheorem{proposition}[counter]{\gp@str@proposition}
+\newtheorem{lemma}[counter]{\gp@str@lemma}
+\newtheorem{corollary}[counter]{\gp@str@corollary}
+\newtheorem{conjecture}[counter]{\gp@str@conjecture}
+\newtheorem{integral}[counter]{\gp@str@integral}
+\newtheorem*{euclidelement}{\gp@str@euclidelement}
+\theoremstyle{gpgpochre}
+\newtheorem{definition}[counter]{\gp@str@definition}
+\newtheorem{axiom}[counter]{\gp@str@axiom}
+\theoremstyle{gpgpgrey}
+\newtheorem{problem}[counter]{\gp@str@problem}
+\newtheorem{geoconstruction}[counter]{\gp@str@geoconstruction}
+\newtheorem{exercise}[counter]{\gp@str@exercise}
+\theoremstyle{gpplain}
+\newtheorem{example}[counter]{\gp@str@example}
+\newtheorem{warning}[counter]{\gp@str@warning}
+\newtheorem{tobedone}[counter]{\gp@str@tobedone}
+
+\tcbset{
+	gpbase/.style={
+		enhanced, breakable, parbox=false,
+		frame hidden, boxrule=0pt, sharp corners,
+		left=0.9em, right=0pt, top=0.1em, bottom=0.1em,
+		boxsep=0pt,
+		before skip=0.9em plus 0.2em minus 0.1em,
+		after skip=0.9em plus 0.2em minus 0.1em,
+	},
+	gpbar/.style={gpbase, interior hidden, borderline west={1.4pt}{0pt}{#1}},
+	gpfilled/.style={
+		gpbase, colback=#1!6,
+		borderline west={2.2pt}{0pt}{#1},
+		left=0.9em, right=0.7em, top=0.55em, bottom=0.55em,
+	},
+}
+% Wewnątrz ramki nic nie może pływać, więc rysunek zostaje tam, gdzie go wpisano.
+\newcommand{\gp@inlinefigures}{%
+	\renewenvironment{figure}[1][]%
+		{\par\smallskip\noindent\minipage{\linewidth}\def\@captype{figure}\centering}%
+		{\endminipage\par\smallskip}%
+}
+\tcbset{gpbase/.append style={before upper={\gp@inlinefigures}}}
+\tcolorboxenvironment{theorem}{gpfilled=gpink}
+\tcolorboxenvironment{proposition}{gpbar=gpink}
+\tcolorboxenvironment{lemma}{gpbar=gpink}
+\tcolorboxenvironment{corollary}{gpbar=gpink}
+\tcolorboxenvironment{conjecture}{gpbar=gpink}
+\tcolorboxenvironment{integral}{gpbar=gpink}
+\tcolorboxenvironment{euclidelement}{gpbar=gpink}
+\tcolorboxenvironment{definition}{gpbar=gpochre}
+\tcolorboxenvironment{axiom}{gpbar=gpochre}
+\tcolorboxenvironment{problem}{gpbar=gpgrey!60}
+\tcolorboxenvironment{geoconstruction}{gpbar=gpgrey!60}
+\tcolorboxenvironment{exercise}{gpbar=gpgrey!60}
+
+% Dowody: mniejszym stopniem, żeby nie konkurowały z wypowiedziami.
+\renewcommand{\qedsymbol}{\textcolor{gpgrey}{\rule{0.45em}{0.45em}}}
+\AtBeginEnvironment{proof}{\small}
+
+% ---------------------------------------------------------------------------
+% Wyliczenia
+% ---------------------------------------------------------------------------
+\setlist{itemsep=0.15em, parsep=0pt, topsep=0.2em, partopsep=0pt}
+\setlist[itemize]{leftmargin=1.5em, labelsep=0.5em}
+\setlist[itemize,1]{label={\color{gpink}\textbullet}}
+\setlist[itemize,2]{label={\color{gpink}--}}
+\setlist[enumerate]{leftmargin=2.4em, labelsep=0.6em, font=\sffamily\small\color{gpink}}
+% Otoczenia oparte na trivlist (center, proof) nie dokładają własnego odstępu do \parskip.
+\def\@listi{\leftmargin\leftmargini \parsep 0pt \topsep 0.15em \itemsep 0.15em}
+\let\@listI\@listi
+\@listi
+\setlength{\partopsep}{0pt}
+\setlength{\pltopsep}{0.2em}
+\setlength{\plitemsep}{0.1em}
+
+% ---------------------------------------------------------------------------
+% Rysunki, przypisy
+% ---------------------------------------------------------------------------
+\captionsetup{font=small, labelfont={bf,sf,color=gpink}, labelsep=period, skip=0.6em}
+\captionsetup[sub]{font=small, labelfont={sf,color=gpink}}
+\setlength{\footnotesep}{0.9em}
+\renewcommand{\footnoterule}{\vspace*{-3pt}{\color{gprule}\hrule width 0.25\columnwidth height 0.4pt}\vspace*{2.6pt}}
+
+% ---------------------------------------------------------------------------
+% Odsyłacze i skorowidze
+% ---------------------------------------------------------------------------
+% https://tex.stackexchange.com/questions/22012/hyperref-and-imakeidx-do-not-work-together
+\RequirePackage{imakeidx}
+\RequirePackage[pdfusetitle]{hyperref}
+% add [backref] for links from bib entries to citations
+\hypersetup{
+	colorlinks,
+	linkcolor={gpink},
+	citecolor={gpink},
+	urlcolor={gpink},
+}
+\RequirePackage{makeidx}
+\makeindex[title=\gp@str@index, columns=2, intoc]
+\makeindex[name=persons, title=\gp@str@persons, columns=2, intoc]
+\indexsetup{level=\chapter*, toclevel=chapter, firstpagestyle=plain, othercode=\footnotesize\raggedright}
+
+% W spisie treści odsyłacze są czarne, a paginy nie krzyczą wersalikami.
+\patchcmd{\tableofcontents}{\MakeUppercase\contentsname}{\contentsname}{}{}
+\patchcmd{\tableofcontents}{\MakeUppercase\contentsname}{\contentsname}{}{}
+\pretocmd{\tableofcontents}{\begingroup\hypersetup{linkcolor=black}\setlength{\parskip}{0pt}}{}{}
+\apptocmd{\tableofcontents}{\endgroup}{}{}
+\patchcmd{\thebibliography}{\MakeUppercase\bibname}{\bibname}{}{}
+\patchcmd{\thebibliography}{\MakeUppercase\bibname}{\bibname}{}{}
+\patchcmd{\thebibliography}{\chapter*{\bibname}}
+	{\chapter*{\bibname}\phantomsection\addcontentsline{toc}{chapter}{\bibname}\small\raggedright}{}{}
+
+% ---------------------------------------------------------------------------
+% Strona tytułowa
+% ---------------------------------------------------------------------------
+% Trójkąt z okręgiem opisanym, wpisanym i okręgiem dziewięciu punktów, który
+% jest styczny do wpisanego w punkcie Feuerbacha; do tego prosta Eulera.
+\newcommand{\gp@frontfigure}{%
+	\begin{tikzpicture}[scale=1.02, line cap=round, line join=round]
+		\coordinate (A) at (0.0000,0.0000);
+		\coordinate (B) at (7.0000,0.0000);
+		\coordinate (C) at (1.5000,4.0000);
+		\coordinate (O) at (3.5000,0.9688);
+		\coordinate (H) at (1.5000,2.0625);
+		\coordinate (N) at (2.5000,1.5156);
+		\coordinate (G) at (2.8333,1.3333);
+		\coordinate (I) at (2.2356,1.5493);
+		\coordinate (F) at (0.6988,1.7450);
+		\draw[black!30, line width=0.5pt] (O) circle [radius=3.6316];
+		\draw[gpgrey, line width=0.4pt] (A) -- (2.4216,3.3297) (B) -- (0.8630,2.3014) (C) -- (1.5000,0.0000);
+		\draw[gpochre, line width=0.8pt] (I) circle [radius=1.5493];
+		\draw[gpink, line width=1pt] (N) circle [radius=1.8158];
+		\draw[black, line width=0.9pt] (A) -- (B) -- (C) -- cycle;
+		\draw[gpink, line width=0.6pt, dash pattern=on 3pt off 2pt] ($(H)!-0.9!(O)$) -- ($(H)!2.1!(O)$);
+		\foreach \P in {O,H,N,G} \fill[gpink] (\P) circle [radius=1.4pt];
+		\fill[gpochre] (I) circle [radius=1.4pt];
+		\fill[white, draw=gpink, line width=0.7pt] (F) circle [radius=1.7pt];
+		\foreach \P in {A,B,C} \fill[black] (\P) circle [radius=1.6pt];
+	\end{tikzpicture}%
+}
+\renewcommand{\maketitle}{%
+	\begin{titlepage}
+		\raggedright
+		\vspace*{0.9in}
+		{\sffamily\large\color{gpgrey}\gp@str@author\par}
+		\vspace{1.4em}
+		{\fontsize{34}{38}\selectfont\bfseries\gp@str@title\par}
+		\vspace{0.9em}
+		{\color{gpink}\hrule height 0.8pt}
+		\vfill
+		\centering
+		\gp@frontfigure
+		\vfill
+		\vspace*{0.3in}
+	\end{titlepage}
+	\cleardoublepage
+}
+\AtBeginDocument{\hypersetup{pdftitle={\gp@str@title}, pdfauthor={\gp@str@pdfauthor}}}
+
+% ---------------------------------------------------------------------------
+% Drobiazgi używane w tekście
+% ---------------------------------------------------------------------------
+\newcommand{\loremipsum}{ {\color{gray}  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisl purus, ultricies et ante quis, iaculis imperdiet justo. Proin tristique turpis a tortor eleifend lobortis. Vestibulum odio nisi, tempor sed scelerisque ac, aliquet a lorem. Proin ullamcorper nibh eget augue placerat lobortis. Quisque ac commodo libero, fringilla dictum purus. Proin nec massa vitae lorem eleifend lacinia. Praesent rhoncus ultricies ullamcorper. Fusce vel viverra purus, nec rhoncus massa. Etiam nisl lorem, cursus vel est sit amet, mattis venenatis magna. Vestibulum id risus sit amet nisi congue ultrices id nec ex. } }
+\newcommand{\todofoot}[1]{\textcolor{red}{\textbf{(!)}\footnote{\textbf{\color{red}{\gp@str@todo}}: #1}}}
+
+\endinput
