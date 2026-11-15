@@ -255,8 +255,22 @@
 	\else
 		\global\gp@initialfalse
 	\fi}
+% Liczbę wierszy akapitu z inicjałem zapisujemy w pliku .aux; jeśli w poprzednim
+% przebiegu akapit miał jeden wiersz, inicjału nie stawiamy, bo wisiałby w próżni.
+\newcount\gp@initno
+\def\gp@initlines#1#2{\expandafter\gdef\csname gp@il@#1\endcsname{#2}}
 \def\gp@doinitial#1{%
 	\global\gp@initialfalse
+	\global\advance\gp@initno\@ne
+	\edef\gp@thisinit{\the\gp@initno}%
+	\AddToHookNext{para/after}{\immediate\write\@auxout{%
+		\string\gp@initlines{\gp@thisinit}{\the\gp@lines}}}%
+	\@tempswatrue
+	\expandafter\ifx\csname gp@il@\gp@thisinit\endcsname\relax\else
+		\ifnum\csname gp@il@\gp@thisinit\endcsname<\tw@ \@tempswafalse\fi
+	\fi
+	\if@tempswa\expandafter\gp@setinitial\else\expandafter\@firstofone\fi{#1}}
+\def\gp@setinitial#1{%
 	\begingroup
 		\setbox\z@\hbox{X}\dimen@=\ht\z@
 		\dimen@ii=\dimexpr\baselineskip+\dimen@\relax
@@ -545,6 +559,8 @@
 \apptocmd{\tableofcontents}{\endgroup}{}{}
 \patchcmd{\thebibliography}{\MakeUppercase\bibname}{\bibname}{}{}
 \patchcmd{\thebibliography}{\MakeUppercase\bibname}{\bibname}{}{}
+\patchcmd{\thebibliography}{\clubpenalty4000}{\clubpenalty\@M}{}{}
+\patchcmd{\thebibliography}{\widowpenalty4000}{\widowpenalty\@M}{}{}
 \patchcmd{\thebibliography}{\chapter*{\bibname}}
 	{\chapter*{\bibname}\phantomsection\addcontentsline{toc}{chapter}{\bibname}\small\raggedright}{}{}
 
@@ -703,8 +719,8 @@
 	\global\let\gp@pendingtodo\@empty % najpierw wyczyść: przypisy też mają akapity
 	\setbox\gp@todobox\hbox{}%
 	\gp@todolist
-	\ifdim\wd\gp@todobox>3.6em
-		\box\gp@todobox\hskip0.4em % długi szereg nie zmieści się na marginesie
+	\ifdim\wd\gp@todobox>2.3em
+		\box\gp@todobox\hskip0.4em % więcej niż dwa znaki nie mieszczą się na marginesie
 	\else
 		\llap{\box\gp@todobox\hskip0.5em}%
 	\fi}
@@ -725,7 +741,11 @@
 	\ifgp@boxtodo
 		\global\gp@boxtodofalse
 		\AddToHookNext{para/begin}{%
-			\llap{\box\gp@boxtodobox\hskip\dimexpr1.4em+2.2pt\relax}\kern\z@}%
+			\ifdim\wd\gp@boxtodobox>2.3em
+				\box\gp@boxtodobox\hskip0.4em\kern\z@
+			\else
+				\llap{\box\gp@boxtodobox\hskip\dimexpr1.4em+2.2pt\relax}\kern\z@
+			\fi}%
 	\fi}
 \IfHookExistsTF{para/begin}{}{% stary LaTeX: krzyżyk zostaje w tekście
 	\renewcommand{\todofoot}[1]{\gp@todomark{#1}}}
