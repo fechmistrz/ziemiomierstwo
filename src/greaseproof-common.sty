@@ -9,14 +9,16 @@
 % Format strony
 % ---------------------------------------------------------------------------
 % Kolumna ma ok. 70 znaków w wierszu; margines zewnętrzny jest szerszy od
-% wewnętrznego, żeby rozkładówka miała trzy podobne pasy światła.
+% wewnętrznego, żeby rozkładówka miała trzy podobne pasy światła. Wysokość
+% kolumny ma się do jej szerokości jak w podziale złotym (Elementy, II.11):
+% 4,525 cala razy 1,618 to 7,3216 cala.
 \RequirePackage[
 	paperwidth=6.125in,
 	paperheight=9.25in,
 	inner=0.72in,
 	outer=0.88in,
-	top=0.95in,
-	bottom=0.95in,
+	top=0.93in,
+	textheight=7.3216in,
 	headsep=0.22in,
 	headheight=14pt,
 	footskip=0.4in,
@@ -49,16 +51,72 @@
 % ---------------------------------------------------------------------------
 % Kolory
 % ---------------------------------------------------------------------------
-% Dwa akcenty: atrament (wyniki, nagłówki, odsyłacze) i ochra (to, co się
-% przyjmuje: definicje i aksjomaty). Oba są na tyle ciemne, żeby nie zniknąć
-% w druku czarno-białym.
-\definecolor{gpink}{HTML}{1F4E79}
-\definecolor{gpochre}{HTML}{9A5B13}
-\definecolor{gpgrey}{HTML}{6B6B6B}
-\colorlet{gprule}{black!25}
+% Paleta starożytnego malarza: czerwona ochra (rubryki: numery, etykiety
+% wyników, ornamenty), błękit egipski (to, co się przyjmuje: definicje
+% i aksjomaty, oraz odsyłacze) i papirus (tło twierdzeń). Wszystko na tyle
+% ciemne, żeby nie zniknąć w druku czarno-białym.
+\definecolor{gpterra}{HTML}{A4411F}
+\definecolor{gpblue}{HTML}{1D4C7C}
+\definecolor{gppapyrus}{HTML}{F6EFDD}
+\definecolor{gpgrey}{HTML}{6E675E}
+\colorlet{gprule}{black!22}
 % Nazwy używane w starszych wersjach klasy.
-\colorlet{ocre}{gpink}
-\colorlet{darkblue}{gpink}
+\colorlet{ocre}{gpterra}
+\colorlet{darkblue}{gpblue}
+
+% ---------------------------------------------------------------------------
+% Pismo pomocnicze
+% ---------------------------------------------------------------------------
+% Greka (numeracja ksiąg, motto, ὅ.ἔ.δ.) jest zawsze składana Alegreyą,
+% niezależnie od pisma tekstu głównego.
+\newfontfamily\gp@antique{Alegreya-Regular.otf}[
+	BoldFont=Alegreya-Bold.otf,
+	ItalicFont=Alegreya-Italic.otf,
+	BoldItalicFont=Alegreya-BoldItalic.otf,
+]
+% Spacjowanie wersalików i kapitalików: \gp@ls[procenty]{tekst}.
+\newcommand{\gp@ls}[2][8]{{\addfontfeatures{LetterSpace=#1}#2}}
+% Liczby po grecku: α΄, β΄, γ΄... (szóstka jako ΣΤ, bo stigmy w Alegreyi nie ma).
+\newcommand{\gp@greeknum}[1]{\ifcase#1\or
+	Α\or Β\or Γ\or Δ\or Ε\or ΣΤ\or Ζ\or Η\or Θ\or Ι\or
+	ΙΑ\or ΙΒ\or ΙΓ\or ΙΔ\or ΙΕ\or ΙΣΤ\or ΙΖ\or ΙΗ\or ΙΘ\or Κ\else\the\numexpr#1\relax\fi\kern0.03em ʹ}
+
+% ---------------------------------------------------------------------------
+% Ornamenty
+% ---------------------------------------------------------------------------
+% Meander. \gp@meander{n} rysuje n ogniw i rozciąga je dokładnie na szerokość
+% wiersza; \gp@meandershort{n} rysuje n ogniw stałej wielkości.
+\newcommand{\gp@meanderpath}[1]{%
+	\draw[gpterra, line cap=rect, line join=miter] (0,0)
+		\foreach \gp@i in {1,...,#1} {
+			-- ++(0,4) -- ++(4,0) -- ++(0,-3) -- ++(-2,0) -- ++(0,1)
+			-- ++(1,0) -- ++(0,1) -- ++(-2,0) -- ++(0,-3) -- ++(4,0)}
+		-- ++(0,4);}
+\newcommand{\gp@meander}[1]{%
+	\begin{tikzpicture}[x=\dimexpr\linewidth/\numexpr5*#1\relax\relax,
+			y=\dimexpr\linewidth/\numexpr5*#1\relax\relax, line width=0.55pt]
+		\gp@meanderpath{#1}
+	\end{tikzpicture}}
+\newcommand{\gp@meandershort}[1]{%
+	\begin{tikzpicture}[x=1.5pt, y=1.5pt, line width=0.55pt]
+		\gp@meanderpath{#1}
+	\end{tikzpicture}}
+\newcommand{\gp@band}{\par\nointerlineskip\hbox to\linewidth{\hss\gp@meander{43}\hss}\par}
+
+% Rysunek do pierwszego twierdzenia pierwszej księgi Elementów (trójkąt
+% równoboczny na danym odcinku): zamyka każdy rozdział.
+\newcommand{\gp@protasis}{%
+	\begin{tikzpicture}[x=0.46cm, y=0.46cm, gpterra, line join=round]
+		\draw[line width=0.4pt] (0,0) circle [radius=1] (1,0) circle [radius=1];
+		\draw[line width=0.75pt] (0,0) -- (1,0) -- (0.5,0.8660) -- cycle;
+	\end{tikzpicture}}
+\newif\ifgp@chapteropen
+\newcommand{\gp@closechapter}{%
+	\ifgp@chapteropen
+		\global\gp@chapteropenfalse
+		\par\nopagebreak\vspace{1.8em}\nopagebreak
+		{\centering\gp@protasis\par}%
+	\fi}
 
 % ---------------------------------------------------------------------------
 % Akapity i łamanie stron
@@ -70,29 +128,42 @@
 \clubpenalty=10000
 \widowpenalty=10000
 \displaywidowpenalty=10000
-\emergencystretch=1.5em
+% W tekście jest dużo wzorów, których nie wolno łamać: lepszy luźniejszy wiersz
+% niż wzór wystający na margines.
+\tolerance=900
+\emergencystretch=2em
+\hbadness=2500
 
 % ---------------------------------------------------------------------------
 % Paginy
 % ---------------------------------------------------------------------------
-% Po lewej tytuł rozdziału, po prawej tytuł sekcji; numer strony zawsze na
-% zewnątrz. Tytuł książki i autor są na stronie tytułowej.
-\newcommand{\gp@headfont}{\sffamily\small\color{gpgrey}}
-\newcommand{\gp@folio}{{\sffamily\small\bfseries\color{black}\thepage}}
+% Po lewej tytuł rozdziału, po prawej tytuł sekcji, kapitalikami; numer strony
+% zawsze na zewnątrz. Tytuł książki i autor są na stronie tytułowej.
+\newcommand{\gp@headfont}{\small\scshape\color{gpgrey}\addfontfeatures{LetterSpace=5}}
+\newcommand{\gp@folio}{{\normalfont\small\color{black}\thepage}}
+\newcommand{\gp@dot}{{\color{gpterra}\textperiodcentered}}
+% Na samym końcu książki: koniec. Napis stoi w stopce ostatniej strony (jej
+% numer znamy z poprzedniego przebiegu), więc nigdy nie wymusza nowej kartki.
+\newcommand{\gp@telos}{%
+	\@ifundefined{PreviousTotalPages}{}{%
+		\ifnum\numexpr\ReadonlyShipoutCounter+1\relax=\PreviousTotalPages\relax
+			{\gp@antique\small\color{gpterra}\gp@ls[22]{ΤΕΛΟΣ}}%
+		\fi}}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE]{\gp@folio\hspace{1.2em}\gp@headfont\nouppercase{\leftmark}}
-\fancyhead[RO]{\gp@headfont\nouppercase{\rightmark}\hspace{1.2em}\gp@folio}
+\fancyfoot[C]{\gp@telos}
+\fancyhead[LE]{\gp@folio\hspace{1.3em}{\gp@headfont\nouppercase{\leftmark}}}
+\fancyhead[RO]{{\gp@headfont\nouppercase{\rightmark}}\hspace{1.3em}\gp@folio}
 \renewcommand{\headrulewidth}{0.3pt}
 \renewcommand{\headrule}{{\color{gprule}\hrule width\headwidth height\headrulewidth}}
 \renewcommand{\footrulewidth}{0pt}
 \fancypagestyle{plain}{%
 	\fancyhf{}%
-	\fancyfoot[C]{\gp@folio}%
+	\fancyfoot[C]{\gp@dot\enspace\gp@folio\enspace\gp@dot}%
 	\renewcommand{\headrulewidth}{0pt}%
 }
-\renewcommand{\chaptermark}[1]{\markboth{\ifnum\value{chapter}>0 \thechapter.\enspace\fi#1}{}}
-\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace#1}}
+\renewcommand{\chaptermark}[1]{\markboth{\ifnum\value{chapter}>0 \thechapter\enspace\textperiodcentered\enspace\fi#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\textperiodcentered\enspace#1}}
 % Pusta strona przed rozdziałem zaczynającym się na stronie nieparzystej
 % nie dostaje paginy.
 \renewcommand{\cleardoublepage}{\clearpage\if@twoside\ifodd\c@page\else
@@ -101,39 +172,67 @@
 % ---------------------------------------------------------------------------
 % Tytuły
 % ---------------------------------------------------------------------------
+% Część: rzymska liczba między dwoma krótkimi meandrami, a pod spodem rozdziały,
+% które do niej należą, numerowane po grecku jak na swoich stronach tytułowych.
+\newcommand{\gp@partafter}{%
+	\vspace{2em}\gp@meandershort{9}\par\vspace{3.2em}%
+	\startcontents[parts]%
+	{\hypersetup{linkcolor=.}\printcontents[parts]{p}{0}{\setcounter{tocdepth}{0}}}}
 \titleformat{\part}[display]
 	{\normalfont\centering}
-	{\sffamily\large\color{gpink}\addfontfeatures{LetterSpace=12}\MakeUppercase{\partname}\ \thepart}
-	{1.2em}
-	{\fontsize{26}{31}\selectfont\bfseries}
+	{\parbox{\linewidth}{\centering
+		\gp@meandershort{9}\\[2.2em]
+		{\scshape\color{gpgrey}\gp@ls[14]{\MakeLowercase{\partname}}}\\[0.9em]
+		{\color{gpterra}\fontsize{44}{44}\selectfont\thepart}}}
+	{1.4em}
+	{\fontsize{19}{26}\selectfont\addfontfeatures{LetterSpace=12}\MakeUppercase}
+	[\gp@partafter]
+\titlecontents{pchapter}[0pt]
+	{\centering\normalfont\normalsize}
+	{\makebox[2.2em][r]{\gp@antique\color{gpterra}\gp@greeknum{\thecontentslabel}}\hspace{0.9em}}
+	{}
+	{}
+	[\vspace{0.35em}]
+\pretocmd{\appendix}{\stopcontents[parts]}{}{}
 
+% Rozdział: jak księgi Elementów, numerowany po grecku (Γʹ), z numerem
+% arabskim w etykiecie nad spodem. Pod tytułem meander na całą szerokość.
+\newcommand{\gp@chapterlabel}{%
+	\global\gp@chapteropentrue
+	\parbox[b]{\linewidth}{\raggedright
+		{\scshape\color{gpgrey}\gp@ls[14]{\MakeLowercase{\@chapapp}\ \thechapter}}\\[1.1em]
+		{\gp@antique\color{gpterra}\fontsize{56}{56}\selectfont
+			\ifnum\value{chapter}>0 \gp@greeknum{\value{chapter}}\fi}}}
 \titleformat{\chapter}[display]
 	{\normalfont\raggedright}
-	{\color{gpink}\fontsize{54}{54}\selectfont\thechapter}
-	{0.35em}
-	{\fontsize{22}{26}\selectfont\bfseries}
-	[\vspace{0.7em}{\color{gpink}\titlerule[0.8pt]}]
+	{\gp@chapterlabel}
+	{0.5em}
+	{\fontsize{23}{27}\selectfont\bfseries}
+	[\vskip 15pt\gp@band]
 \titleformat{name=\chapter,numberless}[display]
 	{\normalfont\raggedright}
 	{}
 	{0pt}
-	{\fontsize{22}{26}\selectfont\bfseries}
-	[\vspace{0.7em}{\color{gpink}\titlerule[0.8pt]}]
-\titlespacing*{\chapter}{0pt}{1.2in}{2.2em}
-\titlespacing*{name=\chapter,numberless}{0pt}{1.2in}{2.2em}
+	{\fontsize{23}{27}\selectfont\bfseries}
+	[\vskip 15pt\gp@band]
+\titlespacing*{\chapter}{0pt}{0.75in}{2.6em}
+\titlespacing*{name=\chapter,numberless}{0pt}{1.2in}{2.6em}
+% Koniec rozdziału dostaje ornament, zanim zacznie się następny rozdział albo część.
+\pretocmd{\chapter}{\gp@closechapter}{}{\ClassWarning{greaseproof}{nie udało się dodać ornamentu na końcu rozdziału}}
+\pretocmd{\part}{\gp@closechapter}{}{}
 
 \titleformat{\section}
 	{\normalfont\Large\bfseries\raggedright}
-	{\color{gpink}\thesection}{0.7em}{}
+	{\color{gpterra}\thesection}{0.7em}{}
 \titlespacing*{\section}{0pt}{1.9em plus 0.5em minus 0.2em}{0.5em}
 
 \titleformat{\subsection}
 	{\normalfont\large\bfseries\raggedright}
-	{\color{gpink}\thesubsection}{0.7em}{}
+	{\color{gpterra}\thesubsection}{0.7em}{}
 \titlespacing*{\subsection}{0pt}{1.4em plus 0.4em minus 0.2em}{0.3em}
 
 \titleformat{\subsubsection}
-	{\normalfont\normalsize\bfseries\itshape\raggedright}
+	{\normalfont\normalsize\scshape\raggedright\addfontfeatures{LetterSpace=6}}
 	{\thesubsubsection}{0.7em}{}
 \titlespacing*{\subsubsection}{0pt}{1.1em plus 0.3em minus 0.1em}{0.1em}
 
@@ -142,14 +241,14 @@
 % ---------------------------------------------------------------------------
 \setcounter{tocdepth}{2}
 \titlecontents{part}[0em]
-	{\addvspace{1.8em}\sffamily\bfseries\color{gpink}}
-	{\partname\ \thecontentslabel\enspace\textperiodcentered\enspace}
+	{\addvspace{2em}\centering\scshape\color{gpterra}\addfontfeatures{LetterSpace=12}}
 	{}
 	{}
-	[\vspace{-0.3em}]
+	{}
+	[\vspace{0.1em}]
 \titlecontents{chapter}[1.7em]
 	{\addvspace{0.8em}\bfseries}
-	{\contentslabel[\color{gpink}\thecontentslabel]{1.7em}}
+	{\contentslabel[\color{gpterra}\thecontentslabel]{1.7em}}
 	{\hspace*{-1.7em}}
 	{\hfill\contentspage}
 	[\vspace{0.15em}]
@@ -168,27 +267,28 @@
 % ---------------------------------------------------------------------------
 % Otoczenia: twierdzenia, definicje, zadania
 % ---------------------------------------------------------------------------
-% Treść jest prosta (nie kursywą), a rodzaj wypowiedzi widać po lewej kresce:
-%   atrament + tło  -- twierdzenia,
-%   atrament        -- fakty, lematy, wnioski, hipotezy,
-%   ochra           -- definicje i aksjomaty,
+% Treść jest prosta (nie kursywą), etykieta kapitalikami, a rodzaj wypowiedzi
+% widać po lewej kresce:
+%   ochra + papirus -- twierdzenia,
+%   ochra           -- fakty, lematy, wnioski, hipotezy,
+%   błękit          -- definicje i aksjomaty,
 %   szara           -- zadania, konstrukcje, ćwiczenia,
 %   bez kreski      -- przykłady i uwagi.
-\newcommand{\gp@thmhead}[1]{%
-	\newtheoremstyle{gp#1}{0pt}{0pt}{\normalfont}{}{}{}{0.6em}%
-		{{\sffamily\bfseries\color{#1}\thmname{##1}\thmnumber{ ##2}}%
+\newcommand{\gp@thmhead}[2]{%
+	\newtheoremstyle{#1}{0pt}{0pt}{\normalfont}{}{}{}{0.7em}%
+		{\strut{\scshape\color{#2}\addfontfeatures{LetterSpace=5}\thmname{##1}\thmnumber{ ##2}}%
 		 \thmnote{\normalfont\ {\itshape(##3)}}}}
-\gp@thmhead{gpink}
-\gp@thmhead{gpochre}
-\gp@thmhead{gpgrey}
-\newtheoremstyle{gpplain}{0.5em}{0.5em}{\normalfont}{}{}{}{0.6em}%
-	{{\sffamily\bfseries\thmname{#1}\thmnumber{ #2}}%
+\gp@thmhead{gpresult}{gpterra}
+\gp@thmhead{gpgiven}{gpblue}
+\gp@thmhead{gptask}{gpgrey}
+\newtheoremstyle{gpplain}{0.5em}{0.5em}{\normalfont}{}{}{}{0.7em}%
+	{\strut{\scshape\addfontfeatures{LetterSpace=5}\thmname{#1}\thmnumber{ #2}}%
 	 \thmnote{\normalfont\ {\itshape(#3)}}}
 
 \newcounter{counter}
 \numberwithin{counter}{section}
 
-\theoremstyle{gpgpink}
+\theoremstyle{gpresult}
 \newtheorem{theorem}[counter]{\gp@str@theorem}
 \newtheorem{proposition}[counter]{\gp@str@proposition}
 \newtheorem{lemma}[counter]{\gp@str@lemma}
@@ -196,10 +296,10 @@
 \newtheorem{conjecture}[counter]{\gp@str@conjecture}
 \newtheorem{integral}[counter]{\gp@str@integral}
 \newtheorem*{euclidelement}{\gp@str@euclidelement}
-\theoremstyle{gpgpochre}
+\theoremstyle{gpgiven}
 \newtheorem{definition}[counter]{\gp@str@definition}
 \newtheorem{axiom}[counter]{\gp@str@axiom}
-\theoremstyle{gpgpgrey}
+\theoremstyle{gptask}
 \newtheorem{problem}[counter]{\gp@str@problem}
 \newtheorem{geoconstruction}[counter]{\gp@str@geoconstruction}
 \newtheorem{exercise}[counter]{\gp@str@exercise}
@@ -214,16 +314,22 @@
 		frame hidden, boxrule=0pt, sharp corners,
 		left=0.9em, right=0pt, top=0.1em, bottom=0.1em,
 		boxsep=0pt,
-		before skip=0.9em plus 0.2em minus 0.1em,
-		after skip=0.9em plus 0.2em minus 0.1em,
+		beforeafter skip balanced=0.6\baselineskip plus 0.15\baselineskip minus 0.05\baselineskip,
+		after upper={\gp@fixdepth},
 	},
 	gpbar/.style={gpbase, interior hidden, borderline west={1.4pt}{0pt}{#1}},
 	gpfilled/.style={
-		gpbase, colback=#1!6,
+		gpbase, colback=gppapyrus,
 		borderline west={2.2pt}{0pt}{#1},
 		left=0.9em, right=0.7em, top=0.55em, bottom=0.55em,
 	},
 }
+% Ostatni wiersz ramki dostaje pełną głębokość, także gdy nie ma w nim liter
+% z wydłużeniami dolnymi; dzięki temu odstępy wokół ramek są wszędzie równe.
+\newcommand{\gp@fixdepth}{%
+	\ifvmode\ifdim\prevdepth>-999pt\ifdim\prevdepth<\dp\strutbox
+		\kern\dimexpr\dp\strutbox-\prevdepth\relax
+	\fi\fi\fi}
 % Wewnątrz ramki nic nie może pływać, więc rysunek zostaje tam, gdzie go wpisano.
 \newcommand{\gp@inlinefigures}{%
 	\renewenvironment{figure}[1][]%
@@ -231,31 +337,43 @@
 		{\endminipage\par\smallskip}%
 }
 \tcbset{gpbase/.append style={before upper={\gp@inlinefigures}}}
-\tcolorboxenvironment{theorem}{gpfilled=gpink}
-\tcolorboxenvironment{proposition}{gpbar=gpink}
-\tcolorboxenvironment{lemma}{gpbar=gpink}
-\tcolorboxenvironment{corollary}{gpbar=gpink}
-\tcolorboxenvironment{conjecture}{gpbar=gpink}
-\tcolorboxenvironment{integral}{gpbar=gpink}
-\tcolorboxenvironment{euclidelement}{gpbar=gpink}
-\tcolorboxenvironment{definition}{gpbar=gpochre}
-\tcolorboxenvironment{axiom}{gpbar=gpochre}
+% Puste otoczenie center (rysunek zakomentowany na później) nie zostawia dziury.
+\let\gp@endcenter\endcenter
+\def\endcenter{%
+	\if@inlabel
+		\global\@inlabelfalse
+		\global\@newlistfalse
+		\global\setbox\@labels\hbox{}%
+	\else
+		\gp@endcenter
+	\fi}
+\tcolorboxenvironment{theorem}{gpfilled=gpterra}
+\tcolorboxenvironment{proposition}{gpbar=gpterra}
+\tcolorboxenvironment{lemma}{gpbar=gpterra}
+\tcolorboxenvironment{corollary}{gpbar=gpterra}
+\tcolorboxenvironment{conjecture}{gpbar=gpterra}
+\tcolorboxenvironment{integral}{gpbar=gpterra}
+\tcolorboxenvironment{euclidelement}{gpbar=gpterra}
+\tcolorboxenvironment{definition}{gpbar=gpblue}
+\tcolorboxenvironment{axiom}{gpbar=gpblue}
 \tcolorboxenvironment{problem}{gpbar=gpgrey!60}
 \tcolorboxenvironment{geoconstruction}{gpbar=gpgrey!60}
 \tcolorboxenvironment{exercise}{gpbar=gpgrey!60}
 
-% Dowody: mniejszym stopniem, żeby nie konkurowały z wypowiedziami.
-\renewcommand{\qedsymbol}{\textcolor{gpgrey}{\rule{0.45em}{0.45em}}}
+% Dowody: mniejszym stopniem, żeby nie konkurowały z wypowiedziami, i z tym
+% zakończeniem, którego używał Euklides: ὅπερ ἔδει δεῖξαι, co było do okazania.
+\renewcommand{\qedsymbol}{{\gp@antique\itshape\color{gpterra}ὅ.\,ἔ.\,δ.}}
 \AtBeginEnvironment{proof}{\small}
+\patchcmd{\proof}{\itshape}{\scshape\addfontfeatures{LetterSpace=5}}{}{}
 
 % ---------------------------------------------------------------------------
 % Wyliczenia
 % ---------------------------------------------------------------------------
 \setlist{itemsep=0.15em, parsep=0pt, topsep=0.2em, partopsep=0pt}
 \setlist[itemize]{leftmargin=1.5em, labelsep=0.5em}
-\setlist[itemize,1]{label={\color{gpink}\textbullet}}
-\setlist[itemize,2]{label={\color{gpink}--}}
-\setlist[enumerate]{leftmargin=2.4em, labelsep=0.6em, font=\sffamily\small\color{gpink}}
+\setlist[itemize,1]{label={\color{gpterra}\textbullet}}
+\setlist[itemize,2]{label={\color{gpterra}--}}
+\setlist[enumerate]{leftmargin=2.4em, labelsep=0.6em, font=\small\color{gpterra}}
 % Otoczenia oparte na trivlist (center, proof) nie dokładają własnego odstępu do \parskip.
 \def\@listi{\leftmargin\leftmargini \parsep 0pt \topsep 0.15em \itemsep 0.15em}
 \let\@listI\@listi
@@ -267,8 +385,11 @@
 % ---------------------------------------------------------------------------
 % Rysunki, przypisy
 % ---------------------------------------------------------------------------
-\captionsetup{font=small, labelfont={bf,sf,color=gpink}, labelsep=period, skip=0.6em}
-\captionsetup[sub]{font=small, labelfont={sf,color=gpink}}
+% W rysunku złożonym z kilku ramek obok siebie TeX ma zmieścić w rzędzie tyle
+% ramek, ile się da, zamiast oszczędzać na ściskaniu odstępów.
+\AtBeginEnvironment{figure}{\linepenalty=2000 }
+\captionsetup{font=small, textfont=it, labelfont={sc,color=gpterra}, labelsep=period, skip=0.6em}
+\captionsetup[sub]{font=small, textfont=it, labelfont={color=gpterra}}
 \setlength{\footnotesep}{0.9em}
 \renewcommand{\footnoterule}{\vspace*{-3pt}{\color{gprule}\hrule width 0.25\columnwidth height 0.4pt}\vspace*{2.6pt}}
 
@@ -281,19 +402,20 @@
 % add [backref] for links from bib entries to citations
 \hypersetup{
 	colorlinks,
-	linkcolor={gpink},
-	citecolor={gpink},
-	urlcolor={gpink},
+	bookmarksnumbered,
+	linkcolor={gpblue},
+	citecolor={gpblue},
+	urlcolor={gpblue},
 }
 \RequirePackage{makeidx}
 \makeindex[title=\gp@str@index, columns=2, intoc]
 \makeindex[name=persons, title=\gp@str@persons, columns=2, intoc]
 \indexsetup{level=\chapter*, toclevel=chapter, firstpagestyle=plain, othercode=\footnotesize\raggedright}
 
-% W spisie treści odsyłacze są czarne, a paginy nie krzyczą wersalikami.
+% W spisie treści odsyłacze biorą kolor wpisu, a paginy nie krzyczą wersalikami.
 \patchcmd{\tableofcontents}{\MakeUppercase\contentsname}{\contentsname}{}{}
 \patchcmd{\tableofcontents}{\MakeUppercase\contentsname}{\contentsname}{}{}
-\pretocmd{\tableofcontents}{\begingroup\hypersetup{linkcolor=black}\setlength{\parskip}{0pt}}{}{}
+\pretocmd{\tableofcontents}{\begingroup\hypersetup{linkcolor=.}\setlength{\parskip}{0pt}}{}{}
 \apptocmd{\tableofcontents}{\endgroup}{}{}
 \patchcmd{\thebibliography}{\MakeUppercase\bibname}{\bibname}{}{}
 \patchcmd{\thebibliography}{\MakeUppercase\bibname}{\bibname}{}{}
@@ -301,48 +423,69 @@
 	{\chapter*{\bibname}\phantomsection\addcontentsline{toc}{chapter}{\bibname}\small\raggedright}{}{}
 
 % ---------------------------------------------------------------------------
-% Strona tytułowa
+% Matematyka
 % ---------------------------------------------------------------------------
-% Trójkąt z okręgiem opisanym, wpisanym i okręgiem dziewięciu punktów, który
-% jest styczny do wpisanego w punkcie Feuerbacha; do tego prosta Eulera.
-\newcommand{\gp@frontfigure}{%
-	\begin{tikzpicture}[scale=1.02, line cap=round, line join=round]
-		\coordinate (A) at (0.0000,0.0000);
-		\coordinate (B) at (7.0000,0.0000);
-		\coordinate (C) at (1.5000,4.0000);
-		\coordinate (O) at (3.5000,0.9688);
-		\coordinate (H) at (1.5000,2.0625);
-		\coordinate (N) at (2.5000,1.5156);
-		\coordinate (G) at (2.8333,1.3333);
-		\coordinate (I) at (2.2356,1.5493);
-		\coordinate (F) at (0.6988,1.7450);
-		\draw[black!30, line width=0.5pt] (O) circle [radius=3.6316];
-		\draw[gpgrey, line width=0.4pt] (A) -- (2.4216,3.3297) (B) -- (0.8630,2.3014) (C) -- (1.5000,0.0000);
-		\draw[gpochre, line width=0.8pt] (I) circle [radius=1.5493];
-		\draw[gpink, line width=1pt] (N) circle [radius=1.8158];
-		\draw[black, line width=0.9pt] (A) -- (B) -- (C) -- cycle;
-		\draw[gpink, line width=0.6pt, dash pattern=on 3pt off 2pt] ($(H)!-0.9!(O)$) -- ($(H)!2.1!(O)$);
-		\foreach \P in {O,H,N,G} \fill[gpink] (\P) circle [radius=1.4pt];
-		\fill[gpochre] (I) circle [radius=1.4pt];
-		\fill[white, draw=gpink, line width=0.7pt] (F) circle [radius=1.7pt];
-		\foreach \P in {A,B,C} \fill[black] (\P) circle [radius=1.6pt];
-	\end{tikzpicture}%
+% Dwie poprawki do unicode-math, potrzebne przy każdym foncie matematycznym.
+% Trójkąt jest w tych fontach wyższy od wersalików, więc go pomniejszamy
+% (\gp@trianglescale ustala klasa); klamry dookoła sprawiają, że dalej działa
+% zapis $S_\triangle$ bez klamer.
+\providecommand{\gp@trianglescale}{0.8}
+\AtBeginDocument{%
+	\let\gp@triangle\triangle
+	\renewcommand{\triangle}{{\mathchoice
+		{\scalebox{\gp@trianglescale}{$\displaystyle\gp@triangle$}}%
+		{\scalebox{\gp@trianglescale}{$\textstyle\gp@triangle$}}%
+		{\scalebox{\gp@trianglescale}{$\scriptstyle\gp@triangle$}}%
+		{\scalebox{\gp@trianglescale}{$\scriptscriptstyle\gp@triangle$}}}}%
 }
+% Symbole matematyczne w tytułach sekcji psułyby zakładki PDF.
+\pdfstringdefDisableCommands{\def\pi{π}}
+
+% ---------------------------------------------------------------------------
+% Strona tytułowa i ostatnia
+% ---------------------------------------------------------------------------
+% ,,Wiatrak'' z dowodu twierdzenia Pitagorasa w Elementach (I.47), jedynego
+% dowodu, który przytaczamy w całości: dwa jasne kwadraty i jeden ciemny.
+\newcommand{\gp@windmill}{%
+	\begin{tikzpicture}[x=0.5cm, y=0.5cm, line join=round, line cap=round]
+		\coordinate (A) at (0,0);
+		\coordinate (B) at (5,0);
+		\coordinate (C) at (1.8,2.4);
+		\fill[gpterra!55] (A) -- (B) -- (5,-5) -- (0,-5) -- cycle;
+		\fill[gpterra!20] (A) -- (C) -- (-0.6,4.2) -- (-2.4,1.8) -- cycle;
+		\fill[gpterra!20] (C) -- (B) -- (7.4,3.2) -- (4.2,5.6) -- cycle;
+		\draw[black!70, line width=0.35pt]
+			(C) -- (1.8,-5) (C) -- (0,-5) (C) -- (5,-5)
+			(-2.4,1.8) -- (B) (7.4,3.2) -- (A);
+		\draw[black, line width=0.7pt]
+			(A) -- (B) -- (5,-5) -- (0,-5) -- cycle
+			(A) -- (C) -- (-0.6,4.2) -- (-2.4,1.8) -- cycle
+			(C) -- (B) -- (7.4,3.2) -- (4.2,5.6) -- cycle;
+		\draw[black, line width=1pt] (A) -- (B) -- (C) -- cycle;
+	\end{tikzpicture}}
+% Nad drzwiami Akademii miał wisieć napis: niech nie wchodzi nikt, kto nie zna geometrii.
+\newcommand{\gp@motto}{{\gp@antique\gp@ls[18]{ΑΓΕΩΜΕΤΡΗΤΟΣ\quad ΜΗΔΕΙΣ\quad ΕΙΣΙΤΩ}}}
 \renewcommand{\maketitle}{%
 	\begin{titlepage}
-		\raggedright
-		\vspace*{0.9in}
-		{\sffamily\large\color{gpgrey}\gp@str@author\par}
-		\vspace{1.4em}
-		{\fontsize{34}{38}\selectfont\bfseries\gp@str@title\par}
-		\vspace{0.9em}
-		{\color{gpink}\hrule height 0.8pt}
-		\vfill
 		\centering
-		\gp@frontfigure
+		\gp@band
+		\vspace{0.6in}
+		{\large\gp@str@author\par}
+		\vspace{1.5em}
+		{\fontsize{27}{37}\selectfont\gp@ls[14]{\MakeUppercase{\gp@str@titlelines}}\par}
+		\vspace{1.6em}
+		\gp@protasis\par
 		\vfill
-		\vspace*{0.3in}
+		\gp@windmill\par
+		\vfill
+		{\small\color{gpterra}\gp@motto\par}
+		\vspace{1em}
+		{\small\gp@ls[16]{\uppercase\expandafter{\romannumeral\year}}\par}
+		\vspace{0.35in}
+		\gp@band
 	\end{titlepage}
+	\thispagestyle{empty}\null\vfill
+	{\centering\footnotesize\itshape\gp@str@colophon\par}
 	\cleardoublepage
 }
 \AtBeginDocument{\hypersetup{pdftitle={\gp@str@title}, pdfauthor={\gp@str@pdfauthor}}}
@@ -351,6 +494,8 @@
 % Drobiazgi używane w tekście
 % ---------------------------------------------------------------------------
 \newcommand{\loremipsum}{ {\color{gray}  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisl purus, ultricies et ante quis, iaculis imperdiet justo. Proin tristique turpis a tortor eleifend lobortis. Vestibulum odio nisi, tempor sed scelerisque ac, aliquet a lorem. Proin ullamcorper nibh eget augue placerat lobortis. Quisque ac commodo libero, fringilla dictum purus. Proin nec massa vitae lorem eleifend lacinia. Praesent rhoncus ultricies ullamcorper. Fusce vel viverra purus, nec rhoncus massa. Etiam nisl lorem, cursus vel est sit amet, mattis venenatis magna. Vestibulum id risus sit amet nisi congue ultrices id nec ex. } }
-\newcommand{\todofoot}[1]{\textcolor{red}{\textbf{(!)}\footnote{\textbf{\color{red}{\gp@str@todo}}: #1}}}
+% Miejsce do poprawienia oznacza krzyżyk, jak w wydaniach krytycznych
+% (crux desperationis, potomek obelosa aleksandryjskich filologów).
+\newcommand{\todofoot}[1]{\textcolor{red}{\textbf{\textdagger}\footnote{\textbf{\color{red}{\gp@str@todo}}: #1}}}
 
 \endinput

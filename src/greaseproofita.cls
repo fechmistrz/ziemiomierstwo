@@ -8,14 +8,40 @@
 \RequirePackage{amsmath}
 \RequirePackage{amsthm}
 
-% Tekst: Palatino (TeX Gyre Pagella) jak dotąd; matematyka z tej samej rodziny.
-\RequirePackage{newpxtext}
-\RequirePackage{newpxmath}
-\RequirePackage{AlegreyaSans}
+% Tekst: Palatino (TeX Gyre Pagella) z cyframi nautycznymi, jak dotąd;
+% matematyka: TeX Gyre Pagella Math, czyli ten sam krój.
+\RequirePackage{fontspec}
+% Pagella nie ma greki z akcentami ani cyrylicy i takie znaki znikałyby z tekstu
+% bez śladu. Brakujące litery bierzemy z Alegreyi (wymaga luaotfload 3.12+).
+\newif\ifgp@fallback
+\directlua{
+	if luaotfload and luaotfload.add_fallback then
+		luaotfload.add_fallback("gpfbrm", {"[Alegreya-Regular.otf]:mode=node;"})
+		luaotfload.add_fallback("gpfbit", {"[Alegreya-Italic.otf]:mode=node;"})
+		luaotfload.add_fallback("gpfbbf", {"[Alegreya-Bold.otf]:mode=node;"})
+		luaotfload.add_fallback("gpfbbi", {"[Alegreya-BoldItalic.otf]:mode=node;"})
+		tex.sprint("\luaescapestring{\string\gp@fallbacktrue}")
+	end
+}
+\ifgp@fallback
+	\setmainfont{TeXGyrePagellaX}[
+		Numbers={Proportional,OldStyle},
+		UprightFeatures={RawFeature={fallback=gpfbrm}},
+		ItalicFeatures={RawFeature={fallback=gpfbit}},
+		BoldFeatures={RawFeature={fallback=gpfbbf}},
+		BoldItalicFeatures={RawFeature={fallback=gpfbbi}},
+	]
+\else
+	\setmainfont{TeXGyrePagellaX}[Numbers={Proportional,OldStyle}]
+\fi
+\RequirePackage{unicode-math}
+\setmathfont{texgyrepagella-math.otf}
+\newcommand{\gp@trianglescale}{0.85}
 
 \RequirePackage[italian]{babel}
 
 \newcommand{\gp@str@title}{Almanacco geometrico}
+\newcommand{\gp@str@titlelines}{Almanacco\\geometrico}
 \newcommand{\gp@str@author}{$\mathcal{L}$emiaogius di Hornšperk}
 \newcommand{\gp@str@pdfauthor}{Lemiaogius di Hornšperk}
 
@@ -37,6 +63,8 @@
 \newcommand{\gp@str@index}{Indice}
 \newcommand{\gp@str@persons}{Indice delle persone}
 \newcommand{\gp@str@todo}{Da rielaborare}
+\newcommand{\gp@str@colophon}{Composto con LuaLaTeX nei caratteri TeX Gyre Pagella\\
+	(dal Palatino di Hermann Zapf) e Alegreya (Juan Pablo del Peral).}
 
 \RequirePackage{greaseproof-common}
 

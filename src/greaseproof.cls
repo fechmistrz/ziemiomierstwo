@@ -8,12 +8,14 @@
 \RequirePackage{amsmath}
 \RequirePackage{amsthm}
 
-% Tekst: Alegreya i Alegreya Sans; matematyka: STIX Two Math dopasowany
+% Tekst: Alegreya z cyframi nautycznymi; matematyka: STIX Two Math dopasowany
 % wysokością małych liter do Alegreyi.
-\RequirePackage{Alegreya}
-\RequirePackage{AlegreyaSans}
+\RequirePackage[osf]{Alegreya}
 \RequirePackage{unicode-math}
-\setmathfont{STIXTwoMath-Regular.otf}[Scale=MatchLowercase]
+% (W TeX Live sprzed 2021 roku ten sam font nazywa się STIX2Math.otf.)
+\IfFontExistsTF{STIXTwoMath-Regular.otf}
+	{\setmathfont{STIXTwoMath-Regular.otf}[Scale=MatchLowercase]}
+	{\setmathfont{STIX2Math.otf}[Scale=MatchLowercase]}
 
 \RequirePackage[polish]{babel}
 \RequirePackage[nomathsymbols]{polski}
@@ -21,15 +23,11 @@
 \AtBeginDocument{%
 	\let\leq\leqslant \let\le\leqslant
 	\let\geq\geqslant \let\ge\geqslant
-	% Trójkąt z fontu STIX jest wyższy od wersalików, więc go pomniejszamy; klamry
-	% dookoła sprawiają, że dalej działa zapis $S_\triangle$.
-	\let\gp@triangle\triangle
-	\renewcommand{\triangle}{{\mathchoice
-		{\scalebox{0.8}{$\displaystyle\gp@triangle$}}{\scalebox{0.8}{$\textstyle\gp@triangle$}}%
-		{\scalebox{0.8}{$\scriptstyle\gp@triangle$}}{\scalebox{0.8}{$\scriptscriptstyle\gp@triangle$}}}}%
 }
+\newcommand{\gp@trianglescale}{0.8}
 
 \newcommand{\gp@str@title}{Almanach geometryczny}
+\newcommand{\gp@str@titlelines}{Almanach\\geometryczny}
 \newcommand{\gp@str@author}{$\mathcal{L}$emiałgiusz z Hornšperku}
 \newcommand{\gp@str@pdfauthor}{Lemiałgiusz z Hornšperku}
 
@@ -51,11 +49,10 @@
 \newcommand{\gp@str@index}{Skorowidz}
 \newcommand{\gp@str@persons}{Indeks osób}
 \newcommand{\gp@str@todo}{Do zrobienia}
+\newcommand{\gp@str@colophon}{Złożono w systemie LuaLaTeX krojami Alegreya\\
+	(Juan Pablo del Peral, Huerta Tipográfica) i STIX Two Math.}
 
 \RequirePackage{greaseproof-common}
-
-% Z unicode-math symbole matematyczne w tytułach sekcji psują zakładki PDF.
-\pdfstringdefDisableCommands{\def\pi{π}}
 
 \newcommand{\ita}[1]{}
 \newcommand{\pol}[1]{#1}
