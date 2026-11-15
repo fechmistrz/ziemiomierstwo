@@ -7,7 +7,7 @@ endif
 # Build the Polish and Italian PDFs at the same time.
 MAKEFLAGS += -j2
 
-SOURCES = src/ziemiomierstwo.tex src/ziemiomierstwo.bib src/*.cls src/chapters/*.tex src/chapters/*/*.tex
+SOURCES = src/ziemiomierstwo.tex src/ziemiomierstwo.bib src/*.cls src/*.sty src/chapters/*.tex src/chapters/*/*.tex
 
 .PHONY: all pl it clean
 

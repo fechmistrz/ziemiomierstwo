@@ -1,6 +1,17 @@
 # ziemiomierstwo
 Przewodnik po geometrii nowej i nowej.
 
+## Budowanie
+
+`make` buduje obie wersje językowe (`make pl` i `make it` budują jedną).
+Potrzebny jest LuaLaTeX z pełnego TeX Live, w tym pakiety `tcolorbox`, `unicode-math`, `titlesec` i `imakeidx` oraz fonty Alegreya, STIX Two Math, TeX Gyre Pagella (pakiet `newpx`) i TeX Gyre Pagella Math.
+
+## Skład
+
+Cały wygląd książki jest w `src/greaseproof-common.sty`.
+Klasy `greaseproof.cls` (wersja polska) i `greaseproofita.cls` (włoska) wybierają tylko język, fonty i napisy.
+Rysunki na stronach tytułowych części są w `src/greaseproof-emblems.sty`; ten plik generuje `python3 utils/emblems.py > src/greaseproof-emblems.sty`.
+
 Narzędzie do poprawiania składni dokumentu dwujęzykowego:
 ```
 fiks() {

@@ -14,3 +14,4 @@
 src-it
 src-pl
 .claude/worktrees/
+*.ptc

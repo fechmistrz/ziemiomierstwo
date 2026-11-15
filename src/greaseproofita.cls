@@ -1,133 +1,74 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{greaseproof}[2024/08/28]
-\LoadClass[9pt, twoside]{extbook}
+\ProvidesClass{greaseproofita}[2026/11/15 Almanacco geometrico (edizione italiana)]
+\LoadClass[10pt, twoside]{extbook}
 
-\RequirePackage[
-	paperwidth=6.125in,
-	paperheight=9.25in,
-	left=0.6in,
-	right=0.6in,
-	top=0.8in,
-	bottom=0.8in,
-	twoside,
-	% showframe,
-	headsep=0.2in,
-]{geometry}
-
-\RequirePackage{graphicx}
-\graphicspath{{images/}}
-\RequirePackage{tikz}
-
-\RequirePackage[svgnames, table]{xcolor}
-\RequirePackage{calc}
-\RequirePackage{changepage}
-\RequirePackage[toc]{appendix}
-\RequirePackage{etoolbox}
-
-\RequirePackage{float}
-
-\RequirePackage[utf8]{inputenc}
-\RequirePackage[T1]{fontenc}
-\RequirePackage[final]{microtype}
-
-\RequirePackage[T1]{fontenc}
-\RequirePackage{newpxtext}
-
-\RequirePackage[italian]{babel}
-\RequirePackage[utf8]{inputenc}
-
-\RequirePackage{fancyhdr}
-\fancypagestyle{plain}{
-    \fancyhf{}
-    \fancyfoot[C]{}
-    \renewcommand{\headrulewidth}{0pt}
-    \renewcommand{\footrulewidth}{0pt}
-}
-\pagestyle{fancy}
-\fancyhead{}
-\fancyfoot{}
-\fancyhead[LE]{\thepage}
-\fancyhead[CE]{$\mathcal{L}$emiaogius di Hornšperk}
-\fancyhead[RE]{}
-\fancyhead[LO]{}
-\fancyhead[CO]{Almanacco geometrico}
-\fancyhead[RO]{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.0pt}
+% Ta klasa ustala tylko język, fonty i napisy.
+% Cały wygląd książki jest w greaseproof-common.sty (wspólnym z greaseproof.cls).
 
 \RequirePackage{amsmath}
-\RequirePackage{amssymb}
 \RequirePackage{amsthm}
 
-\theoremstyle{plain}
-\newcounter{counter}
-\numberwithin{counter}{section}
-\newtheorem{conjecture}[counter]{Congettura}
-\newtheorem{geoconstruction}[counter]{Costruzione geometrica}
-\newtheorem{exercise}[counter]{Esercizio}
-\newtheorem{integral}[counter]{Integrale}
-\newtheorem{corollary}[counter]{Corollario}
-\newtheorem{definition}[counter]{Definizione}
-\newtheorem{problem}[counter]{Problema}
-\newtheorem{example}[counter]{Esempio}
-\newtheorem{axiom}[counter]{Assioma}
-\newtheorem{lemma}[counter]{Lemma}
-\newtheorem{proposition}[counter]{Fatto}
-\newtheorem{theorem}[counter]{Teorema}
-\newtheorem{warning}[counter]{Avvertenza}
-\newtheorem{tobedone}[counter]{Da rielaborare}
-
-\theoremstyle{plain}
-\newtheorem*{euclidelement}{Elemento di Euclide}
-
-% https://tex.stackexchange.com/questions/22012/hyperref-and-imakeidx-do-not-work-together
-\RequirePackage{imakeidx}
-
-\RequirePackage[pdfusetitle]{hyperref}
-% add [backref] for links from bib entries to citations
-% add [pdfusetitle] for metadata
-\hypersetup{
-    colorlinks,
-    linkcolor={darkblue},
-    citecolor={darkblue},
-    urlcolor={darkblue}
+% Tekst: Palatino (TeX Gyre Pagella) z cyframi nautycznymi, jak dotąd;
+% matematyka: TeX Gyre Pagella Math, czyli ten sam krój.
+\RequirePackage{fontspec}
+% Pagella nie ma greki z akcentami ani cyrylicy i takie znaki znikałyby z tekstu
+% bez śladu. Brakujące litery bierzemy z Alegreyi (wymaga luaotfload 3.12+).
+\newif\ifgp@fallback
+\directlua{
+	if luaotfload and luaotfload.add_fallback then
+		luaotfload.add_fallback("gpfbrm", {"[Alegreya-Regular.otf]:mode=node;"})
+		luaotfload.add_fallback("gpfbit", {"[Alegreya-Italic.otf]:mode=node;"})
+		luaotfload.add_fallback("gpfbbf", {"[Alegreya-Bold.otf]:mode=node;"})
+		luaotfload.add_fallback("gpfbbi", {"[Alegreya-BoldItalic.otf]:mode=node;"})
+		tex.sprint("\luaescapestring{\string\gp@fallbacktrue}")
+	end
 }
+\ifgp@fallback
+	\setmainfont{TeXGyrePagellaX}[
+		Numbers={Proportional,OldStyle},
+		UprightFeatures={RawFeature={fallback=gpfbrm}},
+		ItalicFeatures={RawFeature={fallback=gpfbit}},
+		BoldFeatures={RawFeature={fallback=gpfbbf}},
+		BoldItalicFeatures={RawFeature={fallback=gpfbbi}},
+	]
+\else
+	\setmainfont{TeXGyrePagellaX}[Numbers={Proportional,OldStyle}]
+\fi
+\RequirePackage{unicode-math}
+\setmathfont{texgyrepagella-math.otf}
+\newcommand{\gp@trianglescale}{0.85}
 
-\RequirePackage{tkz-euclide}
-\RequirePackage{subcaption}
+\RequirePackage[italian]{babel}
 
-\RequirePackage{makeidx}
-\patchcmd{\theindex}{\MakeUppercase\indexname}{\sffamily\normalsize\bfseries\indexname}{}{}
-\makeindex[title=Indice]
-\makeindex[name=persons,title=Indice delle persone]
+\newcommand{\gp@str@title}{Almanacco geometrico}
+\newcommand{\gp@str@titlelines}{Almanacco\\geometrico}
+\newcommand{\gp@str@titlea}{Almanacco}
+\newcommand{\gp@str@titleb}{geometrico}
+\newcommand{\gp@str@author}{$\mathcal{L}$emiaogius di Hornšperk}
+\newcommand{\gp@str@pdfauthor}{Lemiaogius di Hornšperk}
 
-\definecolor{ocre}{RGB}{105, 180, 255}
-\colorlet{darkblue}{ocre!80!black}
+\newcommand{\gp@str@conjecture}{Congettura}
+\newcommand{\gp@str@geoconstruction}{Costruzione geometrica}
+\newcommand{\gp@str@exercise}{Esercizio}
+\newcommand{\gp@str@integral}{Integrale}
+\newcommand{\gp@str@corollary}{Corollario}
+\newcommand{\gp@str@definition}{Definizione}
+\newcommand{\gp@str@problem}{Problema}
+\newcommand{\gp@str@example}{Esempio}
+\newcommand{\gp@str@axiom}{Assioma}
+\newcommand{\gp@str@lemma}{Lemma}
+\newcommand{\gp@str@proposition}{Fatto}
+\newcommand{\gp@str@theorem}{Teorema}
+\newcommand{\gp@str@warning}{Avvertenza}
+\newcommand{\gp@str@tobedone}{Da rielaborare}
+\newcommand{\gp@str@euclidelement}{Elemento di Euclide}
+\newcommand{\gp@str@index}{Indice}
+\newcommand{\gp@str@persons}{Indice delle persone}
+\newcommand{\gp@str@todo}{Da rielaborare}
+\newcommand{\gp@str@colophon}{Composto con LuaLaTeX nei caratteri TeX Gyre Pagella\\
+	(dal Palatino di Hermann Zapf) e Alegreya (Juan Pablo del Peral).}
 
-% \usepackage[subtle]{savetrees}
-
-\RequirePackage{titlesec}
-
-\RequirePackage{lipsum}
-\RequirePackage{comment}
-% \includecomment{comment}
-\RequirePackage{tikz}
-\RequirePackage{paralist}
-\usetikzlibrary{calc}
-
-\RequirePackage{parskip}
-\makeatletter
-\def\thm@space@setup{%
-  \thm@preskip=\parskip \thm@postskip=0pt
-}
-\makeatother
-
-% https://tex.stackexchange.com/questions/91124/itemize-removing-natural-indent
-\RequirePackage{enumitem}
-\setlist[itemize]{leftmargin=*}
-
-\newcommand{\loremipsum}{ {\color{gray}  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisl purus, ultricies et ante quis, iaculis imperdiet justo. Proin tristique turpis a tortor eleifend lobortis. Vestibulum odio nisi, tempor sed scelerisque ac, aliquet a lorem. Proin ullamcorper nibh eget augue placerat lobortis. Quisque ac commodo libero, fringilla dictum purus. Proin nec massa vitae lorem eleifend lacinia. Praesent rhoncus ultricies ullamcorper. Fusce vel viverra purus, nec rhoncus massa. Etiam nisl lorem, cursus vel est sit amet, mattis venenatis magna. Vestibulum id risus sit amet nisi congue ultrices id nec ex. } }
-\newcommand{\todofoot}[1]{\textcolor{red}{\textbf{(!)}\footnote{\textbf{\color{red}{Da rielaborare}}: #1}}}
+\RequirePackage{greaseproof-common}
 
 \newcommand{\ita}[1]{#1}
 \newcommand{\pol}[1]{}

@@ -5,6 +5,9 @@
 \begin{document}
 % \input{blurbs/page-1-5}
 
+\frontmatter
+\maketitle
+
 \tableofcontents
 
 \chapter*{Przedmowa} % lang-pl
@@ -20,16 +23,33 @@ Non ci sforziamo eccessivamente, come farebbe Bourbaki, di utilizzare soltanto c
 Tekst jest pełen dygresji. % lang-pl
 Il testo è ricco di digressioni. % lang-it
 
+% Numery plików są historyczne; o kolejności rozdziałów decyduje ta lista.
+\mainmatter
+
+\part{Podstawy} % lang-pl
+\part{Fondamenti} % lang-it
 \input{chapters/01} % aksjomatyka
+
+\part{Figury płaskie} % lang-pl
+\part{Figure piane} % lang-it
 \input{chapters/05} % okręgi
 \input{chapters/02} % trójkąty
 \input{chapters/03} % czworokąty
 \input{chapters/04} % pięciokąty
-\input{chapters/06} % podobieństwo
+
+\part{Metody} % lang-pl
+\part{Metodi} % lang-it
+\input{chapters/06} % trygonometria
 \input{chapters/07} % współliniowość
 \input{chapters/08} % przekształcenia
+
+\part{Krzywe i konstrukcje} % lang-pl
+\part{Curve e costruzioni} % lang-it
 \input{chapters/09} % stożkowe
 \input{chapters/10} % konstrukcje
+
+\part{Poza płaszczyzną Euklidesa} % lang-pl
+\part{Oltre il piano euclideo} % lang-it
 \input{chapters/11} % stereometria
 \input{chapters/12} % nieeuklidesowe
 
