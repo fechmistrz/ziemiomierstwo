@@ -280,10 +280,12 @@
 \newcommand{\gp@partafter}{%
 	\vspace{2.4em}\gp@emblem{\value{part}}\par\vspace{2.6em}%
 	\startcontents[parts]%
-	{\hypersetup{linkcolor=.}\printcontents[parts]{p}{0}{\setcounter{tocdepth}{0}}}}
+	{\hypersetup{linkcolor=.}\printcontents[parts]{p}{0}{\setcounter{tocdepth}{0}}}%
+	\par\vspace{\z@ plus 1fill}}% cały luz na dół: nagłówek stoi zawsze w tym samym miejscu
 \titleformat{\part}[display]
 	{\normalfont\centering}
 	{\parbox{\linewidth}{\centering
+		\vspace*{0.55in}%
 		\gp@meandershort{9}\\[2.2em]
 		{\scshape\color{gpgrey}\gp@ls[14]{\MakeLowercase{\partname}}}\\[0.9em]
 		{\color{gpterra}\fontsize{44}{44}\selectfont\thepart}}}
@@ -419,7 +421,8 @@
 		boxsep=0pt,
 		beforeafter skip balanced=0.6\baselineskip plus 0.15\baselineskip minus 0.05\baselineskip,
 		lines before break=4,
-		before upper={\global\gp@initialfalse},
+		code={\gp@todobeforebox},
+		before upper={\global\gp@initialfalse\gp@todoinbox},
 		after upper={\gp@fixdepth},
 	},
 	gpbar/.style={gpbase, interior hidden, borderline west={1.4pt}{0pt}{#1}},
@@ -474,6 +477,17 @@
 \tcolorboxenvironment{problem}{gpbar=gpgrey!60}
 \tcolorboxenvironment{geoconstruction}{gpbar=gpgrey!60}
 \tcolorboxenvironment{exercise}{gpbar=gpgrey!60}
+
+% W zadaniach i konstrukcjach liczba kroków stoi po \hfill, w \emph. Trzyma się
+% w całości i staje przy prawym marginesie także wtedy, gdy musi zejść do
+% następnego wiersza.
+\newcommand{\gp@stepcount}{%
+	\let\gp@emph\emph
+	\renewcommand{\emph}[1]{\mbox{\gp@emph{##1}}}%
+	\renewcommand{\hfill}{\unskip\nobreak\hfil\penalty50\hskip1em\hbox{}\nobreak\hfil
+		\parfillskip=\z@\relax}}
+\AtBeginEnvironment{problem}{\gp@stepcount}
+\AtBeginEnvironment{geoconstruction}{\gp@stepcount}
 
 % Dowody: mniejszym stopniem, żeby nie konkurowały z wypowiedziami, i z tym
 % zakończeniem, którego używał Euklides: ὅπερ ἔδει δεῖξαι, co było do okazania.
@@ -693,6 +707,25 @@
 		\box\gp@todobox\hskip0.4em % długi szereg nie zmieści się na marginesie
 	\else
 		\llap{\box\gp@todobox\hskip0.5em}%
+	\fi}
+% Gdy na krzyżyk czeka ramka, a nie akapit, przypis trafia na dół strony jeszcze
+% przed ramką, a sam znak staje na marginesie obok jej pierwszego wiersza.
+\newsavebox{\gp@boxtodobox}
+\newif\ifgp@boxtodo
+\newcommand{\gp@todobeforebox}{%
+	\ifx\gp@pendingtodo\@empty\else
+		\let\gp@todolist\gp@pendingtodo
+		\global\let\gp@pendingtodo\@empty
+		\setbox\gp@todobox\hbox{}%
+		\gp@todolist
+		\global\setbox\gp@boxtodobox\box\gp@todobox
+		\global\gp@boxtodotrue
+	\fi}
+\newcommand{\gp@todoinbox}{%
+	\ifgp@boxtodo
+		\global\gp@boxtodofalse
+		\AddToHookNext{para/begin}{%
+			\llap{\box\gp@boxtodobox\hskip\dimexpr1.4em+2.2pt\relax}\kern\z@}%
 	\fi}
 \IfHookExistsTF{para/begin}{}{% stary LaTeX: krzyżyk zostaje w tekście
 	\renewcommand{\todofoot}[1]{\gp@todomark{#1}}}
